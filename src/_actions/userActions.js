@@ -16,21 +16,11 @@ function login(user) {
     return dispatch => {
         dispatch(request({ user }));
 
-        userService.login(user)
-            .then(
-                user => {
-                    dispatch(alertActions.success('Login successful'));
-                    localStorage.setItem('user', JSON.stringify(user));
-                    dispatch(miscActions.closeSpinner(false))
-                    dispatch(success(user));
-                    history.push('/');
-                 },
-                error => {
-                    dispatch(failure(error.toString()));
-                    dispatch(miscActions.closeSpinner(false))
-                    dispatch(alertActions.error(error.toString()));
-                }
-            );
+        dispatch(alertActions.success('Login successful'));
+        localStorage.setItem('user', JSON.stringify(user));
+        dispatch(miscActions.closeSpinner(false))
+        dispatch(success(user));
+        history.push('/');
 
     };
 
