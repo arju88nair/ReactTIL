@@ -1,14 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e6cd1e56-f032-4ca2-9a6d-429c1f3ffe28" name="Default Changelist" comment="">
+    <list default="true" id="e6cd1e56-f032-4ca2-9a6d-429c1f3ffe28" name="Default Changelist" comment="WIthout login call">
+      <change afterPath="$PROJECT_DIR$/src/_helpers/theme.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/Components/PreLoginAppbar.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_actions/userActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/_actions/userActions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/LandingPage/LandingPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/LandingPage/LandingPage.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -46,7 +56,17 @@
       <option name="presentableId" value="Default" />
       <updated>1620054623828</updated>
       <workItem from="1620054625725" duration="4604000" />
+      <workItem from="1620307594539" duration="242000" />
+      <workItem from="1620394522037" duration="2559000" />
     </task>
+    <task id="LOCAL-00001" summary="WIthout login call">
+      <created>1620226149200</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1620226149200</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -63,5 +83,9 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="WIthout login call" />
+    <option name="LAST_COMMIT_MESSAGE" value="WIthout login call" />
   </component>
 </project>
