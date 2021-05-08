@@ -35,8 +35,15 @@ const useStyles = makeStyles((theme) => ({
     navBarText: {
         textDecoration: 'none',
         color: 'var(--color-text)',
-        textTransform: "none"
+        textTransform: "none",
+        '&:hover': {
+            backgroundColor: '#fff',
+            color: 'black',
+        },
     },
+    button: {
+
+    }
 }));
 
 export function PreLoginAppbar() {
@@ -141,7 +148,7 @@ export function PreLoginAppbar() {
             <AppBar position="static">
                 <Container maxWidth="lg">
                 <Toolbar>
-                    <Typography variant="h6" noWrap>
+                    <Typography variant="h6" noWrap style={{fontSize:"2em",fontWeight:"bold"}}>
                         Shelved
                     </Typography>
                     <div className={classes.grow}/>
