@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e6cd1e56-f032-4ca2-9a6d-429c1f3ffe28" name="Default Changelist" comment="WIthout login call">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_helpers/theme.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/_helpers/theme.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/Components/PreAppBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Components/PreAppBar.js" afterDir="false" />
+    <list default="true" id="e6cd1e56-f032-4ca2-9a6d-429c1f3ffe28" name="Default Changelist" comment="Pre app login bar">
       <change beforePath="$PROJECT_DIR$/src/views/Components/PreLoginAppbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Components/PreLoginAppbar.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -66,7 +62,7 @@
       <workItem from="1620054625725" duration="4604000" />
       <workItem from="1620307594539" duration="242000" />
       <workItem from="1620394522037" duration="2559000" />
-      <workItem from="1620453108974" duration="7383000" />
+      <workItem from="1620453108974" duration="7427000" />
     </task>
     <task id="LOCAL-00001" summary="WIthout login call">
       <created>1620226149200</created>
@@ -75,7 +71,14 @@
       <option name="project" value="LOCAL" />
       <updated>1620226149200</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Pre app login bar">
+      <created>1620463003613</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1620463003613</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -95,6 +98,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="WIthout login call" />
-    <option name="LAST_COMMIT_MESSAGE" value="WIthout login call" />
+    <MESSAGE value="Pre app login bar" />
+    <option name="LAST_COMMIT_MESSAGE" value="Pre app login bar" />
   </component>
 </project>
