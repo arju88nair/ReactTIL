@@ -1,5 +1,5 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
+import {makeStyles} from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
@@ -11,18 +11,19 @@ import AccountCircle from '@material-ui/icons/AccountCircle';
 import MailIcon from '@material-ui/icons/Mail';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import MoreIcon from '@material-ui/icons/MoreVert';
+import Container from "@material-ui/core/Container";
+import Button from "@material-ui/core/Button";
+import {Link} from "react-router-dom";
+import Grid from "@material-ui/core/Grid";
+import Divider from "@material-ui/core/Divider";
 
 const useStyles = makeStyles((theme) => ({
     grow: {
         flexGrow: 1,
     },
-    title: {
-        display: 'none',
-        [theme.breakpoints.up('sm')]: {
-            display: 'block',
-        },
+    menuButton: {
+        marginRight: theme.spacing(2),
     },
-
     sectionDesktop: {
         display: 'none',
         [theme.breakpoints.up('md')]: {
@@ -35,9 +36,14 @@ const useStyles = makeStyles((theme) => ({
             display: 'none',
         },
     },
+    navBarText: {
+        textDecoration: 'none',
+        color: 'var(--color-text)',
+        textTransform: "none"
+    },
 }));
 
-export  function PreLoginAppbar() {
+export function PreLoginAppbar() {
     const classes = useStyles();
     const [anchorEl, setAnchorEl] = React.useState(null);
     const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
@@ -66,10 +72,10 @@ export  function PreLoginAppbar() {
     const renderMenu = (
         <Menu
             anchorEl={anchorEl}
-            anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
+            anchorOrigin={{vertical: 'top', horizontal: 'right'}}
             id={menuId}
             keepMounted
-            transformOrigin={{ vertical: 'top', horizontal: 'right' }}
+            transformOrigin={{vertical: 'top', horizontal: 'right'}}
             open={isMenuOpen}
             onClose={handleMenuClose}
         >
@@ -82,39 +88,54 @@ export  function PreLoginAppbar() {
     const renderMobileMenu = (
         <Menu
             anchorEl={mobileMoreAnchorEl}
-            anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
+            anchorOrigin={{vertical: 'top', horizontal: 'right'}}
             id={mobileMenuId}
             keepMounted
-            transformOrigin={{ vertical: 'top', horizontal: 'right' }}
+            transformOrigin={{vertical: 'top', horizontal: 'right'}}
             open={isMobileMenuOpen}
             onClose={handleMobileMenuClose}
         >
             <MenuItem>
-                <IconButton aria-label="show 4 new mails" color="inherit">
-                    <Badge badgeContent={4} color="secondary">
-                        <MailIcon />
-                    </Badge>
-                </IconButton>
-                <p>Messages</p>
+                <Button className={classes.navBarText}
+                        style={{fontWeight: "600", backgroundColor: 'transparent',justifyContent: "flex-start"}} component={Link}
+                        to="/landing">
+                    How it works
+                </Button>
             </MenuItem>
             <MenuItem>
-                <IconButton aria-label="show 11 new notifications" color="inherit">
-                    <Badge badgeContent={11} color="secondary">
-                        <NotificationsIcon />
-                    </Badge>
-                </IconButton>
-                <p>Notifications</p>
+                <Button className={classes.navBarText}
+                        style={{fontWeight: "600", backgroundColor: 'transparent',justifyContent: "flex-start"}} component={Link}
+                        to="/landing">
+                    Blog
+                </Button>
             </MenuItem>
             <MenuItem onClick={handleProfileMenuOpen}>
-                <IconButton
-                    aria-label="account of current user"
-                    aria-controls="primary-search-account-menu"
-                    aria-haspopup="true"
-                    color="inherit"
-                >
-                    <AccountCircle />
-                </IconButton>
-                <p>Profile</p>
+                <Button className={classes.navBarText}
+                        style={{fontWeight: "600", backgroundColor: 'transparent',justifyContent: "flex-start"}} component={Link}
+                        to="/landing">
+                    Pricing
+                </Button>
+            </MenuItem>
+            <MenuItem onClick={handleProfileMenuOpen}>
+                <Button className={classes.navBarText}
+                        style={{fontWeight: "600", backgroundColor: 'transparent',justifyContent: "flex-start"}} component={Link}
+                        to="/landing">
+                    Contact
+                </Button>
+            </MenuItem>
+            <MenuItem onClick={handleProfileMenuOpen}>
+                <Button className={classes.navBarText}
+                        style={{fontWeight: "600", backgroundColor: 'transparent',justifyContent: "flex-start"}} component={Link}
+                        to="/login">
+                    Login
+                </Button>
+            </MenuItem>
+            <MenuItem onClick={handleProfileMenuOpen}>
+                <Button className={classes.navBarText}
+                        style={{fontWeight: "600", backgroundColor: 'transparent',justifyContent: "flex-start"}} component={Link}
+                        to="/login">
+                    Sign Up
+                </Button>
             </MenuItem>
         </Menu>
     );
@@ -122,32 +143,49 @@ export  function PreLoginAppbar() {
     return (
         <div className={classes.grow}>
             <AppBar position="static">
+                <Container maxWidth="lg">
                 <Toolbar>
-                    <Typography className={classes.title} variant="h6" noWrap>
+                    <Typography variant="h6" noWrap>
                         Shelved
                     </Typography>
-                    <div className={classes.grow} />
+                    <div className={classes.grow}/>
                     <div className={classes.sectionDesktop}>
-                        <IconButton aria-label="show 4 new mails" color="inherit">
-                            <Badge badgeContent={4} color="secondary">
-                                <MailIcon />
-                            </Badge>
-                        </IconButton>
-                        <IconButton aria-label="show 17 new notifications" color="inherit">
-                            <Badge badgeContent={17} color="secondary">
-                                <NotificationsIcon />
-                            </Badge>
-                        </IconButton>
-                        <IconButton
-                            edge="end"
-                            aria-label="account of current user"
-                            aria-controls={menuId}
-                            aria-haspopup="true"
-                            onClick={handleProfileMenuOpen}
-                            color="inherit"
-                        >
-                            <AccountCircle />
-                        </IconButton>
+                        <Grid container alignItems="center" >
+                            <Button className={classes.navBarText}
+                                    style={{fontWeight: "600", backgroundColor: 'transparent'}} component={Link}
+                                    to="/landing">
+                                How it works
+                            </Button>
+                            <Button className={classes.navBarText}
+                                    style={{fontWeight: "600", backgroundColor: 'transparent'}} component={Link}
+                                    to="/landing">
+                                Blog
+                            </Button>
+                            <Button className={classes.navBarText}
+                                    style={{fontWeight: "600", backgroundColor: 'transparent'}} component={Link}
+                                    to="/landing">
+                                Pricing
+                            </Button>
+                            <Button className={classes.navBarText}
+                                    style={{fontWeight: "600", backgroundColor: 'transparent'}} component={Link}
+                                    to="/landing">
+                                Contact
+                            </Button>
+                            <Divider orientation="vertical" flexItem />
+                            <Button className={classes.navBarText}
+                                    style={{fontWeight: "600", backgroundColor: 'transparent'}} component={Link}
+                                    to="/login">
+                                Login
+                            </Button>
+                            <Button variant="contained" className={classes.navBarText}
+                                    style={{
+                                        background: 'var(--color-button)',
+                                        color: 'white', fontWeight: "600"
+                                    }}
+                                    component={Link} to="/register">
+                                Sign Up
+                            </Button>
+                        </Grid>
                     </div>
                     <div className={classes.sectionMobile}>
                         <IconButton
@@ -157,10 +195,11 @@ export  function PreLoginAppbar() {
                             onClick={handleMobileMenuOpen}
                             color="inherit"
                         >
-                            <MoreIcon />
+                            <MoreIcon/>
                         </IconButton>
                     </div>
                 </Toolbar>
+                </Container>
             </AppBar>
             {renderMobileMenu}
             {renderMenu}

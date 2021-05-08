@@ -140,7 +140,22 @@ export function PreAppBar() {
                             <Button className={classes.navBarText}
                                     style={{fontWeight: "600", backgroundColor: 'transparent'}} component={Link}
                                     to="/landing">
+                                How it works
+                            </Button>
+                             <Button className={classes.navBarText}
+                                    style={{fontWeight: "600", backgroundColor: 'transparent'}} component={Link}
+                                    to="/landing">
+                                Contact
+                            </Button>
+                             <Button className={classes.navBarText}
+                                    style={{fontWeight: "600", backgroundColor: 'transparent'}} component={Link}
+                                    to="/landing">
                                 Blog
+                            </Button>
+                             <Button className={classes.navBarText}
+                                    style={{fontWeight: "600", backgroundColor: 'transparent'}} component={Link}
+                                    to="/landing">
+                                 Contact
                             </Button>
                             <Button className={classes.navBarText}
                                     style={{fontWeight: "600", backgroundColor: 'transparent'}} component={Link}
