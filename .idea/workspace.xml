@@ -1,9 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e6cd1e56-f032-4ca2-9a6d-429c1f3ffe28" name="Default Changelist" comment="Pre app login bar">
+    <list default="true" id="e6cd1e56-f032-4ca2-9a6d-429c1f3ffe28" name="Default Changelist" comment="Style changes Navbar">
+      <change afterPath="$PROJECT_DIR$/src/resources/images/Complex dashboard.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/images/Document Collaboration.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/images/Happy Bunch - Desk.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/images/Note-taking apps.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/images/Save time and effort(1).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/images/Save time and effort.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/images/Solving problems.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/images/Successful completion of project(1).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/images/Successful completion of project.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/images/The Infinite BookShelf(1).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/images/Visual collaboration.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/images/blogging-site-concept.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/Components/PreLoginAppbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Components/PreLoginAppbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/LandingPage/LandingPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/LandingPage/LandingPage.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,17 +52,19 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/resources/images" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/resources/images" />
       <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
@@ -63,7 +79,11 @@
       <workItem from="1620054625725" duration="4604000" />
       <workItem from="1620307594539" duration="242000" />
       <workItem from="1620394522037" duration="2559000" />
-      <workItem from="1620453108974" duration="7687000" />
+      <workItem from="1620453108974" duration="8316000" />
+      <workItem from="1620536960719" duration="64000" />
+      <workItem from="1620539180626" duration="1406000" />
+      <workItem from="1620541144599" duration="761000" />
+      <workItem from="1620575529336" duration="3700000" />
     </task>
     <task id="LOCAL-00001" summary="WIthout login call">
       <created>1620226149200</created>
@@ -86,7 +106,14 @@
       <option name="project" value="LOCAL" />
       <updated>1620463039062</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Style changes Navbar">
+      <created>1620463314544</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1620463314544</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -107,6 +134,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="WIthout login call" />
     <MESSAGE value="Pre app login bar" />
-    <option name="LAST_COMMIT_MESSAGE" value="Pre app login bar" />
+    <MESSAGE value="Style changes Navbar" />
+    <option name="LAST_COMMIT_MESSAGE" value="Style changes Navbar" />
   </component>
 </project>
