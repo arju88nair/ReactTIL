@@ -3,7 +3,7 @@ import {makeStyles} from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Container from "@material-ui/core/Container";
 import Grid from "@material-ui/core/Grid";
-import logo from "../../resources/images/Complex dashboard.png";
+import logo from "../../resources/images/The Infinite BookShelf(1).png";
 import Typography from "@material-ui/core/Typography";
 
 
@@ -24,9 +24,12 @@ const useStyles = makeStyles((theme) => ({
     img: {
         margin: 'auto',
         display: 'block',
-        maxWidth: '90%',
+        maxWidth: '100%',
         background: 'transparent'
     },
+    typography: {
+        textAlign: "center"
+    }
 }));
 
 export function HeroBanner() {
@@ -40,21 +43,21 @@ export function HeroBanner() {
                 justify="center"
                 alignItems="center"
             >
-                <Grid item xs={8} justify="flex-start" alignItems="flex-start">
+                <Grid item xs={12} sm={8} justify="flex-start" alignItems="flex-start">
                     <img className={classes.img} alt="complex" src={logo}/>
                 </Grid>
-                <Grid item xs={4} alignItems="center">
-                    <div>
+                <Grid item xs={12} sm={4} alignItems="center" justify="center">
+                    <div className={classes.typography}>
                         <Typography variant="h2" noWrap style={{fontWeight: "bold"}}>
-                            Savel.
+                            Save.
                         </Typography>
                     </div>
-                    <div>
+                    <div className={classes.typography}>
                         <Typography variant="h2" noWrap style={{fontWeight: "bold"}}>
                             Organise.
                         </Typography>
                     </div>
-                    <div>
+                    <div className={classes.typography}>
                         <Typography variant="h2" noWrap style={{fontWeight: "bold"}}>
                             Grow.
                         </Typography>

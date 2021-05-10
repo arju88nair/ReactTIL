@@ -4,7 +4,7 @@ import {createMuiTheme} from '@material-ui/core/styles';
 export default createMuiTheme({
     typography: {
         fontFamily: [
-            'Inter',
+            'Oxygen',
             '-apple-system',
             'BlinkMacSystemFont',
             '"Segoe UI"',
