@@ -30,5 +30,6 @@ export default createMuiTheme({
         background: {
             default: '#fff',
         },
+        // type: 'dark'
     },
 });

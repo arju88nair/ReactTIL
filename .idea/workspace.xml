@@ -4,7 +4,6 @@
     <list default="true" id="e6cd1e56-f032-4ca2-9a6d-429c1f3ffe28" name="Default Changelist" comment="Hero Banner phase 1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/_helpers/theme.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/_helpers/theme.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/LandingPage/HeroBanner.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/LandingPage/HeroBanner.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -73,6 +72,8 @@
       <workItem from="1620541144599" duration="761000" />
       <workItem from="1620575529336" duration="3700000" />
       <workItem from="1620658259972" duration="7674000" />
+      <workItem from="1620710055165" duration="3037000" />
+      <workItem from="1620747852462" duration="912000" />
     </task>
     <task id="LOCAL-00001" summary="WIthout login call">
       <created>1620226149200</created>

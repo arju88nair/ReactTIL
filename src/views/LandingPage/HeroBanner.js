@@ -5,6 +5,8 @@ import Container from "@material-ui/core/Container";
 import Grid from "@material-ui/core/Grid";
 import logo from "../../resources/images/The Infinite BookShelf(1).png";
 import Typography from "@material-ui/core/Typography";
+import Button from "@material-ui/core/Button";
+import {Link} from "react-router-dom";
 
 
 const useStyles = makeStyles((theme) => ({
@@ -62,6 +64,35 @@ export function HeroBanner() {
                             Grow.
                         </Typography>
                     </div>
+                    <div className={classes.typography}>
+                        <p   style={{fontWeight: "bold",color: 'var(--color-text)'}}>
+                            Blahdiblah bakd djdndjn
+                            Blahdiblah bakd djdndjn
+                            Blahdiblah bakd djdndjn
+                        </p>
+                    </div>
+                </Grid>
+            </Grid>
+            <Grid container spacing={3}>
+                <Grid item xs={12} sm={6} justify="flex-end" alignItems="flex-end">
+                    <Button variant="contained"
+                            style={{
+                                background: 'var(--color-button)',
+                                color: 'white', fontWeight: "600"
+                            }}
+                            component={Link} to="/register">
+                        Start Shelving
+                    </Button>
+                </Grid>
+                <Grid item xs={12} sm={6} justify="flex-end" alignItems="flex-end">
+                    <Button variant="contained"
+                            style={{
+                                background: 'var(--color-button)',
+                                color: 'white', fontWeight: "600"
+                            }}
+                            component={Link} to="/register">
+                        Start Shelving
+                    </Button>
                 </Grid>
             </Grid>
         </Container>
