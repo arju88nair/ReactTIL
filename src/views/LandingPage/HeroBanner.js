@@ -1,6 +1,5 @@
 import React from 'react';
 import {makeStyles} from '@material-ui/core/styles';
-import Paper from '@material-ui/core/Paper';
 import Container from "@material-ui/core/Container";
 import Grid from "@material-ui/core/Grid";
 import logo from "../../resources/images/The Infinite BookShelf(1).png";
@@ -31,7 +30,10 @@ const useStyles = makeStyles((theme) => ({
     },
     typography: {
         textAlign: "center"
-    }
+    },
+    heroButtons: {
+        marginTop: theme.spacing(4),
+    },
 }));
 
 export function HeroBanner() {
@@ -73,28 +75,27 @@ export function HeroBanner() {
                     </div>
                 </Grid>
             </Grid>
-            <Grid container spacing={3}>
-                <Grid item xs={12} sm={6} justify="flex-end" alignItems="flex-end">
+            <div className={classes.heroButtons}>
+            <Grid container spacing={2} justify="center">
+                <Grid item>
                     <Button variant="contained"
                             style={{
                                 background: 'var(--color-button)',
-                                color: 'white', fontWeight: "600"
+                                color: 'white', fontWeight: "600",fontSize:'1.4em'
                             }}
                             component={Link} to="/register">
                         Start Shelving
                     </Button>
                 </Grid>
-                <Grid item xs={12} sm={6} justify="flex-end" alignItems="flex-end">
+                <Grid item>
                     <Button variant="contained"
-                            style={{
-                                background: 'var(--color-button)',
-                                color: 'white', fontWeight: "600"
-                            }}
-                            component={Link} to="/register">
-                        Start Shelving
+                            style={{fontWeight: "600", backgroundColor: 'transparent',fontSize:'1.4em'}} component={Link}
+                            to="/register">
+                        Learn More
                     </Button>
                 </Grid>
             </Grid>
+        </div>
         </Container>
     );
 }
