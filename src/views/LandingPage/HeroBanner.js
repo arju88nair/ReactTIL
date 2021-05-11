@@ -9,19 +9,6 @@ import {Link} from "react-router-dom";
 
 
 const useStyles = makeStyles((theme) => ({
-    root: {
-        flexGrow: 1,
-    },
-    mainFeaturedPost: {
-        position: 'relative',
-        backgroundColor: theme.palette.grey[800],
-        color: theme.palette.common.white,
-        marginBottom: theme.spacing(4),
-        backgroundImage: 'url(https://source.unsplash.com/random)',
-        backgroundSize: 'cover',
-        backgroundRepeat: 'no-repeat',
-        backgroundPosition: 'center',
-    },
     img: {
         margin: 'auto',
         display: 'block',
@@ -67,35 +54,34 @@ export function HeroBanner() {
                         </Typography>
                     </div>
                     <div className={classes.typography}>
-                        <p   style={{fontWeight: "bold",color: 'var(--color-text)'}}>
-                            Blahdiblah bakd djdndjn
-                            Blahdiblah bakd djdndjn
-                            Blahdiblah bakd djdndjn
+                        <p style={{fontWeight: "bold", color: 'var(--color-text)'}}>
+                            Shelved helps in becoming a powerful knowledge repository and a centralised bookmark tool.
                         </p>
                     </div>
                 </Grid>
             </Grid>
             <div className={classes.heroButtons}>
-            <Grid container spacing={2} justify="center">
-                <Grid item>
-                    <Button variant="contained"
-                            style={{
-                                background: 'var(--color-button)',
-                                color: 'white', fontWeight: "600",fontSize:'1.4em'
-                            }}
-                            component={Link} to="/register">
-                        Start Shelving
-                    </Button>
+                <Grid container spacing={2} justify="center">
+                    <Grid item>
+                        <Button variant="contained"
+                                style={{
+                                    background: 'var(--color-button)',textDecoration: 'none',textTransform: "none",
+                                    color: 'white', fontWeight: "600", fontSize: '1.4em'
+                                }}
+                                component={Link} to="/register">
+                            Start Shelving
+                        </Button>
+                    </Grid>
+                    <Grid item>
+                        <Button variant="contained"
+                                style={{fontWeight: "600", textDecoration: 'none',textTransform: "none",backgroundColor: 'transparent', fontSize: '1.4em'}}
+                                component={Link}
+                                to="/register">
+                            Learn More
+                        </Button>
+                    </Grid>
                 </Grid>
-                <Grid item>
-                    <Button variant="contained"
-                            style={{fontWeight: "600", backgroundColor: 'transparent',fontSize:'1.4em'}} component={Link}
-                            to="/register">
-                        Learn More
-                    </Button>
-                </Grid>
-            </Grid>
-        </div>
+            </div>
         </Container>
     );
 }
