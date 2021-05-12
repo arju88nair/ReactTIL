@@ -22,13 +22,13 @@ export default createMuiTheme({
             main: '#FFFEFC',
         },
         secondary: {
-            main: '#19857b',
+            main: '#000',
         },
         error: {
             main: red.A400,
         },
         background: {
-            default: '#fff',
+            default: '#000',
         },
         // type: 'dark'
     },

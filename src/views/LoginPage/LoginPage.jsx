@@ -1,7 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import {PreAppBar} from "../Components/PreAppBar";
 import {LoginForm} from "./LoginForm";
+import {PreLoginAppbar} from "../Components/PreLoginAppbar";
 
 
 const useStyles = makeStyles((theme) => ({
@@ -16,7 +16,7 @@ export  function LoginPage() {
 
     return (
         <div className={classes.root}>
-            <PreAppBar/>
+            <PreLoginAppbar/>
             <LoginForm/>
         </div>
     );

@@ -66,7 +66,7 @@ export function HeroBanner() {
                         <Button variant="contained"
                                 style={{
                                     background: 'var(--color-button)',textDecoration: 'none',textTransform: "none",
-                                    color: 'white', fontWeight: "600", fontSize: '1.4em'
+                                    color: 'white', fontWeight: "600", fontSize: '1.2em'
                                 }}
                                 component={Link} to="/register">
                             Start Shelving
@@ -74,7 +74,7 @@ export function HeroBanner() {
                     </Grid>
                     <Grid item>
                         <Button variant="contained"
-                                style={{fontWeight: "600", textDecoration: 'none',textTransform: "none",backgroundColor: 'transparent', fontSize: '1.4em'}}
+                                style={{fontWeight: "600", textDecoration: 'none',textTransform: "none",backgroundColor: 'transparent', fontSize: '1.2em'}}
                                 component={Link}
                                 to="/register">
                             Learn More
