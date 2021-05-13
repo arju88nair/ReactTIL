@@ -214,7 +214,7 @@ export function RegisterForm() {
                     </Button>
                     <Grid container justify="center">
                         <Grid item>
-                            <Link to="/login" style={{textDecoration: 'none', color: 'var(--color-text-dark)'}}> Already have an
+                            <Link to="/login" style={{textDecoration: 'none', color: 'var(--color-text-dark)',fontWeight:'bold'}}> Already have an
                                 account? Log In
                             </Link>
                         </Grid>
