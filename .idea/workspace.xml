@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="908b436c-b8a6-476b-9d1f-177b9c9b967d" name="Default Changelist" comment="Login and Signup before components">
+    <list default="true" id="908b436c-b8a6-476b-9d1f-177b9c9b967d" name="Default Changelist" comment="stupid changes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/RegisterPage/RegisterForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/RegisterPage/RegisterForm.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_actions/userActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/_actions/userActions.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +66,11 @@
       <workItem from="1620799151015" duration="727000" />
       <workItem from="1620824148936" duration="3646000" />
       <workItem from="1620837616396" duration="3003000" />
-      <workItem from="1620881958068" duration="1206000" />
+      <workItem from="1620881958068" duration="2186000" />
+      <workItem from="1620998426667" duration="744000" />
+      <workItem from="1621054529233" duration="601000" />
+      <workItem from="1621109422936" duration="5000" />
+      <workItem from="1621783871493" duration="184000" />
     </task>
     <task id="LOCAL-00001" summary="Login and Signup before components">
       <created>1620839335095</created>
@@ -77,7 +79,14 @@
       <option name="project" value="LOCAL" />
       <updated>1620839335095</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="stupid changes">
+      <created>1620912189420</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1620912189420</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -97,6 +106,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Login and Signup before components" />
-    <option name="LAST_COMMIT_MESSAGE" value="Login and Signup before components" />
+    <MESSAGE value="stupid changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="stupid changes" />
   </component>
 </project>
