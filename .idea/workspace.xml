@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="908b436c-b8a6-476b-9d1f-177b9c9b967d" name="Default Changelist" comment="stupid changes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_actions/userActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/_actions/userActions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Components/PreLoginAppbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Components/PreLoginAppbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/RegisterPage/RegisterForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/RegisterPage/RegisterForm.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,6 +72,7 @@
       <workItem from="1621054529233" duration="601000" />
       <workItem from="1621109422936" duration="5000" />
       <workItem from="1621783871493" duration="184000" />
+      <workItem from="1621875594455" duration="1249000" />
     </task>
     <task id="LOCAL-00001" summary="Login and Signup before components">
       <created>1620839335095</created>

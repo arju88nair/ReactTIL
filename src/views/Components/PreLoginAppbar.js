@@ -12,6 +12,7 @@ import Button from "@material-ui/core/Button";
 import {Link} from "react-router-dom";
 import Grid from "@material-ui/core/Grid";
 import Divider from "@material-ui/core/Divider";
+import {Spinner} from "./Spinner";
 
 const useStyles = makeStyles((theme) => ({
     grow: {
@@ -145,6 +146,7 @@ export function PreLoginAppbar() {
 
     return (
         <div className={classes.grow}>
+            <Spinner/>
             <AppBar position="static">
                 <Container maxWidth="lg">
                 <Toolbar>
