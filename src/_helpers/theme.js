@@ -33,20 +33,37 @@ export const themeDark = createMuiTheme({
             main: '#171c24',
             default: '#171c24',
         },
-        // type: 'dark'
+        text: {
+            primary: "#ffffff"
+        }
     },
 });
 
 export const themeLight = createMuiTheme({
+    typography: {
+        fontFamily: [
+            'Oxygen',
+            '-apple-system',
+            'BlinkMacSystemFont',
+            '"Segoe UI"',
+            'Roboto',
+            '"Helvetica Neue"',
+            'Arial',
+            'sans-serif',
+            '"Apple Color Emoji"',
+            '"Segoe UI Emoji"',
+            '"Segoe UI Symbol"',
+        ].join(','),
+    },
     palette: {
         primary:{
-            main: "#fffccc"
+            main: "#ffffff"
         },
         background: {
-            default: "#fffccc"
+            default: "#ffffff"
         },
         text: {
-            primary: "#ffffff"
+            primary: "#000000"
         }
     }
 });

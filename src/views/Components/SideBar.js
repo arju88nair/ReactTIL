@@ -15,7 +15,10 @@ import MailIcon from '@material-ui/icons/Mail';
 import MenuIcon from '@material-ui/icons/Menu';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
+import {makeStyles, useTheme} from '@material-ui/core/styles';
+import {ListSubheader} from "@material-ui/core";
+import navbar from "../../resources/images/main.png";
+import Grid from "@material-ui/core/Grid";
 
 const drawerWidth = 240;
 
@@ -28,6 +31,7 @@ const useStyles = makeStyles((theme) => ({
             width: drawerWidth,
             flexShrink: 0,
         },
+
     },
     appBar: {
         [theme.breakpoints.up('sm')]: {
@@ -42,18 +46,28 @@ const useStyles = makeStyles((theme) => ({
         },
     },
     // necessary for content to be below app bar
-    toolbar: theme.mixins.toolbar,
+    toolbar: {
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        padding: '0 8px',
+        ...theme.mixins.toolbar,
+    },
     drawerPaper: {
         width: drawerWidth,
+        backgroundColor: theme.palette.primary.main,
+        color: theme.palette.text.primary,
     },
     content: {
         flexGrow: 1,
         padding: theme.spacing(3),
+        backgroundColor: theme.palette.secondary.main,
+
     },
 }));
 
 export function SideBar(props) {
-    const { window } = props;
+    const {window} = props;
     const classes = useStyles();
     const theme = useTheme();
     const [mobileOpen, setMobileOpen] = React.useState(false);
@@ -64,22 +78,44 @@ export function SideBar(props) {
 
     const drawer = (
         <div>
-            <div className={classes.toolbar} />
-            <Divider />
-            <List>
+            <div className={classes.toolbar}>
+                <Grid
+                    direction="row"
+                    justify="center"
+                    alignItems="center"
+                >
+                   <Typography variant="h6" noWrap style={{fontSize:"2em",fontWeight:"bold"}}>
+                       Shelved
+                   </Typography>
+            </Grid>
+            </div>
+            <Divider/>
+
+            <List subheader={
+                <ListSubheader style={{color: theme.palette.text.primary, fontWeight: "bold"}} component="div"
+                               id="nested-list-subheader">
+                    Nested List Items
+                </ListSubheader>
+            }>
                 {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-                    <ListItem button key={text}>
-                        <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-                        <ListItemText primary={text} />
+                    <ListItem button key={text} style={{marginLeft:'1.5em'}}>
+                        <ListItemIcon style={{color: theme.palette.text.primary}}>{index % 2 === 0 ? <InboxIcon/> :
+                            <MailIcon/>}</ListItemIcon>
+                        <ListItemText primary={text}/>
                     </ListItem>
                 ))}
             </List>
-            <Divider />
-            <List>
-                {['All mail', 'Trash', 'Spam'].map((text, index) => (
-                    <ListItem button key={text}>
-                        <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-                        <ListItemText primary={text} />
+            <Divider/>
+            <List subheader={
+                <ListSubheader style={{color: theme.palette.text.primary, fontWeight: "bold"}} component="div"
+                               id="nested-list-subheader">
+                    Nested List Items
+                </ListSubheader>
+            }>                {['All mail', 'Trash', 'Spam'].map((text, index) => (
+                <ListItem button key={text} style={{marginLeft:'1.5em'}}>
+                        <ListItemIcon style={{color: theme.palette.text.primary}}>{index % 2 === 0 ? <InboxIcon/> :
+                            <MailIcon/>}</ListItemIcon>
+                        <ListItemText primary={text}/>
                     </ListItem>
                 ))}
             </List>
@@ -90,7 +126,7 @@ export function SideBar(props) {
 
     return (
         <div className={classes.root}>
-            <CssBaseline />
+            <CssBaseline/>
             <AppBar position="fixed" className={classes.appBar}>
                 <Toolbar>
                     <IconButton
@@ -100,11 +136,8 @@ export function SideBar(props) {
                         onClick={handleDrawerToggle}
                         className={classes.menuButton}
                     >
-                        <MenuIcon />
+                        <MenuIcon/>
                     </IconButton>
-                    <Typography variant="h6" noWrap>
-                        Responsive drawer
-                    </Typography>
                 </Toolbar>
             </AppBar>
             <nav className={classes.drawer} aria-label="mailbox folders">
@@ -138,41 +171,32 @@ export function SideBar(props) {
                     </Drawer>
                 </Hidden>
             </nav>
-            <main className={classes.content}>
-                <div className={classes.toolbar} />
-                <Typography paragraph>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                    ut labore et dolore magna aliqua. Rhoncus dolor purus non enim praesent elementum
-                    facilisis leo vel. Risus at ultrices mi tempus imperdiet. Semper risus in hendrerit
-                    gravida rutrum quisque non tellus. Convallis convallis tellus id interdum velit laoreet id
-                    donec ultrices. Odio morbi quis commodo odio aenean sed adipiscing. Amet nisl suscipit
-                    adipiscing bibendum est ultricies integer quis. Cursus euismod quis viverra nibh cras.
-                    Metus vulputate eu scelerisque felis imperdiet proin fermentum leo. Mauris commodo quis
-                    imperdiet massa tincidunt. Cras tincidunt lobortis feugiat vivamus at augue. At augue eget
-                    arcu dictum varius duis at consectetur lorem. Velit sed ullamcorper morbi tincidunt. Lorem
-                    donec massa sapien faucibus et molestie ac.
-                </Typography>
-                <Typography paragraph>
-                    Consequat mauris nunc congue nisi vitae suscipit. Fringilla est ullamcorper eget nulla
-                    facilisi etiam dignissim diam. Pulvinar elementum integer enim neque volutpat ac
-                    tincidunt. Ornare suspendisse sed nisi lacus sed viverra tellus. Purus sit amet volutpat
-                    consequat mauris. Elementum eu facilisis sed odio morbi. Euismod lacinia at quis risus sed
-                    vulputate odio. Morbi tincidunt ornare massa eget egestas purus viverra accumsan in. In
-                    hendrerit gravida rutrum quisque non tellus orci ac. Pellentesque nec nam aliquam sem et
-                    tortor. Habitant morbi tristique senectus et. Adipiscing elit duis tristique sollicitudin
-                    nibh sit. Ornare aenean euismod elementum nisi quis eleifend. Commodo viverra maecenas
-                    accumsan lacus vel facilisis. Nulla posuere sollicitudin aliquam ultrices sagittis orci a.
-                </Typography>
-            </main>
+            {/*<main className={classes.content}>*/}
+            {/*    <div className={classes.toolbar}/>*/}
+            {/*    <Typography paragraph>*/}
+            {/*        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt*/}
+            {/*        ut labore et dolore magna aliqua. Rhoncus dolor purus non enim praesent elementum*/}
+            {/*        facilisis leo vel. Risus at ultrices mi tempus imperdiet. Semper risus in hendrerit*/}
+            {/*        gravida rutrum quisque non tellus. Convallis convallis tellus id interdum velit laoreet id*/}
+            {/*        donec ultrices. Odio morbi quis commodo odio aenean sed adipiscing. Amet nisl suscipit*/}
+            {/*        adipiscing bibendum est ultricies integer quis. Cursus euismod quis viverra nibh cras.*/}
+            {/*        Metus vulputate eu scelerisque felis imperdiet proin fermentum leo. Mauris commodo quis*/}
+            {/*        imperdiet massa tincidunt. Cras tincidunt lobortis feugiat vivamus at augue. At augue eget*/}
+            {/*        arcu dictum varius duis at consectetur lorem. Velit sed ullamcorper morbi tincidunt. Lorem*/}
+            {/*        donec massa sapien faucibus et molestie ac.*/}
+            {/*    </Typography>*/}
+            {/*    <Typography paragraph>*/}
+            {/*        Consequat mauris nunc congue nisi vitae suscipit. Fringilla est ullamcorper eget nulla*/}
+            {/*        facilisi etiam dignissim diam. Pulvinar elementum integer enim neque volutpat ac*/}
+            {/*        tincidunt. Ornare suspendisse sed nisi lacus sed viverra tellus. Purus sit amet volutpat*/}
+            {/*        consequat mauris. Elementum eu facilisis sed odio morbi. Euismod lacinia at quis risus sed*/}
+            {/*        vulputate odio. Morbi tincidunt ornare massa eget egestas purus viverra accumsan in. In*/}
+            {/*        hendrerit gravida rutrum quisque non tellus orci ac. Pellentesque nec nam aliquam sem et*/}
+            {/*        tortor. Habitant morbi tristique senectus et. Adipiscing elit duis tristique sollicitudin*/}
+            {/*        nibh sit. Ornare aenean euismod elementum nisi quis eleifend. Commodo viverra maecenas*/}
+            {/*        accumsan lacus vel facilisis. Nulla posuere sollicitudin aliquam ultrices sagittis orci a.*/}
+            {/*    </Typography>*/}
+            {/*</main>*/}
         </div>
     );
 }
-
-SideBar.propTypes = {
-    /**
-     * Injected by the documentation to work in an iframe.
-     * You won't need it on your project.
-     */
-    window: PropTypes.func,
-};
-
