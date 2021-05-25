@@ -1,7 +1,7 @@
 import {red} from '@material-ui/core/colors';
 import {createMuiTheme} from '@material-ui/core/styles';
 
-export default createMuiTheme({
+export const themeDark = createMuiTheme({
     typography: {
         fontFamily: [
             'Oxygen',
@@ -19,17 +19,34 @@ export default createMuiTheme({
     },
     palette: {
         primary: {
-            main: '#FFFEFC',
+            main: '#222b36',
+            // main: '#FFFEFC',
         },
         secondary: {
-            main: '#000',
+            // main: '#000',
+            main: '#171c24',
         },
         error: {
             main: red.A400,
         },
         background: {
-            default: '#000',
+            main: '#171c24',
+            default: '#171c24',
         },
         // type: 'dark'
     },
+});
+
+export const themeLight = createMuiTheme({
+    palette: {
+        primary:{
+            main: "#fffccc"
+        },
+        background: {
+            default: "#fffccc"
+        },
+        text: {
+            primary: "#ffffff"
+        }
+    }
 });

@@ -21,7 +21,7 @@ function HomePage() {
             <CategoryModal/>
             <CssBaseline />
             <SideBar/>
-            <CategoryView/>
+            {/*<CategoryView/>*/}
         </div>
     );
 }
