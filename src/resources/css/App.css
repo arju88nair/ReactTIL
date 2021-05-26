@@ -5,3 +5,6 @@
     /*--color-text-dark: #323232;*/
     /*--color-button: black;*/
 }
+html, body {
+    height:100%;
+}
