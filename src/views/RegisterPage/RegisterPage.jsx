@@ -5,7 +5,7 @@ import {PreLoginAppbar} from "../Components/PreLoginAppbar";
 
 
 const useStyles = makeStyles((theme) => ({
-    root: {
+    toolbar: {
         flexGrow: 1,
     },
 }));
@@ -15,7 +15,7 @@ export  function RegisterPage() {
     const classes = useStyles();
 
     return (
-        <div className={classes.root}>
+        <div className={classes.toolbar}>
             <PreLoginAppbar/>
             <RegisterForm/>
         </div>

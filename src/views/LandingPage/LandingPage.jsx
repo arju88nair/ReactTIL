@@ -6,6 +6,8 @@ import {HeroBanner} from "./HeroBanner";
 const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,
+        backgroundColor:theme.palette.secondary.main,
+        height:'100%'
     },
 }));
 

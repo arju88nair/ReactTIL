@@ -4,11 +4,11 @@
     <list default="true" id="908b436c-b8a6-476b-9d1f-177b9c9b967d" name="Default Changelist" comment="Start of theming">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/_helpers/theme.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/_helpers/theme.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/Components/SideBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Components/SideBar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/HomePage/Categories.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/HomePage/Categories.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/HomePage/CategoryView.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/HomePage/CategoryView.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/HomePage/HomePage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/HomePage/HomePage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/css/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/css/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Components/PreLoginAppbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Components/PreLoginAppbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/LandingPage/HeroBanner.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/LandingPage/HeroBanner.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/LandingPage/LandingPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/LandingPage/LandingPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/RegisterPage/RegisterPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/RegisterPage/RegisterPage.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,6 +84,7 @@
       <workItem from="1621783871493" duration="184000" />
       <workItem from="1621875594455" duration="1326000" />
       <workItem from="1621954982697" duration="9160000" />
+      <workItem from="1622040088558" duration="3008000" />
     </task>
     <task id="LOCAL-00001" summary="Login and Signup before components">
       <created>1620839335095</created>

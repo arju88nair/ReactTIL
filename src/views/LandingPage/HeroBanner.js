@@ -1,5 +1,5 @@
 import React from 'react';
-import {makeStyles} from '@material-ui/core/styles';
+import {makeStyles, useTheme} from '@material-ui/core/styles';
 import Container from "@material-ui/core/Container";
 import Grid from "@material-ui/core/Grid";
 import logo from "../../resources/images/The Infinite BookShelf(1).png";
@@ -25,6 +25,7 @@ const useStyles = makeStyles((theme) => ({
 
 export function HeroBanner() {
     const classes = useStyles();
+    const theme = useTheme();
 
     return (
         <Container maxWidth="lg">
@@ -65,8 +66,9 @@ export function HeroBanner() {
                     <Grid item>
                         <Button variant="contained"
                                 style={{
-                                    background: 'var(--color-button)',textDecoration: 'none',textTransform: "none",
-                                    color: 'white', fontWeight: "600", fontSize: '1.2em'
+                                    background: theme.palette.button.primary,
+                                    color: theme.palette.text.primary,textDecoration: 'none',textTransform: "none",
+                                     fontWeight: "600", fontSize: '1.2em'
                                 }}
                                 component={Link} to="/register">
                             Start Shelving
@@ -74,7 +76,8 @@ export function HeroBanner() {
                     </Grid>
                     <Grid item>
                         <Button variant="contained"
-                                style={{fontWeight: "600", textDecoration: 'none',textTransform: "none",backgroundColor: 'transparent', fontSize: '1.2em'}}
+                                style={{fontWeight: "600", textDecoration: 'none',textTransform: "none",background: theme.palette.text.primary,
+                                    color: theme.palette.button.primary, fontSize: '1.2em'}}
                                 component={Link}
                                 to="/register">
                             Learn More

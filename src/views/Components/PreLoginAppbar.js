@@ -1,5 +1,5 @@
 import React from 'react';
-import {makeStyles} from '@material-ui/core/styles';
+import {makeStyles, useTheme} from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
@@ -35,11 +35,11 @@ const useStyles = makeStyles((theme) => ({
     },
     navBarText: {
         textDecoration: 'none',
-        color: 'var(--color-text)',
+        color: theme.palette.text.primary,
         textTransform: "none",
         '&:hover': {
             backgroundColor: '#fff',
-            color: 'black',
+            color: 'lightgrey',
         },
     },
     button: {
@@ -51,6 +51,7 @@ export function PreLoginAppbar() {
     const classes = useStyles();
     const [anchorEl, setAnchorEl] = React.useState(null);
     const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
+    const theme = useTheme();
 
     const isMenuOpen = Boolean(anchorEl);
     const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
@@ -136,7 +137,8 @@ export function PreLoginAppbar() {
             </MenuItem>
             <MenuItem onClick={handleProfileMenuOpen}>
                 <Button className={classes.navBarText}
-                        style={{fontWeight: "600", backgroundColor: 'transparent',justifyContent: "flex-start"}} component={Link}
+                        style={{fontWeight: "600", background: theme.palette.button.primary,
+                            color: theme.palette.text.primary, justifyContent: "flex-start"}} component={Link}
                         to="/login">
                     Sign Up
                 </Button>
@@ -184,11 +186,11 @@ export function PreLoginAppbar() {
                             </Button>
                             <Button variant="contained" className={classes.navBarText}
                                     style={{
-                                        background: 'var(--color-button)',
-                                        color: 'white', fontWeight: "600"
+                                        background: theme.palette.button.primary,
+                                        color: theme.palette.text.primary, fontWeight: "600"
                                     }}
                                     component={Link} to="/register">
-                                Sign Up
+                                Sign Ups
                             </Button>
                         </Grid>
                     </div>
