@@ -3,12 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="908b436c-b8a6-476b-9d1f-177b9c9b967d" name="Default Changelist" comment="Dark theme for Landing page">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_helpers/theme.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/_helpers/theme.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/css/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/css/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/LandingPage/LandingPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/LandingPage/LandingPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Components/PreLoginAppbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Components/PreLoginAppbar.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/LoginPage/LoginForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/LoginPage/LoginForm.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/LoginPage/LoginPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/LoginPage/LoginPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/RegisterPage/RegisterForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/RegisterPage/RegisterForm.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/RegisterPage/RegisterPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/RegisterPage/RegisterPage.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,6 +86,7 @@
       <workItem from="1621875594455" duration="1326000" />
       <workItem from="1621954982697" duration="9160000" />
       <workItem from="1622040088558" duration="4987000" />
+      <workItem from="1622055929280" duration="4848000" />
     </task>
     <task id="LOCAL-00001" summary="Login and Signup before components">
       <created>1620839335095</created>

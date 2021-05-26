@@ -39,7 +39,7 @@ const useStyles = makeStyles((theme) => ({
         textTransform: "none",
         '&:hover': {
             backgroundColor: '#fff',
-            color: 'lightgrey',
+            color: theme.palette.button.active,
         },
     },
     button: {

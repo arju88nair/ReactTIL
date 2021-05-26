@@ -21,10 +21,13 @@ export const themeDark = createMuiTheme({
         primary: {
             main: '#222b36',
             primary: '#688eff',
+            light: '#688eff',
         },
         secondary: {
             // main: '#000',
             main: '#171c24',
+            light: '#171c24',
+            primary: '#171c24',
         },
         error: {
             main: red.A400,
@@ -33,10 +36,19 @@ export const themeDark = createMuiTheme({
             main:"#688eff",
         },
         text: {
-            primary: "#ffffff"
+            primary: "#ffffff",
+            secondary:'rgba(255, 255, 255, 0.7)',
+            disabled:'rgba(255, 255, 255, 0.5)'
         },
         button:{
-            primary:"#688eff"
+            primary:"#688eff",
+            secondary:'#688eff',
+            active:'#fff',
+            hover:'rgba(255, 255, 255, 0.08)',
+            selected:'rgba(255, 255, 255, 0.16)',
+            disabled:'rgba(255, 255, 255, 0.3)',
+            disabledBackground:'rgba(255, 255, 255, 0.12)'
+
         }
     },
 });
@@ -63,16 +75,24 @@ export const themeLight = createMuiTheme({
         },
         secondary: {
             // main: '#000',
-            main: '#f4f5f7',
+            main: '#f4f5f7'
         },
         background: {
             default: "#ffffff"
         },
         text: {
-            primary: "#000000"
+            primary: "#000000",
+            secondary:'rgba(0, 0, 0, 0.54)',
+            disabled:'rgba(0, 0, 0, 0.38)'
         },
         button:{
-            primary:"#fff"
+            primary:"#fff",
+            secondary:'#000',
+            active:'rgba(0, 0, 0, 0.54)',
+            hover:'rgba(0, 0, 0, 0.04)',
+            selected:'rgba(0, 0, 0, 0.08)',
+            disabled:'rgba(0, 0, 0, 0.26)',
+            disabledBackground:'rgba(0, 0, 0, 0.12) '
         }
     }
 });

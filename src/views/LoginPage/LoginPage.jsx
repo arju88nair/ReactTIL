@@ -5,10 +5,9 @@ import {PreLoginAppbar} from "../Components/PreLoginAppbar";
 
 
 const useStyles = makeStyles((theme) => ({
-    blah: {
+    root: {
         flexGrow: 1,
         backgroundColor:theme.palette.secondary.main,
-        // border:'thick solid black',
         minHeight:'100vh'
 
     },
@@ -19,7 +18,7 @@ export  function LoginPage() {
     const classes = useStyles();
 
     return (
-        <div className={classes.blah}>
+        <div className={classes.root}>
             <PreLoginAppbar/>
             <LoginForm/>
         </div>
