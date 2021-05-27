@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import AppBar from '@material-ui/core/AppBar';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Divider from '@material-ui/core/Divider';
 import Drawer from '@material-ui/core/Drawer';
@@ -17,8 +16,8 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import {makeStyles, useTheme} from '@material-ui/core/styles';
 import {ListSubheader} from "@material-ui/core";
-import navbar from "../../resources/images/main.png";
 import Grid from "@material-ui/core/Grid";
+import {MainAppBar} from "./MainAppBar";
 
 const drawerWidth = 240;
 
@@ -127,19 +126,20 @@ export function SideBar(props) {
     return (
         <div className={classes.root}>
             <CssBaseline/>
-            <AppBar position="fixed" className={classes.appBar}>
-                <Toolbar>
-                    <IconButton
-                        color="inherit"
-                        aria-label="open drawer"
-                        edge="start"
-                        onClick={handleDrawerToggle}
-                        className={classes.menuButton}
-                    >
-                        <MenuIcon/>
-                    </IconButton>
-                </Toolbar>
-            </AppBar>
+            <MainAppBar/>
+            {/*<AppBar position="fixed" className={classes.appBar}>*/}
+            {/*    <Toolbar>*/}
+            {/*        <IconButton*/}
+            {/*            color="inherit"*/}
+            {/*            aria-label="open drawer"*/}
+            {/*            edge="start"*/}
+            {/*            onClick={handleDrawerToggle}*/}
+            {/*            className={classes.menuButton}*/}
+            {/*        >*/}
+            {/*            <MenuIcon/>*/}
+            {/*        </IconButton>*/}
+            {/*    </Toolbar>*/}
+            {/*</AppBar>*/}
             <nav className={classes.drawer} aria-label="mailbox folders">
                 {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
                 <Hidden smUp implementation="css">
