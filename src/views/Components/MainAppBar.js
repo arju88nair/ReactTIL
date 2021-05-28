@@ -20,8 +20,17 @@ const useStyles = makeStyles((theme) => ({
     grow: {
         flexGrow: 1,
     },
+    menuPaper: {
+        backgroundColor: theme.palette.primary.main,
+    },
     menuButton: {
         marginRight: theme.spacing(2),
+        [theme.breakpoints.up('sm')]: {
+            display: 'none',
+        },
+    },
+    menuText:{
+        color: theme.palette.text.primary,
     },
     title: {
         display: 'none',
@@ -44,6 +53,7 @@ const useStyles = makeStyles((theme) => ({
             marginLeft: theme.spacing(3),
             width: 'auto',
         },
+        border:"thin solid grey"
     },
     searchIcon: {
         padding: theme.spacing(0, 2),
@@ -92,6 +102,12 @@ export  function MainAppBar() {
     const classes = useStyles();
     const [anchorEl, setAnchorEl] = React.useState(null);
     const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
+    const [mobileOpen, setMobileOpen] = React.useState(false);
+
+    const handleDrawerToggle = () => {
+        console.log("Sss")
+        setMobileOpen(!mobileOpen);
+    };
 
     const isMenuOpen = Boolean(anchorEl);
     const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
@@ -122,10 +138,11 @@ export  function MainAppBar() {
             keepMounted
             transformOrigin={{ vertical: 'top', horizontal: 'right' }}
             open={isMenuOpen}
+            classes={{ paper: classes.menuPaper }}
             onClose={handleMenuClose}
         >
-            <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
-            <MenuItem onClick={handleMenuClose}>My account</MenuItem>
+            <MenuItem className={classes.menuText} onClick={handleMenuClose}>Profile</MenuItem>
+            <MenuItem className={classes.menuText} onClick={handleMenuClose}>My account</MenuItem>
         </Menu>
     );
 
@@ -138,6 +155,7 @@ export  function MainAppBar() {
             keepMounted
             transformOrigin={{ vertical: 'top', horizontal: 'right' }}
             open={isMobileMenuOpen}
+            classes={{ paper: classes.menuPaper }}
             onClose={handleMobileMenuClose}
         >
             <MenuItem>
@@ -174,6 +192,15 @@ export  function MainAppBar() {
         <div className={classes.grow}>
             <AppBar position="fixed" className={classes.appBar}>
                 <Toolbar>
+                    <IconButton
+                        color="inherit"
+                        aria-label="open drawer"
+                        edge="start"
+                        onClick={handleDrawerToggle}
+                        className={classes.menuButton}
+                    >
+                        <MenuIcon/>
+                    </IconButton>
                     <div className={classes.search}>
                         <div className={classes.searchIcon}>
                             <SearchIcon />

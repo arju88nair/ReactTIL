@@ -227,7 +227,7 @@ export function LoginForm() {
                     <Grid container justify="center">
                         <Grid item>
                             <Link to="/register" variant="body2"
-                                  style={{textDecoration: 'none', color: 'var(--color-text-dark)', fontWeight: 'bold'}}>
+                                  style={{textDecoration: 'none', color: 1, fontWeight: 'bold'}}>
                                 New here? Sign Up
                             </Link>
                         </Grid>

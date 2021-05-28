@@ -15,13 +15,18 @@ import MenuIcon from '@material-ui/icons/Menu';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import {makeStyles, useTheme} from '@material-ui/core/styles';
-import {ListSubheader} from "@material-ui/core";
+import {AppBar, ListSubheader} from "@material-ui/core";
 import Grid from "@material-ui/core/Grid";
 import {MainAppBar} from "./MainAppBar";
 
 const drawerWidth = 240;
 
 const useStyles = makeStyles((theme) => ({
+    listItemText:{
+        fontSize:'0.875rem',
+        fontWeight:500,
+        color: theme.palette.text.secondary
+    },
     root: {
         display: 'flex',
     },
@@ -93,31 +98,31 @@ export function SideBar(props) {
             <Divider/>
 
             <List subheader={
-                <ListSubheader style={{color: theme.palette.text.primary, fontWeight: "bold"}} component="div"
+                <ListSubheader style={{color: theme.palette.text.primary, fontWeight: "bold", textTransform:"uppercase"}} component="div"
                                id="nested-list-subheader">
-                    Nested List Items
+                    Nested
                 </ListSubheader>
             }>
                 {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-                    <ListItem button key={text} style={{marginLeft:'1.5em'}}>
-                        <ListItemIcon style={{color: theme.palette.text.primary}}>{index % 2 === 0 ? <InboxIcon/> :
+                    <ListItem button key={text} style={{marginLeft:'1.5em',color: 'var(--color-text)',fontWeight:"bold"}}>
+                        <ListItemIcon style={{color: theme.palette.text.secondary}}>{index % 2 === 0 ? <InboxIcon/> :
                             <MailIcon/>}</ListItemIcon>
-                        <ListItemText primary={text}/>
+                        <ListItemText  classes={{primary:classes.listItemText}} primary={text}/>
                     </ListItem>
                 ))}
             </List>
             <Divider/>
             <List subheader={
-                <ListSubheader style={{color: theme.palette.text.primary, fontWeight: "bold"}} component="div"
+                <ListSubheader style={{color: theme.palette.text.primary, fontWeight: "bold", textTransform:"uppercase"}} component="div"
                                id="nested-list-subheader">
-                    Nested List Items
+                     Items
                 </ListSubheader>
             }>                {['All mail', 'Trash', 'Spam'].map((text, index) => (
-                <ListItem button key={text} style={{marginLeft:'1.5em'}}>
-                        <ListItemIcon style={{color: theme.palette.text.primary}}>{index % 2 === 0 ? <InboxIcon/> :
-                            <MailIcon/>}</ListItemIcon>
-                        <ListItemText primary={text}/>
-                    </ListItem>
+                <ListItem button key={text} style={{marginLeft:'1.5em',color: 'var(--color-text)'}}>
+                    <ListItemIcon style={{color: theme.palette.text.secondary}}>{index % 2 === 0 ? <InboxIcon/> :
+                        <MailIcon/>}</ListItemIcon>
+                    <ListItemText  classes={{primary:classes.listItemText}} primary={text}/>
+                </ListItem>
                 ))}
             </List>
         </div>
@@ -129,19 +134,19 @@ export function SideBar(props) {
         <div className={classes.root}>
             <CssBaseline/>
             <MainAppBar/>
-            {/*<AppBar position="fixed" className={classes.appBar}>*/}
-            {/*    <Toolbar>*/}
-            {/*        <IconButton*/}
-            {/*            color="inherit"*/}
-            {/*            aria-label="open drawer"*/}
-            {/*            edge="start"*/}
-            {/*            onClick={handleDrawerToggle}*/}
-            {/*            className={classes.menuButton}*/}
-            {/*        >*/}
-            {/*            <MenuIcon/>*/}
-            {/*        </IconButton>*/}
-            {/*    </Toolbar>*/}
-            {/*</AppBar>*/}
+            {/*    <AppBar position="fixed" className={classes.appBar}>*/}
+            {/*        <Toolbar>*/}
+            {/*            <IconButton*/}
+            {/*                color="inherit"*/}
+            {/*                aria-label="open drawer"*/}
+            {/*                edge="start"*/}
+            {/*                onClick={handleDrawerToggle}*/}
+            {/*                className={classes.menuButton}*/}
+            {/*            >*/}
+            {/*                <MenuIcon/>*/}
+            {/*            </IconButton>*/}
+            {/*        </Toolbar>*/}
+            {/*    </AppBar>*/}
             <nav className={classes.drawer} aria-label="mailbox folders">
                 {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
                 <Hidden smUp implementation="css">

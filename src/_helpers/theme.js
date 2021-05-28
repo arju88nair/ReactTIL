@@ -37,7 +37,7 @@ export const themeDark = createMuiTheme({
         },
         text: {
             primary: "#ffffff",
-            secondary:'rgba(255, 255, 255, 0.7)',
+            secondary:'rgb(145, 158, 171)',
             disabled:'rgba(255, 255, 255, 0.5)'
         },
         button:{
@@ -82,8 +82,9 @@ export const themeLight = createMuiTheme({
         },
         text: {
             primary: "#000000",
-            secondary:'rgba(0, 0, 0, 0.54)',
-            disabled:'rgba(0, 0, 0, 0.38)'
+            secondary:'rgb(107, 119, 140)',
+            disabled:'rgba(0, 0, 0, 0.38)',
+
         },
         button:{
             primary:"#fff",

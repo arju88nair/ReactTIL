@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="908b436c-b8a6-476b-9d1f-177b9c9b967d" name="Default Changelist" comment="Landing, Login and Register pages">
+    <list default="true" id="908b436c-b8a6-476b-9d1f-177b9c9b967d" name="Default Changelist" comment="Appbar without color correction">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_helpers/theme.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/_helpers/theme.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/css/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/css/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/Components/MainAppBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Components/MainAppBar.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/Components/SideBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Components/SideBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/LoginPage/LoginForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/LoginPage/LoginForm.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +93,7 @@
       <workItem from="1622040088558" duration="4987000" />
       <workItem from="1622055929280" duration="4896000" />
       <workItem from="1622124867103" duration="1779000" />
-      <workItem from="1622209871677" duration="2256000" />
+      <workItem from="1622209871677" duration="5972000" />
     </task>
     <task id="LOCAL-00001" summary="Login and Signup before components">
       <created>1620839335095</created>
@@ -134,7 +137,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622060812557</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Appbar without color correction">
+      <created>1622223464725</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1622223464725</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -159,6 +169,19 @@
     <MESSAGE value="Start of theming" />
     <MESSAGE value="Dark theme for Landing page" />
     <MESSAGE value="Landing, Login and Register pages" />
-    <option name="LAST_COMMIT_MESSAGE" value="Landing, Login and Register pages" />
+    <MESSAGE value="Appbar without color correction" />
+    <option name="LAST_COMMIT_MESSAGE" value="Appbar without color correction" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/views/Components/MainAppBar.js</url>
+          <line>225</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
