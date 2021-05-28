@@ -14,6 +14,7 @@ import AccountCircle from '@material-ui/icons/AccountCircle';
 import MailIcon from '@material-ui/icons/Mail';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import MoreIcon from '@material-ui/icons/MoreVert';
+const drawerWidth = 240;
 
 const useStyles = makeStyles((theme) => ({
     grow: {
@@ -30,7 +31,8 @@ const useStyles = makeStyles((theme) => ({
     },
     search: {
         position: 'relative',
-        borderRadius: theme.shape.borderRadius,
+        borderRadius: '16px',
+        // borderRadius: theme.shape.borderRadius,
         backgroundColor: fade(theme.palette.common.white, 0.15),
         '&:hover': {
             backgroundColor: fade(theme.palette.common.white, 0.25),
@@ -62,7 +64,7 @@ const useStyles = makeStyles((theme) => ({
         transition: theme.transitions.create('width'),
         width: '100%',
         [theme.breakpoints.up('md')]: {
-            width: '20ch',
+            width: '40ch',
         },
     },
     sectionDesktop: {
@@ -70,11 +72,18 @@ const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.up('md')]: {
             display: 'flex',
         },
+
     },
     sectionMobile: {
         display: 'flex',
         [theme.breakpoints.up('md')]: {
             display: 'none',
+        },
+    },
+    appBar: {
+        [theme.breakpoints.up('sm')]: {
+            width: `calc(100% - ${drawerWidth}px)`,
+            marginLeft: drawerWidth,
         },
     },
 }));
@@ -163,19 +172,8 @@ export  function MainAppBar() {
 
     return (
         <div className={classes.grow}>
-            <AppBar position="static">
+            <AppBar position="fixed" className={classes.appBar}>
                 <Toolbar>
-                    <IconButton
-                        edge="start"
-                        className={classes.menuButton}
-                        color="inherit"
-                        aria-label="open drawer"
-                    >
-                        <MenuIcon />
-                    </IconButton>
-                    <Typography className={classes.title} variant="h6" noWrap>
-                        Material-UI
-                    </Typography>
                     <div className={classes.search}>
                         <div className={classes.searchIcon}>
                             <SearchIcon />
@@ -197,7 +195,7 @@ export  function MainAppBar() {
                             </Badge>
                         </IconButton>
                         <IconButton aria-label="show 17 new notifications" color="inherit">
-                            <Badge badgeContent={17} color="secondary">
+                            <Badge badgeContent={20} color="secondary">
                                 <NotificationsIcon />
                             </Badge>
                         </IconButton>

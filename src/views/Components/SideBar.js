@@ -31,6 +31,7 @@ const useStyles = makeStyles((theme) => ({
             flexShrink: 0,
         },
 
+        overflowX:'hidden'
     },
     appBar: {
         [theme.breakpoints.up('sm')]: {
@@ -56,6 +57,7 @@ const useStyles = makeStyles((theme) => ({
         width: drawerWidth,
         backgroundColor: theme.palette.primary.main,
         color: theme.palette.text.primary,
+        overflowX:'hidden'
     },
     content: {
         flexGrow: 1,
