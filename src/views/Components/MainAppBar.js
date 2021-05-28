@@ -196,6 +196,7 @@ export  function MainAppBar() {
                         color="inherit"
                         aria-label="open drawer"
                         edge="start"
+                        open={mobileOpen}
                         onClick={handleDrawerToggle}
                         className={classes.menuButton}
                     >
