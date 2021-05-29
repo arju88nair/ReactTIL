@@ -55,12 +55,25 @@ const useStyles = makeStyles((theme) => ({
         backgroundColor: theme.palette.primary.main,
         color: theme.palette.text.primary,
 
-
     },
+    button: {
+        background: theme.palette.button.primary,
+        color: theme.palette.text.primary,
+        borderColor: theme.palette.button.secondary,
+        borderRadius: '16px',
+        textTransform: 'capitalize',
+        fontWeight: 900,
+        padding:'0.85em',
+        '&:hover': {
+            background: theme.palette.button.hover,
+        },
+
+    }
 
 }));
 
 function ErrorRefresh() {
+    const classes = useStyles();
     const dispatch = useDispatch();
 
     const handleErrorRefresh = (event) => {
@@ -70,11 +83,11 @@ function ErrorRefresh() {
         <Grid container
               direction="column"
               justify="center"
-              alignItems="center" xs={12}>
+              alignItems="center" xs={12} style={{marginTop:'20%'}}>
             <Typography gutterBottom variant="body2">
                 Something went wrong.Please Try again
             </Typography>
-            <Button onClick={handleErrorRefresh}>Retry</Button>
+            <Button  className={classes.button}   onClick={handleErrorRefresh}>Retry</Button>
         </Grid>
     )
 }
@@ -197,8 +210,8 @@ export function Category() {
                   justify="flex-start"
                   alignItems="center" spacing={3}>
                 {categoryState.loading && Array(6).fill(<CategorySkeleton/>)}
-                {categoryState.error && <ErrorRefresh/>}
-                {/*{categoryState.categories && <CategoryCards/>}*/}
+                {/*{categoryState.error && <ErrorRefresh/>}*/}
+                {categoryState.categories && <CategoryCards/>}
                 {['All mail', 'Trash', 'Spam', 'All mails', 'Trashed', 'Spams', 'All mailed', 'Trashy', 'Spammed'].map((text, index) => (
                     <Grid item xs={12} sm={6} lg={3} xl={2} key={text}>
                         <Card className={classes.card}>
@@ -216,9 +229,9 @@ export function Category() {
                                 title="Shrimp and Chorizo Paella"
                                 subheader="September 14, 2016"
                             />
-
+                
                             <CardContent>
-                                <Typography variant="body2"  component="p">
+                                <Typography variant="body2" component="p">
                                     This impressive paella is a perfect party dish and a fun meal to cook together with
                                     your
                                     guests. Add 1 cup of frozen peas along with the mussels, if you like.
@@ -248,7 +261,7 @@ export function Category() {
                                     <Typography paragraph>
                                         Heat 1/2 cup of the broth in a pot until simmering, add saffron and set aside
                                         for 10
-
+                
                                         minutes.
                                     </Typography>
                                     <Typography paragraph>
@@ -284,7 +297,8 @@ export function Category() {
                             </Collapse>
                         </Card>
                     </Grid>
-                ))}            </Grid>
+                ))}
+            </Grid>
         </div>
     );
 }

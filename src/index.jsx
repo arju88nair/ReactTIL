@@ -9,7 +9,7 @@ import ThemeProvider from "@material-ui/styles/ThemeProvider";
 
 render(
     <Provider store={store}>
-            <ThemeProvider theme={themeDark}>
+            <ThemeProvider theme={themeLight}>
             <CssBaseline />
         <App />
         </ThemeProvider>

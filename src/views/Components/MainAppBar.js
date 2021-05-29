@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { fade, makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -14,6 +14,8 @@ import AccountCircle from '@material-ui/icons/AccountCircle';
 import MailIcon from '@material-ui/icons/Mail';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import MoreIcon from '@material-ui/icons/MoreVert';
+import Brightness7Icon from "@material-ui/icons/Brightness7";
+import Brightness3Icon from "@material-ui/icons/Brightness3";
 const drawerWidth = 240;
 
 const useStyles = makeStyles((theme) => ({
@@ -103,6 +105,8 @@ export  function MainAppBar() {
     const [anchorEl, setAnchorEl] = React.useState(null);
     const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
     const [mobileOpen, setMobileOpen] = React.useState(false);
+    const [themeSelector, setTheme] = useState(true);
+    const icon = !themeSelector ? <Brightness7Icon /> : <Brightness3Icon />;
 
     const handleDrawerToggle = () => {
         console.log("Sss")
@@ -218,6 +222,14 @@ export  function MainAppBar() {
                     </div>
                     <div className={classes.grow} />
                     <div className={classes.sectionDesktop}>
+                        <IconButton
+                            edge="end"
+                            color="inherit"
+                            aria-label="mode"
+                            onClick={() => setTheme(!themeSelector)}
+                        >
+                            {icon}
+                        </IconButton>
                         <IconButton aria-label="show 4 new mails" color="inherit">
                             <Badge badgeContent={4} color="secondary">
                                 <MailIcon />

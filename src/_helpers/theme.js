@@ -97,7 +97,7 @@ export const themeLight = createMuiTheme({
             disabled:'rgba(0, 0, 0, 0.26)',
             disabledBackground:'rgba(0, 0, 0, 0.12) '
         },
-        divider: 'rgba(255, 255, 255, 0.12  )'
+        divider: '#CECECE'
 
     }
 });
