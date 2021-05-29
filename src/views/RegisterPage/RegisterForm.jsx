@@ -82,6 +82,9 @@ const useStyles = makeStyles((theme) => ({
         height: '50px',
         fontWeight: "600",
         background: theme.palette.button.primary,
+        '&:hover': {
+            background: theme.palette.button.hover,
+        }
     },
     loginBay: {
         position: "relative",

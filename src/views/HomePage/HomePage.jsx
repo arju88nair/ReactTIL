@@ -10,6 +10,8 @@ import {CategoryModal} from "../Components/CategoryModal";
 const useStyles = makeStyles((theme) => ({
     root: {
         display: 'flex',
+        backgroundColor:theme.palette.secondary.main,
+        minHeight:'100vh'
     },
 }));
 

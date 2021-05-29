@@ -192,6 +192,7 @@ export  function MainAppBar() {
         <div className={classes.grow}>
             <AppBar position="fixed" className={classes.appBar}>
                 <Toolbar>
+                    {/*//TODO: Action wit redux*/}
                     <IconButton
                         color="inherit"
                         aria-label="open drawer"

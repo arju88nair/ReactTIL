@@ -193,10 +193,6 @@ export function Category() {
 
     return (
         <div className={classes.cateContainer}>
-
-
-            <Typography style={{marginBottom: '1%'}} variant="h6" gutterBottom>Your Boards</Typography>
-
             <Grid container direction="row"
                   justify="flex-start"
                   alignItems="center" spacing={3}>

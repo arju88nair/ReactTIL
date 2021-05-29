@@ -40,8 +40,8 @@ function login(user) {
 }
 
 function logout() {
-    userService.logout();
-    return { type: userConstants.LOGOUT };
+    // userService.logout();
+    // return { type: userConstants.LOGOUT };
 }
 
 function register(user) {

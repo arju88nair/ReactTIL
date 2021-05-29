@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="908b436c-b8a6-476b-9d1f-177b9c9b967d" name="Default Changelist" comment="Appbar without mobile close action">
+    <list default="true" id="908b436c-b8a6-476b-9d1f-177b9c9b967d" name="Default Changelist" comment="Without drawer redux action. TODO">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_actions/userActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/_actions/userActions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_helpers/theme.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/_helpers/theme.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/Components/MainAppBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Components/MainAppBar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/Components/SideBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Components/SideBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/HomePage/Categories.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/HomePage/Categories.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/HomePage/CategoryView.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/HomePage/CategoryView.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/HomePage/HomePage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/HomePage/HomePage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/LoginPage/LoginForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/LoginPage/LoginForm.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/RegisterPage/RegisterForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/RegisterPage/RegisterForm.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +96,8 @@
       <workItem from="1622040088558" duration="4987000" />
       <workItem from="1622055929280" duration="4896000" />
       <workItem from="1622124867103" duration="1779000" />
-      <workItem from="1622209871677" duration="6862000" />
+      <workItem from="1622209871677" duration="7542000" />
+      <workItem from="1622292753840" duration="3151000" />
     </task>
     <task id="LOCAL-00001" summary="Login and Signup before components">
       <created>1620839335095</created>
@@ -148,7 +155,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622227621770</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Without drawer redux action. TODO">
+      <created>1622228444339</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1622228444339</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -175,15 +189,15 @@
     <MESSAGE value="Landing, Login and Register pages" />
     <MESSAGE value="Appbar without color correction" />
     <MESSAGE value="Appbar without mobile close action" />
-    <option name="LAST_COMMIT_MESSAGE" value="Appbar without mobile close action" />
+    <MESSAGE value="Without drawer redux action. TODO" />
+    <option name="LAST_COMMIT_MESSAGE" value="Without drawer redux action. TODO" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/views/Components/MainAppBar.js</url>
-          <line>226</line>
-          <properties lambdaOrdinal="-1" />
+          <line>227</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
