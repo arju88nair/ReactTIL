@@ -16,6 +16,10 @@ import NotificationsIcon from '@material-ui/icons/Notifications';
 import MoreIcon from '@material-ui/icons/MoreVert';
 import Brightness7Icon from "@material-ui/icons/Brightness7";
 import Brightness3Icon from "@material-ui/icons/Brightness3";
+import {alertActions} from "../../_actions";
+import {homeActions} from "../../_actions/homeActions";
+import {useDispatch, useSelector} from "react-redux";
+
 const drawerWidth = 240;
 
 const useStyles = makeStyles((theme) => ({
@@ -105,10 +109,15 @@ export  function MainAppBar() {
     const [anchorEl, setAnchorEl] = React.useState(null);
     const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
     const [mobileOpen, setMobileOpen] = React.useState(false);
-    const [themeSelector, setTheme] = useState(true);
-    const icon = !themeSelector ? <Brightness7Icon /> : <Brightness3Icon />;
+    const alert = useSelector(state => state.alert);
+    const isDarkMode = useSelector(state => state.home.darkThemeEnabled);
+    const icon = !isDarkMode ? <Brightness7Icon /> : <Brightness3Icon />;
+    const dispatch = useDispatch();
 
-    const handleDrawerToggle = () => {
+    function switchThemes(e) {
+        dispatch(homeActions.turnOnDarkMode());
+    }
+        const handleDrawerToggle = () => {
         console.log("Sss")
         setMobileOpen(!mobileOpen);
     };
@@ -226,7 +235,7 @@ export  function MainAppBar() {
                             edge="end"
                             color="inherit"
                             aria-label="mode"
-                            onClick={() => setTheme(!themeSelector)}
+                            onClick={switchThemes}
                         >
                             {icon}
                         </IconButton>

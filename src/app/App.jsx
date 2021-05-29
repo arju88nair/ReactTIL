@@ -9,8 +9,12 @@ import {LandingPage} from '../views/LandingPage';
 import {LoginPage} from '../views/LoginPage';
 import {RegisterPage} from '../views/RegisterPage';
  import MuiAlert from '@material-ui/lab/Alert';
-import {makeStyles} from "@material-ui/core/styles";
+import {makeStyles, ThemeProvider} from "@material-ui/core/styles";
 import '../resources/css/App.css';
+import {themeDark, themeLight} from "../_helpers/theme";
+
+
+
 const useStyles = makeStyles((theme) => ({
     root:{}
 
@@ -22,7 +26,8 @@ function Alert(props) {
 
 export function App() {
     const dispatch = useDispatch();
-
+    const darkThemeEnabled = useSelector((state) => state.home.darkThemeEnabled);
+    const themeMode = darkThemeEnabled ? themeDark : themeLight
     const handleBackClose = (event, reason) => {
         dispatch(miscActions.closeSpinner(false))
     }
@@ -47,6 +52,7 @@ export function App() {
             {/*        {alert.message}*/}
             {/*    </Alert>*/}
             {/*</Snackbar>*/}
+            <ThemeProvider theme={themeMode}>
             <Router history={history}>
                 <Switch>
                     <PrivateRoute exact path="/" component={HomePage}/>
@@ -56,6 +62,7 @@ export function App() {
                     <Redirect from="*" to="/home"/>
                 </Switch>
             </Router>
+            </ThemeProvider>
         </div>
     );
 }

@@ -9,10 +9,10 @@ import ThemeProvider from "@material-ui/styles/ThemeProvider";
 
 render(
     <Provider store={store}>
-            <ThemeProvider theme={themeLight}>
+            {/*<ThemeProvider theme={themeLight}>*/}
             <CssBaseline />
         <App />
-        </ThemeProvider>
+        {/*</ThemeProvider>*/}
     </Provider>,
     document.getElementById('app')
 );
