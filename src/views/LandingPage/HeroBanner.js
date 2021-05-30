@@ -16,7 +16,8 @@ const useStyles = makeStyles((theme) => ({
         background: 'transparent'
     },
     typography: {
-        textAlign: "center"
+        textAlign: "center",
+        color: theme.palette.text.primary,
     },
     heroButtons: {
         marginTop: theme.spacing(4),

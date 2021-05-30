@@ -53,7 +53,7 @@ export function App() {
             {/*        {alert.message}*/}
             {/*    </Alert>*/}
             {/*</Snackbar>*/}
-                <ThemeProvider theme={themeLight}>
+                <ThemeProvider theme={themeDark}>
             <Router history={history}>
                 <Switch>
                     <PrivateRoute exact path="/" component={HomePage}/>

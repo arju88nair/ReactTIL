@@ -102,10 +102,21 @@ const useStyles = makeStyles((theme) => ({
         [`& fieldset`]: {
             borderRadius: '16px',
         },
+    },
+    textColor: {
+        color: theme.palette.text.primary
+    },
+    multilineColor: {
+        color: theme.palette.text.primary,
+        borderRadius: '16px',
+
     }
+
+
 }));
 
 export function RegisterForm() {
+    /// TODO :  Change input field colors
     const [user, setUser] = useState({
         email: '',
         password: '',
@@ -140,7 +151,7 @@ export function RegisterForm() {
         <Container component="main" maxWidth="sm" className={classes.loginBay}>
             <div className={classes.paper}>
 
-                <Typography component="h1" variant="h5" style={{fontSize: "1.8em", fontWeight: "bold"}}>
+                <Typography component="h1" variant="h5" className={classes.textColor}  style={{fontSize: "1.8em", fontWeight: "bold"}}>
                     Create your account
                 </Typography>
                 <div className={classes.socialButtonBlock}>
@@ -184,7 +195,9 @@ export function RegisterForm() {
                                     value={user.username}
                                     onChange={handleChange}
                                     type="text"
-                                    className={classes.textField}
+                                    InputProps={{
+                                        className: classes.multilineColor
+                                    }}
                                 />
                             </ThemeProvider>
                         </Grid>
@@ -201,7 +214,9 @@ export function RegisterForm() {
                                     onChange={handleChange}
                                     value={user.email}
                                     type="email"
-                                    className={classes.textField}
+                                    InputProps={{
+                                        className: classes.multilineColor
+                                    }}
                                 />
                             </ThemeProvider>
                         </Grid>
@@ -219,13 +234,15 @@ export function RegisterForm() {
                                     value={user.password}
                                     onChange={handleChange}
                                     inputProps={{minLength: 2}}
-                                    className={classes.textField}
+                                    InputProps={{
+                                        className: classes.multilineColor
+                                    }}
                                 />
                             </ThemeProvider>
                         </Grid>
                         <Grid item xs={12}>
-                            <FormControlLabel
-                                control={<Checkbox value="allowExtraEmails" color="secondary" required/>}
+                            <FormControlLabel className={classes.textColor}
+                                              control={<Checkbox value="allowExtraEmails" color="secondary" required/>}
                                 label="I agree to the terms and conditions."
                             />
                         </Grid>
@@ -246,9 +263,8 @@ export function RegisterForm() {
                     </Button>
                     <Grid container justify="center">
                         <Grid item>
-                            <Link to="/login" style={{
+                            <Link to="/login" className={classes.textColor}  style={{
                                 textDecoration: 'none',
-                                color: 'var(--color-text-dark)',
                                 fontWeight: 'bold'
                             }}> Already have an
                                 account? Log In

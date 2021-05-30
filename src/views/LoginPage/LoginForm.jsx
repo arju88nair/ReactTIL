@@ -8,19 +8,21 @@ import {ThemeProvider, makeStyles, createMuiTheme} from '@material-ui/core/style
 import Container from '@material-ui/core/Container';
 import {green} from "@material-ui/core/colors/green";
 import {useDispatch, useSelector} from "react-redux";
-import {alertActions, miscActions,authenticationActions} from "../../_actions";
+import {alertActions, miscActions, authenticationActions} from "../../_actions";
 import {Link} from 'react-router-dom';
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Checkbox from "@material-ui/core/Checkbox";
 import Divider from "@material-ui/core/Divider";
 
 const theme = createMuiTheme({
-    palette: {
-        primary: green,
-        // text:"white"
-    },
+    // palette: {
+    //     primary: {
+    //         main: "#fff", //this overide blue color
+    //         light: "red", //overides light blue
+    //         dark: "green", //overides dark blue color
+    //     },
+    // },
 });
-
 
 const useStyles = makeStyles((theme) => ({
     backdrop: {
@@ -43,7 +45,6 @@ const useStyles = makeStyles((theme) => ({
         padding: theme.spacing(8),
         borderRadius: '2%',
         backgroundColor: '#ffffff'
-
     },
     avatar: {
         margin: theme.spacing(1),
@@ -95,10 +96,20 @@ const useStyles = makeStyles((theme) => ({
         "MozBoxShadow": "6px 10px 25px 0px rgba(0,0,0,0.75)",
         "boxShadow": "6px 10px 25px 0px rgba(0,0,0,0.75)"
     },
-    textField: {
-        [`& fieldset`]: {
-            borderRadius: '16px',
-        },
+    // textField: {
+    //     [`& fieldset`]: {
+    //         borderRadius: '16px',
+    //         color: theme.palette.text.primary
+    //     },
+    //
+    // },
+    textColor: {
+        color: theme.palette.text.primary
+    },
+    multilineColor: {
+        color: theme.palette.text.primary,
+        borderRadius: '16px',
+
     }
 }));
 
@@ -135,7 +146,7 @@ export function LoginForm() {
     return (
         <Container component="main" maxWidth="sm" className={classes.loginBay}>
             <div className={classes.paper}>
-                <Typography  variant="h5" style={{fontSize: "1.8em", fontWeight: "bold",color: theme.palette.text.primary }}>
+                <Typography className={classes.textColor} variant="h5" style={{fontSize: "1.8em", fontWeight: "bold"}}>
                     Log in to your account
                 </Typography>
                 <div className={classes.socialButtonBlock}>
@@ -181,7 +192,9 @@ export function LoginForm() {
                                     margin="normal"
                                     value={user.email}
                                     type="email"
-                                    className={classes.textField}
+                                    InputProps={{
+                                        className: classes.multilineColor
+                                    }}
 
                                 />
                             </ThemeProvider>
@@ -199,16 +212,16 @@ export function LoginForm() {
                                     autoComplete="current-password"
                                     value={user.password} onChange={handleChange}
                                     inputProps={{minLength: 2}}
-                                    color="primary"
-                                    className={classes.textField}
-                                />
+                                    InputProps={{
+                                        className: classes.multilineColor
+                                    }}/>
                             </ThemeProvider>
                         </Grid>
                         <Grid item xs={12}>
 
-                            <FormControlLabel
-                                control={<Checkbox value="allowExtraEmails" color="text"/>}
-                                label="Remember me"
+                            <FormControlLabel className={classes.textColor}
+                                              control={<Checkbox value="allowExtraEmails" color="text"/>}
+                                              label="Remember me"
                             />
                         </Grid>
                         {errorOpen ? <Grid item xs={12}>
@@ -228,8 +241,8 @@ export function LoginForm() {
                     </Button>
                     <Grid container justify="center">
                         <Grid item>
-                            <Link to="/register" variant="body2"
-                                  style={{textDecoration: 'none', fontWeight: 'bold',color: theme.palette.text.primary}}>
+                            <Link to="/register" variant="body2" className={classes.textColor}
+                                  style={{textDecoration: 'none', fontWeight: 'bold'}}>
                                 New here? Sign Up
                             </Link>
                         </Grid>
