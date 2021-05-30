@@ -36,7 +36,7 @@ export const themeDark = createMuiTheme({
             main:"#688eff",
         },
         text: {
-            primary: "#ffffff",
+            primary: "#fff",
             secondary:'rgb(145, 158, 171)',
             disabled:'rgba(255, 255, 255, 0.5)'
         },
@@ -83,21 +83,20 @@ export const themeLight = createMuiTheme({
             default: "#ffffff"
         },
         text: {
-            primary: "#000000",
+            primary: "#fff",
             secondary:'rgb(107, 119, 140)',
             disabled:'rgba(0, 0, 0, 0.38)',
 
         },
         button:{
-            primary:"#fff",
+            primary:"#000",
             secondary:'#000',
             active:'rgba(0, 0, 0, 0.54)',
             hover:'rgba(0, 0, 0, 0.04)',
             selected:'rgba(0, 0, 0, 0.08)',
             disabled:'rgba(0, 0, 0, 0.26)',
-            disabledBackground:'rgba(0, 0, 0, 0.12) '
+            disabledBackground:'rgba(0, 0, 0, 0.12)'
         },
         divider: '#CECECE'
-
     }
 });

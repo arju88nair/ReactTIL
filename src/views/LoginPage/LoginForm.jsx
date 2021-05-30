@@ -17,7 +17,7 @@ import Divider from "@material-ui/core/Divider";
 const theme = createMuiTheme({
     palette: {
         primary: green,
-        text:"grey"
+        // text:"white"
     },
 });
 
@@ -135,7 +135,7 @@ export function LoginForm() {
     return (
         <Container component="main" maxWidth="sm" className={classes.loginBay}>
             <div className={classes.paper}>
-                <Typography component="h1" variant="h5" style={{fontSize: "1.8em", fontWeight: "bold"}}>
+                <Typography  variant="h5" style={{fontSize: "1.8em", fontWeight: "bold",color: theme.palette.text.primary }}>
                     Log in to your account
                 </Typography>
                 <div className={classes.socialButtonBlock}>
@@ -229,7 +229,7 @@ export function LoginForm() {
                     <Grid container justify="center">
                         <Grid item>
                             <Link to="/register" variant="body2"
-                                  style={{textDecoration: 'none', color: 1, fontWeight: 'bold'}}>
+                                  style={{textDecoration: 'none', fontWeight: 'bold',color: theme.palette.text.primary}}>
                                 New here? Sign Up
                             </Link>
                         </Grid>
