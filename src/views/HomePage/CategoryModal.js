@@ -26,11 +26,13 @@ const useStyles = makeStyles((theme) => ({
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-
     },
+
+    root: { },
     paper: {
         backgroundColor: theme.palette.background.paper,
         // border: '2px solid #000',
+        borderRadius:'16px',
         boxShadow: theme.shadows[5],
         // padding: theme.spacing(2, 4, 3),
     },
@@ -44,14 +46,23 @@ const useStyles = makeStyles((theme) => ({
         alignSelf: 'right'
     },
     modalWindow: {
-        bottom: '35%'
+        bottom: '35%',
+        borderRadius:'2em'
     },
     modelTopBottom: {
         backgroundColor: theme.palette.primary.main,
     },
     modelBody: {
         backgroundColor: theme.palette.secondary.main,
-    }
+    },
+    notchedOutline: {
+        borderWidth: '1px',
+        borderColor: theme.palette.text.primary,
+        color: 'rgb(61, 158, 116)',
+    },
+    cssLabel: {
+        color : theme.palette.text.primary
+    },
 }));
 
 const styles = (theme) => ({
@@ -66,9 +77,10 @@ const styles = (theme) => ({
         color: theme.palette.grey[500],
     },
 });
-const theme = createMuiTheme({
+const themer = createMuiTheme({
     palette: {
-        primary: green,
+        text:'white',
+        type:'dark'
     },
 });
 
@@ -126,10 +138,13 @@ export function CategoryModal() {
         <div>
             <Spinner/>
             <Dialog onClose={handleClose} aria-labelledby="customized-dialog-title" open={modalOpen}
-                    className={classes.modalWindow}>
+                    className={classes.modalWindow} classes={{
+                root: classes.root,
+                paper: classes.paper
+            }}>
                 <form onSubmit={handleAddBoard}>
                     <DialogTitle id="customized-dialog-title" onClose={handleClose} className={classes.modelTopBottom}>
-                        Add a new Board
+                        <Typography variant="h6" style={{fontWeight:"bold"}}>Add a new Board</Typography>
                     </DialogTitle>
                     <DialogContent dividers className={classes.modelBody}>
                         <Typography gutterBottom>
@@ -137,6 +152,7 @@ export function CategoryModal() {
                         </Typography>
                         <Grid container>
                             <Grid item xs={12}>
+                                <ThemeProvider theme={themer}>
                                 <TextField
                                     variant="outlined"
                                     required
@@ -148,7 +164,9 @@ export function CategoryModal() {
                                     margin="normal"
                                     type="text"
                                 />
+                                </ThemeProvider>
                             </Grid> <Grid item xs={12}>
+                            <ThemeProvider theme={themer}>
                             <TextField
                                 id="Description"
                                 label="Description"
@@ -159,6 +177,7 @@ export function CategoryModal() {
                                 variant="outlined"
                                 onChange={handleChange}
                             />
+                            </ThemeProvider>
                         </Grid>
                         </Grid>
                     </DialogContent>
