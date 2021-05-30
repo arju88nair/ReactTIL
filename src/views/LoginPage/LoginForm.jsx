@@ -75,7 +75,7 @@ const useStyles = makeStyles((theme) => ({
     submit: {
         margin: theme.spacing(3, 0, 2),
         background: theme.palette.button.primary,
-        color: theme.palette.text.primary,
+        color: theme.palette.text.light,
         borderColor: theme.palette.button.secondary,
         borderRadius: '16px',
         height: '50px',

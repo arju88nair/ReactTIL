@@ -138,7 +138,7 @@ export function PreLoginAppbar() {
             <MenuItem onClick={handleProfileMenuOpen}>
                 <Button className={classes.navBarText}
                         style={{fontWeight: "600", background: theme.palette.button.primary,
-                            color: theme.palette.text.primary, justifyContent: "flex-start"}} component={Link}
+                            color: 'white', justifyContent: "flex-start"}} component={Link}
                         to="/login">
                     Sign Up
                 </Button>
@@ -187,7 +187,7 @@ export function PreLoginAppbar() {
                             <Button variant="contained" className={classes.navBarText}
                                     style={{
                                         background: theme.palette.button.primary,
-                                        color: theme.palette.text.primary, fontWeight: "600"
+                                        color: theme.palette.text.light, fontWeight: "600"
                                     }}
                                     component={Link} to="/register">
                                 Sign Ups

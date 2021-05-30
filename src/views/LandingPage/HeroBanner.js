@@ -18,6 +18,7 @@ const useStyles = makeStyles((theme) => ({
     typography: {
         textAlign: "center",
         color: theme.palette.text.primary,
+
     },
     heroButtons: {
         marginTop: theme.spacing(4),
@@ -68,7 +69,7 @@ export function HeroBanner() {
                         <Button variant="contained"
                                 style={{
                                     background: theme.palette.button.primary,
-                                    color: theme.palette.text.primary,textDecoration: 'none',textTransform: "none",
+                                    color: theme.palette.text.light,textDecoration: 'none',textTransform: "none",
                                      fontWeight: "600", fontSize: '1.2em'
                                 }}
                                 component={Link} to="/register">
@@ -78,7 +79,7 @@ export function HeroBanner() {
                     <Grid item>
                         <Button variant="contained"
                                 style={{fontWeight: "600", textDecoration: 'none',textTransform: "none",background: theme.palette.text.primary,
-                                    color: theme.palette.button.primary, fontSize: '1.2em'}}
+                                    color: theme.palette.text.dark, fontSize: '1.2em'}}
                                 component={Link}
                                 to="/register">
                             Learn More

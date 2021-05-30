@@ -42,8 +42,8 @@ const useStyles = makeStyles((theme) => ({
         alignSelf: "center"
     },
     button: {
-        background: theme.palette.button.primary,
-        color: theme.palette.text.primary,
+        background: theme.palette.button.secondary,
+        color: 'white',
         borderColor: theme.palette.button.secondary,
         borderRadius: '16px',
         textTransform: 'capitalize',
