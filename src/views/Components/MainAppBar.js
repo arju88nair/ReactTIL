@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { fade, makeStyles } from '@material-ui/core/styles';
+import {fade, makeStyles} from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
@@ -35,7 +35,7 @@ const useStyles = makeStyles((theme) => ({
             display: 'none',
         },
     },
-    menuText:{
+    menuText: {
         color: theme.palette.text.primary,
     },
     title: {
@@ -59,7 +59,7 @@ const useStyles = makeStyles((theme) => ({
             marginLeft: theme.spacing(3),
             width: 'auto',
         },
-        border:"thin solid grey"
+        border: "thin solid grey"
     },
     searchIcon: {
         padding: theme.spacing(0, 2),
@@ -104,21 +104,21 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-export  function MainAppBar() {
+export function MainAppBar() {
     const classes = useStyles();
     const [anchorEl, setAnchorEl] = React.useState(null);
     const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
     const [mobileOpen, setMobileOpen] = React.useState(false);
     const alert = useSelector(state => state.alert);
     const isDarkMode = useSelector(state => state.preferences.darkThemeEnabled);
-    const icon = !isDarkMode ? <Brightness7Icon /> : <Brightness3Icon />;
+    const icon = !isDarkMode ? <Brightness7Icon/> : <Brightness3Icon/>;
     const dispatch = useDispatch();
 
     function switchThemes(e) {
         dispatch(preferencesActions.turnOnDarkMode());
     }
-        const handleDrawerToggle = () => {
-        console.log("Sss")
+
+    const handleDrawerToggle = () => {
         setMobileOpen(!mobileOpen);
     };
 
@@ -139,8 +139,8 @@ export  function MainAppBar() {
     };
 
     const handleLogout = () => {
-        dispatch(authenticationActions.logout());
-        handleMobileMenuClose();
+        // dispatch(authenticationActions.logout());
+        // handleMobileMenuClose();
     };
     const handleMobileMenuOpen = (event) => {
         setMobileMoreAnchorEl(event.currentTarget);
@@ -150,17 +150,17 @@ export  function MainAppBar() {
     const renderMenu = (
         <Menu
             anchorEl={anchorEl}
-            anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
+            anchorOrigin={{vertical: 'top', horizontal: 'right'}}
             id={menuId}
             keepMounted
-            transformOrigin={{ vertical: 'top', horizontal: 'right' }}
+            transformOrigin={{vertical: 'top', horizontal: 'right'}}
             open={isMenuOpen}
-            classes={{ paper: classes.menuPaper }}
+            classes={{paper: classes.menuPaper}}
             onClose={handleMenuClose}
         >
             <MenuItem className={classes.menuText} onClick={handleMenuClose}>Profile</MenuItem>
             <MenuItem className={classes.menuText} onClick={handleMenuClose}>My account</MenuItem>
-            <MenuItem className={classes.menuText}  onClick={handleLogout}>Logout</MenuItem>
+            <MenuItem className={classes.menuText} onClick={handleLogout}>Logout</MenuItem>
 
         </Menu>
     );
@@ -169,12 +169,12 @@ export  function MainAppBar() {
     const renderMobileMenu = (
         <Menu
             anchorEl={mobileMoreAnchorEl}
-            anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
+            anchorOrigin={{vertical: 'top', horizontal: 'right'}}
             id={mobileMenuId}
             keepMounted
-            transformOrigin={{ vertical: 'top', horizontal: 'right' }}
+            transformOrigin={{vertical: 'top', horizontal: 'right'}}
             open={isMobileMenuOpen}
-            classes={{ paper: classes.menuPaper }}
+            classes={{paper: classes.menuPaper}}
             onClose={handleMobileMenuClose}
         >
             <MenuItem>
@@ -188,7 +188,7 @@ export  function MainAppBar() {
                 </IconButton>
                 <IconButton aria-label="show 4 new mails" color="inherit">
                     <Badge badgeContent={4} color="secondary">
-                        <MailIcon />
+                        <MailIcon/>
                     </Badge>
                 </IconButton>
                 <p>Messages</p>
@@ -196,7 +196,7 @@ export  function MainAppBar() {
             <MenuItem>
                 <IconButton aria-label="show 11 new notifications" color="inherit">
                     <Badge badgeContent={11} color="secondary">
-                        <NotificationsIcon />
+                        <NotificationsIcon/>
                     </Badge>
                 </IconButton>
                 <p>Notifications</p>
@@ -208,7 +208,7 @@ export  function MainAppBar() {
                     aria-haspopup="true"
                     color="inherit"
                 >
-                    <AccountCircle />
+                    <AccountCircle/>
                 </IconButton>
                 <p>Profile</p>
             </MenuItem>
@@ -232,7 +232,7 @@ export  function MainAppBar() {
                     </IconButton>
                     <div className={classes.search}>
                         <div className={classes.searchIcon}>
-                            <SearchIcon />
+                            <SearchIcon/>
                         </div>
                         <InputBase
                             placeholder="Search…"
@@ -240,10 +240,10 @@ export  function MainAppBar() {
                                 root: classes.inputRoot,
                                 input: classes.inputInput,
                             }}
-                            inputProps={{ 'aria-label': 'search' }}
+                            inputProps={{'aria-label': 'search'}}
                         />
                     </div>
-                    <div className={classes.grow} />
+                    <div className={classes.grow}/>
                     <div className={classes.sectionDesktop}>
                         <IconButton
                             edge="end"
@@ -255,12 +255,12 @@ export  function MainAppBar() {
                         </IconButton>
                         <IconButton aria-label="show 4 new mails" color="inherit">
                             <Badge badgeContent={4} color="secondary">
-                                <MailIcon />
+                                <MailIcon/>
                             </Badge>
                         </IconButton>
                         <IconButton aria-label="show 17 new notifications" color="inherit">
                             <Badge badgeContent={20} color="secondary">
-                                <NotificationsIcon />
+                                <NotificationsIcon/>
                             </Badge>
                         </IconButton>
                         <IconButton
@@ -271,7 +271,7 @@ export  function MainAppBar() {
                             onClick={handleProfileMenuOpen}
                             color="inherit"
                         >
-                            <AccountCircle />
+                            <AccountCircle/>
                         </IconButton>
                     </div>
                     <div className={classes.sectionMobile}>
@@ -282,7 +282,7 @@ export  function MainAppBar() {
                             onClick={handleMobileMenuOpen}
                             color="inherit"
                         >
-                            <MoreIcon />
+                            <MoreIcon/>
                         </IconButton>
                     </div>
                 </Toolbar>

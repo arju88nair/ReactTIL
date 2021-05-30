@@ -4,14 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="908b436c-b8a6-476b-9d1f-177b9c9b967d" name="Default Changelist" comment="Text colors">
+    <list default="true" id="908b436c-b8a6-476b-9d1f-177b9c9b967d" name="Default Changelist" comment="Theme fix for nth time">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/_helpers/theme.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/_helpers/theme.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/Components/PreLoginAppbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Components/PreLoginAppbar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/HomePage/CategoryView.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/HomePage/CategoryView.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/LandingPage/HeroBanner.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/LandingPage/HeroBanner.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/LoginPage/LoginForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/LoginPage/LoginForm.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/RegisterPage/RegisterForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/RegisterPage/RegisterForm.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Components/CategoryModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/HomePage/CategoryModal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Components/MainAppBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Components/MainAppBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/HomePage/HomePage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/HomePage/HomePage.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,6 +62,9 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/views/Components" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/views/HomePage" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
@@ -106,7 +108,7 @@
       <workItem from="1622292753840" duration="10728000" />
       <workItem from="1622314706817" duration="1753000" />
       <workItem from="1622340881287" duration="3926000" />
-      <workItem from="1622382124592" duration="7908000" />
+      <workItem from="1622382124592" duration="9453000" />
     </task>
     <task id="LOCAL-00001" summary="Login and Signup before components">
       <created>1620839335095</created>
@@ -213,7 +215,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622390241962</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Theme fix for nth time">
+      <created>1622397346891</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1622397346891</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -247,7 +256,8 @@
     <MESSAGE value="Persistent Theme" />
     <MESSAGE value="Broken palette without fix" />
     <MESSAGE value="Text colors" />
-    <option name="LAST_COMMIT_MESSAGE" value="Text colors" />
+    <MESSAGE value="Theme fix for nth time" />
+    <option name="LAST_COMMIT_MESSAGE" value="Theme fix for nth time" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -18,7 +18,7 @@ import {withStyles} from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 import Grid from "@material-ui/core/Grid";
 import {preferencesActions} from "../../_actions/preferencesActions";
-import {Spinner} from "./Spinner";
+import {Spinner} from "../Components/Spinner";
 import {categoryActions} from "../../_actions/categoryActions";
 
 const useStyles = makeStyles((theme) => ({
@@ -45,6 +45,12 @@ const useStyles = makeStyles((theme) => ({
     },
     modalWindow: {
         bottom: '35%'
+    },
+    modelTopBottom: {
+        backgroundColor: theme.palette.primary.main,
+    },
+    modelBody: {
+        backgroundColor: theme.palette.secondary.main,
     }
 }));
 
@@ -122,45 +128,45 @@ export function CategoryModal() {
             <Dialog onClose={handleClose} aria-labelledby="customized-dialog-title" open={modalOpen}
                     className={classes.modalWindow}>
                 <form onSubmit={handleAddBoard}>
-                <DialogTitle id="customized-dialog-title" onClose={handleClose}>
-                    Add a shelf
-                </DialogTitle>
-                <DialogContent dividers>
-                    <Typography gutterBottom>
-                        Shelves help you to categorise your items
-                    </Typography>
-                    <Grid container spacing={2}>
-                        <Grid item xs={12}>
+                    <DialogTitle id="customized-dialog-title" onClose={handleClose} className={classes.modelTopBottom}>
+                        Add a new Board
+                    </DialogTitle>
+                    <DialogContent dividers className={classes.modelBody}>
+                        <Typography gutterBottom>
+                            Boards help you to categorise your items
+                        </Typography>
+                        <Grid container>
+                            <Grid item xs={12}>
+                                <TextField
+                                    variant="outlined"
+                                    required
+                                    fullWidth
+                                    id="title"
+                                    label="Title"
+                                    name="title"
+                                    onChange={handleChange}
+                                    margin="normal"
+                                    type="text"
+                                />
+                            </Grid> <Grid item xs={12}>
                             <TextField
-                                variant="outlined"
-                                required
+                                id="Description"
+                                label="Description"
+                                name="description"
+                                multiline
                                 fullWidth
-                                id="title"
-                                label="Title"
-                                name="title"
+                                rows={4}
+                                variant="outlined"
                                 onChange={handleChange}
-                                margin="normal"
-                                type="text"
                             />
-                        </Grid> <Grid item xs={12}>
-                        <TextField
-                            id="Description"
-                            label="Description"
-                            name="description"
-                            multiline
-                            fullWidth
-                            rows={4}
-                            variant="outlined"
-                            onChange={handleChange}
-                        />
-                    </Grid>
-                    </Grid>
-                </DialogContent>
-                <DialogActions>
-                    <Button autoFocus type="submit" color="default">
-                        Save changes
-                    </Button>
-                </DialogActions>
+                        </Grid>
+                        </Grid>
+                    </DialogContent>
+                    <DialogActions className={classes.modelTopBottom}>
+                        <Button autoFocus type="submit" color="default">
+                            Save changes
+                        </Button>
+                    </DialogActions>
                 </form>
             </Dialog>
         </div>

@@ -4,7 +4,7 @@ import {SideBar}from '../Components/SideBar'
 import {CategoryView}from './CategoryView'
 import CssBaseline from "@material-ui/core/CssBaseline";
 import {makeStyles} from "@material-ui/core/styles";
-import {CategoryModal} from "../Components/CategoryModal";
+import {CategoryModal} from "./CategoryModal";
 
 
 const useStyles = makeStyles((theme) => ({
