@@ -2,9 +2,8 @@ import { userConstants } from '../_constants';
 import { userService } from '../_services';
 import {alertActions, miscActions} from './';
 import { history } from '../_helpers';
-import {misc} from "../_reducers/miscReducers";
 
-export const userActions = {
+export const authenticationActions = {
     login,
     logout,
     register,
@@ -40,8 +39,8 @@ function login(user) {
 }
 
 function logout() {
-    // userService.logout();
-    // return { type: userConstants.LOGOUT };
+    userService.logout();
+    return { type: userConstants.LOGOUT };
 }
 
 function register(user) {

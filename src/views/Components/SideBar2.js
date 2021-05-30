@@ -35,7 +35,7 @@ import Menu from "@material-ui/core/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
 import {useDispatch, useSelector} from "react-redux";
 import Button from "@material-ui/core/Button";
-import {userActions} from "../../_actions";
+import {authenticationActions} from "../../_actions";
 
 const drawerWidth = 240;
 
@@ -196,7 +196,7 @@ export function SideBar(props) {
     };
 
     const handleLogout = () => {
-        dispatch(userActions.logout());
+        dispatch(authenticationActions.logout());
         handleMobileMenuClose();
     };
  const handleMenuClose = () => {

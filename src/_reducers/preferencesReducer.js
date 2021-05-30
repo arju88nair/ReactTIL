@@ -1,10 +1,10 @@
-import {homeConstants} from '../_constants';
+import {preferencesConstants} from '../_constants';
 
 const initialState = {darkThemeEnabled: false}
 
-export function home(state = {initialState}, action) {
+export function preferences(state = {initialState}, action) {
     switch (action.type) {
-        case homeConstants.TOGGLE_DARKTHEME:
+        case preferencesConstants.TOGGLE_DARKTHEME:
             console.log(action)
             return {...state, darkThemeEnabled: !state.darkThemeEnabled};
         default:

@@ -1,11 +1,11 @@
 import { combineReducers } from 'redux';
-import { authentication } from './loginReducer';
+import { authentication } from './authenticationReducer';
 import { registration } from './registrationReducer';
 import { users } from './usersReducer';
 import { alert } from './alertReducer';
 import { misc } from './miscReducers';
 import {categories} from "./categoryReducer";
-import {home} from "./homeReducer";
+import {preferences} from "./preferencesReducer";
 
 const rootReducer = combineReducers({
   authentication,
@@ -13,7 +13,7 @@ const rootReducer = combineReducers({
   users,
   alert,
   misc,
-  home
+  preferences
 });
 
 export default rootReducer;

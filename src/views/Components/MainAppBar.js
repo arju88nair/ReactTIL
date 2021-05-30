@@ -16,8 +16,8 @@ import NotificationsIcon from '@material-ui/icons/Notifications';
 import MoreIcon from '@material-ui/icons/MoreVert';
 import Brightness7Icon from "@material-ui/icons/Brightness7";
 import Brightness3Icon from "@material-ui/icons/Brightness3";
-import {alertActions} from "../../_actions";
-import {homeActions} from "../../_actions/homeActions";
+import {alertActions, authenticationActions} from "../../_actions";
+import {preferencesActions} from "../../_actions/preferencesActions";
 import {useDispatch, useSelector} from "react-redux";
 
 const drawerWidth = 240;
@@ -110,12 +110,12 @@ export  function MainAppBar() {
     const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
     const [mobileOpen, setMobileOpen] = React.useState(false);
     const alert = useSelector(state => state.alert);
-    const isDarkMode = useSelector(state => state.home.darkThemeEnabled);
+    const isDarkMode = useSelector(state => state.preferences.darkThemeEnabled);
     const icon = !isDarkMode ? <Brightness7Icon /> : <Brightness3Icon />;
     const dispatch = useDispatch();
 
     function switchThemes(e) {
-        dispatch(homeActions.turnOnDarkMode());
+        dispatch(preferencesActions.turnOnDarkMode());
     }
         const handleDrawerToggle = () => {
         console.log("Sss")
@@ -138,6 +138,10 @@ export  function MainAppBar() {
         handleMobileMenuClose();
     };
 
+    const handleLogout = () => {
+        dispatch(authenticationActions.logout());
+        handleMobileMenuClose();
+    };
     const handleMobileMenuOpen = (event) => {
         setMobileMoreAnchorEl(event.currentTarget);
     };
@@ -156,6 +160,8 @@ export  function MainAppBar() {
         >
             <MenuItem className={classes.menuText} onClick={handleMenuClose}>Profile</MenuItem>
             <MenuItem className={classes.menuText} onClick={handleMenuClose}>My account</MenuItem>
+            <MenuItem className={classes.menuText}  onClick={handleLogout}>Logout</MenuItem>
+
         </Menu>
     );
 
@@ -172,6 +178,14 @@ export  function MainAppBar() {
             onClose={handleMobileMenuClose}
         >
             <MenuItem>
+                <IconButton
+                    edge="end"
+                    color="inherit"
+                    aria-label="mode"
+                    onClick={switchThemes}
+                >
+                    {icon}
+                </IconButton>
                 <IconButton aria-label="show 4 new mails" color="inherit">
                     <Badge badgeContent={4} color="secondary">
                         <MailIcon />

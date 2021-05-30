@@ -4,7 +4,7 @@ import Modal from '@material-ui/core/Modal';
 import Backdrop from '@material-ui/core/Backdrop';
 import Fade from '@material-ui/core/Fade';
 import {useDispatch, useSelector} from "react-redux";
-import {miscActions, userActions} from "../../_actions";
+import {miscActions, authenticationActions} from "../../_actions";
 import Button from '@material-ui/core/Button';
 import Dialog from '@material-ui/core/Dialog';
 import MuiDialogTitle from '@material-ui/core/DialogTitle';
@@ -17,7 +17,7 @@ import {green} from "@material-ui/core/colors/green";
 import {withStyles} from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 import Grid from "@material-ui/core/Grid";
-import {homeActions} from "../../_actions/homeActions";
+import {preferencesActions} from "../../_actions/preferencesActions";
 import {Spinner} from "./Spinner";
 import {categoryActions} from "../../_actions/categoryActions";
 

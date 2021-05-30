@@ -8,8 +8,7 @@ import {ThemeProvider, makeStyles, createMuiTheme} from '@material-ui/core/style
 import Container from '@material-ui/core/Container';
 import {green} from "@material-ui/core/colors/green";
 import {useDispatch, useSelector} from "react-redux";
-import {userActions} from "../../_actions";
-import {alertActions, miscActions} from "../../_actions";
+import {alertActions, miscActions,authenticationActions} from "../../_actions";
 import {Link} from 'react-router-dom';
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Checkbox from "@material-ui/core/Checkbox";
@@ -113,7 +112,7 @@ export function LoginForm() {
     const errorOpen = alert.open
     // reset login status
     useEffect(() => {
-        dispatch(userActions.logout());
+        dispatch(authenticationActions.logout());
     }, []);
 
     function handleChange(e) {
@@ -126,7 +125,7 @@ export function LoginForm() {
         if (user.email && user.password) {
             dispatch(alertActions.clear());
             dispatch(miscActions.openSpinner(true));
-            dispatch(userActions.login(user));
+            dispatch(authenticationActions.login(user));
         }
     }
 

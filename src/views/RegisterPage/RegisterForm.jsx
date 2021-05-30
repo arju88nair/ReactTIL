@@ -8,7 +8,7 @@ import {ThemeProvider, makeStyles, createMuiTheme} from '@material-ui/core/style
 import Container from '@material-ui/core/Container';
 import {green} from "@material-ui/core/colors/green";
 import {useDispatch, useSelector} from "react-redux";
-import {userActions} from "../../_actions";
+import {authenticationActions} from "../../_actions";
 import {alertActions, miscActions} from "../../_actions";
 import {Link} from 'react-router-dom';
 import Divider from "@material-ui/core/Divider";
@@ -116,7 +116,7 @@ export function RegisterForm() {
     const errorOpen = alert.open
     // // reset login status
     // useEffect(() => {
-    //     dispatch(userActions.logout());
+    //     dispatch(authenticationActions.logout());
     // }, []);
 
     function handleChange(e) {
@@ -129,7 +129,7 @@ export function RegisterForm() {
         if (user.email && user.password) {
             dispatch(alertActions.clear());
             dispatch(miscActions.openSpinner(true))
-            dispatch(userActions.register(user));
+            dispatch(authenticationActions.register(user));
         }
     }
 

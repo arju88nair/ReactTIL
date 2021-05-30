@@ -12,6 +12,7 @@ import {RegisterPage} from '../views/RegisterPage';
 import {makeStyles, ThemeProvider} from "@material-ui/core/styles";
 import '../resources/css/App.css';
 import {themeDark, themeLight} from "../_helpers/theme";
+import {preferences} from "../_reducers/preferencesReducer";
 
 
 
@@ -26,7 +27,7 @@ function Alert(props) {
 
 export function App() {
     const dispatch = useDispatch();
-    const darkThemeEnabled = useSelector((state) => state.home.darkThemeEnabled);
+    const darkThemeEnabled = useSelector((state) => state.preferences.darkThemeEnabled);
     const themeMode = darkThemeEnabled ? themeDark : themeLight
     const handleBackClose = (event, reason) => {
         dispatch(miscActions.closeSpinner(false))

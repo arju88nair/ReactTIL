@@ -1,16 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="908b436c-b8a6-476b-9d1f-177b9c9b967d" name="Default Changelist" comment="Dark mode initiation before redux to hooks migration">
-      <change afterPath="$PROJECT_DIR$/src/_helpers/darkThemeToggle.js" afterDir="false" />
+    <list default="true" id="908b436c-b8a6-476b-9d1f-177b9c9b967d" name="Default Changelist" comment="Dark/light mode switch completed">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_actions/homeActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/_actions/homeActions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_constants/homeConstants.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/_constants/homeConstants.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_reducers/homeReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/_reducers/homeReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_actions/homeActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/_actions/preferencesActions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_actions/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/_actions/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_actions/userActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/_actions/authenticationActions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_constants/homeConstants.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/_constants/preferencesConstants.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_constants/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/_constants/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_helpers/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/_helpers/store.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_reducers/homeReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/_reducers/preferencesReducer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/_reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/_reducers/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_reducers/loginReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/_reducers/authenticationReducer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Components/CategoryModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Components/CategoryModal.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/Components/MainAppBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Components/MainAppBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Components/SideBar2.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Components/SideBar2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/LoginPage/LoginForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/LoginPage/LoginForm.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/RegisterPage/RegisterForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/RegisterPage/RegisterForm.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +108,8 @@
       <workItem from="1622124867103" duration="1779000" />
       <workItem from="1622209871677" duration="7542000" />
       <workItem from="1622292753840" duration="10728000" />
-      <workItem from="1622314706817" duration="1495000" />
+      <workItem from="1622314706817" duration="1753000" />
+      <workItem from="1622340881287" duration="2647000" />
     </task>
     <task id="LOCAL-00001" summary="Login and Signup before components">
       <created>1620839335095</created>
@@ -177,7 +188,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622303736046</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Dark/light mode switch completed">
+      <created>1622316239618</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1622316239618</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -207,14 +225,15 @@
     <MESSAGE value="Without drawer redux action. TODO" />
     <MESSAGE value="Category view header fixes" />
     <MESSAGE value="Dark mode initiation before redux to hooks migration" />
-    <option name="LAST_COMMIT_MESSAGE" value="Dark mode initiation before redux to hooks migration" />
+    <MESSAGE value="Dark/light mode switch completed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Dark/light mode switch completed" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/views/Components/MainAppBar.js</url>
-          <line>248</line>
+          <line>262</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
