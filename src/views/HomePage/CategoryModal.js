@@ -41,10 +41,6 @@ const useStyles = makeStyles((theme) => ({
         paddingBottom: theme.spacing(2),
 
     },
-    submit: {
-        margin: theme.spacing(3, 0, 2),
-        alignSelf: 'right'
-    },
     modalWindow: {
         bottom: '35%',
         borderRadius:'2em'
@@ -63,6 +59,19 @@ const useStyles = makeStyles((theme) => ({
     cssLabel: {
         color : theme.palette.text.primary
     },
+    submit: {
+        background: theme.palette.button.primary,
+        color: theme.palette.text.light,
+        borderColor: theme.palette.button.secondary,
+        borderRadius: '26px',
+        height: '50px',
+        fontWeight: "600",
+        '&:hover': {
+            background: theme.palette.button.hover,
+        },
+        alignSelf: 'right'
+    },
+
 }));
 
 const styles = (theme) => ({
@@ -182,7 +191,8 @@ export function CategoryModal() {
                         </Grid>
                     </DialogContent>
                     <DialogActions className={classes.modelTopBottom}>
-                        <Button autoFocus type="submit" color="default">
+                        <Button autoFocus type="submit"    type="submit"
+                                variant="outlined" color="primary" className={classes.submit}>
                             Save changes
                         </Button>
                     </DialogActions>

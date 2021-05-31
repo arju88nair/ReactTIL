@@ -47,7 +47,7 @@ export const themeDark = createMuiTheme({
             primary:"#688eff",
             secondary:'#688eff', // Same
             active:'#fff',
-            hover:'#395fa3',
+            hover:'#395fa3', //Same
             // hover:'rgba(255, 255, 255, 0.08)',
             selected:'rgba(255, 255, 255, 0.16)',
             disabled:'rgba(255, 255, 255, 0.3)',
@@ -98,8 +98,8 @@ export const themeLight = createMuiTheme({
             primary:"#688eff",
             light:'#000',
             secondary:'#688eff', // Same
+            hover:'#395fa3', //Same
             active:'rgba(0, 0, 0, 0.54)',
-            hover:'rgba(0, 0, 0, 0.04)',
             selected:'rgba(0, 0, 0, 0.08)',
             disabled:'rgba(0, 0, 0, 0.26)',
             disabledBackground:'rgba(0, 0, 0, 0.12)'

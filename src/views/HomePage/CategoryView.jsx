@@ -45,7 +45,7 @@ const useStyles = makeStyles((theme) => ({
         background: theme.palette.button.secondary,
         color: 'white',
         borderColor: theme.palette.button.secondary,
-        borderRadius: '16px',
+        borderRadius: '26px',
         textTransform: 'capitalize',
         fontWeight: 900,
         padding:'0.85em',

@@ -6,7 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="908b436c-b8a6-476b-9d1f-177b9c9b967d" name="Default Changelist" comment="Board theme except input">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_helpers/theme.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/_helpers/theme.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Components/MainAppBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Components/MainAppBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/HomePage/Categories.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/HomePage/Categories.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/HomePage/CategoryModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/HomePage/CategoryModal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/HomePage/CategoryView.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/HomePage/CategoryView.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/LoginPage/LoginForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/LoginPage/LoginForm.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/RegisterPage/RegisterForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/RegisterPage/RegisterForm.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,6 +112,7 @@
       <workItem from="1622340881287" duration="3926000" />
       <workItem from="1622382124592" duration="11757000" />
       <workItem from="1622401269665" duration="1481000" />
+      <workItem from="1622474473755" duration="2736000" />
     </task>
     <task id="LOCAL-00001" summary="Login and Signup before components">
       <created>1620839335095</created>

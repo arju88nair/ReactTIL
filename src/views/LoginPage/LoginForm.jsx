@@ -77,7 +77,7 @@ const useStyles = makeStyles((theme) => ({
         background: theme.palette.button.primary,
         color: theme.palette.text.light,
         borderColor: theme.palette.button.secondary,
-        borderRadius: '16px',
+        borderRadius: '26px',
         height: '50px',
         fontWeight: "600",
         '&:hover': {
@@ -91,14 +91,14 @@ const useStyles = makeStyles((theme) => ({
         alignItems: 'center',
         backgroundColor: theme.palette.primary.main,
         marginTop: '5%',
-        borderRadius: '16px',
+        borderRadius: '26px',
         WebkitBoxShadow: "6px 10px 25px 0px rgba(0,0,0,0.75)",
         "MozBoxShadow": "6px 10px 25px 0px rgba(0,0,0,0.75)",
         "boxShadow": "6px 10px 25px 0px rgba(0,0,0,0.75)"
     },
     // textField: {
     //     [`& fieldset`]: {
-    //         borderRadius: '16px',
+    //         borderRadius: '26px',
     //         color: theme.palette.text.primary
     //     },
     //
@@ -108,7 +108,7 @@ const useStyles = makeStyles((theme) => ({
     },
     multilineColor: {
         color: theme.palette.text.primary,
-        borderRadius: '16px',
+        borderRadius: '26px',
 
     }
 }));
