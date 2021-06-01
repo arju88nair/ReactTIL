@@ -143,7 +143,7 @@ Media.propTypes = {
     loading: PropTypes.bool,
 };
 
-export  function CategorySkeleton() {
+export  function BoardSkeleton() {
     const classes = useStyles();
 
     return (

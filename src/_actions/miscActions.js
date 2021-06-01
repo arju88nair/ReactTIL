@@ -3,8 +3,8 @@ import {miscConstants} from '../_constants/miscConstants';
 export const miscActions = {
     openSpinner,
     closeSpinner,
-    openCategoryModal,
-    closeCategoryModal
+    openBoardModal,
+    closeBoardModal
 
 };
 
@@ -15,11 +15,11 @@ function closeSpinner(open) {
     return {type: miscConstants.CLOSE_SPINNER,open};
 }
 
-function openCategoryModal(open) {
-    return {type: miscConstants.OPEN_CATEGORY_MODAL,open};
+function openBoardModal(open) {
+    return {type: miscConstants.OPEN_BOARD_MODAL,open};
 }
 
-function closeCategoryModal(open) {
-    return {type: miscConstants.CLOSE_CATEGORY_MODAL,open};
+function closeBoardModal(open) {
+    return {type: miscConstants.CLOSE_BOARD_MODAL,open};
 }
 

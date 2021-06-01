@@ -14,10 +14,10 @@ import FacebookIcon from "@material-ui/icons/Facebook";
 import TwitterIcon from "@material-ui/icons/Twitter";
 import Button from "@material-ui/core/Button";
 import Divider from "@material-ui/core/Divider";
-import {Category} from "./Categories";
+import {Board} from "./Boards";
 import {miscActions} from "../../_actions";
 import {useDispatch} from "react-redux";
-import {CategorySkeleton} from "../Components/CategorySkeleton";
+import {BoardSkeleton} from "../Components/BoardSkeleton";
 
 const useStyles = makeStyles((theme) => ({
     // necessary for content to be below app bar
@@ -56,7 +56,7 @@ const useStyles = makeStyles((theme) => ({
     }
 }));
 
-export function CategoryView() {
+export function BoardView() {
     const classes = useStyles();
     const [age, setAge] = React.useState('');
     const handleChange = (event) => {
@@ -65,7 +65,7 @@ export function CategoryView() {
     const dispatch = useDispatch();
 
     const handleBoardModal = () => {
-        dispatch(miscActions.openCategoryModal(true));
+        dispatch(miscActions.openBoardModal(true));
     };
 
 
@@ -107,8 +107,8 @@ export function CategoryView() {
                 </Grid>
             </Grid>
             <Divider/>
-            {/*<CategorySkeleton/>*/}
-            <Category/>
+            {/*<BoardSkeleton/>*/}
+            <Board/>
         </main>
 
     )

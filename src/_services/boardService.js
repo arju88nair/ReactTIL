@@ -2,7 +2,7 @@ import config from 'config';
 import {authHeader, handleResponse} from '../_helpers';
 
 
-export const categoryService = {
+export const boardService = {
     add,
     get
 }
@@ -15,10 +15,10 @@ function add(payload) {
         body: JSON.stringify(payload),
 
     };
-    return fetch(`${config.apiUrl}/categories`, requestOptions)
+    return fetch(`${config.apiUrl}/boards`, requestOptions)
         .then(handleResponse)
-        .then(category => {
-            return category;
+        .then(board => {
+            return board;
         });
 }
 
@@ -31,9 +31,9 @@ function get(payload) {
         body: JSON.stringify(payload),
 
     };
-    return fetch(`${config.apiUrl}/categories`, requestOptions)
+    return fetch(`${config.apiUrl}/boards`, requestOptions)
         .then(handleResponse)
-        .then(category => {
-            return category;
+        .then(board => {
+            return board;
         });
 }

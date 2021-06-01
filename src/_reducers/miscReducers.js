@@ -7,9 +7,9 @@ export function misc(state = initialState, action) {
             return {...state,spinner: true};
         case miscConstants.CLOSE_SPINNER:
             return {...state,spinner: false};
-        case miscConstants.OPEN_CATEGORY_MODAL:
+        case miscConstants.OPEN_BOARD_MODAL:
             return {...state,boardModal: true};
-        case miscConstants.CLOSE_CATEGORY_MODAL:
+        case miscConstants.CLOSE_BOARD_MODAL:
             return {...state,boardModal: false};
         default:
             return state

@@ -16,9 +16,9 @@ import ShareIcon from '@material-ui/icons/Share';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 import Grid from "@material-ui/core/Grid";
-import {CategorySkeleton} from "../Components/CategorySkeleton";
+import {BoardSkeleton} from "../Components/BoardSkeleton";
 import {useDispatch, useSelector} from "react-redux";
-import {categoryActions} from "../../_actions/categoryActions";
+import {boardActions} from "../../_actions/boardActions";
 import Button from "@material-ui/core/Button";
 
 const useStyles = makeStyles((theme) => ({
@@ -77,7 +77,7 @@ function ErrorRefresh() {
     const dispatch = useDispatch();
 
     const handleErrorRefresh = (event) => {
-        dispatch(categoryActions.get());
+        dispatch(boardActions.get());
     };
     return (
         <Grid container
@@ -92,7 +92,7 @@ function ErrorRefresh() {
     )
 }
 
-function CategoryCards() {
+function BoardCards() {
     const classes = useStyles();
     const [expanded, setExpanded] = React.useState(false);
     const handleExpandClick = () => {
@@ -191,16 +191,16 @@ function CategoryCards() {
     )
 }
 
-export function Category() {
+export function Board() {
     const classes = useStyles();
-    const categoryState = useSelector(state => state.categories);
+    const boardState = useSelector(state => state.boards);
     const dispatch = useDispatch();
     const [expanded, setExpanded] = React.useState(false);
     const handleExpandClick = () => {
         setExpanded(!expanded);
     };
     useEffect(() => {
-        dispatch(categoryActions.get());
+        dispatch(boardActions.get());
     }, []);
 
 
@@ -209,9 +209,9 @@ export function Category() {
             <Grid container direction="row"
                   justify="flex-start"
                   alignItems="center" spacing={3}>
-                {categoryState.loading && Array(6).fill(<CategorySkeleton/>)}
-                {/*{categoryState.error && <ErrorRefresh/>}*/}
-                {categoryState.categories && <CategoryCards/>}
+                {boardState.loading && Array(6).fill(<BoardSkeleton/>)}
+                {/*{boardState.error && <ErrorRefresh/>}*/}
+                {boardState.boards && <BoardCards/>}
                 {['All mail', 'Trash', 'Spam', 'All mails', 'Trashed', 'Spams', 'All mailed', 'Trashy', 'Spammed'].map((text, index) => (
                     <Grid item xs={12} sm={6} lg={3} xl={2} key={text}>
                         <Card className={classes.card}>

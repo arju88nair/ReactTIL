@@ -1,9 +1,9 @@
-import {categoryConstants} from "../_constants/categoryConstants";
-import {categoryService} from "../_services";
+import {boardConstants} from "../_constants/boardConstants";
+import {boardService} from "../_services";
 import {alertActions} from "./alertActions";
 import {miscActions} from "./miscActions";
 
-export const categoryActions = {
+export const boardActions = {
     add,
     get
 }
@@ -11,7 +11,7 @@ export const categoryActions = {
 function add(payload) {
     return dispatch => {
         dispatch(request({payload}));
-        categoryService.add(payload)
+        boardService.add(payload)
             .then(
                 payload => {
                     dispatch(alertActions.success('Added successfully'));
@@ -29,15 +29,15 @@ function add(payload) {
     };
 
     function request(payload) {
-        return {type: categoryConstants.ADD_REQUEST, payload}
+        return {type: boardConstants.ADD_REQUEST, payload}
     }
 
     function success(payload) {
-        return {type: categoryConstants.ADD_SUCCESS, payload}
+        return {type: boardConstants.ADD_SUCCESS, payload}
     }
 
     function failure(error) {
-        return {type: categoryConstants.ADD_FAILURE, error}
+        return {type: boardConstants.ADD_FAILURE, error}
     }
 }
 
@@ -45,7 +45,7 @@ function add(payload) {
 function get(payload) {
     return dispatch => {
         dispatch(request({payload}));
-        categoryService.get(payload)
+        boardService.get(payload)
             .then(
                 payload => {
                     // dispatch(alertActions.success('Added successfully'));
@@ -62,14 +62,14 @@ function get(payload) {
     };
 
     function request(payload) {
-        return {type: categoryConstants.GET_REQUEST, payload}
+        return {type: boardConstants.GET_REQUEST, payload}
     }
 
     function success(payload) {
-        return {type: categoryConstants.GET_SUCCESS, payload}
+        return {type: boardConstants.GET_SUCCESS, payload}
     }
 
     function failure(error) {
-        return {type: categoryConstants.GET_FAILURE, error}
+        return {type: boardConstants.GET_FAILURE, error}
     }
 }

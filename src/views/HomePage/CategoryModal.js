@@ -19,7 +19,7 @@ import TextField from '@material-ui/core/TextField';
 import Grid from "@material-ui/core/Grid";
 import {preferencesActions} from "../../_actions/preferencesActions";
 import {Spinner} from "../Components/Spinner";
-import {categoryActions} from "../../_actions/categoryActions";
+import {boardActions} from "../../_actions/boardActions";
 
 const useStyles = makeStyles((theme) => ({
     modal: {
@@ -122,20 +122,20 @@ const DialogActions = withStyles((theme) => ({
 }))(MuiDialogActions);
 
 
-export function CategoryModal() {
+export function BoardModal() {
     const classes = useStyles();
     const modalOpen = useSelector(state => state.misc.boardModal);
     const dispatch = useDispatch();
     const [newBoard, setBoard] = useState({title: '', description: ''});
 
     const handleClose = () => {
-        dispatch(miscActions.closeCategoryModal(false));
+        dispatch(miscActions.closeBoardModal(false));
     };
 
     const handleAddBoard = (e) => {
         e.preventDefault();
         dispatch(miscActions.openSpinner(true))
-        dispatch(categoryActions.add(newBoard))
+        dispatch(boardActions.add(newBoard))
     }
 
     function handleChange(e) {

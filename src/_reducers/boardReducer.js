@@ -1,33 +1,33 @@
-import {categoryConstants} from '../_constants';
+import {boardConstants} from '../_constants';
 
-export function categories(state = {}, action) {
+export function boards(state = {}, action) {
     switch (action.type) {
-        case categoryConstants.ADD_REQUEST:
+        case boardConstants.ADD_REQUEST:
             return {
                 adding: true,
             };
-        case categoryConstants.ADD_SUCCESS:
+        case boardConstants.ADD_SUCCESS:
             return {
                 ...state,
                 added: true,
-                category: action.category
+                board: action.board
             };
-        case categoryConstants.ADD_FAILURE:
+        case boardConstants.ADD_FAILURE:
             return {
                 ...state,
                 added: false,
             };
-        case categoryConstants.GET_REQUEST:
+        case boardConstants.GET_REQUEST:
             return {
                 loading: true,
             };
-        case categoryConstants.GET_SUCCESS:
+        case boardConstants.GET_SUCCESS:
 
             return {
                 loading: false,
-                categories: action.payload
+                boards: action.payload
             };
-        case categoryConstants.GET_FAILURE:
+        case boardConstants.GET_FAILURE:
             return {
                 ...state,
                 loading: false,

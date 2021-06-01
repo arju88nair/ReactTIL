@@ -4,15 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="908b436c-b8a6-476b-9d1f-177b9c9b967d" name="Default Changelist" comment="Board theme except input">
+    <list default="true" id="908b436c-b8a6-476b-9d1f-177b9c9b967d" name="Default Changelist" comment="Minor changes in style">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_helpers/theme.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/_helpers/theme.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/Components/MainAppBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Components/MainAppBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_actions/categoryActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/_actions/boardActions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_actions/miscActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/_actions/miscActions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_actions/preferencesActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/_actions/preferencesActions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_constants/categoryConstants.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/_constants/boardConstants.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_constants/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/_constants/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_constants/miscConstants.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/_constants/miscConstants.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_constants/preferencesConstants.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/_constants/preferencesConstants.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_reducers/categoryReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/_reducers/boardReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/_reducers/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_reducers/miscReducers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/_reducers/miscReducers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_services/categoryService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/_services/boardService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_services/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/_services/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Components/CategorySkeleton.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Components/CategorySkeleton.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/HomePage/Categories.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/HomePage/Categories.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/HomePage/CategoryModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/HomePage/CategoryModal.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/HomePage/CategoryView.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/HomePage/CategoryView.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/LoginPage/LoginForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/LoginPage/LoginForm.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/RegisterPage/RegisterForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/RegisterPage/RegisterForm.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/HomePage/HomePage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/HomePage/HomePage.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,7 +122,11 @@
       <workItem from="1622340881287" duration="3926000" />
       <workItem from="1622382124592" duration="11757000" />
       <workItem from="1622401269665" duration="1481000" />
-      <workItem from="1622474473755" duration="2736000" />
+      <workItem from="1622474473755" duration="2895000" />
+      <workItem from="1622484316653" duration="180000" />
+      <workItem from="1622487564294" duration="18000" />
+      <workItem from="1622560084730" duration="36000" />
+      <workItem from="1622564934243" duration="251000" />
     </task>
     <task id="LOCAL-00001" summary="Login and Signup before components">
       <created>1620839335095</created>
@@ -233,7 +247,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622398887123</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Minor changes in style">
+      <created>1622484137491</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1622484137491</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -269,7 +290,8 @@
     <MESSAGE value="Text colors" />
     <MESSAGE value="Theme fix for nth time" />
     <MESSAGE value="Board theme except input" />
-    <option name="LAST_COMMIT_MESSAGE" value="Board theme except input" />
+    <MESSAGE value="Minor changes in style" />
+    <option name="LAST_COMMIT_MESSAGE" value="Minor changes in style" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

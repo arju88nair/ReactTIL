@@ -6,7 +6,7 @@ export const preferencesActions = {
     turnOnDarkMode
 };
 
-function submitAddCategory(board) {
+function submitAddBoard(board) {
     miscActions.closeSpinner(false)
 
 }
