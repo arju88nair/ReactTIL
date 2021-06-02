@@ -20,12 +20,6 @@ import {makeStyles} from "@material-ui/core/styles";
 import {red} from "@material-ui/core/colors";
 
 const useStyles = makeStyles((theme) => ({
-    cateContainer: {
-        marginTop: '1%',
-        // display: 'flex',
-        // verticalAlign: 'middle',
-        // height:'100%'
-    },
     media: {
         height: 0,
         paddingTop: '56.25%', // 16:9
@@ -54,18 +48,6 @@ const useStyles = makeStyles((theme) => ({
         color: theme.palette.text.primary,
         marginBottom: '10%'
     },
-    button: {
-        background: theme.palette.button.primary,
-        color: theme.palette.text.primary,
-        borderColor: theme.palette.button.secondary,
-        borderRadius: '26px',
-        textTransform: 'capitalize',
-        fontWeight: 900,
-        padding: '0.85em',
-        '&:hover': {
-            background: theme.palette.button.hover,
-        },
-    },
     cardMedia: {
         paddingTop: '56.25%', // 16:9
     },
@@ -81,22 +63,14 @@ const useStyles = makeStyles((theme) => ({
 export function BoardCards() {
     const classes = useStyles();
     const boardState = useSelector(state => state.boards);
-    const dispatch = useDispatch();
     const [expanded, setExpanded] = React.useState(false);
     const handleExpandClick = () => {
         setExpanded(!expanded);
     };
-    const cards = [1,2];
 
-
-    useEffect(() => {
-        dispatch(boardActions.get());
-    }, []);
-
-    console.log(boardState.boards)
+    const cards = [1,2,4,5,6,7,8,9,10];
     return (
-        <div>
-            {/* End hero unit */}
+        <div style={{width: '100%'}}>
             <Grid container style={{width: '100%'}}>
                 {cards.map((card) => (
                     <Grid item key={card} xs={12} sm={6} lg={3} xl={2}>
