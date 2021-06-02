@@ -63,17 +63,16 @@ const useStyles = makeStyles((theme) => ({
 export function BoardCards() {
     const classes = useStyles();
     const boardState = useSelector(state => state.boards);
+    let boards = boardState.boards.data;
     const [expanded, setExpanded] = React.useState(false);
     const handleExpandClick = () => {
         setExpanded(!expanded);
     };
-
-    const cards = [1,2,4,5,6,7,8,9,10];
     return (
         <div style={{width: '100%'}}>
             <Grid container style={{width: '100%'}}>
-                {cards.map((card) => (
-                    <Grid item key={card} xs={12} sm={6} lg={3} xl={2}>
+                {boards.map((board) => (
+                    <Grid item key={board} xs={12} sm={6} lg={3} xl={2}>
                         <Card className={classes.card}>
                             <CardHeader
                                 avatar={
@@ -86,10 +85,9 @@ export function BoardCards() {
                                         <MoreVertIcon/>
                                     </IconButton>
                                 }
-                                title="Shrimp and Chorizo Paella"
+                                title={board.title}
                                 subheader="September 14, 2016"
                             />
-
                             <CardContent>
                                 <Typography variant="body2" component="p">
                                     This impressive paella is a perfect party dish and a fun meal to cook together with

@@ -1,34 +1,16 @@
 import React, {useEffect} from 'react';
 import {makeStyles} from '@material-ui/core/styles';
-import clsx from 'clsx';
-import Card from '@material-ui/core/Card';
-import CardHeader from '@material-ui/core/CardHeader';
-import CardMedia from '@material-ui/core/CardMedia';
-import CardContent from '@material-ui/core/CardContent';
-import CardActions from '@material-ui/core/CardActions';
-import Collapse from '@material-ui/core/Collapse';
-import Avatar from '@material-ui/core/Avatar';
-import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
-import {red} from '@material-ui/core/colors';
-import FavoriteIcon from '@material-ui/icons/Favorite';
-import ShareIcon from '@material-ui/icons/Share';
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import MoreVertIcon from '@material-ui/icons/MoreVert';
 import Grid from "@material-ui/core/Grid";
 import {BoardSkeleton} from "../Components/BoardSkeleton";
 import {useDispatch, useSelector} from "react-redux";
 import {boardActions} from "../../_actions/boardActions";
 import Button from "@material-ui/core/Button";
-import Container from "@material-ui/core/Container";
 import  {BoardCards} from "./BoardCards";
 
 const useStyles = makeStyles((theme) => ({
     cateContainer: {
-        marginTop: '1%',
-        // display: 'flex',
-        // verticalAlign: 'middle',
-        // height:'100%'
+        marginTop: '2%',
     },
     button: {
         background: theme.palette.button.primary,
@@ -47,10 +29,11 @@ const useStyles = makeStyles((theme) => ({
 function ErrorRefresh() {
     const classes = useStyles();
     const dispatch = useDispatch();
-    let cards = [];
     const handleErrorRefresh = (event) => {
-        cards = dispatch(boardActions.get());
+        dispatch(boardActions.get());
     };
+
+    // TODO Fix error refresh rendering
     return (
         <Grid container
               direction="column"
