@@ -13,6 +13,7 @@ import {makeStyles, ThemeProvider} from "@material-ui/core/styles";
 import '../resources/css/App.css';
 import {themeDark, themeLight} from "../_helpers/theme";
 import {preferences} from "../_reducers/preferencesReducer";
+import {Snackbar} from "@material-ui/core";
 
 
 
@@ -48,11 +49,11 @@ export function App() {
 
     return (
         <div>
-            {/*<Snackbar open={alert.open} autoHideDuration={6000} onClose={handleClose}>*/}
-            {/*    <Alert onClose={handleClose} severity={alert.type}>*/}
-            {/*        {alert.message}*/}
-            {/*    </Alert>*/}
-            {/*</Snackbar>*/}
+            <Snackbar open={alert.open} autoHideDuration={6000} onClose={handleClose}>
+                <Alert onClose={handleClose} severity={alert.type}>
+                    {alert.message}
+                </Alert>
+            </Snackbar>
                 <ThemeProvider theme={themeMode}>
             <Router history={history}>
                 <Switch>
