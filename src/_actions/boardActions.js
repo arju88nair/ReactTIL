@@ -17,7 +17,7 @@ function add(payload) {
                     dispatch(alertActions.success('Added successfully'));
                     dispatch(success(payload));
                     dispatch(miscActions.closeSpinner(false))
-
+                    dispatch(miscActions.closeBoardModal(false));
                 },
                 error => {
                     dispatch(failure(error.toString()));

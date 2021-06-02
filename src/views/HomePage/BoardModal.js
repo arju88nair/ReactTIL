@@ -4,7 +4,7 @@ import Modal from '@material-ui/core/Modal';
 import Backdrop from '@material-ui/core/Backdrop';
 import Fade from '@material-ui/core/Fade';
 import {useDispatch, useSelector} from "react-redux";
-import {miscActions, authenticationActions} from "../../_actions";
+import {miscActions, authenticationActions, alertActions} from "../../_actions";
 import Button from '@material-ui/core/Button';
 import Dialog from '@material-ui/core/Dialog';
 import MuiDialogTitle from '@material-ui/core/DialogTitle';

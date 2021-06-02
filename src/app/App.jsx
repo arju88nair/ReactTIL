@@ -30,6 +30,7 @@ export function App() {
     const dispatch = useDispatch();
     const darkThemeEnabled = useSelector((state) => state.preferences.darkThemeEnabled);
     const themeMode = darkThemeEnabled ? themeDark : themeLight
+    const alert = useSelector((state) => state.alert);
     const handleBackClose = (event, reason) => {
         dispatch(miscActions.closeSpinner(false))
     }
