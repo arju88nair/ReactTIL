@@ -5,24 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="908b436c-b8a6-476b-9d1f-177b9c9b967d" name="Default Changelist" comment="Minor changes in style">
+      <change afterPath="$PROJECT_DIR$/src/views/HomePage/BoardCards.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_actions/categoryActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/_actions/boardActions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_actions/miscActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/_actions/miscActions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_actions/preferencesActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/_actions/preferencesActions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_constants/categoryConstants.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/_constants/boardConstants.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_constants/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/_constants/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_constants/miscConstants.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/_constants/miscConstants.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_constants/preferencesConstants.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/_constants/preferencesConstants.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_reducers/categoryReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/_reducers/boardReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/_reducers/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_reducers/miscReducers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/_reducers/miscReducers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_services/categoryService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/_services/boardService.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_services/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/_services/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/Components/CategorySkeleton.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Components/CategorySkeleton.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/HomePage/Categories.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/HomePage/Categories.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/HomePage/CategoryModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/HomePage/CategoryModal.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/HomePage/CategoryView.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/HomePage/CategoryView.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/HomePage/HomePage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/HomePage/HomePage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Components/CategorySkeleton.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Components/BoardSkeleton.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/HomePage/Categories.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/HomePage/Boards.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/HomePage/CategoryModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/HomePage/BoardModal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/HomePage/CategoryView.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/HomePage/BoardView.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,6 +115,7 @@
       <workItem from="1622487564294" duration="18000" />
       <workItem from="1622560084730" duration="36000" />
       <workItem from="1622564934243" duration="251000" />
+      <workItem from="1622646514779" duration="4633000" />
     </task>
     <task id="LOCAL-00001" summary="Login and Signup before components">
       <created>1620839335095</created>

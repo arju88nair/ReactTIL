@@ -152,7 +152,6 @@ export  function BoardSkeleton() {
                 <Box  width={220} marginRight={1} my={5} className={classes.box}>
                     <Skeleton variant="rect" width={210} height={118} />
 
-
                     <Box pt={0.5}>
                         <Skeleton />
                         <Skeleton width="60%" />
