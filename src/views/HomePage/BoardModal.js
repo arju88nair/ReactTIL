@@ -60,14 +60,14 @@ const useStyles = makeStyles((theme) => ({
         color : theme.palette.text.primary
     },
     submit: {
-        background: theme.palette.button.primary,
+        background: theme.palette.action.primary,
         color: theme.palette.text.light,
-        borderColor: theme.palette.button.secondary,
+        borderColor: theme.palette.action.secondary,
         borderRadius: '26px',
         height: '50px',
         fontWeight: "600",
         '&:hover': {
-            background: theme.palette.button.hover,
+            background: theme.palette.action.hover,
         },
         alignSelf: 'right'
     },

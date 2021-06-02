@@ -68,7 +68,7 @@ export function HeroBanner() {
                     <Grid item>
                         <Button variant="contained"
                                 style={{
-                                    background: theme.palette.button.primary,
+                                    background: theme.palette.action.primary,
                                     color: theme.palette.text.light,textDecoration: 'none',textTransform: "none",
                                      fontWeight: "600", fontSize: '1.2em'
                                 }}

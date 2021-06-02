@@ -13,15 +13,15 @@ const useStyles = makeStyles((theme) => ({
         marginTop: '2%',
     },
     button: {
-        background: theme.palette.button.primary,
+        background: theme.palette.action.primary,
         color: theme.palette.text.primary,
-        borderColor: theme.palette.button.secondary,
+        borderColor: theme.palette.action.secondary,
         borderRadius: '26px',
         textTransform: 'capitalize',
         fontWeight: 900,
         padding: '0.85em',
         '&:hover': {
-            background: theme.palette.button.hover,
+            background: theme.palette.action.hover,
         },
     },
 }));

@@ -39,7 +39,7 @@ const useStyles = makeStyles((theme) => ({
         textTransform: "none",
         '&:hover': {
             backgroundColor: '#fff',
-            color: theme.palette.button.active,
+            color: theme.palette.action.active,
         },
     },
     button: {
@@ -137,7 +137,7 @@ export function PreLoginAppbar() {
             </MenuItem>
             <MenuItem onClick={handleProfileMenuOpen}>
                 <Button className={classes.navBarText}
-                        style={{fontWeight: "600", background: theme.palette.button.primary,
+                        style={{fontWeight: "600", background: theme.palette.action.primary,
                             color: 'white', justifyContent: "flex-start"}} component={Link}
                         to="/login">
                     Sign Up
@@ -186,7 +186,7 @@ export function PreLoginAppbar() {
                             </Button>
                             <Button variant="contained" className={classes.navBarText}
                                     style={{
-                                        background: theme.palette.button.primary,
+                                        background: theme.palette.action.primary,
                                         color: theme.palette.text.light, fontWeight: "600"
                                     }}
                                     component={Link} to="/register">

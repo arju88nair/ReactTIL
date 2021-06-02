@@ -42,15 +42,15 @@ const useStyles = makeStyles((theme) => ({
         alignSelf: "center"
     },
     button: {
-        background: theme.palette.button.secondary,
+        background: theme.palette.action.secondary,
         color: 'white',
-        borderColor: theme.palette.button.secondary,
+        borderColor: theme.palette.action.secondary,
         borderRadius: '26px',
         textTransform: 'capitalize',
         fontWeight: 900,
         padding:'0.85em',
         '&:hover': {
-            background: theme.palette.button.hover,
+            background: theme.palette.action.hover,
         },
 
     }
