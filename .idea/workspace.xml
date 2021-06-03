@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="908b436c-b8a6-476b-9d1f-177b9c9b967d" name="Default Changelist" comment="Theme changes">
+    <list default="true" id="908b436c-b8a6-476b-9d1f-177b9c9b967d" name="Default Changelist" comment="Snackbar with actions">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/_actions/boardActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/_actions/boardActions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_reducers/alertReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/_reducers/alertReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/HomePage/BoardModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/HomePage/BoardModal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_reducers/boardReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/_reducers/boardReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,7 +113,8 @@
       <workItem from="1622487564294" duration="18000" />
       <workItem from="1622560084730" duration="36000" />
       <workItem from="1622564934243" duration="251000" />
-      <workItem from="1622646514779" duration="8407000" />
+      <workItem from="1622646514779" duration="8731000" />
+      <workItem from="1622730369736" duration="2606000" />
     </task>
     <task id="LOCAL-00001" summary="Login and Signup before components">
       <created>1620839335095</created>
@@ -277,7 +277,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622654271855</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Snackbar with actions">
+      <created>1622658808324</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1622658808324</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -319,7 +326,8 @@
     <MESSAGE value="Boards rendering from API" />
     <MESSAGE value="THeme js for button" />
     <MESSAGE value="Theme changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Theme changes" />
+    <MESSAGE value="Snackbar with actions" />
+    <option name="LAST_COMMIT_MESSAGE" value="Snackbar with actions" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

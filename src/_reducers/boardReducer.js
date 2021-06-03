@@ -5,6 +5,7 @@ export function boards(state = {}, action) {
         case boardConstants.ADD_REQUEST:
             return {
                 adding: true,
+                ...state,
             };
         case boardConstants.ADD_SUCCESS:
             return {
@@ -22,10 +23,10 @@ export function boards(state = {}, action) {
                 loading: true,
             };
         case boardConstants.GET_SUCCESS:
-
             return {
+                ...state,
                 loading: false,
-                boards: action.payload
+                boards: action.payload,
             };
         case boardConstants.GET_FAILURE:
             return {

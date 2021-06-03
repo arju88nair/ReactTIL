@@ -14,9 +14,10 @@ function add(payload) {
         boardService.add(payload)
             .then(
                 payload => {
-                    dispatch(alertActions.success('Added successfully'));
+                    dispatch(alertActions.success('Board added successfully'));
                     dispatch(success(payload));
                     dispatch(miscActions.closeSpinner(false))
+                    dispatch(boardActions.get());
                     dispatch(miscActions.closeBoardModal(false));
                 },
                 error => {
@@ -48,7 +49,6 @@ function get(payload) {
         boardService.get(payload)
             .then(
                 payload => {
-                    // dispatch(alertActions.success('Added successfully'));
                     dispatch(success(payload));
                     dispatch(miscActions.closeSpinner(false))
 
