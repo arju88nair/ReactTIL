@@ -18,6 +18,7 @@ import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import Collapse from "@material-ui/core/Collapse";
 import {makeStyles} from "@material-ui/core/styles";
 import {red} from "@material-ui/core/colors";
+import {CardActionArea} from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
     media: {
@@ -68,12 +69,19 @@ export function BoardCards() {
     const handleExpandClick = () => {
         setExpanded(!expanded);
     };
+
+    const colorSet= ['#E0BBE4','#957DAD', '#D291BC' ,'#FEC8D8' ,'#FFDFD3' , '#EF4056' , '#00CB77' ,'#1CB0A8']
     return (
         <div style={{width: '100%'}}>
             <Grid container style={{width: '100%'}}>
                 {boards.map((board) => (
                     <Grid item key={board} xs={12} sm={6} lg={3} xl={2}>
                         <Card className={classes.card}>
+                            <CardActionArea
+                                onClick={(evt) => {
+                                    console.log(evt.target);
+                                }}
+                            >
                             <CardHeader
                                 avatar={
                                     <Avatar aria-label="recipe" className={classes.avatar}>
@@ -88,12 +96,21 @@ export function BoardCards() {
                                 title={board.title}
                                 subheader={board.time_stamp}
                             />
-                            <CardContent style={{maxHeight:'20vh',backgroundColor:'#EF4056',overflow:"hidden"}}>
-
-                                <p style={{fontWeight:"bold",fontSize:'16em',display:"inline",height:'100%',color:"salmon",marginTop:'-18%'}} >
-                                   R
-                                </p>
+                            <CardContent style={{backgroundColor: colorSet[Math.floor(Math.random() * colorSet.length)], overflow:"hidden"}}>
+                                <div style={{color: "salmon", position: 'relative', width: '119px', height: '150px'}}>
+                                    <span style={{
+                                        fontWeight: "bold",
+                                        fontSize: '16em',
+                                        display: "inline",
+                                        color: "lavenderblush",
+                                        position:"absolute",
+                                        marginTop:'-18%'
+                                    }}>
+                                        {board.title.charAt(0)}
+                                    </span>
+                                </div>
                             </CardContent>
+                            </CardActionArea>
                             <CardActions disableSpacing>
                                 <IconButton aria-label="add to favorites">
                                     <FavoriteIcon/>

@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="908b436c-b8a6-476b-9d1f-177b9c9b967d" name="Default Changelist" comment="Board adding with everything fucking finally">
+    <list default="true" id="908b436c-b8a6-476b-9d1f-177b9c9b967d" name="Default Changelist" comment="Fucking css not fixed">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_actions/boardActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/_actions/boardActions.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/HomePage/BoardCards.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/HomePage/BoardCards.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -117,7 +115,7 @@
       <workItem from="1622646514779" duration="8731000" />
       <workItem from="1622730369736" duration="3371000" />
       <workItem from="1622736199865" duration="37000" />
-      <workItem from="1622823994552" duration="3027000" />
+      <workItem from="1622823994552" duration="6114000" />
     </task>
     <task id="LOCAL-00001" summary="Login and Signup before components">
       <created>1620839335095</created>
@@ -294,7 +292,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622733446847</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Fucking css not fixed">
+      <created>1622827033699</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1622827033699</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -313,7 +318,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Login and Signup before components" />
     <MESSAGE value="stupid changes" />
     <MESSAGE value="Spinner and focus color change" />
     <MESSAGE value="Start of theming" />
@@ -338,7 +342,8 @@
     <MESSAGE value="Theme changes" />
     <MESSAGE value="Snackbar with actions" />
     <MESSAGE value="Board adding with everything fucking finally" />
-    <option name="LAST_COMMIT_MESSAGE" value="Board adding with everything fucking finally" />
+    <MESSAGE value="Fucking css not fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fucking css not fixed" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
