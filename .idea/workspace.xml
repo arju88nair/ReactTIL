@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="908b436c-b8a6-476b-9d1f-177b9c9b967d" name="Default Changelist" comment="Fucking css not fixed">
+    <list default="true" id="908b436c-b8a6-476b-9d1f-177b9c9b967d" name="Default Changelist" comment="Card content fixed">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/HomePage/BoardCards.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/HomePage/BoardCards.js" afterDir="false" />
     </list>
@@ -115,7 +115,9 @@
       <workItem from="1622646514779" duration="8731000" />
       <workItem from="1622730369736" duration="3371000" />
       <workItem from="1622736199865" duration="37000" />
-      <workItem from="1622823994552" duration="6114000" />
+      <workItem from="1622823994552" duration="6432000" />
+      <workItem from="1622830670865" duration="346000" />
+      <workItem from="1622831165813" duration="418000" />
     </task>
     <task id="LOCAL-00001" summary="Login and Signup before components">
       <created>1620839335095</created>
@@ -299,7 +301,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622827033699</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Card content fixed">
+      <created>1622830215882</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1622830215882</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -318,7 +327,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="stupid changes" />
     <MESSAGE value="Spinner and focus color change" />
     <MESSAGE value="Start of theming" />
     <MESSAGE value="Dark theme for Landing page" />
@@ -343,7 +351,8 @@
     <MESSAGE value="Snackbar with actions" />
     <MESSAGE value="Board adding with everything fucking finally" />
     <MESSAGE value="Fucking css not fixed" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fucking css not fixed" />
+    <MESSAGE value="Card content fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Card content fixed" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

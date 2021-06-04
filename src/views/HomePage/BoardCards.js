@@ -19,6 +19,7 @@ import Collapse from "@material-ui/core/Collapse";
 import {makeStyles} from "@material-ui/core/styles";
 import {red} from "@material-ui/core/colors";
 import {CardActionArea} from "@material-ui/core";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
     media: {
@@ -70,18 +71,13 @@ export function BoardCards() {
         setExpanded(!expanded);
     };
 
-    const colorSet= ['#E0BBE4','#957DAD', '#D291BC' ,'#FEC8D8' ,'#FFDFD3' , '#EF4056' , '#00CB77' ,'#1CB0A8']
     return (
         <div style={{width: '100%'}}>
             <Grid container style={{width: '100%'}}>
                 {boards.map((board) => (
                     <Grid item key={board} xs={12} sm={6} lg={3} xl={2}>
                         <Card className={classes.card}>
-                            <CardActionArea
-                                onClick={(evt) => {
-                                    console.log(evt.target);
-                                }}
-                            >
+
                             <CardHeader
                                 avatar={
                                     <Avatar aria-label="recipe" className={classes.avatar}>
@@ -96,7 +92,8 @@ export function BoardCards() {
                                 title={board.title}
                                 subheader={board.time_stamp}
                             />
-                            <CardContent style={{backgroundColor: colorSet[Math.floor(Math.random() * colorSet.length)], overflow:"hidden"}}>
+                            <Link to={board.username + board.slug} component={CardActionArea}>
+                            <CardContent style={{backgroundColor: board.color, overflow:"hidden"}}>
                                 <div style={{color: "salmon", position: 'relative', width: '119px', height: '150px'}}>
                                     <span style={{
                                         fontWeight: "bold",
@@ -110,7 +107,7 @@ export function BoardCards() {
                                     </span>
                                 </div>
                             </CardContent>
-                            </CardActionArea>
+                            </Link>
                             <CardActions disableSpacing>
                                 <IconButton aria-label="add to favorites">
                                     <FavoriteIcon/>
