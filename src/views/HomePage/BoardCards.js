@@ -92,7 +92,7 @@ export function BoardCards() {
                                 title={board.title}
                                 subheader={board.time_stamp}
                             />
-                            <Link to={board.username + board.slug} component={CardActionArea}>
+                            <Link to={board.username +'/' + board.slug} component={CardActionArea}>
                             <CardContent style={{backgroundColor: board.color, overflow:"hidden"}}>
                                 <div style={{color: "salmon", position: 'relative', width: '119px', height: '150px'}}>
                                     <span style={{
@@ -101,7 +101,7 @@ export function BoardCards() {
                                         display: "inline",
                                         color: "lavenderblush",
                                         position:"absolute",
-                                        marginTop:'-18%'
+                                        marginTop:'-48%'
                                     }}>
                                         {board.title.charAt(0)}
                                     </span>
