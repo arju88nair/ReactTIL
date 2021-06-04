@@ -26,7 +26,6 @@ function add(payload) {
                     dispatch(alertActions.error(error.toString()));
                 }
             );
-
     };
 
     function request(payload) {

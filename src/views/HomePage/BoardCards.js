@@ -86,14 +86,13 @@ export function BoardCards() {
                                     </IconButton>
                                 }
                                 title={board.title}
-                                subheader="September 14, 2016"
+                                subheader={board.time_stamp}
                             />
-                            <CardContent>
-                                <Typography variant="body2" component="p">
-                                    This impressive paella is a perfect party dish and a fun meal to cook together with
-                                    your
-                                    guests. Add 1 cup of frozen peas along with the mussels, if you like.
-                                </Typography>
+                            <CardContent style={{maxHeight:'20vh',backgroundColor:'#EF4056',overflow:"hidden"}}>
+
+                                <p style={{fontWeight:"bold",fontSize:'16em',display:"inline",height:'100%',color:"salmon",marginTop:'-18%'}} >
+                                   R
+                                </p>
                             </CardContent>
                             <CardActions disableSpacing>
                                 <IconButton aria-label="add to favorites">
@@ -115,11 +114,8 @@ export function BoardCards() {
                             </CardActions>
                             <Collapse in={expanded} timeout="auto" unmountOnExit>
                                 <CardContent>
-                                    <Typography paragraph>Method:</Typography>
                                     <Typography paragraph>
-                                        Heat 1/2 cup of the broth in a pot until simmering, add saffron and set aside
-                                        for 10
-                                        minutes.
+                                        {board.description}
                                     </Typography>
                                 </CardContent>
                             </Collapse>

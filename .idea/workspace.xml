@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="908b436c-b8a6-476b-9d1f-177b9c9b967d" name="Default Changelist" comment="Snackbar with actions">
+    <list default="true" id="908b436c-b8a6-476b-9d1f-177b9c9b967d" name="Default Changelist" comment="Board adding with everything fucking finally">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/_actions/boardActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/_actions/boardActions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_reducers/boardReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/_reducers/boardReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/HomePage/BoardCards.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/HomePage/BoardCards.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +48,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/views/Components" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
@@ -58,6 +58,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src/views/Components" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -114,7 +115,9 @@
       <workItem from="1622560084730" duration="36000" />
       <workItem from="1622564934243" duration="251000" />
       <workItem from="1622646514779" duration="8731000" />
-      <workItem from="1622730369736" duration="2606000" />
+      <workItem from="1622730369736" duration="3371000" />
+      <workItem from="1622736199865" duration="37000" />
+      <workItem from="1622823994552" duration="3027000" />
     </task>
     <task id="LOCAL-00001" summary="Login and Signup before components">
       <created>1620839335095</created>
@@ -284,7 +287,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622658808324</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Board adding with everything fucking finally">
+      <created>1622733446847</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1622733446847</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -327,7 +337,8 @@
     <MESSAGE value="THeme js for button" />
     <MESSAGE value="Theme changes" />
     <MESSAGE value="Snackbar with actions" />
-    <option name="LAST_COMMIT_MESSAGE" value="Snackbar with actions" />
+    <MESSAGE value="Board adding with everything fucking finally" />
+    <option name="LAST_COMMIT_MESSAGE" value="Board adding with everything fucking finally" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
