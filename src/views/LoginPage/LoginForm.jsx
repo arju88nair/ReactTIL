@@ -13,6 +13,8 @@ import {Link} from 'react-router-dom';
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Checkbox from "@material-ui/core/Checkbox";
 import Divider from "@material-ui/core/Divider";
+import { loginUser, userSelector, clearState } from '../../features/UserSlice';
+
 
 const theme = createMuiTheme({
     // palette: {
@@ -33,9 +35,7 @@ const useStyles = makeStyles((theme) => ({
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        maxHeight: '100vh',
         margin: '10%',
-        // position: "absolute",
         top: '10%',
     },
     formDiv: {
@@ -136,7 +136,9 @@ export function LoginForm() {
         if (user.email && user.password) {
             dispatch(alertActions.clear());
             dispatch(miscActions.openSpinner(true));
-            dispatch(authenticationActions.login(user));
+            dispatch(loginUser(user));
+
+            // dispatch(authenticationActions.login(user));
         }
     }
 

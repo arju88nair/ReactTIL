@@ -29,15 +29,8 @@ const useStyles = makeStyles((theme) => ({
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        maxHeight: '100vh',
         margin: '10%',
         top: '10%',
-
-
-        // "MsTransform": "translateY(-50%)",
-        // "transform": "translateY(-50%)",
-
-
     },
     formDiv: {
         display: 'flex',

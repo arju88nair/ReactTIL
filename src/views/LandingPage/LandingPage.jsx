@@ -7,7 +7,6 @@ const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,
         backgroundColor:theme.palette.secondary.main,
-        // border:'thick solid black'
         minHeight:'100vh'
 
     },
