@@ -39,22 +39,19 @@ export const signupUser = createAsyncThunk(
 
 export const loginUser = createAsyncThunk(
     'users/login',
-    async ({email, password}, thunkAPI) => {
+    async (user, thunkAPI) => {
         try {
             const requestOptions = {
                 method: 'POST',
                 headers: {'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*'},
-                body: JSON.stringify(email,
-                    password,)
+                body: JSON.stringify(user)
             };
-
             const response = await fetch(`${config.apiUrl}/auth/login`, requestOptions);
-
             let data = await response.json();
             console.log('response', data);
             if (response.status === 200) {
-                localStorage.setItem('token', data.token);
-                return data;
+                localStorage.setItem('token', data.access_token);
+                return { ...data,user};
             } else {
                 return thunkAPI.rejectWithValue(data);
             }
@@ -65,35 +62,37 @@ export const loginUser = createAsyncThunk(
     }
 );
 
-export const fetchUserBytoken = createAsyncThunk(
-    'users/fetchUserByToken',
-    async ({token}, thunkAPI) => {
-        try {
-            const response = await fetch(
-                'https://mock-user-auth-server.herokuapp.com/api/v1/users',
-                {
-                    method: 'GET',
-                    headers: {
-                        Accept: 'application/json',
-                        Authorization: token,
-                        'Content-Type': 'application/json',
-                    },
-                }
-            );
-            let data = await response.json();
-            console.log('data', data, response.status);
+// export const fetchUserBytoken = createAsyncThunk(
+//     'users/fetchUserByToken',
+//     async ({token}, thunkAPI) => {
+//         try {
+//             const response = await fetch(
+//                 'https://mock-user-auth-server.herokuapp.com/api/v1/users',
+//                 {
+//                     method: 'GET',
+//                     headers: {
+//                         Accept: 'application/json',
+//                         Authorization: token,
+//                         'Content-Type': 'application/json',
+//                     },
+//                 }
+//             );
+//             let data = await response.json();
+//             console.log('data', data, response.status);
+//
+//             if (response.status === 200) {
+//                 return {...data};
+//             } else {
+//                 return thunkAPI.rejectWithValue(data);
+//             }
+//         } catch (e) {
+//             console.log('Error', e.response.data);
+//             return thunkAPI.rejectWithValue(e.response.data);
+//         }
+//     }
+// );
+let user = JSON.parse(localStorage.getItem('user'));
 
-            if (response.status === 200) {
-                return {...data};
-            } else {
-                return thunkAPI.rejectWithValue(data);
-            }
-        } catch (e) {
-            console.log('Error', e.response.data);
-            return thunkAPI.rejectWithValue(e.response.data);
-        }
-    }
-);
 
 export const userSlice = createSlice({
     name: 'user',
@@ -104,13 +103,13 @@ export const userSlice = createSlice({
         isSuccess: false,
         isError: false,
         errorMessage: '',
+        user:user
     },
     reducers: {
         clearState: (state) => {
             state.isError = false;
             state.isSuccess = false;
             state.isFetching = false;
-
             return state;
         },
     },
@@ -131,6 +130,7 @@ export const userSlice = createSlice({
             state.errorMessage = payload.message;
         },
         [loginUser.fulfilled]: (state, {payload}) => {
+            console.log(payload)
             state.email = payload.email;
             state.username = payload.name;
             state.isFetching = false;
@@ -146,21 +146,21 @@ export const userSlice = createSlice({
         [loginUser.pending]: (state) => {
             state.isFetching = true;
         },
-        [fetchUserBytoken.pending]: (state) => {
-            state.isFetching = true;
-        },
-        [fetchUserBytoken.fulfilled]: (state, {payload}) => {
-            state.isFetching = false;
-            state.isSuccess = true;
-
-            state.email = payload.email;
-            state.username = payload.name;
-        },
-        [fetchUserBytoken.rejected]: (state) => {
-            console.log('fetchUserBytoken');
-            state.isFetching = false;
-            state.isError = true;
-        },
+        // [fetchUserBytoken.pending]: (state) => {
+        //     state.isFetching = true;
+        // },
+        // [fetchUserBytoken.fulfilled]: (state, {payload}) => {
+        //     state.isFetching = false;
+        //     state.isSuccess = true;
+        //
+        //     state.email = payload.email;
+        //     state.username = payload.name;
+        // },
+        // [fetchUserBytoken.rejected]: (state) => {
+        //     console.log('fetchUserBytoken');
+        //     state.isFetching = false;
+        //     state.isError = true;
+        // },
     },
 });
 

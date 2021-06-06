@@ -12,7 +12,6 @@ import {RegisterPage} from '../views/RegisterPage';
 import {makeStyles, ThemeProvider} from "@material-ui/core/styles";
 import '../resources/css/App.css';
 import {themeDark, themeLight} from "../_helpers/theme";
-// import {preferences} from "../_reducers/preferencesReducer";
 import {Snackbar} from "@material-ui/core";
 
 

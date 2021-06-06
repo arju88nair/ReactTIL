@@ -9,11 +9,11 @@ import Container from '@material-ui/core/Container';
 import {green} from "@material-ui/core/colors/green";
 import {useDispatch, useSelector} from "react-redux";
 import {alertActions, miscActions, authenticationActions} from "../../_actions";
-import {Link} from 'react-router-dom';
+import {Link, useHistory} from 'react-router-dom';
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Checkbox from "@material-ui/core/Checkbox";
 import Divider from "@material-ui/core/Divider";
-import { loginUser, userSelector, clearState } from '../../features/UserSlice';
+import {loginUser, userSelector, clearState} from '../../features/UserSlice';
 
 
 const theme = createMuiTheme({
@@ -121,26 +121,58 @@ export function LoginForm() {
     const dispatch = useDispatch();
     const alert = useSelector(state => state.alert);
     const errorOpen = alert.open
-    // reset login status
+    const history = useHistory();
+
+    const {isFetching, isSuccess, isError, errorMessage} = useSelector(
+        userSelector
+    );
+
+    function handleSubmit(e) {
+        e.preventDefault();
+        if (user.email && user.password) {
+            dispatch(loginUser(user));
+        }
+    };
+
     useEffect(() => {
-        dispatch(authenticationActions.logout());
+        return () => {
+            dispatch(clearState());
+        };
     }, []);
 
+    useEffect(() => {
+        if (isError) {
+            dispatch(clearState());
+        }
+
+        if (isSuccess) {
+            dispatch(clearState());
+            history.push('/');
+        }
+    }, [isError, isSuccess]);
+
+
+    // // reset login status
+    // useEffect(() => {
+    //     dispatch(authenticationActions.logout());
+    // }, []);
+    //
     function handleChange(e) {
         const {name, value} = e.target;
         setUser(user => ({...user, [name]: value}));
     }
 
-    function handleSubmit(e) {
-        e.preventDefault();
-        if (user.email && user.password) {
-            dispatch(alertActions.clear());
-            dispatch(miscActions.openSpinner(true));
-            dispatch(loginUser(user));
-
-            // dispatch(authenticationActions.login(user));
-        }
-    }
+    //
+    // function handleSubmit(e) {
+    //     e.preventDefault();
+    //     if (user.email && user.password) {
+    //         dispatch(alertActions.clear());
+    //         dispatch(miscActions.openSpinner(true));
+    //         dispatch(loginUser(user));
+    //
+    //         // dispatch(authenticationActions.login(user));
+    //     }
+    // }
 
     const classes = useStyles();
 
