@@ -4,16 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="908b436c-b8a6-476b-9d1f-177b9c9b967d" name="Default Changelist" comment="Navigation changes">
-      <change afterPath="$PROJECT_DIR$/src/features/UserSlice.js" afterDir="false" />
+    <list default="true" id="908b436c-b8a6-476b-9d1f-177b9c9b967d" name="Default Changelist" comment="SLiver beginning and migration with fix for overflowing forms">
+      <change afterPath="$PROJECT_DIR$/src/app/store.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/features/AlertSlice.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/features/MiscSlice.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/features/PreferencesSlice.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/LandingPage/LandingPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/LandingPage/LandingPage.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/LoginPage/LoginForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/LoginPage/LoginForm.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/LoginPage/LoginPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/LoginPage/LoginPage.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/RegisterPage/RegisterForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/RegisterPage/RegisterForm.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,6 +62,7 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/features" />
+      <recent name="$PROJECT_DIR$/src/app" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src/views/Components" />
     </key>
@@ -127,7 +126,8 @@
       <workItem from="1622830670865" duration="346000" />
       <workItem from="1622831165813" duration="444000" />
       <workItem from="1622832325313" duration="96000" />
-      <workItem from="1622991745420" duration="4724000" />
+      <workItem from="1622991745420" duration="7940000" />
+      <workItem from="1623002729207" duration="609000" />
     </task>
     <task id="LOCAL-00001" summary="Login and Signup before components">
       <created>1620839335095</created>
@@ -332,7 +332,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622832406447</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="SLiver beginning and migration with fix for overflowing forms">
+      <created>1622997838281</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1622997838294</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -351,7 +358,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Dark theme for Landing page" />
     <MESSAGE value="Landing, Login and Register pages" />
     <MESSAGE value="Appbar without color correction" />
     <MESSAGE value="Appbar without mobile close action" />
@@ -376,7 +382,8 @@
     <MESSAGE value="Card content fixed" />
     <MESSAGE value="Navigation" />
     <MESSAGE value="Navigation changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Navigation changes" />
+    <MESSAGE value="SLiver beginning and migration with fix for overflowing forms" />
+    <option name="LAST_COMMIT_MESSAGE" value="SLiver beginning and migration with fix for overflowing forms" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
