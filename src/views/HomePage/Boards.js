@@ -7,6 +7,8 @@ import {useDispatch, useSelector} from "react-redux";
 import {boardActions} from "../../_actions/boardActions";
 import Button from "@material-ui/core/Button";
 import  {BoardCards} from "./BoardCards";
+import {getBoards, userSelector, clearState} from '../../features/BoardsSlice';
+
 
 const useStyles = makeStyles((theme) => ({
     cateContainer: {
@@ -53,7 +55,7 @@ export function Board() {
     const boardState = useSelector(state => state.boards);
     const dispatch = useDispatch();
     useEffect(() => {
-        dispatch(boardActions.get());
+        dispatch(getBoards());
     }, []);
 
 

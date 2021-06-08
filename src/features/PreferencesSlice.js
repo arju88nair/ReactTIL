@@ -18,7 +18,7 @@ export function turnOnDarkMode()
 const initialState = {darkThemeEnabled: false}
 
 export const preferencesSlice = createSlice({
-    name: 'user',
+    name: 'preferences',
     initialState,
     reducers:{
         toggleDarkMode:(state) =>

@@ -1,9 +1,9 @@
 
 export function authHeader() {
     // return authorization header with jwt token
-    let user = JSON.parse(localStorage.getItem('user'));
-    if (user.access_token && user) {
-        return { 'Authorization': 'Bearer ' + user.access_token ,'Access-Control-Allow-Origin':'*'};
+    let token = JSON.parse(localStorage.getItem('token'));
+    if (token) {
+        return { 'Authorization': 'Bearer ' + token ,'Access-Control-Allow-Origin':'*'};
     } else {
         return {};
     }

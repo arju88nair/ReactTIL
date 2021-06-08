@@ -1,14 +1,11 @@
 import {createSlice, createAsyncThunk} from '@reduxjs/toolkit';
-import {store} from "../_helpers";
-import {preferencesConstants} from "../_constants";
-import {userSlice} from "./UserSlice";
 
 
 
 const initialState = {darkThemeEnabled: false}
 
 export const alertSlice = createSlice({
-    name: 'user',
+    name: 'alert',
     initialState,
     reducers:{
         toggleDarkMode:(state) =>
