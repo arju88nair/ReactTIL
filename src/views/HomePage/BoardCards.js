@@ -64,9 +64,8 @@ const useStyles = makeStyles((theme) => ({
 export function BoardCards() {
     const classes = useStyles();
     const data = useSelector(boardSelector);
-    const boards= data.boards
-    // const data = boardState.boards.data;
-    console.log("blah",boards)
+    const boards= data.userBoards
+    console.log("boards",boards)
     const [expanded, setExpanded] = React.useState(false);
     const handleExpandClick = () => {
         setExpanded(!expanded);

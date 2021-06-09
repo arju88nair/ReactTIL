@@ -54,7 +54,6 @@ export function Board() {
     const classes = useStyles();
     const { isFetching, isError,isSuccess } = useSelector(boardSelector);
     const boardState = useSelector(boardSelector);
-    console.log("boards",boardState)
     const dispatch = useDispatch();
     useEffect(() => {
         dispatch(getBoards());

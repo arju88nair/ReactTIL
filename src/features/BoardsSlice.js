@@ -8,7 +8,7 @@ const boardsAdapter = createEntityAdapter({
 
 const initialState = boardsAdapter.getInitialState({
     status: 'idle',
-    boards:{},
+    userBoards:{},
     error: null,
     isFetching: false,
     isSuccess: false,
@@ -19,13 +19,10 @@ export const getBoards = createAsyncThunk(
     'boards/get',
     async (user, thunkAPI) => {
         try {
-            console.log("Ddd")
             const requestOptions = {
                 method: 'GET',
                 headers: {...authHeader(), 'Content-Type': 'application/json','Access-Control-Allow-Origin': '*'},
             };
-            console.log(requestOptions)
-
             const response = await fetch(`${config.apiUrl}/boards`, requestOptions);
             let boards = await response.json();
             if (response.status === 200) {
@@ -55,7 +52,7 @@ export const boardsSlice = createSlice({
             state.isSuccess = true;
             // Add any fetched posts to the array
             console.log('response',action.payload.data)
-            state.boards = action.payload.data
+            state.userBoards = action.payload.data
             // boardsAdapter.upsertMany(state, action.payload)
         },
         [getBoards.rejected]: (state, action) => {
@@ -66,7 +63,5 @@ export const boardsSlice = createSlice({
         },
     }
 });
-
-// export const {toggleDarkMode} = boardsSlice.actions;
 
 export const boardSelector = (state) => state.boards;
