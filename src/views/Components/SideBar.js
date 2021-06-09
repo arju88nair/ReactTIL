@@ -100,7 +100,7 @@ export function SideBar(props) {
                     Nested
                 </ListSubheader>
             }>
-                {['Inbox', 'Starred', 'Send email', 'Drafts', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
+                {['Inbox1', 'Starred1', 'Send1 email', 'Draf1ts', 'Star1red', 'Sen1d email', 'D1rafts'].map((text, index) => (
                     <ListItem button key={text} style={{marginLeft:'1.5em',color: 'var(--color-text)',fontWeight:"bold"}}>
                         <ListItemIcon style={{color: theme.palette.text.secondary}}>{index % 2 === 0 ? <InboxIcon/> :
                             <MailIcon/>}</ListItemIcon>
@@ -114,7 +114,8 @@ export function SideBar(props) {
                                id="nested-list-subheader">
                      Items
                 </ListSubheader>
-            }>                {['All mail', 'Trash', 'Spam', 'Trash', 'Spam', 'Trash', 'Spam', 'Trash', 'Spam'].map((text, index) => (
+            }>
+                {['Inbox1', 'Starred1', 'Send1 email', 'Draf1ts', 'Star1red', 'Sen1d email', 'D1rafts'].map((text, index) => (
                 <ListItem button key={text} style={{marginLeft:'1.5em',color: 'var(--color-text)'}}>
                     <ListItemIcon style={{color: theme.palette.text.secondary}}>{index % 2 === 0 ? <InboxIcon/> :
                         <MailIcon/>}</ListItemIcon>

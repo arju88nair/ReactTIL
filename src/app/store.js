@@ -4,6 +4,7 @@ import { userSlice } from '../features/UserSlice';
 import {preferencesSlice} from '../features/PreferencesSlice';
 import {alertSlice} from '../features/AlertSlice';
 import {miscSlice} from '../features/MiscSlice';
+import {boardsSlice} from '../features/BoardsSlice';
 // const loggerMiddleware = createLogger();
 
 export default configureStore({
@@ -11,7 +12,8 @@ export default configureStore({
     user: userSlice.reducer,
     preferences:preferencesSlice.reducer,
     alert:alertSlice.reducer,
-    misc:miscSlice.reducer
+    misc:miscSlice.reducer,
+    boards:boardsSlice.reducer
   },
   middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(logger),
 });

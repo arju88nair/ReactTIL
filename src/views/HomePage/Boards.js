@@ -7,7 +7,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {boardActions} from "../../_actions/boardActions";
 import Button from "@material-ui/core/Button";
 import  {BoardCards} from "./BoardCards";
-import {getBoards, userSelector, clearState} from '../../features/BoardsSlice';
+import {getBoards, userSelector, clearState, boardSelector} from '../../features/BoardsSlice';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -52,7 +52,9 @@ function ErrorRefresh() {
 
 export function Board() {
     const classes = useStyles();
-    const boardState = useSelector(state => state.boards);
+    const { isFetching, isError,isSuccess } = useSelector(boardSelector);
+    const boardState = useSelector(boardSelector);
+    console.log("boards",boardState)
     const dispatch = useDispatch();
     useEffect(() => {
         dispatch(getBoards());
@@ -64,9 +66,9 @@ export function Board() {
             <Grid container direction="row"
                   justify="flex-start"
                   alignItems="center" spacing={3}>
-                {boardState.loading && Array(6).fill(<BoardSkeleton/>)}
-                {boardState.error && <ErrorRefresh/>}
-                {boardState.boards && <BoardCards/>}
+                {isFetching && Array(6).fill(<BoardSkeleton/>)}
+                {isError && <ErrorRefresh/>}
+                {isSuccess && <BoardCards/>}
             </Grid>
         </div>
     );

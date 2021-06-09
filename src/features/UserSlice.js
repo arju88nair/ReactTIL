@@ -48,10 +48,10 @@ export const loginUser = createAsyncThunk(
             };
             const response = await fetch(`${config.apiUrl}/auth/login`, requestOptions);
             let data = await response.json();
-            console.log('response', data);
+            console.log('response', data.access_token);
             if (response.status === 200) {
                 localStorage.setItem('token', data.access_token);
-                return data;
+                return { ...data,user};
             } else {
                 return thunkAPI.rejectWithValue(data);
             }

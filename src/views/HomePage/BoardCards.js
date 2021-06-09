@@ -1,8 +1,6 @@
 import {useDispatch, useSelector} from "react-redux";
 import React, {useEffect} from "react";
-import {boardActions} from "../../_actions/boardActions";
 import Grid from "@material-ui/core/Grid";
-import {BoardSkeleton} from "../Components/BoardSkeleton";
 import Card from "@material-ui/core/Card";
 import CardHeader from "@material-ui/core/CardHeader";
 import Avatar from "@material-ui/core/Avatar";
@@ -20,6 +18,7 @@ import {makeStyles} from "@material-ui/core/styles";
 import {red} from "@material-ui/core/colors";
 import {CardActionArea} from "@material-ui/core";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import {boardSelector} from "../../features/BoardsSlice";
 
 const useStyles = makeStyles((theme) => ({
     media: {
@@ -64,8 +63,10 @@ const useStyles = makeStyles((theme) => ({
 
 export function BoardCards() {
     const classes = useStyles();
-    const boardState = useSelector(state => state.boards);
-    let boards = boardState.boards.data;
+    const data = useSelector(boardSelector);
+    const boards= data.boards
+    // const data = boardState.boards.data;
+    console.log("blah",boards)
     const [expanded, setExpanded] = React.useState(false);
     const handleExpandClick = () => {
         setExpanded(!expanded);

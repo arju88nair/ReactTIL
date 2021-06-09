@@ -1,38 +1,72 @@
-import {createSlice, createAsyncThunk} from '@reduxjs/toolkit';
+import {createSlice, createAsyncThunk, createEntityAdapter} from '@reduxjs/toolkit';
 import {authHeader} from "../_helpers";
 import config from 'config';
 
+const boardsAdapter = createEntityAdapter({
+    // sortComparer: (a, b) => b.title.localeCompare(a.title),
+})
+
+const initialState = boardsAdapter.getInitialState({
+    status: 'idle',
+    boards:{},
+    error: null,
+    isFetching: false,
+    isSuccess: false,
+    isError: false,
+    errorMessage: '',
+})
 export const getBoards = createAsyncThunk(
     'boards/get',
     async (user, thunkAPI) => {
         try {
+            console.log("Ddd")
             const requestOptions = {
-                method: 'POST',
-                dataType: "jsonp",
+                method: 'GET',
                 headers: {...authHeader(), 'Content-Type': 'application/json','Access-Control-Allow-Origin': '*'},
             };
-            const response = await fetch(`${config.apiUrl}/auth/login`, requestOptions);
+            console.log(requestOptions)
+
+            const response = await fetch(`${config.apiUrl}/boards`, requestOptions);
             let boards = await response.json();
-            console.log('boards', boards);
             if (response.status === 200) {
                 return boards;
             } else {
                 return thunkAPI.rejectWithValue(boards);
             }
         } catch (e) {
-            console.log('Error', e.response.data);
+            console.log('Error', e);
             thunkAPI.rejectWithValue(e.response.data);
         }
     }
 );
-const initialState = {}
 export const boardsSlice = createSlice({
     name: 'boards',
     initialState,
     reducers:{
+    },
+    extraReducers:{
+        [getBoards.pending]: (state, action) => {
+            state.status = 'loading'
+            state.isFetching = true;
+        },
+        [getBoards.fulfilled]: (state, action) => {
+            state.status = 'succeeded'
+            state.isFetching = false;
+            state.isSuccess = true;
+            // Add any fetched posts to the array
+            console.log('response',action.payload.data)
+            state.boards = action.payload.data
+            // boardsAdapter.upsertMany(state, action.payload)
+        },
+        [getBoards.rejected]: (state, action) => {
+            state.status = 'failed'
+            state.errorMessage = action.error.message
+            state.isFetching = false;
+            state.isError = true;
+        },
     }
 });
 
-export const {toggleDarkMode} = boardsSlice.actions;
+// export const {toggleDarkMode} = boardsSlice.actions;
 
-export const alertSelector = (state) => state.alert;
+export const boardSelector = (state) => state.boards;
