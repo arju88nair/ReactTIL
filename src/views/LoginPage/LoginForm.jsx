@@ -14,7 +14,7 @@ import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Checkbox from "@material-ui/core/Checkbox";
 import Divider from "@material-ui/core/Divider";
 import {loginUser, userSelector, clearState} from '../../features/UserSlice';
-
+import {openSpinner} from "../../features/MiscSlice";
 
 const theme = createMuiTheme({
     // palette: {

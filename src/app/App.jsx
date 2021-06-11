@@ -13,7 +13,7 @@ import {makeStyles, ThemeProvider} from "@material-ui/core/styles";
 import '../resources/css/App.css';
 import {themeDark, themeLight} from "../_helpers/theme";
 import {Snackbar} from "@material-ui/core";
-
+import {clear} from "../features/AlertSlice";
 
 
 const useStyles = makeStyles((theme) => ({
@@ -37,7 +37,7 @@ export function App() {
         if (reason === 'clickaway') {
             return;
         }
-        dispatch(alertActions.clear());
+        dispatch(clear());
     };
 
     useEffect(() => {

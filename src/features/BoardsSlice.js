@@ -3,7 +3,7 @@ import {authHeader} from "../_helpers";
 import config from 'config';
 
 const boardsAdapter = createEntityAdapter({
-    // sortComparer: (a, b) => b.title.localeCompare(a.title),
+    sortComparer: (a, b) => b.date.localeCompare(a.date),
 })
 
 const initialState = boardsAdapter.getInitialState({
@@ -65,3 +65,8 @@ export const boardsSlice = createSlice({
 });
 
 export const boardSelector = (state) => state.boards;
+export const {
+    selectAll: selectAllPosts,
+    selectById: selectPostById,
+    selectIds: selectPostIds,
+} = boardsAdapter.getSelectors((state) => state.boards)

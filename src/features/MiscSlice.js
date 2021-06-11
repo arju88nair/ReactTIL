@@ -1,20 +1,27 @@
 import {createSlice, createAsyncThunk} from '@reduxjs/toolkit';
 
 
-
-const initialState = {spinner: false,boardModal:false}
+const initialState = {spinner: false, boardModal: false}
 
 export const miscSlice = createSlice({
     name: 'misc',
     initialState,
-    reducers:{
-        toggleDarkMode:(state) =>
-        {
-            return {...state, darkThemeEnabled: !state.darkThemeEnabled};
-        }
+    reducers: {
+        openSpinner: (state, action) => {
+            return {...state, spinner: true};
+        },
+        closeSpinner: (state, action) => {
+            return {...state, spinner: false};
+        },
+        openModal: (state, action) => {
+            return {...state, boardModal: true};
+        },
+        closeModal: (state, action) => {
+            return {...state, boardModal: false};
+        },
     }
 });
 
-export const {toggleDarkMode} = miscSlice.actions;
+export const {openSpinner, closeSpinner, openModal, closeModal} = miscSlice.actions;
 
 export const miscSelector = (state) => state.misc;
