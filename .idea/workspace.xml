@@ -7,10 +7,8 @@
     <list default="true" id="908b436c-b8a6-476b-9d1f-177b9c9b967d" name="Default Changelist" comment="Working board slice get request before cleanup">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/AlertSlice.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/AlertSlice.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/BoardsSlice.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/BoardsSlice.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/MiscSlice.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/MiscSlice.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/LoginPage/LoginForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/LoginPage/LoginForm.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/UserSlice.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/UserSlice.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/RegisterPage/RegisterForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/RegisterPage/RegisterForm.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -136,6 +134,7 @@
       <workItem from="1623334552131" duration="1839000" />
       <workItem from="1623425002037" duration="1195000" />
       <workItem from="1623428459593" duration="1329000" />
+      <workItem from="1623498791900" duration="2830000" />
     </task>
     <task id="LOCAL-00001" summary="Login and Signup before components">
       <created>1620839335095</created>

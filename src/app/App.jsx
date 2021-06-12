@@ -61,7 +61,7 @@ export function App() {
                     <Route path="/register" component={RegisterPage}/>
                     <Route path="/login" component={LoginPage}/>
                     <Route path="/landing" component={LandingPage}/>
-                    <Redirect from="*" to="/home"/>
+                    <Redirect from="*" to="/landing"/>
                 </Switch>
             </Router>
             </ThemeProvider>

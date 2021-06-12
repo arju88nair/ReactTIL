@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import TextField from '@material-ui/core/TextField';
@@ -13,6 +13,9 @@ import {alertActions, miscActions} from "../../_actions";
 import {Link} from 'react-router-dom';
 import Divider from "@material-ui/core/Divider";
 import {Checkbox, FormControlLabel} from "@material-ui/core";
+import {clearState, signupUser, userSelector} from "../../features/UserSlice";
+import {clear} from "../../features/AlertSlice";
+import {openSpinner} from "../../features/MiscSlice";
 
 
 const theme = createMuiTheme({
@@ -118,23 +121,41 @@ export function RegisterForm() {
     const dispatch = useDispatch();
     const alert = useSelector(state => state.alert);
     const errorOpen = alert.open
-    // // reset login status
-    // useEffect(() => {
-    //     dispatch(authenticationActions.logout());
-    // }, []);
-
-    function handleChange(e) {
-        const {name, value} = e.target;
-        setUser(user => ({...user, [name]: value}));
-    }
+    const {isFetching, isSuccess, isError, errorMessage} = useSelector(
+        userSelector
+    );
 
     function handleSubmit(e) {
         e.preventDefault();
         if (user.email && user.password) {
-            dispatch(alertActions.clear());
-            dispatch(miscActions.openSpinner(true))
-            dispatch(authenticationActions.register(user));
+            dispatch(clear());
+            dispatch(openSpinner())
+            dispatch(signupUser(user));
         }
+    };
+
+    useEffect(() => {
+        return () => {
+            dispatch(clearState());
+        };
+    }, []);
+
+    useEffect(() => {
+        if (isError) {
+            dispatch(clearState());
+        }
+
+        if (isSuccess) {
+            console.log("Ssss")
+            dispatch(clearState());
+            history.push('/');
+        }
+    }, [isError, isSuccess]);
+
+
+    function handleChange(e) {
+        const {name, value} = e.target;
+        setUser(user => ({...user, [name]: value}));
     }
 
     const classes = useStyles();

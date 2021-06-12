@@ -9,24 +9,20 @@ import config from 'config';
 // Once it returns a promise, either it will resolve or reject the promise. By default it provides us three state which are pending, fulfilled and rejected.
 export const signupUser = createAsyncThunk(
     'users/signupUser',
-    async ({name, email, password}, thunkAPI) => {
+    async (user, thunkAPI) => {
         try {
             const requestOptions = {
                 method: 'POST',
-                dataType: 'jsonp',   //you may use jsonp for cross origin request
-                crossDomain: true,
-                headers: {'Content-Type': 'application/json'},
-                body: JSON.stringify(name,
-                    email,
-                    password,),
+                headers: {'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*'},
+                body: JSON.stringify(user)
 
             };
             const response = await fetch(`${config.apiUrl}/auth/signup`, requestOptions);
             let data = await response.json();
             console.log('data', data);
             if (response.status === 200) {
-                localStorage.setItem('token', data.token);
-                return {...data, username: name, email: email};
+                localStorage.setItem('token', data.access_token);
+                return { ...data,user};
             } else {
                 return thunkAPI.rejectWithValue(data);
             }
@@ -118,8 +114,9 @@ export const userSlice = createSlice({
             console.log('payload', payload);
             state.isFetching = false;
             state.isSuccess = true;
-            state.email = payload.user.email;
-            state.username = payload.user.name;
+            state.email = payload.email;
+            state.username = payload.name;
+            return state;
         },
         [signupUser.pending]: (state) => {
             state.isFetching = true;
