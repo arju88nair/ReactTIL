@@ -1,5 +1,8 @@
 import {createSlice, createAsyncThunk} from '@reduxjs/toolkit';
 import config from 'config';
+import {history} from "../_helpers";
+import {closeSpinner} from "./MiscSlice";
+import store from '../app/store'
 
 // createAsyncThunk provides us those states out of the box. To implement it, we just need to use the action name and the state of it.
 // createAsyncThunk takes two argument,
@@ -44,7 +47,7 @@ export const loginUser = createAsyncThunk(
             };
             const response = await fetch(`${config.apiUrl}/auth/login`, requestOptions);
             let data = await response.json();
-            console.log('response', data.access_token);
+            console.log('response', data);
             if (response.status === 200) {
                 localStorage.setItem('token', data.access_token);
                 return { ...data,user};
@@ -58,37 +61,14 @@ export const loginUser = createAsyncThunk(
     }
 );
 
-// export const fetchUserBytoken = createAsyncThunk(
-//     'users/fetchUserByToken',
-//     async ({token}, thunkAPI) => {
-//         try {
-//             const response = await fetch(
-//                 'https://mock-user-auth-server.herokuapp.com/api/v1/users',
-//                 {
-//                     method: 'GET',
-//                     headers: {
-//                         Accept: 'application/json',
-//                         Authorization: token,
-//                         'Content-Type': 'application/json',
-//                     },
-//                 }
-//             );
-//             let data = await response.json();
-//             console.log('data', data, response.status);
-//
-//             if (response.status === 200) {
-//                 return {...data};
-//             } else {
-//                 return thunkAPI.rejectWithValue(data);
-//             }
-//         } catch (e) {
-//             console.log('Error', e.response.data);
-//             return thunkAPI.rejectWithValue(e.response.data);
-//         }
-//     }
-// );
-let user = JSON.parse(localStorage.getItem('user'));
+export function logout() {
+    // TODO Fix action undefined issue after logging out
+    // remove user from local storage to log user out
+    localStorage.removeItem('token');
+    history.push('/landing');
 
+}
+let token = JSON.parse(localStorage.getItem('token'));
 
 export const userSlice = createSlice({
     name: 'user',
@@ -99,7 +79,7 @@ export const userSlice = createSlice({
         isSuccess: false,
         isError: false,
         errorMessage: '',
-        user:user
+        token:token
     },
     reducers: {
         clearState: (state) => {
@@ -122,6 +102,10 @@ export const userSlice = createSlice({
             state.isFetching = true;
         },
         [signupUser.rejected]: (state, {payload}) => {
+            if(!payload)
+            {
+                payload={'message':"Something went wrong. Please try again later"}
+            }
             state.isFetching = false;
             state.isError = true;
             state.errorMessage = payload.message;
@@ -135,7 +119,10 @@ export const userSlice = createSlice({
             return state;
         },
         [loginUser.rejected]: (state, {payload}) => {
-            console.log('payload', payload);
+            if(!payload)
+            {
+                payload={'message':"Something went wrong. Please try again later"}
+            }
             state.isFetching = false;
             state.isError = true;
             state.errorMessage = payload.message;

@@ -19,6 +19,7 @@ import Brightness3Icon from "@material-ui/icons/Brightness3";
 import {alertActions, authenticationActions} from "../../_actions";
 import {preferencesActions} from "../../_actions/preferencesActions";
 import {useDispatch, useSelector} from "react-redux";
+import {logout} from "../../features/UserSlice";
 
 const drawerWidth = 240;
 
@@ -139,8 +140,8 @@ export function MainAppBar() {
     };
 
     const handleLogout = () => {
-        // dispatch(authenticationActions.logout());
-        // handleMobileMenuClose();
+        dispatch(logout())
+
     };
     const handleMobileMenuOpen = (event) => {
         setMobileMoreAnchorEl(event.currentTarget);

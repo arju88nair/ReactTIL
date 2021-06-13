@@ -8,14 +8,11 @@ import {ThemeProvider, makeStyles, createMuiTheme} from '@material-ui/core/style
 import Container from '@material-ui/core/Container';
 import {green} from "@material-ui/core/colors/green";
 import {useDispatch, useSelector} from "react-redux";
-import {authenticationActions} from "../../_actions";
-import {alertActions, miscActions} from "../../_actions";
-import {Link} from 'react-router-dom';
+import {Link, useHistory} from 'react-router-dom';
 import Divider from "@material-ui/core/Divider";
 import {Checkbox, FormControlLabel} from "@material-ui/core";
 import {clearState, signupUser, userSelector} from "../../features/UserSlice";
-import {clear} from "../../features/AlertSlice";
-import {openSpinner} from "../../features/MiscSlice";
+import {closeSpinner, openSpinner} from "../../features/MiscSlice";
 
 
 const theme = createMuiTheme({
@@ -119,47 +116,36 @@ export function RegisterForm() {
         username: ''
     });
     const dispatch = useDispatch();
-    const alert = useSelector(state => state.alert);
-    const errorOpen = alert.open
-    const {isFetching, isSuccess, isError, errorMessage} = useSelector(
+    const history = useHistory();
+    const {isSuccess, isError, errorMessage} = useSelector(
         userSelector
     );
 
     function handleSubmit(e) {
         e.preventDefault();
         if (user.email && user.password) {
-            dispatch(clear());
             dispatch(openSpinner())
             dispatch(signupUser(user));
         }
     };
 
     useEffect(() => {
-        return () => {
-            dispatch(clearState());
-        };
-    }, []);
-
-    useEffect(() => {
-        if (isError) {
-            dispatch(clearState());
-        }
-
         if (isSuccess) {
-            console.log("Ssss")
             dispatch(clearState());
+            dispatch(closeSpinner())
             history.push('/');
         }
+        if(isError)
+        {
+            dispatch(closeSpinner())
+        }
     }, [isError, isSuccess]);
-
 
     function handleChange(e) {
         const {name, value} = e.target;
         setUser(user => ({...user, [name]: value}));
     }
-
     const classes = useStyles();
-
 
     return (
         <Container component="main" maxWidth="sm" className={classes.loginBay}>
@@ -260,10 +246,10 @@ export function RegisterForm() {
                                 label="I agree to the terms and conditions."
                             />
                         </Grid>
-                        {errorOpen ? <Grid item xs={12}>
-                            <Typography variant="caption" display="block" gutterBottom
-                                        style={{color: 'red'}}>
-                                {alert.message}
+                        {isError ? <Grid item xs={12}>
+                            <Typography variant="caption" display="block" gutterBottom color="primary"
+                                        style={{color: 'red',fontSize:'1.05em'}}>
+                                {errorMessage}
                             </Typography>
                         </Grid> : null}
                     </Grid>

@@ -6,8 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="908b436c-b8a6-476b-9d1f-177b9c9b967d" name="Default Changelist" comment="Working board slice get request before cleanup">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/App.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/features/UserSlice.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/UserSlice.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Components/MainAppBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Components/MainAppBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/LoginPage/LoginForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/LoginPage/LoginForm.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/RegisterPage/RegisterForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/RegisterPage/RegisterForm.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -135,6 +136,9 @@
       <workItem from="1623425002037" duration="1195000" />
       <workItem from="1623428459593" duration="1329000" />
       <workItem from="1623498791900" duration="2830000" />
+      <workItem from="1623564626585" duration="2036000" />
+      <workItem from="1623567099730" duration="3982000" />
+      <workItem from="1623573125963" duration="119000" />
     </task>
     <task id="LOCAL-00001" summary="Login and Signup before components">
       <created>1620839335095</created>
@@ -418,8 +422,13 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/views/Components/MainAppBar.js</url>
-          <line>262</line>
+          <line>263</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/views/LoginPage/LoginForm.jsx</url>
+          <line>218</line>
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -1,6 +1,5 @@
 import React, {useEffect, useState} from 'react';
 import Button from '@material-ui/core/Button';
-import CssBaseline from '@material-ui/core/CssBaseline';
 import TextField from '@material-ui/core/TextField';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
@@ -8,13 +7,12 @@ import {ThemeProvider, makeStyles, createMuiTheme} from '@material-ui/core/style
 import Container from '@material-ui/core/Container';
 import {green} from "@material-ui/core/colors/green";
 import {useDispatch, useSelector} from "react-redux";
-import {alertActions, miscActions, authenticationActions} from "../../_actions";
 import {Link, useHistory} from 'react-router-dom';
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Checkbox from "@material-ui/core/Checkbox";
 import Divider from "@material-ui/core/Divider";
 import {loginUser, userSelector, clearState} from '../../features/UserSlice';
-import {openSpinner} from "../../features/MiscSlice";
+import {closeSpinner} from "../../features/MiscSlice";
 
 const theme = createMuiTheme({
     // palette: {
@@ -119,63 +117,37 @@ export function LoginForm() {
         password: ''
     });
     const dispatch = useDispatch();
-    const alert = useSelector(state => state.alert);
-    const errorOpen = alert.open
     const history = useHistory();
 
-    const {isFetching, isSuccess, isError, errorMessage} = useSelector(
+    const {isSuccess, isError, errorMessage} = useSelector(
         userSelector
     );
 
     function handleSubmit(e) {
         e.preventDefault();
         if (user.email && user.password) {
+            dispatch(clearState());
             dispatch(loginUser(user));
         }
     };
 
     useEffect(() => {
-        return () => {
-            dispatch(clearState());
-        };
-    }, []);
-
-    useEffect(() => {
-        if (isError) {
-            dispatch(clearState());
-        }
-
         if (isSuccess) {
             dispatch(clearState());
+            dispatch(closeSpinner())
             history.push('/');
         }
-    }, [isError, isSuccess]);
+        if(isError)
+        {
+            dispatch(closeSpinner())
+        }
+    }, [isError,isSuccess]);
 
-
-    // // reset login status
-    // useEffect(() => {
-    //     dispatch(authenticationActions.logout());
-    // }, []);
-    //
     function handleChange(e) {
         const {name, value} = e.target;
         setUser(user => ({...user, [name]: value}));
     }
-
-    //
-    // function handleSubmit(e) {
-    //     e.preventDefault();
-    //     if (user.email && user.password) {
-    //         dispatch(alertActions.clear());
-    //         dispatch(miscActions.openSpinner(true));
-    //         dispatch(loginUser(user));
-    //
-    //         // dispatch(authenticationActions.login(user));
-    //     }
-    // }
-
     const classes = useStyles();
-
 
     return (
         <Container component="main" maxWidth="sm" className={classes.loginBay}>
@@ -258,10 +230,10 @@ export function LoginForm() {
                                               label="Remember me"
                             />
                         </Grid>
-                        {errorOpen ? <Grid item xs={12}>
+                        {isError ? <Grid item xs={12}>
                             <Typography variant="caption" display="block" gutterBottom color="primary"
-                                        style={{color: 'red'}}>
-                                {alert.message}
+                                        style={{color: 'red',fontSize:'1.05em'}}>
+                                {errorMessage}
                             </Typography>
                         </Grid> : null}
                     </Grid>
