@@ -14,6 +14,7 @@ import '../resources/css/App.css';
 import {themeDark, themeLight} from "../_helpers/theme";
 import {Snackbar} from "@material-ui/core";
 import {clear} from "../features/AlertSlice";
+import {preferencesSelector} from "../features/PreferencesSlice";
 
 
 const useStyles = makeStyles((theme) => ({
@@ -27,7 +28,7 @@ function Alert(props) {
 
 export function App() {
     const dispatch = useDispatch();
-    const darkThemeEnabled = useSelector((state) => state.preferences.darkThemeEnabled);
+    const {darkThemeEnabled} = useSelector(preferencesSelector);
     const themeMode = darkThemeEnabled ? themeDark : themeLight
     const alert = useSelector((state) => state.alert);
     const handleBackClose = (event, reason) => {
@@ -54,7 +55,7 @@ export function App() {
                     {alert.message}
                 </Alert>
             </Snackbar>
-                <ThemeProvider theme={themeDark}>
+                <ThemeProvider theme={themeMode}>
             <Router history={history}>
                 <Switch>
                     <PrivateRoute exact path="/" component={HomePage}/>

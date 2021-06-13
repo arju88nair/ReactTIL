@@ -22,7 +22,7 @@ export const store = createStore(
     )
 );
 store.subscribe(() => {
-    const preferences = store.getState().preferences;
+    const preferences = store.getState();
     if (!preferences) return;
 
     localStorage.setItem(localStorageKey, JSON.stringify(preferences));

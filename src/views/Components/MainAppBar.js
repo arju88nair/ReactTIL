@@ -20,6 +20,7 @@ import {alertActions, authenticationActions} from "../../_actions";
 import {preferencesActions} from "../../_actions/preferencesActions";
 import {useDispatch, useSelector} from "react-redux";
 import {logout} from "../../features/UserSlice";
+import {preferencesSelector, toggleDarkMode, turnOnDarkMode} from "../../features/PreferencesSlice";
 
 const drawerWidth = 240;
 
@@ -110,13 +111,12 @@ export function MainAppBar() {
     const [anchorEl, setAnchorEl] = React.useState(null);
     const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
     const [mobileOpen, setMobileOpen] = React.useState(false);
-    const alert = useSelector(state => state.alert);
-    const isDarkMode = useSelector(state => state.preferences.darkThemeEnabled);
-    const icon = !isDarkMode ? <Brightness7Icon/> : <Brightness3Icon/>;
+    const {darkThemeEnabled} = useSelector(preferencesSelector);
+    const icon = !darkThemeEnabled ? <Brightness7Icon/> : <Brightness3Icon/>;
     const dispatch = useDispatch();
 
     function switchThemes(e) {
-        dispatch(preferencesActions.turnOnDarkMode());
+        dispatch(toggleDarkMode());
     }
 
     const handleDrawerToggle = () => {

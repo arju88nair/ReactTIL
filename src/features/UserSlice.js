@@ -62,13 +62,13 @@ export const loginUser = createAsyncThunk(
 );
 
 export function logout() {
-    // TODO Fix action undefined issue after logging out
+    /// TODO Fix action undefined issue after logging out
     // remove user from local storage to log user out
     localStorage.removeItem('token');
     history.push('/landing');
 
 }
-let token = JSON.parse(localStorage.getItem('token'));
+let token =localStorage.getItem('token');
 
 export const userSlice = createSlice({
     name: 'user',
