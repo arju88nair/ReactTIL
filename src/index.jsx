@@ -3,7 +3,6 @@ import {render} from 'react-dom';
 import {Provider} from 'react-redux';
 // import {store} from './_helpers';
 import store from './app/store';
-
 import {App} from './app';
 import CssBaseline from "@material-ui/core/CssBaseline";
 

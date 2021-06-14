@@ -8,7 +8,7 @@ import {HomePage} from '../views/HomePage';
 import {LandingPage} from '../views/LandingPage';
 import {LoginPage} from '../views/LoginPage';
 import {RegisterPage} from '../views/RegisterPage';
- import MuiAlert from '@material-ui/lab/Alert';
+import MuiAlert from '@material-ui/lab/Alert';
 import {makeStyles, ThemeProvider} from "@material-ui/core/styles";
 import '../resources/css/App.css';
 import {themeDark, themeLight} from "../_helpers/theme";
@@ -18,7 +18,7 @@ import {preferencesSelector} from "../features/PreferencesSlice";
 
 
 const useStyles = makeStyles((theme) => ({
-    root:{}
+    root: {}
 
 }));
 
@@ -30,6 +30,7 @@ export function App() {
     const dispatch = useDispatch();
     const {darkThemeEnabled} = useSelector(preferencesSelector);
     const themeMode = darkThemeEnabled ? themeDark : themeLight
+    console.log("In app", darkThemeEnabled)
     const alert = useSelector((state) => state.alert);
     const handleBackClose = (event, reason) => {
         dispatch(miscActions.closeSpinner(false))
@@ -55,16 +56,16 @@ export function App() {
                     {alert.message}
                 </Alert>
             </Snackbar>
-                <ThemeProvider theme={themeMode}>
-            <Router history={history}>
-                <Switch>
-                    <PrivateRoute exact path="/" component={HomePage}/>
-                    <Route path="/register" component={RegisterPage}/>
-                    <Route path="/login" component={LoginPage}/>
-                    <Route path="/landing" component={LandingPage}/>
-                    <Redirect from="*" to="/landing"/>
-                </Switch>
-            </Router>
+            <ThemeProvider theme={themeMode}>
+                <Router history={history}>
+                    <Switch>
+                        <PrivateRoute exact path="/" component={HomePage}/>
+                        <Route path="/register" component={RegisterPage}/>
+                        <Route path="/login" component={LoginPage}/>
+                        <Route path="/landing" component={LandingPage}/>
+                        <Redirect from="*" to="/landing"/>
+                    </Switch>
+                </Router>
             </ThemeProvider>
         </div>
     );
