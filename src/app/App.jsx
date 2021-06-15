@@ -28,9 +28,9 @@ function Alert(props) {
 
 export function App() {
     const dispatch = useDispatch();
-    const {darkThemeEnabled} = useSelector(preferencesSelector);
-    const themeMode = darkThemeEnabled ? themeDark : themeLight
-    console.log("In app", darkThemeEnabled)
+    const darkMode = useSelector((state) => state.darkMode);
+    const themeMode = darkMode ? themeDark : themeLight
+    console.log("In app", darkMode)
     const alert = useSelector((state) => state.alert);
     const handleBackClose = (event, reason) => {
         dispatch(miscActions.closeSpinner(false))

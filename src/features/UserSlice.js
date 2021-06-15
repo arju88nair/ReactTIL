@@ -2,7 +2,7 @@ import {createSlice, createAsyncThunk} from '@reduxjs/toolkit';
 import config from 'config';
 import {history} from "../_helpers";
 import {closeSpinner} from "./MiscSlice";
-import store from '../app/store'
+import store from '../store/store'
 
 // createAsyncThunk provides us those states out of the box. To implement it, we just need to use the action name and the state of it.
 // createAsyncThunk takes two argument,

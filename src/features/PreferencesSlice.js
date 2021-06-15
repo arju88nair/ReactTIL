@@ -1,19 +1,7 @@
 import {createSlice, createAsyncThunk} from '@reduxjs/toolkit';
-import store from "../app/store";
+import store from "../store/store";
 import {preferencesConstants} from "../_constants";
 import {userSlice} from "./UserSlice";
-
-
-// export function turnOnDarkMode()
-// {
-//     store.subscribe(() => {
-//         const preferences = store.getState().preferences;
-//         if (!preferences) return;
-//
-//         localStorage.setItem('darkMode', JSON.stringify(preferences));
-//     });
-//     return {type: preferencesConstants.TOGGLE_DARKTHEME};
-// }
 
 const initialState = {darkThemeEnabled: false}
 
