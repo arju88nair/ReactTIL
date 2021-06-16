@@ -4,20 +4,31 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="908b436c-b8a6-476b-9d1f-177b9c9b967d" name="Default Changelist" comment="Authentication fixed">
-      <change afterPath="$PROJECT_DIR$/src/store/ReduxProvider.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/persistConfig.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/rootReducer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/Components/Loading/Loading.js" afterDir="false" />
+    <list default="true" id="908b436c-b8a6-476b-9d1f-177b9c9b967d" name="Default Changelist" comment="Fucking finally store and dark mode fixed">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/store.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/PreferencesSlice.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/PreferencesSlice.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/UserSlice.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/UserSlice.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/Components/MainAppBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Components/MainAppBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_actions/alertActions.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_actions/authenticationActions.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_actions/boardActions.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_actions/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_actions/miscActions.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_actions/preferencesActions.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_components/PrivateRoute.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_components/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_constants/alertConstants.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_constants/boardConstants.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_constants/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_constants/miscConstants.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_constants/preferencesConstants.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_constants/userConstants.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_reducers/alertReducer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_reducers/authenticationReducer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_reducers/boardReducer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_reducers/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_reducers/miscReducers.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_reducers/preferencesReducer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_reducers/registrationReducer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_reducers/usersReducer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/ReduxProvider.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -149,7 +160,8 @@
       <workItem from="1623564626585" duration="2036000" />
       <workItem from="1623567099730" duration="3982000" />
       <workItem from="1623573125963" duration="4665000" />
-      <workItem from="1623776038854" duration="63000" />
+      <workItem from="1623776038854" duration="170000" />
+      <workItem from="1623866325840" duration="95000" />
     </task>
     <task id="LOCAL-00001" summary="Login and Signup before components">
       <created>1620839335095</created>
@@ -389,7 +401,14 @@
       <option name="project" value="LOCAL" />
       <updated>1623573254201</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="Fucking finally store and dark mode fixed">
+      <created>1623776147781</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1623776147781</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -408,7 +427,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Category view header fixes" />
     <MESSAGE value="Dark mode initiation before redux to hooks migration" />
     <MESSAGE value="Dark/light mode switch completed" />
     <MESSAGE value="Persistent Theme" />
@@ -433,7 +451,8 @@
     <MESSAGE value="Minor naming fixes and BoardsSlice.js start" />
     <MESSAGE value="Working board slice get request before cleanup" />
     <MESSAGE value="Authentication fixed" />
-    <option name="LAST_COMMIT_MESSAGE" value="Authentication fixed" />
+    <MESSAGE value="Fucking finally store and dark mode fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fucking finally store and dark mode fixed" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
