@@ -9,7 +9,7 @@ import Button from "@material-ui/core/Button";
 import Divider from "@material-ui/core/Divider";
 import {Board} from "./Boards";
 import {useDispatch} from "react-redux";
-import {openModal} from "../../features/MiscSlice";
+import {openBoardModal} from "../../features/MiscSlice";
 
 const useStyles = makeStyles((theme) => ({
     // necessary for content to be below app bar
@@ -57,7 +57,7 @@ export function BoardView() {
     const dispatch = useDispatch();
 
     const handleBoardModal = () => {
-        dispatch(openModal());
+        dispatch(openBoardModal());
     };
 
 

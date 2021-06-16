@@ -13,15 +13,15 @@ export const miscSlice = createSlice({
         closeSpinner: (state, action) => {
             return {...state, spinner: false};
         },
-        openModal: (state, action) => {
+        openBoardModal: (state, action) => {
             return {...state, boardModal: true};
         },
-        closeModal: (state, action) => {
+        closeBoardModal: (state, action) => {
             return {...state, boardModal: false};
         },
     }
 });
 
-export const {openSpinner, closeSpinner, openModal, closeModal} = miscSlice.actions;
+export const {openSpinner, closeSpinner, openBoardModal, closeBoardModal} = miscSlice.actions;
 
 export const miscSelector = (state) => state.misc;

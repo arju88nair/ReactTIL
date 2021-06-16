@@ -8,7 +8,6 @@ export const preferencesSlice = createSlice({
     reducers: {
         toggleDarkMode: (state) => {
             let selectedMode = !state.darkThemeEnabled
-            console.log("in reducer",selectedMode)
             localStorage.setItem('darkMode', selectedMode);
             return {...state, darkThemeEnabled: selectedMode};
         }

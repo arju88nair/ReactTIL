@@ -4,22 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="908b436c-b8a6-476b-9d1f-177b9c9b967d" name="Default Changelist" comment="Starting cleanup after slice migration">
-      <change afterPath="$PROJECT_DIR$/src/components/PrivateRoute.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/index.js" afterDir="false" />
+    <list default="true" id="908b436c-b8a6-476b-9d1f-177b9c9b967d" name="Default Changelist" comment="Cleanup phase 1">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_helpers/handleResponse.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/_helpers/handleResponse.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_helpers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/_helpers/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_helpers/store.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_services/boardService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/boardService.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_services/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_services/userService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/userService.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_helpers/darkThemeToggle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/MiscSlice.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/MiscSlice.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/features/PreferencesSlice.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/PreferencesSlice.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/Components/MainAppBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Components/MainAppBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/boardService.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/userService.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/HomePage/BoardModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/HomePage/BoardModal.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/HomePage/BoardView.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/HomePage/BoardView.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/HomePage/Boards.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/HomePage/Boards.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -152,7 +147,7 @@
       <workItem from="1623567099730" duration="3982000" />
       <workItem from="1623573125963" duration="4665000" />
       <workItem from="1623776038854" duration="170000" />
-      <workItem from="1623866325840" duration="1115000" />
+      <workItem from="1623866325840" duration="1886000" />
     </task>
     <task id="LOCAL-00001" summary="Login and Signup before components">
       <created>1620839335095</created>
@@ -406,7 +401,14 @@
       <option name="project" value="LOCAL" />
       <updated>1623866441678</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="Cleanup phase 1">
+      <created>1623867506009</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1623867506009</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -425,7 +427,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Dark/light mode switch completed" />
     <MESSAGE value="Persistent Theme" />
     <MESSAGE value="Broken palette without fix" />
     <MESSAGE value="Text colors" />
@@ -450,7 +451,8 @@
     <MESSAGE value="Authentication fixed" />
     <MESSAGE value="Fucking finally store and dark mode fixed" />
     <MESSAGE value="Starting cleanup after slice migration" />
-    <option name="LAST_COMMIT_MESSAGE" value="Starting cleanup after slice migration" />
+    <MESSAGE value="Cleanup phase 1" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cleanup phase 1" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

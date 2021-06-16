@@ -15,7 +15,7 @@ import {withStyles} from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 import Grid from "@material-ui/core/Grid";
 import {Spinner} from "../Components/Spinner";
-import {closeModal, openSpinner} from "../../features/MiscSlice";
+import {closeBoardModal, openSpinner} from "../../features/MiscSlice";
 
 const useStyles = makeStyles((theme) => ({
     modal: {
@@ -125,7 +125,7 @@ export function BoardModal() {
     const [newBoard, setBoard] = useState({title: '', description: ''});
 
     const handleClose = () => {
-        dispatch(closeModal());
+        dispatch(closeBoardModal());
     };
 
     const handleAddBoard = (e) => {
