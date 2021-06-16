@@ -1,7 +1,4 @@
-import {createSlice, createAsyncThunk} from '@reduxjs/toolkit';
-import store from "../store/store";
-import {preferencesConstants} from "../_constants";
-import {userSlice} from "./UserSlice";
+import {createSlice} from '@reduxjs/toolkit';
 
 const initialState = {darkThemeEnabled: false}
 

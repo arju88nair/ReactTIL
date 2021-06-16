@@ -1,23 +1,15 @@
 import Typography from "@material-ui/core/Typography";
 import React from "react";
 import {makeStyles} from "@material-ui/core/styles";
-import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
-import FormControl from "@material-ui/core/FormControl";
-import InputLabel from "@material-ui/core/InputLabel";
-import Select from "@material-ui/core/Select";
-import MenuItem from "@material-ui/core/MenuItem";
+
 import ControlPointIcon from "@material-ui/icons/ControlPoint";
-import Drawer from "@material-ui/core/Drawer";
-import {Box} from "@material-ui/core";
-import FacebookIcon from "@material-ui/icons/Facebook";
-import TwitterIcon from "@material-ui/icons/Twitter";
+
 import Button from "@material-ui/core/Button";
 import Divider from "@material-ui/core/Divider";
 import {Board} from "./Boards";
-import {miscActions} from "../../_actions";
 import {useDispatch} from "react-redux";
-import {BoardSkeleton} from "../Components/BoardSkeleton";
+import {openModal} from "../../features/MiscSlice";
 
 const useStyles = makeStyles((theme) => ({
     // necessary for content to be below app bar
@@ -65,7 +57,7 @@ export function BoardView() {
     const dispatch = useDispatch();
 
     const handleBoardModal = () => {
-        dispatch(miscActions.openBoardModal(true));
+        dispatch(openModal());
     };
 
 

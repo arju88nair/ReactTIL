@@ -4,31 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="908b436c-b8a6-476b-9d1f-177b9c9b967d" name="Default Changelist" comment="Fucking finally store and dark mode fixed">
+    <list default="true" id="908b436c-b8a6-476b-9d1f-177b9c9b967d" name="Default Changelist" comment="Starting cleanup after slice migration">
+      <change afterPath="$PROJECT_DIR$/src/components/PrivateRoute.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_actions/alertActions.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_actions/authenticationActions.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_actions/boardActions.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_actions/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_actions/miscActions.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_actions/preferencesActions.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_components/PrivateRoute.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_components/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_constants/alertConstants.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_constants/boardConstants.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_constants/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_constants/miscConstants.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_constants/preferencesConstants.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_constants/userConstants.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_reducers/alertReducer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_reducers/authenticationReducer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_reducers/boardReducer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_reducers/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_reducers/miscReducers.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_reducers/preferencesReducer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_reducers/registrationReducer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_reducers/usersReducer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/ReduxProvider.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_helpers/handleResponse.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/_helpers/handleResponse.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_helpers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/_helpers/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_helpers/store.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_services/boardService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/boardService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_services/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_services/userService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/userService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/PreferencesSlice.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/PreferencesSlice.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Components/MainAppBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Components/MainAppBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/HomePage/BoardModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/HomePage/BoardModal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/HomePage/BoardView.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/HomePage/BoardView.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/HomePage/Boards.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/HomePage/Boards.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -161,7 +152,7 @@
       <workItem from="1623567099730" duration="3982000" />
       <workItem from="1623573125963" duration="4665000" />
       <workItem from="1623776038854" duration="170000" />
-      <workItem from="1623866325840" duration="95000" />
+      <workItem from="1623866325840" duration="1115000" />
     </task>
     <task id="LOCAL-00001" summary="Login and Signup before components">
       <created>1620839335095</created>
@@ -408,7 +399,14 @@
       <option name="project" value="LOCAL" />
       <updated>1623776147781</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="Starting cleanup after slice migration">
+      <created>1623866441678</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1623866441678</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -427,7 +425,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Dark mode initiation before redux to hooks migration" />
     <MESSAGE value="Dark/light mode switch completed" />
     <MESSAGE value="Persistent Theme" />
     <MESSAGE value="Broken palette without fix" />
@@ -452,14 +449,15 @@
     <MESSAGE value="Working board slice get request before cleanup" />
     <MESSAGE value="Authentication fixed" />
     <MESSAGE value="Fucking finally store and dark mode fixed" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fucking finally store and dark mode fixed" />
+    <MESSAGE value="Starting cleanup after slice migration" />
+    <option name="LAST_COMMIT_MESSAGE" value="Starting cleanup after slice migration" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/views/Components/MainAppBar.js</url>
-          <line>265</line>
+          <line>262</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">

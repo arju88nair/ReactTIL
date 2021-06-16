@@ -4,10 +4,9 @@ import Typography from '@material-ui/core/Typography';
 import Grid from "@material-ui/core/Grid";
 import {BoardSkeleton} from "../Components/BoardSkeleton";
 import {useDispatch, useSelector} from "react-redux";
-import {boardActions} from "../../_actions/boardActions";
 import Button from "@material-ui/core/Button";
 import  {BoardCards} from "./BoardCards";
-import {getBoards, userSelector, clearState, boardSelector} from '../../features/BoardsSlice';
+import {getBoards, boardSelector} from '../../features/BoardsSlice';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -32,7 +31,7 @@ function ErrorRefresh() {
     const classes = useStyles();
     const dispatch = useDispatch();
     const handleErrorRefresh = (event) => {
-        dispatch(boardActions.get());
+        // dispatch(boardActions.get());
     };
 
     // TODO Fix error refresh rendering

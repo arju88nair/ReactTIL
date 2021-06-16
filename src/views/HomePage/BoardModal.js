@@ -1,10 +1,7 @@
 import React, {useState} from 'react';
 import {createMuiTheme, makeStyles, ThemeProvider} from '@material-ui/core/styles';
-import Modal from '@material-ui/core/Modal';
-import Backdrop from '@material-ui/core/Backdrop';
-import Fade from '@material-ui/core/Fade';
+
 import {useDispatch, useSelector} from "react-redux";
-import {miscActions, authenticationActions, alertActions} from "../../_actions";
 import Button from '@material-ui/core/Button';
 import Dialog from '@material-ui/core/Dialog';
 import MuiDialogTitle from '@material-ui/core/DialogTitle';
@@ -17,9 +14,8 @@ import {green} from "@material-ui/core/colors/green";
 import {withStyles} from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 import Grid from "@material-ui/core/Grid";
-import {preferencesActions} from "../../_actions/preferencesActions";
 import {Spinner} from "../Components/Spinner";
-import {boardActions} from "../../_actions/boardActions";
+import {closeModal, openSpinner} from "../../features/MiscSlice";
 
 const useStyles = makeStyles((theme) => ({
     modal: {
@@ -129,13 +125,13 @@ export function BoardModal() {
     const [newBoard, setBoard] = useState({title: '', description: ''});
 
     const handleClose = () => {
-        dispatch(miscActions.closeBoardModal(false));
+        dispatch(closeModal());
     };
 
     const handleAddBoard = (e) => {
         e.preventDefault();
-        dispatch(miscActions.openSpinner(true))
-        dispatch(boardActions.add(newBoard))
+        dispatch(openSpinner())
+        // dispatch(boardActions.add(newBoard))
     }
 
     function handleChange(e) {

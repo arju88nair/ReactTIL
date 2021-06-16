@@ -16,11 +16,8 @@ import NotificationsIcon from '@material-ui/icons/Notifications';
 import MoreIcon from '@material-ui/icons/MoreVert';
 import Brightness7Icon from "@material-ui/icons/Brightness7";
 import Brightness3Icon from "@material-ui/icons/Brightness3";
-import {alertActions, authenticationActions} from "../../_actions";
-import {preferencesActions} from "../../_actions/preferencesActions";
 import {useDispatch, useSelector} from "react-redux";
 import {logout} from "../../features/UserSlice";
-// import {preferencesSelector, toggleDarkMode, turnOnDarkMode} from "../../features/PreferencesSlice";
 import {toggleDarkMode} from "../../features/DarkModeSlice";
 
 const drawerWidth = 240;

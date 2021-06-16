@@ -1,5 +1,5 @@
 import {history} from "./history";
-import {userService} from "../_services";
+import {userService} from "../services";
 
 export function handleResponse(response) {
     return response.text().then(text => {
