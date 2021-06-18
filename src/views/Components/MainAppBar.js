@@ -140,7 +140,6 @@ export function MainAppBar() {
 
     const handleLogout = () => {
         dispatch(logout())
-
     };
     const handleMobileMenuOpen = (event) => {
         setMobileMoreAnchorEl(event.currentTarget);

@@ -65,7 +65,7 @@ export function logout() {
     /// TODO Fix action undefined issue after logging out
     // remove user from local storage to log user out
     localStorage.removeItem('token');
-    history.push('/landing');
+    history.push('login');
 
 }
 let token =localStorage.getItem('token');

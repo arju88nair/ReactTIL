@@ -1,5 +1,5 @@
 import {history} from "./history";
-import {userService} from "../services";
+import {logout} from "../features/UserSlice";
 
 export function handleResponse(response) {
     return response.text().then(text => {
@@ -7,8 +7,8 @@ export function handleResponse(response) {
         if (!response.ok) {
             if (response.status === 401) {
                 // auto logout if 401 response returned from api
-                // userService.logout();
-                // location.reload(true);
+                logout();
+                location.reload(true);
             }
 
             const error = (data && data.message) || response.statusText;

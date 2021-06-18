@@ -5,16 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="908b436c-b8a6-476b-9d1f-177b9c9b967d" name="Default Changelist" comment="Cleanup phase 1">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_helpers/darkThemeToggle.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/MiscSlice.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/MiscSlice.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/PreferencesSlice.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/PreferencesSlice.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/boardService.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/userService.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/HomePage/BoardModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/HomePage/BoardModal.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/HomePage/BoardView.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/HomePage/BoardView.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_helpers/handleResponse.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/_helpers/handleResponse.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/UserSlice.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/UserSlice.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Components/MainAppBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Components/MainAppBar.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -148,6 +142,8 @@
       <workItem from="1623573125963" duration="4665000" />
       <workItem from="1623776038854" duration="170000" />
       <workItem from="1623866325840" duration="1886000" />
+      <workItem from="1623940814263" duration="1235000" />
+      <workItem from="1623942158272" duration="750000" />
     </task>
     <task id="LOCAL-00001" summary="Login and Signup before components">
       <created>1620839335095</created>
@@ -459,7 +455,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/views/Components/MainAppBar.js</url>
-          <line>262</line>
+          <line>261</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
