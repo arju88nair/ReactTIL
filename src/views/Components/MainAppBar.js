@@ -110,7 +110,6 @@ export function MainAppBar() {
     const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
     const [mobileOpen, setMobileOpen] = React.useState(false);
     const darkMode = useSelector((state) => state.darkMode);
-    console.log("main",darkMode)
     const icon = !darkMode ? <Brightness7Icon/> : <Brightness3Icon/>;
     const dispatch = useDispatch();
 

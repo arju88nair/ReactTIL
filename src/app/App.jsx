@@ -7,6 +7,7 @@ import {HomePage} from '../views/HomePage';
 import {LandingPage} from '../views/LandingPage';
 import {LoginPage} from '../views/LoginPage';
 import {RegisterPage} from '../views/RegisterPage';
+import {BoardPage} from '../views/BoardPage';
 import MuiAlert from '@material-ui/lab/Alert';
 import {makeStyles, ThemeProvider} from "@material-ui/core/styles";
 import '../resources/css/App.css';
@@ -29,7 +30,6 @@ export function App() {
     const dispatch = useDispatch();
     const darkMode = useSelector((state) => state.darkMode);
     const themeMode = darkMode ? themeDark : themeLight
-    console.log("In app", darkMode)
     const handleBackClose = (event, reason) => {
         dispatch(closeSpinner())
     }
@@ -60,6 +60,7 @@ export function App() {
                         <PrivateRoute exact path="/" component={HomePage}/>
                         <Route path="/register" component={RegisterPage}/>
                         <Route path="/login" component={LoginPage}/>
+                        <Route path="board/:id" component={BoardPage} />
                         <Route path="/landing" component={LandingPage}/>
                         <Redirect from="*" to="/landing"/>
                     </Switch>

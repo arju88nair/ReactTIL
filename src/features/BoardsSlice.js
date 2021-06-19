@@ -60,9 +60,9 @@ const initialState = boardsAdapter.getInitialState({
     status: 'idle',
     userBoards:{},
     error: null,
-    isFetching: false,
-    isSuccess: false,
-    isError: false,
+    isBoardFetching: false,
+    isBoardSuccess: false,
+    isBoardError: false,
     errorMessage: '',
 })
 
@@ -71,40 +71,40 @@ export const boardsSlice = createSlice({
     initialState,
     reducers: {
         clearBoardState: (state) => {
-            state.isError = false;
-            state.isSuccess = false;
-            state.isFetching = false;
-            return state;
+            state.isBoardError = false;
+            state.isBoardSuccess = false;
+            state.isBoardFetching = false;
+            return {...state};
         },
     },
     extraReducers:{
         [getBoards.pending]: (state, action) => {
             state.status = 'loading'
-            state.isFetching = true;
+            state.isBoardFetching = true;
         },
         [getBoards.fulfilled]: (state, action) => {
             state.status = 'succeeded'
-            state.isFetching = false;
-            state.isSuccess = true;
+            state.isBoardFetching = false;
+            state.isBoardSuccess = true;
             // Add any fetched posts to the array
-            console.log('response',action.payload.data)
+            console.log('responseoardFulfilled',action.payload.data)
             state.userBoards = action.payload.data
             // boardsAdapter.upsertMany(state, action.payload)
         },
         [getBoards.rejected]: (state, action) => {
             state.status = 'failed'
             state.errorMessage = action.error.message
-            state.isFetching = false;
-            state.isError = true;
+            state.isBoardFetching = false;
+            state.isBoardError = true;
         },
         [postBoard.pending]: (state, action) => {
             state.status = 'loading'
-            state.isFetching = true;
+            state.isBoardFetching = true;
         },
         [postBoard.fulfilled]: (state, action) => {
             state.status = 'succeeded'
-            state.isFetching = false;
-            state.isSuccess = true;
+            state.isBoardFetching = false;
+            state.isBoardSuccess = true;
             // Add any fetched posts to the array
             console.log('responseAdded',action.payload)
             state.userBoards = action.payload.board
@@ -113,8 +113,8 @@ export const boardsSlice = createSlice({
         [postBoard.rejected]: (state, action) => {
             state.status = 'failed'
             state.errorMessage = <action className="error message"></action>
-            state.isFetching = false;
-            state.isError = true;
+            state.isBoardFetching = false;
+            state.isBoardError = true;
         },
     }
 });
