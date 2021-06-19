@@ -1,8 +1,7 @@
 import {createSlice, createAsyncThunk} from '@reduxjs/toolkit';
 import config from 'config';
 import {history} from "../_helpers";
-import {closeSpinner} from "./MiscSlice";
-import store from '../store/store'
+
 
 // createAsyncThunk provides us those states out of the box. To implement it, we just need to use the action name and the state of it.
 // createAsyncThunk takes two argument,
@@ -65,6 +64,7 @@ export function logout() {
     /// TODO Fix action undefined issue after logging out
     // remove user from local storage to log user out
     localStorage.removeItem('token');
+    clearState()
     history.push('login');
 
 }

@@ -74,8 +74,8 @@ export function BoardCards() {
     return (
         <div style={{width: '100%'}}>
             <Grid container style={{width: '100%'}}>
-                {boards.map((board) => (
-                    <Grid item key={board} xs={12} sm={6} lg={3} xl={2}>
+                {boards.map((board,index) => (
+                    <Grid item key={index} xs={12} sm={6} lg={3} xl={2}>
                         <Card className={classes.card}>
 
                             <CardHeader

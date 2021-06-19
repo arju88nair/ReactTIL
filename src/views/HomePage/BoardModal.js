@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {createMuiTheme, makeStyles, ThemeProvider} from '@material-ui/core/styles';
 
 import {useDispatch, useSelector} from "react-redux";
@@ -15,7 +15,9 @@ import {withStyles} from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 import Grid from "@material-ui/core/Grid";
 import {Spinner} from "../Components/Spinner";
-import {closeBoardModal, openSpinner} from "../../features/MiscSlice";
+import {closeBoardModal, closeSpinner, openSpinner} from "../../features/MiscSlice";
+import {boardSelector, boardsSlice, clearBoardState, postBoard} from "../../features/BoardsSlice";
+import {userSelector} from "../../features/UserSlice";
 
 const useStyles = makeStyles((theme) => ({
     modal: {
@@ -24,11 +26,11 @@ const useStyles = makeStyles((theme) => ({
         justifyContent: 'center',
     },
 
-    root: { },
+    root: {},
     paper: {
         backgroundColor: theme.palette.background.paper,
         // border: '2px solid #000',
-        borderRadius:'16px',
+        borderRadius: '16px',
         boxShadow: theme.shadows[5],
         // padding: theme.spacing(2, 4, 3),
     },
@@ -39,7 +41,7 @@ const useStyles = makeStyles((theme) => ({
     },
     modalWindow: {
         bottom: '35%',
-        borderRadius:'2em'
+        borderRadius: '2em'
     },
     modelTopBottom: {
         backgroundColor: theme.palette.primary.main,
@@ -53,7 +55,7 @@ const useStyles = makeStyles((theme) => ({
         color: 'rgb(61, 158, 116)',
     },
     cssLabel: {
-        color : theme.palette.text.primary
+        color: theme.palette.text.primary
     },
     submit: {
         background: theme.palette.action.primary,
@@ -84,8 +86,8 @@ const styles = (theme) => ({
 });
 const themer = createMuiTheme({
     palette: {
-        text:'white',
-        type:'dark'
+        text: 'white',
+        type: 'dark'
     },
 });
 
@@ -123,16 +125,28 @@ export function BoardModal() {
     const modalOpen = useSelector(state => state.misc.boardModal);
     const dispatch = useDispatch();
     const [newBoard, setBoard] = useState({title: '', description: ''});
-
+    const {isSuccess, isError, errorMessage} = useSelector(
+        boardSelector
+    );
     const handleClose = () => {
         dispatch(closeBoardModal());
     };
 
     const handleAddBoard = (e) => {
         e.preventDefault();
-        dispatch(openSpinner())
-        // dispatch(boardActions.add(newBoard))
+        dispatch(clearBoardState())
+        dispatch(postBoard(newBoard))
     }
+
+    useEffect(() => {
+        if (isSuccess) {
+            dispatch(clearBoardState())
+            dispatch(closeSpinner())
+        }
+        if (isError) {
+            dispatch(closeSpinner())
+        }
+    }, [isError, isSuccess]);
 
     function handleChange(e) {
         const {name, value} = e.target;
@@ -149,7 +163,7 @@ export function BoardModal() {
             }}>
                 <form onSubmit={handleAddBoard}>
                     <DialogTitle id="customized-dialog-title" onClose={handleClose} className={classes.modelTopBottom}>
-                        <Typography variant="h6" style={{fontWeight:"bold"}}>Add a new Board</Typography>
+                        <Typography variant="h6" style={{fontWeight: "bold"}}>Add a new Board</Typography>
                     </DialogTitle>
                     <DialogContent dividers className={classes.modelBody}>
                         <Typography gutterBottom>
@@ -158,36 +172,36 @@ export function BoardModal() {
                         <Grid container>
                             <Grid item xs={12}>
                                 <ThemeProvider theme={themer}>
-                                <TextField
-                                    variant="outlined"
-                                    required
-                                    fullWidth
-                                    id="title"
-                                    label="Title"
-                                    name="title"
-                                    onChange={handleChange}
-                                    margin="normal"
-                                    type="text"
-                                />
+                                    <TextField
+                                        variant="outlined"
+                                        required
+                                        fullWidth
+                                        id="title"
+                                        label="Title"
+                                        name="title"
+                                        onChange={handleChange}
+                                        margin="normal"
+                                        type="text"
+                                    />
                                 </ThemeProvider>
                             </Grid> <Grid item xs={12}>
                             <ThemeProvider theme={themer}>
-                            <TextField
-                                id="Description"
-                                label="Description"
-                                name="description"
-                                multiline
-                                fullWidth
-                                rows={4}
-                                variant="outlined"
-                                onChange={handleChange}
-                            />
+                                <TextField
+                                    id="Description"
+                                    label="Description"
+                                    name="description"
+                                    multiline
+                                    fullWidth
+                                    rows={4}
+                                    variant="outlined"
+                                    onChange={handleChange}
+                                />
                             </ThemeProvider>
                         </Grid>
                         </Grid>
                     </DialogContent>
                     <DialogActions className={classes.modelTopBottom}>
-                        <Button autoFocus type="submit"    type="submit"
+                        <Button autoFocus type="submit" type="submit"
                                 variant="outlined" color="primary" className={classes.submit}>
                             Save changes
                         </Button>

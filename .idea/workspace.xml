@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="908b436c-b8a6-476b-9d1f-177b9c9b967d" name="Default Changelist" comment="Cleanup phase 1">
+    <list default="true" id="908b436c-b8a6-476b-9d1f-177b9c9b967d" name="Default Changelist" comment="Stuff">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_helpers/handleResponse.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/_helpers/handleResponse.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/BoardsSlice.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/BoardsSlice.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/features/UserSlice.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/UserSlice.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/Components/MainAppBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Components/MainAppBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/HomePage/BoardCards.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/HomePage/BoardCards.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/HomePage/BoardModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/HomePage/BoardModal.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,7 +144,8 @@
       <workItem from="1623776038854" duration="170000" />
       <workItem from="1623866325840" duration="1886000" />
       <workItem from="1623940814263" duration="1235000" />
-      <workItem from="1623942158272" duration="750000" />
+      <workItem from="1623942158272" duration="5103000" />
+      <workItem from="1624106041373" duration="2752000" />
     </task>
     <task id="LOCAL-00001" summary="Login and Signup before components">
       <created>1620839335095</created>
@@ -404,7 +406,14 @@
       <option name="project" value="LOCAL" />
       <updated>1623867506009</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="Stuff">
+      <created>1624026925070</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1624026925070</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -423,7 +432,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Persistent Theme" />
     <MESSAGE value="Broken palette without fix" />
     <MESSAGE value="Text colors" />
     <MESSAGE value="Theme fix for nth time" />
@@ -448,7 +456,8 @@
     <MESSAGE value="Fucking finally store and dark mode fixed" />
     <MESSAGE value="Starting cleanup after slice migration" />
     <MESSAGE value="Cleanup phase 1" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cleanup phase 1" />
+    <MESSAGE value="Stuff" />
+    <option name="LAST_COMMIT_MESSAGE" value="Stuff" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
