@@ -4,7 +4,7 @@ import config from 'config';
 import {userSlice} from "./UserSlice";
 
 const boardsAdapter = createEntityAdapter({
-    sortComparer: (a, b) => b.date.localeCompare(a.date),
+    // sortComparer: (a, b) => b.date.localeCompare(a.date),
 })
 
 
@@ -43,7 +43,6 @@ export const postBoard = createAsyncThunk(
             const response = await fetch(`${config.apiUrl}/boards`, requestOptions);
             let boards = await response.json();
             if (response.status === 200) {
-                console.log(boards)
                 getBoards()
                 return boards;
             } else {
@@ -71,10 +70,9 @@ export const boardsSlice = createSlice({
     initialState,
     reducers: {
         clearBoardState: (state) => {
-            // state.isBoardError = false;
-            // state.isBoardSuccess = false;
-            // state.isBoardFetching = false;
-            // return {...state};
+            state.isBoardError = false;
+            state.isBoardSuccess = false;
+            state.isBoardFetching = false;
         },
     },
     extraReducers:{
@@ -87,7 +85,7 @@ export const boardsSlice = createSlice({
             state.isBoardFetching = false;
             state.isBoardSuccess = true;
             // Add any fetched posts to the array
-            console.log('responseoardFulfilled',action.payload.data)
+            console.log('responseBoardFulfilled',action.payload.data)
             state.userBoards = action.payload.data
             // boardsAdapter.upsertMany(state, action.payload)
         },
@@ -108,11 +106,15 @@ export const boardsSlice = createSlice({
             // Add any fetched posts to the array
             console.log('responseAdded',action.payload)
             // state.userBoards = action.payload.board
-            // boardsAdapter.upsertMany(state, action.payload)
+            // boardsAdapter.upsertMany(state, action.payload.board)
         },
-        [postBoard.rejected]: (state, action) => {
+        [postBoard.rejected]: (state, {payload}) => {
+            if(!payload)
+            {
+                payload={'message':"Something went wrong. Please try again later"}
+            }
             state.status = 'failed'
-            state.errorMessage = <action className="error message"></action>
+            state.errorMessage = payload.message;
             state.isBoardFetching = false;
             state.isBoardError = true;
         },

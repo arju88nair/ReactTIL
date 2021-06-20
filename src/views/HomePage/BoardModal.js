@@ -1,6 +1,5 @@
 import React, {useEffect, useState} from 'react';
 import {createMuiTheme, makeStyles, ThemeProvider} from '@material-ui/core/styles';
-
 import {useDispatch, useSelector} from "react-redux";
 import Button from '@material-ui/core/Button';
 import Dialog from '@material-ui/core/Dialog';
@@ -16,8 +15,7 @@ import TextField from '@material-ui/core/TextField';
 import Grid from "@material-ui/core/Grid";
 import {Spinner} from "../Components/Spinner";
 import {closeBoardModal, closeSpinner, openSpinner} from "../../features/MiscSlice";
-import {boardSelector, boardsSlice, clearBoardState, getBoards, postBoard} from "../../features/BoardsSlice";
-import {userSelector} from "../../features/UserSlice";
+import {boardSelector, clearBoardState, getBoards, postBoard} from "../../features/BoardsSlice";
 
 const useStyles = makeStyles((theme) => ({
     modal: {
@@ -140,7 +138,6 @@ export function BoardModal() {
     }
 
     useEffect(() => {
-        console.log(boardSelector)
         if (isBoardSuccess) {
             console.log("Sdsdss")
             dispatch(closeBoardModal())
@@ -148,6 +145,7 @@ export function BoardModal() {
             dispatch(getBoards())
         }
         if (isBoardError) {
+            console.log("SDd")
             dispatch(closeSpinner())
         }
     }, [isBoardError, isBoardSuccess]);

@@ -127,7 +127,7 @@ export function LoginForm() {
         e.preventDefault();
         if (user.email && user.password) {
             dispatch(clearState());
-            dispatch(loginUser(user));
+            dispatch(loginUser(user));;
         }
     };
 
@@ -137,16 +137,16 @@ export function LoginForm() {
             dispatch(closeSpinner())
             history.push('/');
         }
-        if(isError)
-        {
+        if (isError) {
             dispatch(closeSpinner())
         }
-    }, [isError,isSuccess]);
+    }, [isError, isSuccess]);
 
     function handleChange(e) {
         const {name, value} = e.target;
         setUser(user => ({...user, [name]: value}));
     }
+
     const classes = useStyles();
 
     return (
@@ -232,7 +232,7 @@ export function LoginForm() {
                         </Grid>
                         {isError ? <Grid item xs={12}>
                             <Typography variant="caption" display="block" gutterBottom color="primary"
-                                        style={{color: 'red',fontSize:'1.05em'}}>
+                                        style={{color: 'red', fontSize: '1.05em'}}>
                                 {errorMessage}
                             </Typography>
                         </Grid> : null}
