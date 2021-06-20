@@ -44,7 +44,7 @@ export const postBoard = createAsyncThunk(
             let boards = await response.json();
             if (response.status === 200) {
                 console.log(boards)
-                // getBoards()
+                getBoards()
                 return boards;
             } else {
                 return thunkAPI.rejectWithValue(boards);
@@ -71,10 +71,10 @@ export const boardsSlice = createSlice({
     initialState,
     reducers: {
         clearBoardState: (state) => {
-            state.isBoardError = false;
-            state.isBoardSuccess = false;
-            state.isBoardFetching = false;
-            return {...state};
+            // state.isBoardError = false;
+            // state.isBoardSuccess = false;
+            // state.isBoardFetching = false;
+            // return {...state};
         },
     },
     extraReducers:{
@@ -107,7 +107,7 @@ export const boardsSlice = createSlice({
             state.isBoardSuccess = true;
             // Add any fetched posts to the array
             console.log('responseAdded',action.payload)
-            state.userBoards = action.payload.board
+            // state.userBoards = action.payload.board
             // boardsAdapter.upsertMany(state, action.payload)
         },
         [postBoard.rejected]: (state, action) => {
@@ -122,8 +122,8 @@ export const boardsSlice = createSlice({
 export const {clearBoardState} = boardsSlice.actions;
 
 export const boardSelector = (state) => state.boards;
-export const {
-    selectAll: selectAllPosts,
-    selectById: selectPostById,
-    selectIds: selectPostIds,
-} = boardsAdapter.getSelectors((state) => state.boards)
+// export const {
+//     selectAll: selectAllPosts,
+//     selectById: selectPostById,
+//     selectIds: selectPostIds,
+// } = boardsAdapter.getSelectors((state) => state.boards)

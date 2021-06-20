@@ -16,7 +16,7 @@ import TextField from '@material-ui/core/TextField';
 import Grid from "@material-ui/core/Grid";
 import {Spinner} from "../Components/Spinner";
 import {closeBoardModal, closeSpinner, openSpinner} from "../../features/MiscSlice";
-import {boardSelector, boardsSlice, clearBoardState, postBoard} from "../../features/BoardsSlice";
+import {boardSelector, boardsSlice, clearBoardState, getBoards, postBoard} from "../../features/BoardsSlice";
 import {userSelector} from "../../features/UserSlice";
 
 const useStyles = makeStyles((theme) => ({
@@ -125,7 +125,7 @@ export function BoardModal() {
     const modalOpen = useSelector(state => state.misc.boardModal);
     const dispatch = useDispatch();
     const [newBoard, setBoard] = useState({title: '', description: ''});
-    const {isSuccess, isError, errorMessage} = useSelector(
+    const {isBoardSuccess, isBoardError, errorMessage} = useSelector(
         boardSelector
     );
     const handleClose = () => {
@@ -134,19 +134,23 @@ export function BoardModal() {
 
     const handleAddBoard = (e) => {
         e.preventDefault();
+        dispatch(openSpinner())
         dispatch(clearBoardState())
         dispatch(postBoard(newBoard))
     }
 
     useEffect(() => {
-        if (isSuccess) {
-            dispatch(clearBoardState())
+        console.log(boardSelector)
+        if (isBoardSuccess) {
+            console.log("Sdsdss")
+            dispatch(closeBoardModal())
+            dispatch(closeSpinner())
+            dispatch(getBoards())
+        }
+        if (isBoardError) {
             dispatch(closeSpinner())
         }
-        if (isError) {
-            dispatch(closeSpinner())
-        }
-    }, [isError, isSuccess]);
+    }, [isBoardError, isBoardSuccess]);
 
     function handleChange(e) {
         const {name, value} = e.target;
