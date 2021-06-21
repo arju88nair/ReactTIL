@@ -4,15 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="908b436c-b8a6-476b-9d1f-177b9c9b967d" name="Default Changelist" comment="Board slice fix for posting">
+    <list default="true" id="908b436c-b8a6-476b-9d1f-177b9c9b967d" name="Default Changelist" comment="Without dynamic routing fixed">
+      <change afterPath="$PROJECT_DIR$/.htaccess" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/BoardsSlice.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/BoardsSlice.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/BoardPage/BoardPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/BoardPage/BoardPage.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/HomePage/BoardCards.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/HomePage/BoardCards.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/HomePage/BoardModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/HomePage/BoardModal.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/HomePage/Boards.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/HomePage/Boards.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/LoginPage/LoginForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/LoginPage/LoginForm.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -149,7 +144,7 @@
       <workItem from="1623940814263" duration="1235000" />
       <workItem from="1623942158272" duration="5103000" />
       <workItem from="1624106041373" duration="2752000" />
-      <workItem from="1624286399348" duration="3903000" />
+      <workItem from="1624286399348" duration="4470000" />
     </task>
     <task id="LOCAL-00001" summary="Login and Signup before components">
       <created>1620839335095</created>
@@ -438,7 +433,14 @@
       <option name="project" value="LOCAL" />
       <updated>1624203013734</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="Without dynamic routing fixed">
+      <created>1624291009952</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1624291009952</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -457,7 +459,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Board theme except input" />
     <MESSAGE value="Minor changes in style" />
     <MESSAGE value="Before Board cards" />
     <MESSAGE value="BoardCards.js" />
@@ -482,7 +483,8 @@
     <MESSAGE value="Boards state fix with anchor tag error not fixed" />
     <MESSAGE value="Not state fixed" />
     <MESSAGE value="Board slice fix for posting" />
-    <option name="LAST_COMMIT_MESSAGE" value="Board slice fix for posting" />
+    <MESSAGE value="Without dynamic routing fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Without dynamic routing fixed" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -48,7 +48,10 @@ module.exports = {
             }
         ]
     },
-
+    output: {
+        filename: "dev-bundle.js",
+        publicPath: "/",    // added this line
+    },
     plugins: [new HtmlWebpackPlugin({
         template: './src/index.html'
     })],
