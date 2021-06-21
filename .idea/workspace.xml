@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="908b436c-b8a6-476b-9d1f-177b9c9b967d" name="Default Changelist" comment="Without dynamic routing fixed">
-      <change afterPath="$PROJECT_DIR$/.htaccess" afterDir="false" />
+    <list default="true" id="908b436c-b8a6-476b-9d1f-177b9c9b967d" name="Default Changelist" comment="Fucking fixed. Without cleanup">
+      <change afterPath="$PROJECT_DIR$/src/views/NewNotesPage/Editor.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/NewNotesPage/NewEditorPage.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/NewNotesPage/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/App.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +54,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/views/BoardPage" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/views/NewNotesPage" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
@@ -62,11 +64,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/views/NewNotesPage" />
+      <recent name="$PROJECT_DIR$/src/views/NotesPage" />
       <recent name="$PROJECT_DIR$/src/views/BoardPage" />
       <recent name="$PROJECT_DIR$/src/store" />
       <recent name="$PROJECT_DIR$/src/views/Components" />
-      <recent name="$PROJECT_DIR$/src/_components" />
-      <recent name="$PROJECT_DIR$/src/features" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/store" />
@@ -144,7 +146,7 @@
       <workItem from="1623940814263" duration="1235000" />
       <workItem from="1623942158272" duration="5103000" />
       <workItem from="1624106041373" duration="2752000" />
-      <workItem from="1624286399348" duration="4470000" />
+      <workItem from="1624286399348" duration="5343000" />
     </task>
     <task id="LOCAL-00001" summary="Login and Signup before components">
       <created>1620839335095</created>
@@ -440,7 +442,21 @@
       <option name="project" value="LOCAL" />
       <updated>1624291009952</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="FUcking fixed. Without cleanup">
+      <created>1624291566216</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1624291566216</updated>
+    </task>
+    <task id="LOCAL-00044" summary="Fucking fixed. Without cleanup">
+      <created>1624291586367</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1624291586367</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -459,8 +475,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Minor changes in style" />
-    <MESSAGE value="Before Board cards" />
     <MESSAGE value="BoardCards.js" />
     <MESSAGE value="Boards rendering from API" />
     <MESSAGE value="THeme js for button" />
@@ -484,7 +498,9 @@
     <MESSAGE value="Not state fixed" />
     <MESSAGE value="Board slice fix for posting" />
     <MESSAGE value="Without dynamic routing fixed" />
-    <option name="LAST_COMMIT_MESSAGE" value="Without dynamic routing fixed" />
+    <MESSAGE value="FUcking fixed. Without cleanup" />
+    <MESSAGE value="Fucking fixed. Without cleanup" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fucking fixed. Without cleanup" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
