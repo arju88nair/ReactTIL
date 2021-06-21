@@ -17,7 +17,7 @@ import Collapse from "@material-ui/core/Collapse";
 import {makeStyles} from "@material-ui/core/styles";
 import {red} from "@material-ui/core/colors";
 import {CardActionArea} from "@material-ui/core";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import {BrowserRouter as Router, Route, Link} from "react-router-dom";
 import {boardSelector} from "../../features/BoardsSlice";
 
 const useStyles = makeStyles((theme) => ({
@@ -64,8 +64,8 @@ const useStyles = makeStyles((theme) => ({
 export function BoardCards() {
     const classes = useStyles();
     const data = useSelector(boardSelector);
-    const boards= data.userBoards
-    console.log("boards",boards)
+    const boards = data.userBoards
+    console.log("boards", boards)
     const [expanded, setExpanded] = React.useState(false);
     const handleExpandClick = () => {
         setExpanded(!expanded);
@@ -74,7 +74,7 @@ export function BoardCards() {
     return (
         <div style={{width: '100%'}}>
             <Grid container style={{width: '100%'}}>
-                {boards.map((board,index) => (
+                {boards.map((board, index) => (
                     <Grid item key={index} xs={12} sm={6} lg={3} xl={2}>
                         <Card className={classes.card}>
 
@@ -92,21 +92,26 @@ export function BoardCards() {
                                 title={board.title}
                                 subheader={board.time_stamp}
                             />
-                            <Link to={'board/'+ board.username +'/' + board.slug} component={CardActionArea}>
-                            <CardContent style={{backgroundColor: board.color, overflow:"hidden"}}>
-                                <div style={{color: "salmon", position: 'relative', width: '119px', height: '150px'}}>
+                            <Link to={`/board/2`} component={CardActionArea}>
+                                <CardContent style={{backgroundColor: board.color, overflow: "hidden"}}>
+                                    <div style={{
+                                        color: "salmon",
+                                        position: 'relative',
+                                        width: '119px',
+                                        height: '150px'
+                                    }}>
                                     <span style={{
                                         fontWeight: "bold",
                                         fontSize: '16em',
                                         display: "inline",
                                         color: "lavenderblush",
-                                        position:"absolute",
-                                        marginTop:'-48%'
+                                        position: "absolute",
+                                        marginTop: '-48%'
                                     }}>
                                         {board.title.charAt(0)}
                                     </span>
-                                </div>
-                            </CardContent>
+                                    </div>
+                                </CardContent>
                             </Link>
                             <CardActions disableSpacing>
                                 <IconButton aria-label="add to favorites">

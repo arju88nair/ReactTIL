@@ -60,7 +60,9 @@ const initialState = boardsAdapter.getInitialState({
     userBoards:{},
     error: null,
     isBoardFetching: false,
+    isBoardGetSuccess: false,
     isBoardSuccess: false,
+    isBoardGetError: false,
     isBoardError: false,
     errorMessage: '',
 })
@@ -71,6 +73,8 @@ export const boardsSlice = createSlice({
     reducers: {
         clearBoardState: (state) => {
             state.isBoardError = false;
+            state.isBoardGetError = false;
+            state.isBoardGetSuccess = false;
             state.isBoardSuccess = false;
             state.isBoardFetching = false;
         },
@@ -83,7 +87,7 @@ export const boardsSlice = createSlice({
         [getBoards.fulfilled]: (state, action) => {
             state.status = 'succeeded'
             state.isBoardFetching = false;
-            state.isBoardSuccess = true;
+            state.isBoardGetSuccess = true;
             // Add any fetched posts to the array
             console.log('responseBoardFulfilled',action.payload.data)
             state.userBoards = action.payload.data
@@ -93,7 +97,7 @@ export const boardsSlice = createSlice({
             state.status = 'failed'
             state.errorMessage = action.error.message
             state.isBoardFetching = false;
-            state.isBoardError = true;
+            state.isBoardGetError = true;
         },
         [postBoard.pending]: (state, action) => {
             state.status = 'loading'

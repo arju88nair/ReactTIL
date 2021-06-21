@@ -4,10 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="908b436c-b8a6-476b-9d1f-177b9c9b967d" name="Default Changelist" comment="Not state fixed">
+    <list default="true" id="908b436c-b8a6-476b-9d1f-177b9c9b967d" name="Default Changelist" comment="Board slice fix for posting">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/App.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/features/BoardsSlice.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/BoardsSlice.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/BoardPage/BoardPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/BoardPage/BoardPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/HomePage/BoardCards.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/HomePage/BoardCards.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/HomePage/BoardModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/HomePage/BoardModal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/HomePage/Boards.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/HomePage/Boards.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/LoginPage/LoginForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/LoginPage/LoginForm.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -145,6 +149,7 @@
       <workItem from="1623940814263" duration="1235000" />
       <workItem from="1623942158272" duration="5103000" />
       <workItem from="1624106041373" duration="2752000" />
+      <workItem from="1624286399348" duration="3903000" />
     </task>
     <task id="LOCAL-00001" summary="Login and Signup before components">
       <created>1620839335095</created>
@@ -426,7 +431,14 @@
       <option name="project" value="LOCAL" />
       <updated>1624199501199</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="Board slice fix for posting">
+      <created>1624203013734</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1624203013734</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -445,7 +457,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Theme fix for nth time" />
     <MESSAGE value="Board theme except input" />
     <MESSAGE value="Minor changes in style" />
     <MESSAGE value="Before Board cards" />
@@ -470,14 +481,15 @@
     <MESSAGE value="Stuff" />
     <MESSAGE value="Boards state fix with anchor tag error not fixed" />
     <MESSAGE value="Not state fixed" />
-    <option name="LAST_COMMIT_MESSAGE" value="Not state fixed" />
+    <MESSAGE value="Board slice fix for posting" />
+    <option name="LAST_COMMIT_MESSAGE" value="Board slice fix for posting" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/views/LoginPage/LoginForm.jsx</url>
-          <line>218</line>
+          <line>219</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>

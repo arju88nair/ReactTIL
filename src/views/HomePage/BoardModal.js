@@ -139,7 +139,6 @@ export function BoardModal() {
 
     useEffect(() => {
         if (isBoardSuccess) {
-            console.log("Sdsdss")
             dispatch(closeBoardModal())
             dispatch(closeSpinner())
             dispatch(getBoards())

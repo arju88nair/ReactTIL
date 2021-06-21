@@ -12,7 +12,7 @@ import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Checkbox from "@material-ui/core/Checkbox";
 import Divider from "@material-ui/core/Divider";
 import {loginUser, userSelector, clearState} from '../../features/UserSlice';
-import {closeSpinner} from "../../features/MiscSlice";
+import {closeSpinner, openSpinner} from "../../features/MiscSlice";
 
 const theme = createMuiTheme({
     // palette: {
@@ -126,6 +126,7 @@ export function LoginForm() {
     function handleSubmit(e) {
         e.preventDefault();
         if (user.email && user.password) {
+            dispatch(openSpinner())
             dispatch(clearState());
             dispatch(loginUser(user));;
         }

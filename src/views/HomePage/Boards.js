@@ -51,7 +51,7 @@ function ErrorRefresh() {
 
 export function Board() {
     const classes = useStyles();
-    const { isBoardFetching, isBoardError,isBoardSuccess } = useSelector(boardSelector);
+    const { isBoardFetching, isBoardGetError,isBoardGetSuccess } = useSelector(boardSelector);
     const dispatch = useDispatch();
     useEffect(() => {
         console.log("dispatching for boards")
@@ -65,8 +65,8 @@ export function Board() {
                   justify="flex-start"
                   alignItems="center" spacing={3}>
                 {isBoardFetching && Array(6).fill(<BoardSkeleton/>)}
-                {isBoardError && <ErrorRefresh/>}
-                {isBoardSuccess && <BoardCards/>}
+                {isBoardGetError && <ErrorRefresh/>}
+                {isBoardGetSuccess && <BoardCards/>}
             </Grid>
         </div>
     );

@@ -60,7 +60,7 @@ export function App() {
                         <PrivateRoute exact path="/" component={HomePage}/>
                         <Route path="/register" component={RegisterPage}/>
                         <Route path="/login" component={LoginPage}/>
-                        <Route path="board/:id" component={BoardPage} />
+                        <PrivateRoute path="/board/:boardId" component={BoardPage}/>
                         <Route path="/landing" component={LandingPage}/>
                         <Redirect from="*" to="/landing"/>
                     </Switch>
