@@ -15,6 +15,7 @@ import {themeDark, themeLight} from "../_helpers/theme";
 import {Snackbar} from "@material-ui/core";
 import {alertSlice, clear} from "../features/AlertSlice";
 import {closeSpinner} from "../features/MiscSlice";
+import {NewEditorPage} from "../views/NewNotesPage";
 
 
 const useStyles = makeStyles((theme) => ({
@@ -61,7 +62,7 @@ export function App() {
                         <Route path="/register" component={RegisterPage}/>
                         <Route path="/login" component={LoginPage}/>
                         <PrivateRoute path="/board/:boardId" component={BoardPage}/>
-                        <PrivateRoute path="/new-note" component={}/>
+                        <PrivateRoute path="/new-note" component={NewEditorPage}/>
                         <Route path="/landing" component={LandingPage}/>
                         <Redirect from="*" to="/landing"/>
                     </Switch>

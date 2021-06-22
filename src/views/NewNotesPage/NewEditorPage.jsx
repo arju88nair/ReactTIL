@@ -1,7 +1,8 @@
 import React from 'react';
 import {makeStyles} from '@material-ui/core/styles';
-import {LoginForm} from "./LoginForm";
-import {PreLoginAppbar} from "../Components/PreLoginAppbar";
+import CssBaseline from "@material-ui/core/CssBaseline";
+import {SideBar} from "../Components/SideBar";
+import {Editor} from "./Editor";
 
 
 const useStyles = makeStyles((theme) => ({
@@ -19,7 +20,9 @@ export function NewEditorPage() {
 
     return (
         <div className={classes.root}>
-            <PreLoginAppbar/>
+            <CssBaseline/>
+            <SideBar/>
+            <Editor/>
         </div>
     );
 }

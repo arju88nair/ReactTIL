@@ -4,12 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="908b436c-b8a6-476b-9d1f-177b9c9b967d" name="Default Changelist" comment="Fucking fixed. Without cleanup">
-      <change afterPath="$PROJECT_DIR$/src/views/NewNotesPage/Editor.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/NewNotesPage/NewEditorPage.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/NewNotesPage/index.js" afterDir="false" />
+    <list default="true" id="908b436c-b8a6-476b-9d1f-177b9c9b967d" name="Default Changelist" comment="Before ckeditor test">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/NewNotesPage/Editor.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/NewNotesPage/Editor.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/NewNotesPage/NewEditorPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/NewNotesPage/NewEditorPage.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -146,7 +147,8 @@
       <workItem from="1623940814263" duration="1235000" />
       <workItem from="1623942158272" duration="5103000" />
       <workItem from="1624106041373" duration="2752000" />
-      <workItem from="1624286399348" duration="5343000" />
+      <workItem from="1624286399348" duration="5751000" />
+      <workItem from="1624373446866" duration="603000" />
     </task>
     <task id="LOCAL-00001" summary="Login and Signup before components">
       <created>1620839335095</created>
@@ -456,7 +458,14 @@
       <option name="project" value="LOCAL" />
       <updated>1624291586367</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="Before ckeditor test">
+      <created>1624298476415</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1624298476415</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -475,7 +484,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="BoardCards.js" />
     <MESSAGE value="Boards rendering from API" />
     <MESSAGE value="THeme js for button" />
     <MESSAGE value="Theme changes" />
@@ -500,7 +508,8 @@
     <MESSAGE value="Without dynamic routing fixed" />
     <MESSAGE value="FUcking fixed. Without cleanup" />
     <MESSAGE value="Fucking fixed. Without cleanup" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fucking fixed. Without cleanup" />
+    <MESSAGE value="Before ckeditor test" />
+    <option name="LAST_COMMIT_MESSAGE" value="Before ckeditor test" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
