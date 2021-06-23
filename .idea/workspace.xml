@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="908b436c-b8a6-476b-9d1f-177b9c9b967d" name="Default Changelist" comment="Before ckeditor test">
+    <list default="true" id="908b436c-b8a6-476b-9d1f-177b9c9b967d" name="Default Changelist" comment="ckeditor implemetation test run">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Components/SideBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Components/SideBar.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/NewNotesPage/Editor.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/NewNotesPage/Editor.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/NewNotesPage/NewEditorPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/NewNotesPage/NewEditorPage.jsx" afterDir="false" />
     </list>
@@ -148,7 +146,9 @@
       <workItem from="1623942158272" duration="5103000" />
       <workItem from="1624106041373" duration="2752000" />
       <workItem from="1624286399348" duration="5751000" />
-      <workItem from="1624373446866" duration="603000" />
+      <workItem from="1624373446866" duration="2105000" />
+      <workItem from="1624383747624" duration="2312000" />
+      <workItem from="1624462623064" duration="1501000" />
     </task>
     <task id="LOCAL-00001" summary="Login and Signup before components">
       <created>1620839335095</created>
@@ -465,7 +465,14 @@
       <option name="project" value="LOCAL" />
       <updated>1624298476415</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="ckeditor implemetation test run">
+      <created>1624378032006</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1624378032006</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -484,7 +491,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Boards rendering from API" />
     <MESSAGE value="THeme js for button" />
     <MESSAGE value="Theme changes" />
     <MESSAGE value="Snackbar with actions" />
@@ -509,7 +515,8 @@
     <MESSAGE value="FUcking fixed. Without cleanup" />
     <MESSAGE value="Fucking fixed. Without cleanup" />
     <MESSAGE value="Before ckeditor test" />
-    <option name="LAST_COMMIT_MESSAGE" value="Before ckeditor test" />
+    <MESSAGE value="ckeditor implemetation test run" />
+    <option name="LAST_COMMIT_MESSAGE" value="ckeditor implemetation test run" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

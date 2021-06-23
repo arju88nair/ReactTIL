@@ -7,10 +7,9 @@ import {Editor} from "./Editor";
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        flexGrow: 1,
-        backgroundColor: theme.palette.secondary.main,
-        minHeight: '100vh'
-
+        display: 'flex',
+        backgroundColor:theme.palette.secondary.main,
+        minHeight:'100vh'
     },
 }));
 
@@ -20,7 +19,7 @@ export function NewEditorPage() {
 
     return (
         <div className={classes.root}>
-            <CssBaseline/>
+            <CssBaseline />
             <SideBar/>
             <Editor/>
         </div>

@@ -68,6 +68,10 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
+function ListItemLink(props) {
+    return <ListItem button component="a" {...props} />;
+}
+
 export function SideBar(props) {
     const {window} = props;
     const classes = useStyles();
@@ -100,11 +104,19 @@ export function SideBar(props) {
                     Nested
                 </ListSubheader>
             }>
+                <ListItem button key="new-note" style={{marginLeft:'1.2em',color: 'var(--color-text)',fontWeight:"bold"}}>
+                    <ListItemLink href="/new-note">
+                    <ListItemIcon style={{color: theme.palette.text.secondary}}><InboxIcon/></ListItemIcon>
+                    <ListItemText  classes={{primary:classes.listItemText}} primary="New Note"/>
+                    </ListItemLink>
+                </ListItem>
                 {['Inbox1', 'Starred1', 'Send1 email', 'Draf1ts', 'Star1red', 'Sen1d email', 'D1rafts'].map((text, index) => (
-                    <ListItem button key={text} style={{marginLeft:'1.5em',color: 'var(--color-text)',fontWeight:"bold"}}>
+                    <ListItem button key={text} style={{marginLeft:'1.2em',color: 'var(--color-text)',fontWeight:"bold"}}>
+                        <ListItemLink href="#simple-list">
                         <ListItemIcon style={{color: theme.palette.text.secondary}}>{index % 2 === 0 ? <InboxIcon/> :
                             <MailIcon/>}</ListItemIcon>
                         <ListItemText  classes={{primary:classes.listItemText}} primary={text}/>
+                        </ListItemLink>
                     </ListItem>
                 ))}
             </List>
