@@ -5,22 +5,24 @@ import Drawer from '@material-ui/core/Drawer';
 import Hidden from '@material-ui/core/Hidden';
 import InboxIcon from '@material-ui/icons/MoveToInbox';
 import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
+import MuiListItem from "@material-ui/core/ListItem";
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import MailIcon from '@material-ui/icons/Mail';
 import Typography from '@material-ui/core/Typography';
-import {makeStyles, useTheme} from '@material-ui/core/styles';
+import {makeStyles, useTheme, withStyles} from '@material-ui/core/styles';
 import {ListSubheader} from "@material-ui/core";
 import Grid from "@material-ui/core/Grid";
 import {MainAppBar} from "./MainAppBar";
+import {Link} from "react-router-dom";
+
 
 const drawerWidth = 240;
 
 const useStyles = makeStyles((theme) => ({
-    listItemText:{
-        fontSize:'0.875rem',
-        fontWeight:500,
+    listItemText: {
+        fontSize: '0.875rem',
+        fontWeight: 500,
         color: theme.palette.text.secondary
     },
     root: {
@@ -32,7 +34,7 @@ const useStyles = makeStyles((theme) => ({
             flexShrink: 0,
         },
 
-        overflowX:'hidden'
+        overflowX: 'hidden'
     },
     appBar: {
         [theme.breakpoints.up('sm')]: {
@@ -58,7 +60,7 @@ const useStyles = makeStyles((theme) => ({
         width: drawerWidth,
         backgroundColor: theme.palette.primary.main,
         color: theme.palette.text.primary,
-        overflowX:'hidden'
+        overflowX: 'hidden'
     },
     content: {
         flexGrow: 1,
@@ -68,9 +70,15 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-function ListItemLink(props) {
-    return <ListItem button component="a" {...props} />;
-}
+const ListItem = withStyles({
+    root: {
+        "&:hover": {
+            backgroundColor: "#171c24",
+            color: "white"
+        }
+    },
+    selected: {}
+})(MuiListItem);
 
 export function SideBar(props) {
     const {window} = props;
@@ -91,48 +99,61 @@ export function SideBar(props) {
                     justify="center"
                     alignItems="center"
                 >
-                   <Typography variant="h6" noWrap style={{fontSize:"2em",fontWeight:"bold"}}>
-                       Shelved
-                   </Typography>
-            </Grid>
+                    <Typography variant="h6" noWrap style={{fontSize: "2em", fontWeight: "bold"}}>
+                        Shelved
+                    </Typography>
+                </Grid>
             </div>
             <Divider/>
 
             <List subheader={
-                <ListSubheader style={{color: theme.palette.text.primary, fontWeight: "bold", textTransform:"uppercase"}} component="div"
-                               id="nested-list-subheader">
+                <ListSubheader
+                    style={{color: theme.palette.text.primary, fontWeight: "bold", textTransform: "uppercase"}}
+                    component="div"
+                    id="nested-list-subheader" disableSticky={true}>
                     Nested
                 </ListSubheader>
             }>
-                <ListItem button key="new-note" style={{marginLeft:'1.2em',color: 'var(--color-text)',fontWeight:"bold"}}>
-                    <ListItemLink href="/new-note">
-                    <ListItemIcon style={{color: theme.palette.text.secondary}}><InboxIcon/></ListItemIcon>
-                    <ListItemText  classes={{primary:classes.listItemText}} primary="New Note"/>
-                    </ListItemLink>
-                </ListItem>
+
                 {['Inbox1', 'Starred1', 'Send1 email', 'Draf1ts', 'Star1red', 'Sen1d email', 'D1rafts'].map((text, index) => (
-                    <ListItem button key={text} style={{marginLeft:'1.2em',color: 'var(--color-text)',fontWeight:"bold"}}>
-                        <ListItemLink href="#simple-list">
-                        <ListItemIcon style={{color: theme.palette.text.secondary}}>{index % 2 === 0 ? <InboxIcon/> :
-                            <MailIcon/>}</ListItemIcon>
-                        <ListItemText  classes={{primary:classes.listItemText}} primary={text}/>
-                        </ListItemLink>
-                    </ListItem>
+                    <Link
+                        to={{
+                            pathname: "/",
+                        }}
+                        style={{textDecoration: 'none'}}
+                    >
+                        <ListItem button key={text} style={{color: 'var(--color-text)', fontWeight: "bold"}}>
+                            <ListItemIcon style={{color: theme.palette.text.secondary}}>{index % 2 === 0 ?
+                                <InboxIcon/> :
+                                <MailIcon/>}</ListItemIcon>
+                            <ListItemText classes={{primary: classes.listItemText}} primary={text}/>
+                        </ListItem>
+                    </Link>
                 ))}
             </List>
             <Divider/>
-            <List subheader={
-                <ListSubheader style={{color: theme.palette.text.primary, fontWeight: "bold", textTransform:"uppercase"}} component="div"
-                               id="nested-list-subheader">
-                     Items
+            <List dense={true} subheader={
+                <ListSubheader
+                    style={{color: theme.palette.text.primary, fontWeight: "bold", textTransform: "uppercase"}}
+                    component="div"
+                    id="nested-list-subheader">
+                    Items
                 </ListSubheader>
             }>
                 {['Inbox1', 'Starred1', 'Send1 email', 'Draf1ts', 'Star1red', 'Sen1d email', 'D1rafts'].map((text, index) => (
-                <ListItem button key={text} style={{marginLeft:'1.5em',color: 'var(--color-text)'}}>
-                    <ListItemIcon style={{color: theme.palette.text.secondary}}>{index % 2 === 0 ? <InboxIcon/> :
-                        <MailIcon/>}</ListItemIcon>
-                    <ListItemText  classes={{primary:classes.listItemText}} primary={text}/>
-                </ListItem>
+                    <Link
+                        to={{
+                            pathname: "/new-note",
+                        }}
+                        style={{textDecoration: 'none'}}
+                    >
+                        <ListItem button key={text} style={{color: 'var(--color-text)'}}>
+                            <ListItemIcon style={{color: theme.palette.text.secondary}}>{index % 2 === 0 ?
+                                <InboxIcon/> :
+                                <MailIcon/>}</ListItemIcon>
+                            <ListItemText classes={{primary: classes.listItemText}} primary={text}/>
+                        </ListItem>
+                    </Link>
                 ))}
             </List>
         </div>
