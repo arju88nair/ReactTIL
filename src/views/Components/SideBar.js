@@ -75,7 +75,15 @@ const ListItem = withStyles({
         "&:hover": {
             backgroundColor: "#171c24",
             color: "white"
-        }
+        },
+        "&$selected": {
+            backgroundColor: "red",
+            color: "white"
+        },
+        "&$selected:hover": {
+            backgroundColor: "purple",
+            color: "white"
+        },
     },
     selected: {}
 })(MuiListItem);

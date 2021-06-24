@@ -19,12 +19,12 @@ export const themeDark = createMuiTheme({
     },
     palette: {
         primary: {
-            main: '#222b36',
+            main: '#2A2A2E',
             primary: '#688eff',
             dark: '#fff',
         },
         secondary: {
-            main: '#171c24',
+            main: 'rgba(21, 20, 26, 0.75)',
             light: '#171c24',
             primary: '#171c24',
         },
@@ -36,7 +36,7 @@ export const themeDark = createMuiTheme({
         },
         text: {
             primary: "#fff",
-            secondary: 'rgb(145, 158, 171)',
+            secondary: '#fff',
             disabled: 'rgba(255, 255, 255, 0.5)',
             light: '#fff',// For white in blue
             dark: '#000',// For learn more button WiB for light mode and BiW for dark mode
@@ -85,7 +85,7 @@ export const themeLight = createMuiTheme({
         },
         text: {
             primary: "#000",
-            secondary: 'rgb(107, 119, 140)',
+            secondary: 'rgba(21, 20, 26, 0.75)',
             disabled: 'rgba(0, 0, 0, 0.38)',
             light: '#fff',// For white in blue,
             dark: 'white' // For learn more button WiB for light mode and BiW for dark mode

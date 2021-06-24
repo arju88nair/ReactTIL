@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="908b436c-b8a6-476b-9d1f-177b9c9b967d" name="Default Changelist" comment="ckeditor implemetation test run">
+    <list default="true" id="908b436c-b8a6-476b-9d1f-177b9c9b967d" name="Default Changelist" comment="Stlying and link routing">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_helpers/theme.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/_helpers/theme.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/Components/SideBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Components/SideBar.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -470,7 +471,14 @@
       <option name="project" value="LOCAL" />
       <updated>1624378032006</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="Stlying and link routing">
+      <created>1624553208984</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1624553208985</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -489,7 +497,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="THeme js for button" />
     <MESSAGE value="Theme changes" />
     <MESSAGE value="Snackbar with actions" />
     <MESSAGE value="Board adding with everything fucking finally" />
@@ -514,7 +521,8 @@
     <MESSAGE value="Fucking fixed. Without cleanup" />
     <MESSAGE value="Before ckeditor test" />
     <MESSAGE value="ckeditor implemetation test run" />
-    <option name="LAST_COMMIT_MESSAGE" value="ckeditor implemetation test run" />
+    <MESSAGE value="Stlying and link routing" />
+    <option name="LAST_COMMIT_MESSAGE" value="Stlying and link routing" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
