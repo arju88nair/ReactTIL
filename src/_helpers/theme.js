@@ -4,12 +4,10 @@ import {createMuiTheme} from '@material-ui/core/styles';
 export const themeDark = createMuiTheme({
     typography: {
         fontFamily: [
-            'Oxygen',
             '-apple-system',
             'BlinkMacSystemFont',
             '"Segoe UI"',
-            'Roboto',
-            '"Helvetica Neue"',
+            '"Helvetica"',
             'Arial',
             'sans-serif',
             '"Apple Color Emoji"',
@@ -36,7 +34,7 @@ export const themeDark = createMuiTheme({
         },
         text: {
             primary: "#fff",
-            secondary: '#fff',
+            secondary: '#d9d9d9',
             disabled: 'rgba(255, 255, 255, 0.5)',
             light: '#fff',// For white in blue
             dark: '#000',// For learn more button WiB for light mode and BiW for dark mode
@@ -47,7 +45,7 @@ export const themeDark = createMuiTheme({
             active: '#fff',
             hover: '#395fa3', //Same
             // hover:'rgba(255, 255, 255, 0.08)',
-            selected: 'rgba(255, 255, 255, 0.16)',
+            selected: '#38383d',
             disabled: 'rgba(255, 255, 255, 0.3)',
             disabledBackground: 'rgba(255, 255, 255, 0.12)'
 
@@ -59,12 +57,10 @@ export const themeDark = createMuiTheme({
 export const themeLight = createMuiTheme({
     typography: {
         fontFamily: [
-            'Oxygen',
             '-apple-system',
             'BlinkMacSystemFont',
             '"Segoe UI"',
-            'Roboto',
-            '"Helvetica Neue"',
+            '"Helvetica"',
             'Arial',
             'sans-serif',
             '"Apple Color Emoji"',
@@ -85,7 +81,7 @@ export const themeLight = createMuiTheme({
         },
         text: {
             primary: "#000",
-            secondary: 'rgba(21, 20, 26, 0.75)',
+            secondary: '#1a1a1a',
             disabled: 'rgba(0, 0, 0, 0.38)',
             light: '#fff',// For white in blue,
             dark: 'white' // For learn more button WiB for light mode and BiW for dark mode

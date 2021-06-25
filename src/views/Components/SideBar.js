@@ -22,7 +22,7 @@ const drawerWidth = 240;
 const useStyles = makeStyles((theme) => ({
     listItemText: {
         fontSize: '0.875rem',
-        fontWeight: 500,
+        fontWeight: 'bold',
         color: theme.palette.text.secondary
     },
     root: {
@@ -73,7 +73,7 @@ const useStyles = makeStyles((theme) => ({
 const ListItem = withStyles({
     root: {
         "&:hover": {
-            backgroundColor: "#171c24",
+            backgroundColor: "#38383d",
             color: "white"
         },
         "&$selected": {
@@ -130,8 +130,8 @@ export function SideBar(props) {
                         }}
                         style={{textDecoration: 'none'}}
                     >
-                        <ListItem button key={text} style={{color: 'var(--color-text)', fontWeight: "bold"}}>
-                            <ListItemIcon style={{color: theme.palette.text.secondary}}>{index % 2 === 0 ?
+                        <ListItem button key={text} style={{color: 'var(--color-text)', fontWeight: "bold",paddingLeft:'2em'}}>
+                            <ListItemIcon style={{color: theme.palette.text.secondary,minWidth:'42px'}}>{index % 2 === 0 ?
                                 <InboxIcon/> :
                                 <MailIcon/>}</ListItemIcon>
                             <ListItemText classes={{primary: classes.listItemText}} primary={text}/>
