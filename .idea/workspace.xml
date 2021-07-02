@@ -4,10 +4,82 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="908b436c-b8a6-476b-9d1f-177b9c9b967d" name="Default Changelist" comment="Dark mode color correction beginning">
+    <list default="true" id="908b436c-b8a6-476b-9d1f-177b9c9b967d" name="Default Changelist" comment="Build included not fixed">
+      <change afterPath="$PROJECT_DIR$/ckeditor5/LICENSE.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ckeditor5/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ckeditor5/build/ckeditor.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ckeditor5/build/ckeditor.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ckeditor5/build/translations/af.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ckeditor5/build/translations/ar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ckeditor5/build/translations/ast.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ckeditor5/build/translations/az.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ckeditor5/build/translations/bg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ckeditor5/build/translations/ca.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ckeditor5/build/translations/cs.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ckeditor5/build/translations/da.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ckeditor5/build/translations/de-ch.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ckeditor5/build/translations/de.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ckeditor5/build/translations/el.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ckeditor5/build/translations/en-au.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ckeditor5/build/translations/en-gb.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ckeditor5/build/translations/eo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ckeditor5/build/translations/es.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ckeditor5/build/translations/et.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ckeditor5/build/translations/eu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ckeditor5/build/translations/fa.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ckeditor5/build/translations/fi.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ckeditor5/build/translations/fr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ckeditor5/build/translations/gl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ckeditor5/build/translations/gu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ckeditor5/build/translations/he.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ckeditor5/build/translations/hi.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ckeditor5/build/translations/hr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ckeditor5/build/translations/hu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ckeditor5/build/translations/id.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ckeditor5/build/translations/it.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ckeditor5/build/translations/ja.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ckeditor5/build/translations/km.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ckeditor5/build/translations/kn.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ckeditor5/build/translations/ko.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ckeditor5/build/translations/ku.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ckeditor5/build/translations/lt.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ckeditor5/build/translations/lv.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ckeditor5/build/translations/ms.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ckeditor5/build/translations/nb.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ckeditor5/build/translations/ne.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ckeditor5/build/translations/nl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ckeditor5/build/translations/no.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ckeditor5/build/translations/oc.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ckeditor5/build/translations/pl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ckeditor5/build/translations/pt-br.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ckeditor5/build/translations/pt.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ckeditor5/build/translations/ro.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ckeditor5/build/translations/ru.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ckeditor5/build/translations/si.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ckeditor5/build/translations/sk.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ckeditor5/build/translations/sl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ckeditor5/build/translations/sq.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ckeditor5/build/translations/sr-latn.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ckeditor5/build/translations/sr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ckeditor5/build/translations/sv.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ckeditor5/build/translations/th.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ckeditor5/build/translations/tk.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ckeditor5/build/translations/tr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ckeditor5/build/translations/tt.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ckeditor5/build/translations/ug.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ckeditor5/build/translations/uk.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ckeditor5/build/translations/vi.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ckeditor5/build/translations/zh-cn.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ckeditor5/build/translations/zh.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ckeditor5/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ckeditor5/sample/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ckeditor5/sample/styles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ckeditor5/src/ckeditor.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ckeditor5/webpack.config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_helpers/theme.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/_helpers/theme.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/Components/SideBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Components/SideBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/HomePage/Boards.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/HomePage/Boards.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +124,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/views/NewNotesPage" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
@@ -62,11 +134,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src/views/NewNotesPage" />
       <recent name="$PROJECT_DIR$/src/views/NotesPage" />
       <recent name="$PROJECT_DIR$/src/views/BoardPage" />
       <recent name="$PROJECT_DIR$/src/store" />
-      <recent name="$PROJECT_DIR$/src/views/Components" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/store" />
@@ -150,6 +222,9 @@
       <workItem from="1624462623064" duration="1501000" />
       <workItem from="1624598837396" duration="1156000" />
       <workItem from="1624631133554" duration="478000" />
+      <workItem from="1624985231426" duration="2061000" />
+      <workItem from="1625150653806" duration="599000" />
+      <workItem from="1625238610689" duration="697000" />
     </task>
     <task id="LOCAL-00001" summary="Login and Signup before components">
       <created>1620839335095</created>
@@ -506,7 +581,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Snackbar with actions" />
     <MESSAGE value="Board adding with everything fucking finally" />
     <MESSAGE value="Fucking css not fixed" />
     <MESSAGE value="Card content fixed" />
@@ -531,7 +605,8 @@
     <MESSAGE value="ckeditor implemetation test run" />
     <MESSAGE value="Stlying and link routing" />
     <MESSAGE value="Dark mode color correction beginning" />
-    <option name="LAST_COMMIT_MESSAGE" value="Dark mode color correction beginning" />
+    <MESSAGE value="Build included not fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Build included not fixed" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

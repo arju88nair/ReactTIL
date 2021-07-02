@@ -31,7 +31,7 @@ function ErrorRefresh() {
     const classes = useStyles();
     const dispatch = useDispatch();
     const handleErrorRefresh = (event) => {
-        // dispatch(boardActions.get());
+        dispatch(getBoards());
     };
 
     // TODO Fix error refresh rendering
