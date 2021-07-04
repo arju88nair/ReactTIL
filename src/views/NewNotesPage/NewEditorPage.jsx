@@ -2,7 +2,7 @@ import React from 'react';
 import {makeStyles} from '@material-ui/core/styles';
 import CssBaseline from "@material-ui/core/CssBaseline";
 import {SideBar} from "../Components/SideBar";
-import {Editor} from "./Editor";
+import {NewEditor} from "./Editor";
 
 
 const useStyles = makeStyles((theme) => ({
@@ -21,7 +21,7 @@ export function NewEditorPage() {
         <div className={classes.root}>
             <CssBaseline />
             <SideBar/>
-            <Editor/>
+            <NewEditor/>
         </div>
     );
 }
