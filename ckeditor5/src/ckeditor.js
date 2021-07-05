@@ -6,23 +6,13 @@ import ClassicEditor from '@ckeditor/ckeditor5-editor-classic/src/classiceditor.
 import Autoformat from '@ckeditor/ckeditor5-autoformat/src/autoformat.js';
 import AutoImage from '@ckeditor/ckeditor5-image/src/autoimage.js';
 import AutoLink from '@ckeditor/ckeditor5-link/src/autolink.js';
-import Autosave from '@ckeditor/ckeditor5-autosave/src/autosave.js';
 import BlockQuote from '@ckeditor/ckeditor5-block-quote/src/blockquote.js';
 import Bold from '@ckeditor/ckeditor5-basic-styles/src/bold.js';
-import CKFinder from '@ckeditor/ckeditor5-ckfinder/src/ckfinder.js';
-import CKFinderUploadAdapter from '@ckeditor/ckeditor5-adapter-ckfinder/src/uploadadapter.js';
 import CloudServices from '@ckeditor/ckeditor5-cloud-services/src/cloudservices.js';
-import Code from '@ckeditor/ckeditor5-basic-styles/src/code.js';
-import CodeBlock from '@ckeditor/ckeditor5-code-block/src/codeblock.js';
 import Essentials from '@ckeditor/ckeditor5-essentials/src/essentials.js';
-import FontBackgroundColor from '@ckeditor/ckeditor5-font/src/fontbackgroundcolor.js';
-import FontColor from '@ckeditor/ckeditor5-font/src/fontcolor.js';
 import Heading from '@ckeditor/ckeditor5-heading/src/heading.js';
-import Highlight from '@ckeditor/ckeditor5-highlight/src/highlight.js';
 import Image from '@ckeditor/ckeditor5-image/src/image.js';
 import ImageCaption from '@ckeditor/ckeditor5-image/src/imagecaption.js';
-import ImageInsert from '@ckeditor/ckeditor5-image/src/imageinsert.js';
-import ImageResize from '@ckeditor/ckeditor5-image/src/imageresize.js';
 import ImageStyle from '@ckeditor/ckeditor5-image/src/imagestyle.js';
 import ImageToolbar from '@ckeditor/ckeditor5-image/src/imagetoolbar.js';
 import ImageUpload from '@ckeditor/ckeditor5-image/src/imageupload.js';
@@ -36,7 +26,6 @@ import PasteFromOffice from '@ckeditor/ckeditor5-paste-from-office/src/pastefrom
 import Table from '@ckeditor/ckeditor5-table/src/table.js';
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar.js';
 import TextTransformation from '@ckeditor/ckeditor5-typing/src/texttransformation.js';
-import EditorWatchdog from '@ckeditor/ckeditor5-watchdog/src/editorwatchdog.js';
 
 class Editor extends ClassicEditor {}
 
@@ -45,23 +34,13 @@ Editor.builtinPlugins = [
 	Autoformat,
 	AutoImage,
 	AutoLink,
-	Autosave,
 	BlockQuote,
 	Bold,
-	CKFinder,
-	CKFinderUploadAdapter,
 	CloudServices,
-	Code,
-	CodeBlock,
 	Essentials,
-	FontBackgroundColor,
-	FontColor,
 	Heading,
-	Highlight,
 	Image,
 	ImageCaption,
-	ImageInsert,
-	ImageResize,
 	ImageStyle,
 	ImageToolbar,
 	ImageUpload,
@@ -77,4 +56,4 @@ Editor.builtinPlugins = [
 	TextTransformation
 ];
 
-export default { Editor, EditorWatchdog };
+export default Editor;
