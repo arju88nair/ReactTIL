@@ -8,3 +8,15 @@
 html, body {
     height:100%;
 }
+.ck-editor {
+    color: black;
+    height: 100px;
+}
+.ck.ck-content.ck-editor__editable.ck-rounded-corners.ck-editor__editable_inline.ck-blurred
+{
+    height: 100%;
+}
+.ck-editor__editable_inline {
+    min-height: 100vh   ;
+}
+
