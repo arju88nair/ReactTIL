@@ -6,79 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="908b436c-b8a6-476b-9d1f-177b9c9b967d" name="Default Changelist" comment="Custom build after bug submit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ckeditor5/LICENSE.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ckeditor5/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ckeditor5/build/ckeditor.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ckeditor5/build/ckeditor.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ckeditor5/build/translations/af.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ckeditor5/build/translations/ar.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ckeditor5/build/translations/ast.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ckeditor5/build/translations/az.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ckeditor5/build/translations/bg.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ckeditor5/build/translations/ca.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ckeditor5/build/translations/cs.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ckeditor5/build/translations/da.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ckeditor5/build/translations/de-ch.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ckeditor5/build/translations/de.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ckeditor5/build/translations/el.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ckeditor5/build/translations/en-au.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ckeditor5/build/translations/en-gb.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ckeditor5/build/translations/eo.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ckeditor5/build/translations/es.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ckeditor5/build/translations/et.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ckeditor5/build/translations/eu.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ckeditor5/build/translations/fa.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ckeditor5/build/translations/fi.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ckeditor5/build/translations/fr.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ckeditor5/build/translations/gl.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ckeditor5/build/translations/gu.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ckeditor5/build/translations/he.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ckeditor5/build/translations/hi.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ckeditor5/build/translations/hr.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ckeditor5/build/translations/hu.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ckeditor5/build/translations/id.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ckeditor5/build/translations/it.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ckeditor5/build/translations/ja.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ckeditor5/build/translations/km.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ckeditor5/build/translations/kn.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ckeditor5/build/translations/ko.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ckeditor5/build/translations/ku.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ckeditor5/build/translations/lt.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ckeditor5/build/translations/lv.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ckeditor5/build/translations/nb.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ckeditor5/build/translations/ne.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ckeditor5/build/translations/nl.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ckeditor5/build/translations/no.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ckeditor5/build/translations/oc.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ckeditor5/build/translations/pl.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ckeditor5/build/translations/pt-br.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ckeditor5/build/translations/pt.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ckeditor5/build/translations/ro.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ckeditor5/build/translations/ru.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ckeditor5/build/translations/si.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ckeditor5/build/translations/sk.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ckeditor5/build/translations/sl.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ckeditor5/build/translations/sq.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ckeditor5/build/translations/sr-latn.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ckeditor5/build/translations/sr.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ckeditor5/build/translations/sv.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ckeditor5/build/translations/th.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ckeditor5/build/translations/tk.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ckeditor5/build/translations/tr.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ckeditor5/build/translations/tt.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ckeditor5/build/translations/ug.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ckeditor5/build/translations/uk.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ckeditor5/build/translations/vi.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ckeditor5/build/translations/zh-cn.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ckeditor5/build/translations/zh.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ckeditor5/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ckeditor5/sample/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ckeditor5/sample/styles.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ckeditor5/src/ckeditor.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ckeditor5/webpack.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/css/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/css/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/NewNotesPage/Editor.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/NewNotesPage/Editor.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -110,12 +39,13 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/webpack.config.js" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/views/NewNotesPage/Editor.jsx" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/_helpers/theme.js" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/views/NewNotesPage/NewEditorPage.jsx" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/views/Components/SideBar.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/views/NewNotesPage/Editor.jsx" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/views/NewNotesPage/NewEditorPage.jsx" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/webpack.config.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/_helpers/theme.js" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/package.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/node_modules/@material-ui/core/IconButton/IconButton.d.ts" root0="SKIP_INSPECTION" />
   </component>
   <component name="JsbtTreeLayoutManager">
     <layout place="tools.popupGrunt">
@@ -137,6 +67,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -237,6 +168,9 @@
       <workItem from="1625502418393" duration="1114000" />
       <workItem from="1625581082231" duration="613000" />
       <workItem from="1625583147369" duration="3160000" />
+      <workItem from="1625753276262" duration="605000" />
+      <workItem from="1625756629329" duration="487000" />
+      <workItem from="1626108092464" duration="2777000" />
     </task>
     <task id="LOCAL-00001" summary="Login and Signup before components">
       <created>1620839335095</created>
