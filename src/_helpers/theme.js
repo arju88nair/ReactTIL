@@ -18,7 +18,7 @@ export const themeDark = createMuiTheme({
     palette: {
         primary: {
             main: '#2A2A2E',
-            primary: '#688eff',
+            primary: '#20639b',
             dark: '#fff',
         },
         secondary: {
@@ -40,8 +40,8 @@ export const themeDark = createMuiTheme({
             dark: '#000',// For learn more button WiB for light mode and BiW for dark mode
         },
         action: {
-            primary: "#688eff",
-            secondary: '#688eff', // Same
+            primary: "#20639b",
+            secondary: '#20639b', // Same
             active: '#fff',
             hover: '#395fa3', //Same
             // hover:'rgba(255, 255, 255, 0.08)',

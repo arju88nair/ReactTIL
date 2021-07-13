@@ -15,16 +15,18 @@ import {loginUser, userSelector, clearState} from '../../features/UserSlice';
 import {closeSpinner, openSpinner} from "../../features/MiscSlice";
 
 const theme = createMuiTheme({
-    // palette: {
-    //     primary: {
-    //         main: "#fff", //this overide blue color
-    //         light: "red", //overides light blue
-    //         dark: "green", //overides dark blue color
-    //     },
-    // },
+    palette: {
+        primary: {
+            main: "#fff", //this overide blue color
+        },
+    },
 });
 
 const useStyles = makeStyles((theme) => ({
+    notchedOutline: {
+        borderWidth: "1px",
+        borderColor: "white !important"
+    },
     backdrop: {
         zIndex: theme.zIndex.drawer + 1,
         color: '#fff',
@@ -186,6 +188,13 @@ export function LoginForm() {
 
                     <Grid container spacing={2}>
                         <Grid item xs={12}>
+                            <TextField
+                                id="outlined-password-input"
+                                label="Password"
+                                type="password"
+                                autoComplete="current-password"
+                                variant="outlined"
+                            />
                             <ThemeProvider theme={theme}>
                                 <TextField
                                     variant="outlined"
@@ -200,7 +209,9 @@ export function LoginForm() {
                                     value={user.email}
                                     type="email"
                                     InputProps={{
-                                        className: classes.multilineColor
+                                        classes: {
+                                            notchedOutline: classes.notchedOutline
+                                        }
                                     }}
 
                                 />
@@ -220,8 +231,11 @@ export function LoginForm() {
                                     value={user.password} onChange={handleChange}
                                     inputProps={{minLength: 2}}
                                     InputProps={{
-                                        className: classes.multilineColor
-                                    }}/>
+                                        classes: {
+                                            notchedOutline: classes.notchedOutline
+                                        }
+                                    }}
+                                />
                             </ThemeProvider>
                         </Grid>
                         <Grid item xs={12}>
