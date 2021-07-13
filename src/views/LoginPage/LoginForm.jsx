@@ -13,20 +13,19 @@ import Checkbox from "@material-ui/core/Checkbox";
 import Divider from "@material-ui/core/Divider";
 import {loginUser, userSelector, clearState} from '../../features/UserSlice';
 import {closeSpinner, openSpinner} from "../../features/MiscSlice";
+import {withStyles} from "@material-ui/core";
 
 const theme = createMuiTheme({
-    palette: {
-        primary: {
-            main: "#fff", //this overide blue color
-        },
-    },
+    // palette: {
+    //     primary: {
+    //         main: "#fff", //this overide blue color
+    //         light: "red", //overides light blue
+    //         dark: "green", //overides dark blue color
+    //     },
+    // },
 });
 
 const useStyles = makeStyles((theme) => ({
-    notchedOutline: {
-        borderWidth: "1px",
-        borderColor: "white !important"
-    },
     backdrop: {
         zIndex: theme.zIndex.drawer + 1,
         color: '#fff',
@@ -107,11 +106,32 @@ const useStyles = makeStyles((theme) => ({
         color: theme.palette.text.primary
     },
     multilineColor: {
-        color: theme.palette.text.primary,
+        color: 'white',
         borderRadius: '26px',
-
     }
 }));
+const CssTextField = withStyles({
+    root: {
+        '& label.Mui-focused': {
+            color: '#20639b',
+        },
+        '& .MuiInput-underline:after': {
+            borderBottomColor: '#20639b',
+        },
+        '& .MuiOutlinedInput-root': {
+            '& fieldset': {
+                borderColor: '#20639b',
+            },
+            '&:hover fieldset': {
+                borderColor: '#20639b',
+            },
+            '&.Mui-focused fieldset': {
+                borderColor: '#20639b',
+            },
+        },
+    },
+})(TextField);
+
 
 export function LoginForm() {
     const [user, setUser] = useState({
@@ -188,38 +208,25 @@ export function LoginForm() {
 
                     <Grid container spacing={2}>
                         <Grid item xs={12}>
-                            <TextField
-                                id="outlined-password-input"
-                                label="Password"
-                                type="password"
-                                autoComplete="current-password"
+                            <CssTextField
                                 variant="outlined"
+                                required
+                                fullWidth
+                                id="email"
+                                label="Email Address"
+                                name="email"
+                                autoComplete="email"
+                                onChange={handleChange}
+                                margin="normal"
+                                value={user.email}
+                                type="email"
+                                InputProps={{
+                                    className: classes.multilineColor,
+                                }}
                             />
-                            <ThemeProvider theme={theme}>
-                                <TextField
-                                    variant="outlined"
-                                    required
-                                    fullWidth
-                                    id="email"
-                                    label="Email Address"
-                                    name="email"
-                                    autoComplete="email"
-                                    onChange={handleChange}
-                                    margin="normal"
-                                    value={user.email}
-                                    type="email"
-                                    InputProps={{
-                                        classes: {
-                                            notchedOutline: classes.notchedOutline
-                                        }
-                                    }}
-
-                                />
-                            </ThemeProvider>
                         </Grid>
                         <Grid item xs={12}>
-                            <ThemeProvider theme={theme}>
-                                <TextField
+                                <CssTextField
                                     variant="outlined"
                                     required
                                     fullWidth
@@ -231,12 +238,8 @@ export function LoginForm() {
                                     value={user.password} onChange={handleChange}
                                     inputProps={{minLength: 2}}
                                     InputProps={{
-                                        classes: {
-                                            notchedOutline: classes.notchedOutline
-                                        }
-                                    }}
-                                />
-                            </ThemeProvider>
+                                        className: classes.multilineColor
+                                    }}/>
                         </Grid>
                         <Grid item xs={12}>
 

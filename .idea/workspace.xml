@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="908b436c-b8a6-476b-9d1f-177b9c9b967d" name="Default Changelist" comment="Custom build after bug submit">
+    <list default="true" id="908b436c-b8a6-476b-9d1f-177b9c9b967d" name="Default Changelist" comment="Need to fix input and remove light mode">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_helpers/theme.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/_helpers/theme.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/LoginPage/LoginForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/LoginPage/LoginForm.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/RegisterPage/RegisterForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/RegisterPage/RegisterForm.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -170,14 +170,7 @@
       <workItem from="1625753276262" duration="605000" />
       <workItem from="1625756629329" duration="487000" />
       <workItem from="1626108092464" duration="2777000" />
-      <workItem from="1626184419250" duration="2465000" />
-    </task>
-    <task id="LOCAL-00001" summary="Login and Signup before components">
-      <created>1620839335095</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1620839335095</updated>
+      <workItem from="1626184419250" duration="5964000" />
     </task>
     <task id="LOCAL-00002" summary="stupid changes">
       <created>1620912189420</created>
@@ -515,7 +508,14 @@
       <option name="project" value="LOCAL" />
       <updated>1625413626750</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="Need to fix input and remove light mode">
+      <created>1626190667477</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1626190667478</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -534,7 +534,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Fucking css not fixed" />
     <MESSAGE value="Card content fixed" />
     <MESSAGE value="Navigation" />
     <MESSAGE value="Navigation changes" />
@@ -559,14 +558,15 @@
     <MESSAGE value="Dark mode color correction beginning" />
     <MESSAGE value="Build included not fixed" />
     <MESSAGE value="Custom build after bug submit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Custom build after bug submit" />
+    <MESSAGE value="Need to fix input and remove light mode" />
+    <option name="LAST_COMMIT_MESSAGE" value="Need to fix input and remove light mode" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/views/LoginPage/LoginForm.jsx</url>
-          <line>230</line>
+          <line>275</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
