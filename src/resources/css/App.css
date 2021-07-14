@@ -20,3 +20,7 @@ html, body {
     min-height: 100vh   ;
 }
 
+
+.MuiAutocomplete-hasPopupIcon.MuiAutocomplete-hasClearIcon .MuiAutocomplete-inputRoot[class*="MuiOutlinedInput-root"]{
+    border-radius: 26px;
+}

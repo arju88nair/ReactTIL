@@ -2,7 +2,7 @@ import React from 'react';
 import {makeStyles} from '@material-ui/core/styles';
 import {CKEditor} from '@ckeditor/ckeditor5-react';
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
-import {Container, CssBaseline, FormGroup, TextField} from "@material-ui/core";
+import {Container, CssBaseline, FormGroup, Paper, TextField, withStyles} from "@material-ui/core";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import SortIcon from '@material-ui/icons/Sort';
@@ -33,7 +33,18 @@ const useStyles = makeStyles((theme) => ({
         "&>div": {
             flexGrow: "1"
         }
-    }
+    },
+    submit: {
+        background: theme.palette.action.primary,
+        color: theme.palette.text.light,
+        borderColor: theme.palette.action.secondary,
+        borderRadius: '25px',
+        height: '35px',
+        fontWeight: "600",
+        '&:hover': {
+            background: theme.palette.action.hover,
+        }
+    },
 }));
 
 // Top 100 films as rated by IMDb users. http://www.imdb.com/chart/top
@@ -139,6 +150,27 @@ const top100Films = [
     {title: '3 Idiots', year: 2009},
     {title: 'Monty Python and the Holy Grail', year: 1975},
 ];
+const CssTextField = withStyles({
+    root: {
+        '& label.Mui-focused': {
+            color: 'grey',
+        },
+        '& .MuiInput-underline:after': {
+            borderBottomColor: 'grey',
+        },
+        '& .MuiOutlinedInput-root': {
+            '& fieldset': {
+                borderColor: 'grey',
+            },
+            '&:hover fieldset': {
+                borderColor: 'grey',
+            },
+            '&.Mui-focused fieldset': {
+                borderColor: 'grey',
+            },
+        },
+    },
+})(TextField);
 
 export function NewEditor() {
     const classes = useStyles();
@@ -146,41 +178,36 @@ export function NewEditor() {
         <main className={classes.content}>
             <div className={classes.toolbar}/>
             <Grid container className={classes.root}>
-                <Grid item xs={3} className={classes.fixedWidthContainer}>
-                    <IconButton
-                        edge="end"
-                        color="inherit"
-                        aria-label="mode"
-                    >
-                        <SortIcon/>
-                    </IconButton>
-                    <IconButton
-                        edge="end"
-                        color="inherit"
-                        aria-label="mode"
-                    >
-                        <FilterListIcon/>
-                    </IconButton>
-                </Grid>
                 <Grid item style={{flexGrow: "1"}}>
                     <Autocomplete
                         id="combo-box-demo"
                         options={top100Films}
                         getOptionLabel={(option) => option.title}
-                        style={{width: 300}}
-                        renderInput={(params) => <TextField {...params} label="Select board" variant="outlined"/>}
+                        style={{width: 300, color: "white", borderRadius: '26px !important'}}
+                        PaperComponent={({children}) => (
+                            <Paper style={{background: "#2A2A2E", color: 'white'}}>{children}</Paper>
+                        )}
+                        renderInput={(params) => <CssTextField {...params} label="Select board" variant="outlined"/>}
                     />
                 </Grid>
-                <Grid xs={3} item className={classes.fixedWidthContainer}>
-                    <Button variant="contained">
-                        Primary
-                    </Button> </Grid>
+                <Grid direction="row"
+                      justifyContent="center"
+                      alignItems="center"
+                      xs={3} item className={classes.fixedWidthContainer}>
+                    <Button
+                        type="submit"
+                        variant="outlined"
+                        className={classes.submit}
+                    >
+                        Log In
+                    </Button>
+                </Grid>
             </Grid>
 
             <div className={classes.editorDiv}>
                 <CKEditor
                     editor={ClassicEditor}
-                    data="<p>Hello from CKEditor 5!</p>"
+                    data="<p>Start adding a note</p>"
                     onReady={editor => {
                         // You can store the "editor" and use when it is needed.
                         console.log('Editor is ready to use!', editor);

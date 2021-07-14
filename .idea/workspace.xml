@@ -6,8 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="908b436c-b8a6-476b-9d1f-177b9c9b967d" name="Default Changelist" comment="Need to fix input and remove light mode">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/LoginPage/LoginForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/LoginPage/LoginForm.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/RegisterPage/RegisterForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/RegisterPage/RegisterForm.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/css/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/css/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/NewNotesPage/Editor.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/NewNotesPage/Editor.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -171,6 +171,7 @@
       <workItem from="1625756629329" duration="487000" />
       <workItem from="1626108092464" duration="2777000" />
       <workItem from="1626184419250" duration="5964000" />
+      <workItem from="1626271160859" duration="3695000" />
     </task>
     <task id="LOCAL-00002" summary="stupid changes">
       <created>1620912189420</created>
