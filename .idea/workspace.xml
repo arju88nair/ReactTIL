@@ -4,9 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="908b436c-b8a6-476b-9d1f-177b9c9b967d" name="Default Changelist" comment="Need to fix input and remove light mode">
+    <list default="true" id="908b436c-b8a6-476b-9d1f-177b9c9b967d" name="Default Changelist" comment="Editor page">
+      <change afterPath="$PROJECT_DIR$/src/views/BoardPage/BoardActions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/BoardPage/Boards.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/Components/BreadCrumbs.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/css/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/css/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/BoardPage/BoardPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/BoardPage/BoardPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/HomePage/BoardCards.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/HomePage/BoardCards.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/NewNotesPage/Editor.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/NewNotesPage/Editor.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -171,14 +175,8 @@
       <workItem from="1625756629329" duration="487000" />
       <workItem from="1626108092464" duration="2777000" />
       <workItem from="1626184419250" duration="5964000" />
-      <workItem from="1626271160859" duration="3695000" />
-    </task>
-    <task id="LOCAL-00002" summary="stupid changes">
-      <created>1620912189420</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1620912189420</updated>
+      <workItem from="1626271160859" duration="3871000" />
+      <workItem from="1626360180396" duration="2585000" />
     </task>
     <task id="LOCAL-00003" summary="Spinner and focus color change">
       <created>1621879556488</created>
@@ -516,7 +514,14 @@
       <option name="project" value="LOCAL" />
       <updated>1626190667478</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="Editor page">
+      <created>1626276401264</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1626276401264</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -535,7 +540,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Card content fixed" />
     <MESSAGE value="Navigation" />
     <MESSAGE value="Navigation changes" />
     <MESSAGE value="SLiver beginning and migration with fix for overflowing forms" />
@@ -560,7 +564,8 @@
     <MESSAGE value="Build included not fixed" />
     <MESSAGE value="Custom build after bug submit" />
     <MESSAGE value="Need to fix input and remove light mode" />
-    <option name="LAST_COMMIT_MESSAGE" value="Need to fix input and remove light mode" />
+    <MESSAGE value="Editor page" />
+    <option name="LAST_COMMIT_MESSAGE" value="Editor page" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

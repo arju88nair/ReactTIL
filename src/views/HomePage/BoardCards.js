@@ -92,7 +92,7 @@ export function BoardCards() {
                                 title={board.title}
                                 subheader={board.time_stamp}
                             />
-                            <Link to={`/board/2`} component={CardActionArea}>
+                            <Link to={`/board/2`}>
                                 <CardContent style={{backgroundColor: board.color, overflow: "hidden"}}>
                                     <div style={{
                                         color: "salmon",

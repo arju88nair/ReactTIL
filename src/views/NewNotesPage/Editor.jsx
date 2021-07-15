@@ -177,7 +177,7 @@ export function NewEditor() {
     return (
         <main className={classes.content}>
             <div className={classes.toolbar}/>
-            <Grid container className={classes.root}>
+            <Grid container>
                 <Grid item style={{flexGrow: "1"}}>
                     <Autocomplete
                         id="combo-box-demo"
