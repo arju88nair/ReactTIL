@@ -5,13 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="908b436c-b8a6-476b-9d1f-177b9c9b967d" name="Default Changelist" comment="Editor page">
-      <change afterPath="$PROJECT_DIR$/src/views/BoardPage/BoardActions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/BoardPage/Boards.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/Components/BreadCrumbs.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/BoardPage/BoardPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/BoardPage/BoardPage.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/HomePage/BoardCards.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/HomePage/BoardCards.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/NewNotesPage/Editor.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/NewNotesPage/Editor.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/App.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,9 +38,10 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/src/views/Components/SideBar.js" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/views/NewNotesPage/Editor.jsx" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/views/Components/Editor.jsx" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/views/NewNotesPage/NewEditorPage.jsx" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/webpack.config.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/views/NewNotesPage/Editor.jsx" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/_helpers/theme.js" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/package.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/node_modules/@material-ui/core/IconButton/IconButton.d.ts" root0="SKIP_INSPECTION" />
@@ -177,6 +173,8 @@
       <workItem from="1626184419250" duration="5964000" />
       <workItem from="1626271160859" duration="3871000" />
       <workItem from="1626360180396" duration="2585000" />
+      <workItem from="1626444231140" duration="599000" />
+      <workItem from="1628344649833" duration="1259000" />
     </task>
     <task id="LOCAL-00003" summary="Spinner and focus color change">
       <created>1621879556488</created>

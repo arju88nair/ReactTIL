@@ -55,7 +55,7 @@ export function App() {
                     {alert.message}
                 </Alert>
             </Snackbar>
-            <ThemeProvider theme={themeMode}>
+            <ThemeProvider theme={themeDark}>
                 <Router history={history}>
                     <Switch>
                         <PrivateRoute exact path="/" component={HomePage}/>
