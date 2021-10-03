@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="908b436c-b8a6-476b-9d1f-177b9c9b967d" name="Default Changelist" comment="Before restarting">
+    <list default="true" id="908b436c-b8a6-476b-9d1f-177b9c9b967d" name="Default Changelist" comment="Revert &quot;SSO buttons&quot;&#10;&#10;This reverts commit 5d60b5cd">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
@@ -27,7 +27,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="c7744da38d278dcd61713b31f07f05efb14c4481" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -178,12 +178,14 @@
       <workItem from="1626271160859" duration="3871000" />
       <workItem from="1626360180396" duration="2585000" />
       <workItem from="1626444231140" duration="599000" />
-      <workItem from="1628344649833" duration="5610000" />
-      <workItem from="1628398676125" duration="602000" />
-      <workItem from="1628607933377" duration="601000" />
-      <workItem from="1633269534491" duration="1787000" />
-      <workItem from="1633271341871" duration="118000" />
-      <workItem from="1633271481714" duration="95000" />
+      <workItem from="1628344649833" duration="1259000" />
+    </task>
+    <task id="LOCAL-00003" summary="Spinner and focus color change">
+      <created>1621879556488</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1621879556488</updated>
     </task>
     <task id="LOCAL-00004" summary="Start of theming">
       <created>1621960975533</created>
@@ -521,14 +523,7 @@
       <option name="project" value="LOCAL" />
       <updated>1626276401264</updated>
     </task>
-    <task id="LOCAL-00052" summary="Before restarting">
-      <created>1628349758682</created>
-      <option name="number" value="00052" />
-      <option name="presentableId" value="LOCAL-00052" />
-      <option name="project" value="LOCAL" />
-      <updated>1628349758682</updated>
-    </task>
-    <option name="localTasksCounter" value="53" />
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -547,6 +542,7 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <MESSAGE value="Navigation" />
     <MESSAGE value="Navigation changes" />
     <MESSAGE value="SLiver beginning and migration with fix for overflowing forms" />
     <MESSAGE value="BluePrint for Slices" />
@@ -571,15 +567,14 @@
     <MESSAGE value="Custom build after bug submit" />
     <MESSAGE value="Need to fix input and remove light mode" />
     <MESSAGE value="Editor page" />
-    <MESSAGE value="Before restarting" />
-    <option name="LAST_COMMIT_MESSAGE" value="Before restarting" />
+    <option name="LAST_COMMIT_MESSAGE" value="Editor page" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/views/LoginPage/LoginForm.jsx</url>
-          <line>260</line>
+          <line>275</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
