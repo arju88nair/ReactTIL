@@ -190,7 +190,7 @@ export function PreLoginAppbar() {
                                         color: theme.palette.text.light, fontWeight: "600"
                                     }}
                                     component={Link} to="/register">
-                                Sign Up
+                                Sign Ups
                             </Button>
                         </Grid>
                     </div>
