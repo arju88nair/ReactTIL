@@ -1,41 +1,23 @@
 import React from 'react';
-import {makeStyles} from '@material-ui/core/styles';
-// import {CKEditor} from '@ckeditor/ckeditor5-react';
-// import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
-import {Container, CssBaseline, FormGroup, Paper, TextField, withStyles} from "@material-ui/core";
+import { makeStyles } from '@material-ui/core/styles';
+import Breadcrumbs from '@material-ui/core/Breadcrumbs';
+import Typography from '@material-ui/core/Typography';
+import Link from '@material-ui/core/Link';
+import NavigateNextIcon from '@material-ui/icons/NavigateNext';
 import Grid from "@material-ui/core/Grid";
-import Typography from "@material-ui/core/Typography";
-import SortIcon from '@material-ui/icons/Sort';
-import IconButton from "@material-ui/core/IconButton";
 import {Autocomplete} from "@material-ui/lab";
-import FilterListIcon from '@material-ui/icons/FilterList';
+import {Paper, TextField, withStyles} from "@material-ui/core";
 import Button from "@material-ui/core/Button";
-
-import Editor from 'ckeditor5-custom-build/build/ckeditor';
-import {CKEditor} from '@ckeditor/ckeditor5-react'
+import {NewEditor} from "./Editor";
 
 const useStyles = makeStyles((theme) => ({
-    toolbar: theme.mixins.toolbar,
-    content: {
-        flexGrow: 1,
-        backgroundColor: theme.palette.secondary.main,
-        padding: theme.spacing(3),
-    },
-
-    editorDiv: {
-        marginTop: "2%"
+    root: {
+        '& > * + *': {
+            marginTop: theme.spacing(2),
+        },
     },
     fixedWidthContainer: {
         maxWidth: "100px",
-    },
-    titleSpacing: {
-        marginRight: theme.spacing(2)
-    },
-    container: {
-        display: "flex",
-        "&>div": {
-            flexGrow: "1"
-        }
     },
     submit: {
         background: theme.palette.action.primary,
@@ -49,6 +31,11 @@ const useStyles = makeStyles((theme) => ({
         }
     },
 }));
+
+function handleClick(event) {
+    event.preventDefault();
+    console.info('You clicked a breadcrumb.');
+}
 
 // Top 100 films as rated by IMDb users. http://www.imdb.com/chart/top
 const top100Films = [
@@ -153,6 +140,7 @@ const top100Films = [
     {title: '3 Idiots', year: 2009},
     {title: 'Monty Python and the Holy Grail', year: 1975},
 ];
+
 const CssTextField = withStyles({
     root: {
         '& label.Mui-focused': {
@@ -174,31 +162,12 @@ const CssTextField = withStyles({
         },
     },
 })(TextField);
-const editorConfiguration = {
-    toolbar: ['bold',
-        'italic',
-        'heading',
-        '|',
-        'link',
-        'bulletedList',
-        'numberedList',
-        'outdent',
-        'indent',
-        '|',
-        'imageUpload',
-        'blockQuote',
-        'insertTable',
-        'mediaEmbed',
-        'undo',
-        'redo',
-        'autoFormat'],
-};
 
-export function NewEditor() {
+export  function EditorAction() {
     const classes = useStyles();
+
     return (
-        <main className={classes.content}>
-            <div className={classes.toolbar}/>
+        <div className={classes.root}>
             <Grid container>
                 <Grid item style={{flexGrow: "1"}}>
                     <Autocomplete
@@ -225,28 +194,8 @@ export function NewEditor() {
                     </Button>
                 </Grid>
             </Grid>
+            <NewEditor/>
 
-            <div className={classes.editorDiv}>
-                <CKEditor
-                    editor={Editor}
-                    config={editorConfiguration}
-                    data="<p>Hello from CKEditor 5!</p>"
-                    onReady={editor => {
-                        // You can store the "editor" and use when it is needed.
-                        console.log('Editor is ready to use!', editor);
-                    }}
-                    onChange={(event, editor) => {
-                        const data = editor.getData();
-                        console.log({event, editor, data});
-                    }}
-                    onBlur={(event, editor) => {
-                        console.log('Blur.', editor);
-                    }}
-                    onFocus={(event, editor) => {
-                        console.log('Focus.', editor);
-                    }}
-                />
-            </div>
-        </main>
+        </div>
     );
 }
