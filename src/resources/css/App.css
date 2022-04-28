@@ -1,0 +1,26 @@
+:root {
+    /*--color-surface: white;*/
+    /*--color-topBar: white;*/
+    /*--color-text: rgb(145, 158, 171);*/
+    /*--color-text-dark: #323232;*/
+    /*--color-button: black;*/
+}
+html, body {
+    height:100%;
+}
+.ck-editor {
+    color: black;
+    height: 100px;
+}
+.ck.ck-content.ck-editor__editable.ck-rounded-corners.ck-editor__editable_inline.ck-blurred
+{
+    height: 100%;
+}
+.ck-editor__editable_inline {
+    min-height: 100vh   ;
+}
+
+
+.MuiAutocomplete-hasPopupIcon.MuiAutocomplete-hasClearIcon .MuiAutocomplete-inputRoot[class*="MuiOutlinedInput-root"]{
+    border-radius: 26px;
+}
