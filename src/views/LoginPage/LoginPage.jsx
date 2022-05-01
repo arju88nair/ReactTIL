@@ -12,16 +12,14 @@ const LayoutContainer = styled('div')(() => ({
 }));
 
 
-
-
 export function LoginPage() {
     return (
         <div>
             <CssBaseline/>
 
             <LayoutContainer>
-            <PreLoginAppBar/>
-            <LoginForm/>
+                <PreLoginAppBar/>
+                <LoginForm/>
             </LayoutContainer>
         </div>
     );

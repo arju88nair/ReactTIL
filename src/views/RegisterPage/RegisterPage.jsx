@@ -12,17 +12,15 @@ const LayoutContainer = styled('div')(() => ({
 }));
 
 
-
-
-export  function RegisterPage() {
+export function RegisterPage() {
 
     return (
         <div>
             <CssBaseline/>
 
             <LayoutContainer>
-            <PreLoginAppBar/>
-            <RegisterForm/>
+                <PreLoginAppBar/>
+                <RegisterForm/>
             </LayoutContainer>
         </div>
     );
