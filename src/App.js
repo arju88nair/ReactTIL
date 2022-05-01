@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import {Routes, Route} from 'react-router-dom';
 import {LandingPage} from "./views/LandingPage";
@@ -9,10 +8,12 @@ function App() {
         palette: {
             mode: 'dark',
             primary: {
-                main: '#c35ee8',
+                main: '#655D8A',
+                // main: '#5584AC',
             },
             secondary: {
-                main: '#f50057',
+                main: '#FDCEB9',
+                // main: '#D885A3',
             },
             background: {
                 main: '#2e2e2e',

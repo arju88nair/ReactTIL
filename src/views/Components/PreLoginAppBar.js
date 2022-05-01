@@ -104,7 +104,7 @@ const PreLoginAppbar = () => {
 
                     <Box sx={{ flexGrow: 0 }}>
                         <Button
-                            variant="outlined" style={{fontWeight: "600" ,justifyContent: "flex-start"}}>
+                            variant={"outlined"} style={{fontWeight: "600" ,justifyContent: "flex-start", color: 'white'}}   >
                             Login
                         </Button>
                         <Button

@@ -3,11 +3,20 @@ import logo from "../../resources/images/The Infinite BookShelf(1).png";
 import {Link} from "react-router-dom";
 import {Button, Container, Grid} from "@mui/material";
 import Typography from "@mui/material/Typography";
+import { alpha,styled, createTheme, ThemeProvider } from '@mui/material/styles';
 
+const BannerImage = styled("img")(({ theme }) => ({
+    margin: 'auto',
+    display: 'block',
+    maxWidth: '100%',
+    background: 'transparent'
+}));
 
+const HeroButtons = styled("div")(({ theme }) => ({
+    marginTop: theme.spacing(4),
+}));
 
 export function HeroBanner() {
-
     return (
         <Container maxWidth="lg">
             <Grid
@@ -17,7 +26,7 @@ export function HeroBanner() {
                 alignItems="center"
             >
                 <Grid item xs={12} sm={8} justify="flex-start" alignItems="flex-start">
-                    <img  alt="complex" src={logo}/>
+                    <BannerImage  alt="complex" src={logo}/>
                 </Grid>
                 <Grid item xs={12} sm={4} alignItems="center" justify="center">
                     <div >
@@ -42,8 +51,11 @@ export function HeroBanner() {
                     </div>
                 </Grid>
             </Grid>
-            <div c>
-                <Grid container spacing={2} justify="center">
+                <Grid container spacing={4}
+                      direction="row"
+                      justifyContent="center"
+                      alignItems="center"
+                >
                     <Grid item>
                         <Button variant="contained"
                                 style={{
@@ -64,7 +76,6 @@ export function HeroBanner() {
                         </Button>
                     </Grid>
                 </Grid>
-            </div>
         </Container>
     );
 }

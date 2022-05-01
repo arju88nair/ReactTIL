@@ -1,6 +1,5 @@
 import React from 'react';
 import PreLoginAppBar from "../Components/PreLoginAppBar";
-import Box from "@mui/material/Box";
 import {HeroBanner} from "./HeroBanner";
 import styled from "@emotion/styled";
 import {CssBaseline} from "@mui/material";
@@ -22,7 +21,6 @@ export function LandingPage() {
                 <PreLoginAppBar/>
                 <HeroBanner/>
             </LayoutContainer>
-            Fuck off
         </div>
     );
 }
