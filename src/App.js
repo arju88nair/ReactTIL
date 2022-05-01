@@ -2,6 +2,8 @@ import './App.css';
 import {Routes, Route} from 'react-router-dom';
 import {LandingPage} from "./views/LandingPage";
 import {createTheme, ThemeProvider} from '@mui/material/styles';
+import {LoginPage} from "./views/LoginPage";
+import {RegisterPage} from "./views/RegisterPage";
 
 function App() {
     const theme = createTheme({
@@ -24,6 +26,8 @@ function App() {
         <ThemeProvider theme={theme}>
             <Routes>
                 <Route path="/" element={<LandingPage/>}/>
+                <Route path="/login" element={<LoginPage/>}/>
+                <Route path="/register" element={<RegisterPage/>}/>
             </Routes>
         </ThemeProvider>
     );

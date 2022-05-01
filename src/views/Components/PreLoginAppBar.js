@@ -9,6 +9,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
+import {Link} from "react-router-dom";
 
 const pages = ['How it works', 'Pricing', 'Blog', 'Contact'];
 
@@ -104,12 +105,14 @@ const PreLoginAppbar = () => {
 
                     <Box sx={{ flexGrow: 0 }}>
                         <Button
-                            variant={"outlined"} style={{fontWeight: "600" ,justifyContent: "flex-start", color: 'white'}}   >
+                            variant={"outlined"} style={{fontWeight: "600" ,justifyContent: "flex-start", color: 'white'}}  component={Link}
+                            to="/login"  >
                             Login
                         </Button>
                         <Button
                                 style={{fontWeight: "600",marginLeft:8,
-                                    color: 'white', justifyContent: "flex-start"}} >
+                                    color: 'white', justifyContent: "flex-start"}} component={Link}
+                                to="/register">
                             Sign Up
                         </Button>
                     </Box>
