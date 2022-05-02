@@ -1,5 +1,5 @@
 import './App.css';
-import {Route, Routes} from 'react-router-dom';
+import {Navigate, Route, Routes} from 'react-router-dom';
 import {LandingPage} from "./views/LandingPage";
 import {createTheme, ThemeProvider} from '@mui/material/styles';
 import {LoginPage} from "./views/LoginPage";
@@ -25,9 +25,13 @@ function App() {
     return (
         <ThemeProvider theme={theme}>
             <Routes>
-                <Route path="/" element={<LandingPage/>}/>
+                <Route path="/landing" element={<LandingPage/>}/>
                 <Route path="/login" element={<LoginPage/>}/>
                 <Route path="/register" element={<RegisterPage/>}/>
+                <Route
+                    path="*"
+                    element={<Navigate to="/landing" replace/>}
+                />
             </Routes>
         </ThemeProvider>
     );

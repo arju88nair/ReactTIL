@@ -15,22 +15,16 @@ const pages = ['How it works', 'Pricing', 'Blog', 'Contact'];
 
 const PreLoginAppbar = () => {
     const [anchorElNav, setAnchorElNav] = React.useState(null);
-    const [anchorElUser, setAnchorElUser] = React.useState(null);
 
     const handleOpenNavMenu = (event) => {
         setAnchorElNav(event.currentTarget);
     };
-    const handleOpenUserMenu = (event) => {
-        setAnchorElUser(event.currentTarget);
-    };
-
     const handleCloseNavMenu = () => {
+        console.log(process.env.REACT_APP_SERVER_URL)
         setAnchorElNav(null);
     };
 
-    const handleCloseUserMenu = () => {
-        setAnchorElUser(null);
-    };
+
 
     return (
         <AppBar position="static">
@@ -76,8 +70,9 @@ const PreLoginAppbar = () => {
                             }}
                         >
                             {pages.map((page) => (
-                                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                                    <Typography textAlign="center">{page}</Typography>
+                                <MenuItem key={page} onClick={handleCloseNavMenu} component={Link}
+                                          to={"/" + page.replace(/\s/g, "-").toLowerCase()}>
+                                    <Typography textAlign="center">{page.toString()}</Typography>
                                 </MenuItem>
                             ))}
                         </Menu>
@@ -97,6 +92,7 @@ const PreLoginAppbar = () => {
                                 key={page}
                                 onClick={handleCloseNavMenu}
                                 sx={{my: 2, color: 'white', display: 'block'}}
+                                href={"/" + page.replace(/\s/g, "-").toLowerCase()}
                             >
                                 {page}
                             </Button>
