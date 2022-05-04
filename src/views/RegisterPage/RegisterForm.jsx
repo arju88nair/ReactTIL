@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, {useState} from 'react';
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -12,17 +12,33 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import SocialButtons from "../Components/SocialButtons";
+import {useDispatch} from "react-redux";
+import {signupUser} from "../../features/UserSlice";
+import {openSpinner} from "../../features/MiscSlice";
 
 
 export default function RegisterForm() {
+    const dispatch = useDispatch();
+    const [user, setUser] = useState({
+        username: '',
+        email: '',
+        password: '',
+    });
     const handleSubmit = (event) => {
         event.preventDefault();
-        const data = new FormData(event.currentTarget);
-        console.log({
-            email: data.get('email'),
-            password: data.get('password'),
-        });
+        if (user.email && user.password) {
+            console.log(user);
+            dispatch(openSpinner())
+            dispatch(signupUser(user));
+        }
     };
+
+    function handleChange(e) {
+        console.log(user)
+        const {name, value} = e.target;
+        console.log(e.target)
+        setUser(user => ({...user, [name]: value}));
+    }
 
     return (
         <Container component="main" maxWidth="xs">
@@ -46,13 +62,14 @@ export default function RegisterForm() {
                     <Grid container spacing={2}>
                         <Grid item xs={12}>
                             <TextField
-                                autoComplete="given-name"
-                                name="firstName"
+                                autoFocus
                                 required
                                 fullWidth
-                                id="firstName"
-                                label="First Name"
-                                autoFocus
+                                id="username"
+                                label="User Name"
+                                onChange={handleChange}
+                                value={user.username}
+                                name="username"
                             />
                         </Grid>
                         <Grid item xs={12}>
@@ -61,6 +78,8 @@ export default function RegisterForm() {
                                 fullWidth
                                 id="email"
                                 label="Email Address"
+                                onChange={handleChange}
+                                value={user.email}
                                 name="email"
                                 autoComplete="email"
                             />
@@ -73,6 +92,8 @@ export default function RegisterForm() {
                                 label="Password"
                                 type="password"
                                 id="password"
+                                onChange={handleChange}
+                                value={user.password}
                                 autoComplete="new-password"
                             />
                         </Grid>

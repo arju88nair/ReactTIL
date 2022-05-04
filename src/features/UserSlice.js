@@ -1,5 +1,4 @@
 import {createSlice, createAsyncThunk} from '@reduxjs/toolkit';
-import config from 'config';
 import {history} from "../_helpers";
 
 
@@ -19,7 +18,7 @@ export const signupUser = createAsyncThunk(
                 body: JSON.stringify(user)
 
             };
-            const response = await fetch(`${config.apiUrl}/auth/signup`, requestOptions);
+            const response = await fetch(process.env.REACT_APP_SERVER_URL+`/auth/signup`, requestOptions);
             let data = await response.json();
             console.log('data', data);
             if (response.status === 200) {
@@ -44,7 +43,7 @@ export const loginUser = createAsyncThunk(
                 headers: {'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*'},
                 body: JSON.stringify(user)
             };
-            const response = await fetch(`${config.apiUrl}/auth/login`, requestOptions);
+            const response = await fetch(process.env.REACT_APP_SERVER_URL+`/auth/login`, requestOptions);
             let data = await response.json();
             console.log('response', data);
             if (response.status === 200) {
