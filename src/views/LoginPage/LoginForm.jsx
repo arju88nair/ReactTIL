@@ -11,16 +11,51 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import SocialButtons from "../Components/SocialButtons";
+import {useDispatch, useSelector} from "react-redux";
+import {clearState, loginUser, userSelector} from "../../features/UserSlice";
+import {useEffect, useState} from "react";
+import {closeSpinner, openSpinner} from "../../features/MiscSlice";
+import {useLocation, useNavigate} from "react-router-dom";
 
 export default function LoginForm() {
-    const handleSubmit = (event) => {
-        event.preventDefault();
-        const data = new FormData(event.currentTarget);
-        console.log({
-            email: data.get('email'),
-            password: data.get('password'),
-        });
+    const dispatch = useDispatch();
+    const [user, setUser] = useState({
+        username: '',
+        email: '',
+        password: '',
+    });
+    const {isSuccess, isError, errorMessage} = useSelector(
+        userSelector
+    );
+    function handleSubmit(e) {
+        e.preventDefault();
+        if (user.email && user.password) {
+            dispatch(openSpinner())
+            dispatch(clearState());
+            dispatch(loginUser(user));
+            ;
+        }
     };
+    let navigate = useNavigate();
+    let location = useLocation();
+    let from = location.state?.from?.pathname || "/";
+
+    useEffect(() => {
+        if (isSuccess) {
+            dispatch(clearState());
+            dispatch(closeSpinner())
+            // this.props.history.push('/');
+            navigate(from, { replace: true });
+        }
+        if (isError) {
+            dispatch(closeSpinner())
+        }
+    }, [isError, isSuccess]);
+
+    function handleChange(e) {
+        const {name, value} = e.target;
+        setUser(user => ({...user, [name]: value}));
+    }
 
     return (
         <Container component="main" maxWidth="xs">
@@ -39,7 +74,7 @@ export default function LoginForm() {
                     Log in to your account
                 </Typography>
                 <SocialButtons/>
-                <Box component="form" onSubmit={handleSubmit} noValidate sx={{mt: 1}}>
+                <Box component="form" onSubmit={handleSubmit} validate sx={{mt: 1}}>
                     <TextField
                         margin="normal"
                         required

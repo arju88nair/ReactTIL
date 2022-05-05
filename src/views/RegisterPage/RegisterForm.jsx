@@ -15,7 +15,7 @@ import SocialButtons from "../Components/SocialButtons";
 import {useDispatch, useSelector} from "react-redux";
 import {clearState, signupUser, userSelector} from "../../features/UserSlice";
 import {closeSpinner, openSpinner} from "../../features/MiscSlice";
-
+import { ValidatorForm, TextValidator } from 'react-material-ui-form-validator';
 
 export default function RegisterForm() {
     const dispatch = useDispatch();
@@ -71,7 +71,7 @@ export default function RegisterForm() {
                     Create your account
                 </Typography>
                 <SocialButtons/>
-                <Box component="form" noValidate onSubmit={handleSubmit} sx={{mt: 3}}>
+                <Box component="form" validate onSubmit={handleSubmit} sx={{mt: 3}}>
                     <Grid container spacing={2}>
                         <Grid item xs={12}>
                             <TextField
@@ -90,6 +90,7 @@ export default function RegisterForm() {
                                 required
                                 fullWidth
                                 id="email"
+                                type="email"
                                 label="Email Address"
                                 onChange={handleChange}
                                 value={user.email}
