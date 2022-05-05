@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -12,9 +12,9 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import SocialButtons from "../Components/SocialButtons";
-import {useDispatch} from "react-redux";
-import {signupUser} from "../../features/UserSlice";
-import {openSpinner} from "../../features/MiscSlice";
+import {useDispatch, useSelector} from "react-redux";
+import {clearState, signupUser, userSelector} from "../../features/UserSlice";
+import {closeSpinner, openSpinner} from "../../features/MiscSlice";
 
 
 export default function RegisterForm() {
@@ -24,19 +24,32 @@ export default function RegisterForm() {
         email: '',
         password: '',
     });
+    const {isSuccess, isError, errorMessage} = useSelector(
+        userSelector
+    );
+
+
     const handleSubmit = (event) => {
         event.preventDefault();
         if (user.email && user.password) {
-            console.log(user);
             dispatch(openSpinner())
             dispatch(signupUser(user));
         }
     };
 
+    useEffect(() => {
+        if (isSuccess) {
+            dispatch(clearState());
+            dispatch(closeSpinner())
+            // history.push('/');
+        }
+        if (isError) {
+            dispatch(closeSpinner())
+        }
+    }, [isError, isSuccess]);
+
     function handleChange(e) {
-        console.log(user)
         const {name, value} = e.target;
-        console.log(e.target)
         setUser(user => ({...user, [name]: value}));
     }
 
@@ -86,6 +99,7 @@ export default function RegisterForm() {
                         </Grid>
                         <Grid item xs={12}>
                             <TextField
+                                autoFocus
                                 required
                                 fullWidth
                                 name="password"
@@ -94,7 +108,6 @@ export default function RegisterForm() {
                                 id="password"
                                 onChange={handleChange}
                                 value={user.password}
-                                autoComplete="new-password"
                             />
                         </Grid>
                         <Grid item xs={12}>

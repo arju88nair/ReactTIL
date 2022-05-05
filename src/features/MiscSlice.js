@@ -1,4 +1,4 @@
-import {createSlice, createAsyncThunk} from '@reduxjs/toolkit';
+import {createSlice} from '@reduxjs/toolkit';
 
 
 const initialState = {spinner: false, boardModal: false}
@@ -8,6 +8,7 @@ export const miscSlice = createSlice({
     initialState,
     reducers: {
         openSpinner: (state, action) => {
+            console.log("dddd")
             return {...state, spinner: true};
         },
         closeSpinner: (state, action) => {

@@ -10,6 +10,7 @@ import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import {Link} from "react-router-dom";
+import {Spinner} from "./Spinner";
 
 const pages = ['How it works', 'Pricing', 'Blog', 'Contact'];
 
@@ -28,6 +29,7 @@ const PreLoginAppbar = () => {
 
     return (
         <AppBar position="static">
+            <Spinner/>
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
                     <Typography
