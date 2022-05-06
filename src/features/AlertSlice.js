@@ -1,7 +1,9 @@
 import {createSlice, createAsyncThunk} from '@reduxjs/toolkit';
 
 
-const initialState = {darkThemeEnabled: false}
+const initialState = {type: 'success',
+    message: '',
+    open: false}
 
 export const alertSlice = createSlice({
     name: 'alert',

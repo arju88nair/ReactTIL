@@ -1,4 +1,5 @@
 import * as React from 'react';
+import {useEffect, useState} from 'react';
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
@@ -13,27 +14,28 @@ import Container from '@mui/material/Container';
 import SocialButtons from "../Components/SocialButtons";
 import {useDispatch, useSelector} from "react-redux";
 import {clearState, loginUser, userSelector} from "../../features/UserSlice";
-import {useEffect, useState} from "react";
 import {closeSpinner, openSpinner} from "../../features/MiscSlice";
 import {useLocation, useNavigate} from "react-router-dom";
+import {error, success} from "../../features/AlertSlice";
 
 export default function LoginForm() {
     const dispatch = useDispatch();
     const [user, setUser] = useState({
-        username: '',
         email: '',
         password: '',
     });
     const {isSuccess, isError, errorMessage} = useSelector(
         userSelector
     );
+
     function handleSubmit(e) {
         e.preventDefault();
+        console.log(user)
+
         if (user.email && user.password) {
             dispatch(openSpinner())
             dispatch(clearState());
             dispatch(loginUser(user));
-            ;
         }
     };
     let navigate = useNavigate();
@@ -43,11 +45,13 @@ export default function LoginForm() {
     useEffect(() => {
         if (isSuccess) {
             dispatch(clearState());
+            dispatch(success(errorMessage))
             dispatch(closeSpinner())
             // this.props.history.push('/');
-            navigate(from, { replace: true });
+            navigate(from, {replace: true});
         }
         if (isError) {
+            dispatch(error(errorMessage))
             dispatch(closeSpinner())
         }
     }, [isError, isSuccess]);
@@ -80,9 +84,12 @@ export default function LoginForm() {
                         required
                         fullWidth
                         id="email"
+                        type="email"
                         label="Email Address"
                         name="email"
                         autoComplete="email"
+                        onChange={handleChange}
+                        value={user.email}
                         autoFocus
                     />
                     <TextField
@@ -93,6 +100,8 @@ export default function LoginForm() {
                         label="Password"
                         type="password"
                         id="password"
+                        onChange={handleChange}
+                        value={user.password}
                         autoComplete="current-password"
                     />
                     <FormControlLabel

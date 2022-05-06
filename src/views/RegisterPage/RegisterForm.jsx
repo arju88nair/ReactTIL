@@ -16,6 +16,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {clearState, signupUser, userSelector} from "../../features/UserSlice";
 import {closeSpinner, openSpinner} from "../../features/MiscSlice";
 import { ValidatorForm, TextValidator } from 'react-material-ui-form-validator';
+import {error, success} from "../../features/AlertSlice";
 
 export default function RegisterForm() {
     const dispatch = useDispatch();
@@ -40,10 +41,12 @@ export default function RegisterForm() {
     useEffect(() => {
         if (isSuccess) {
             dispatch(clearState());
+            dispatch(success(errorMessage))
             dispatch(closeSpinner())
             // history.push('/');
         }
         if (isError) {
+            dispatch(error(errorMessage))
             dispatch(closeSpinner())
         }
     }, [isError, isSuccess]);

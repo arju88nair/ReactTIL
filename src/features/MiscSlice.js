@@ -8,7 +8,6 @@ export const miscSlice = createSlice({
     initialState,
     reducers: {
         openSpinner: (state, action) => {
-            console.log("dddd")
             return {...state, spinner: true};
         },
         closeSpinner: (state, action) => {

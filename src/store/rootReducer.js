@@ -9,7 +9,7 @@ import {miscSlice} from "../features/MiscSlice";
 const rootReducer = combineReducers({
   user: userSlice.reducer,
   // preferences: preferencesSlice.reducer,
-  // alert: alertSlice.reducer,
+  alert: alertSlice.reducer,
   misc: miscSlice.reducer,
   // boards: boardsSlice.reducer,
   // darkMode:darkModeReducer
