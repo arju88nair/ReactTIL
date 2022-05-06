@@ -21,10 +21,8 @@ const PreLoginAppbar = () => {
         setAnchorElNav(event.currentTarget);
     };
     const handleCloseNavMenu = () => {
-        console.log(process.env.REACT_APP_SERVER_URL)
         setAnchorElNav(null);
     };
-
 
 
     return (

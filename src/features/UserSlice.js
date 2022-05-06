@@ -1,4 +1,4 @@
-import {createSlice, createAsyncThunk} from '@reduxjs/toolkit';
+import {createAsyncThunk, createSlice} from '@reduxjs/toolkit';
 import {history} from "../_helpers";
 
 
@@ -18,12 +18,12 @@ export const signupUser = createAsyncThunk(
                 body: JSON.stringify(user)
 
             };
-            const response = await fetch(process.env.REACT_APP_SERVER_URL+`/auth/signup`, requestOptions);
+            const response = await fetch(process.env.REACT_APP_SERVER_URL + `/auth/signup`, requestOptions);
             let data = await response.json();
             console.log('data', data);
             if (response.status === 200) {
                 localStorage.setItem('token', data.access_token);
-                return { ...data,user};
+                return {...data, user};
             } else {
                 return thunkAPI.rejectWithValue(data);
             }
@@ -43,12 +43,12 @@ export const loginUser = createAsyncThunk(
                 headers: {'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*'},
                 body: JSON.stringify(user)
             };
-            const response = await fetch(process.env.REACT_APP_SERVER_URL+`/auth/login`, requestOptions);
+            const response = await fetch(process.env.REACT_APP_SERVER_URL + `/auth/login`, requestOptions);
             let data = await response.json();
             console.log('response', data);
             if (response.status === 200) {
                 localStorage.setItem('token', data.access_token);
-                return { ...data,user};
+                return {...data, user};
             } else {
                 return thunkAPI.rejectWithValue(data);
             }
@@ -67,7 +67,8 @@ export function logout() {
     history.push('login');
 
 }
-let token =localStorage.getItem('token');
+
+let token = localStorage.getItem('token');
 
 export const userSlice = createSlice({
     name: 'user',
@@ -78,7 +79,7 @@ export const userSlice = createSlice({
         isSuccess: false,
         isError: false,
         errorMessage: '',
-        token:token
+        token: token
     },
     reducers: {
         clearState: (state) => {
@@ -101,9 +102,8 @@ export const userSlice = createSlice({
             state.isFetching = true;
         },
         [signupUser.rejected]: (state, {payload}) => {
-            if(!payload)
-            {
-                payload={'message':"Something went wrong. Please try again later"}
+            if (!payload) {
+                payload = {'message': "Something went wrong. Please try again later"}
             }
             state.isFetching = false;
             state.isError = true;
@@ -118,9 +118,8 @@ export const userSlice = createSlice({
             return state;
         },
         [loginUser.rejected]: (state, {payload}) => {
-            if(!payload)
-            {
-                payload={'message':"Something went wrong. Please try again later"}
+            if (!payload) {
+                payload = {'message': "Something went wrong. Please try again later"}
             }
             state.isFetching = false;
             state.isError = true;

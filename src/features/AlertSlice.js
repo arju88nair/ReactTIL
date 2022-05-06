@@ -1,9 +1,11 @@
-import {createSlice, createAsyncThunk} from '@reduxjs/toolkit';
+import {createSlice} from '@reduxjs/toolkit';
 
 
-const initialState = {type: 'success',
+const initialState = {
+    type: 'success',
     message: '',
-    open: false}
+    open: false
+}
 
 export const alertSlice = createSlice({
     name: 'alert',
@@ -24,7 +26,8 @@ export const alertSlice = createSlice({
         }, clear: (state, action) => {
             return {
                 open: false,
-                ...action
+                type: action.payload.type,
+                message: action.payload.message
             }
         },
     }

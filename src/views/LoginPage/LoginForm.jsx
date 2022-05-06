@@ -30,7 +30,6 @@ export default function LoginForm() {
 
     function handleSubmit(e) {
         e.preventDefault();
-        console.log(user)
 
         if (user.email && user.password) {
             dispatch(openSpinner())

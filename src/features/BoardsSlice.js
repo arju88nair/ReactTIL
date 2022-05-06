@@ -1,7 +1,6 @@
-import {createSlice, createAsyncThunk, createEntityAdapter} from '@reduxjs/toolkit';
+import {createAsyncThunk, createEntityAdapter, createSlice} from '@reduxjs/toolkit';
 import {authHeader} from "../_helpers";
 import config from 'config';
-import {userSlice} from "./UserSlice";
 
 const boardsAdapter = createEntityAdapter({
     // sortComparer: (a, b) => b.date.localeCompare(a.date),
@@ -14,7 +13,7 @@ export const getBoards = createAsyncThunk(
         try {
             const requestOptions = {
                 method: 'GET',
-                headers: {...authHeader(), 'Content-Type': 'application/json','Access-Control-Allow-Origin': '*'},
+                headers: {...authHeader(), 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*'},
             };
             const response = await fetch(`${config.apiUrl}/boards`, requestOptions);
             let boards = await response.json();
@@ -36,7 +35,7 @@ export const postBoard = createAsyncThunk(
         try {
             const requestOptions = {
                 method: 'POST',
-                headers: {...authHeader(), 'Content-Type': 'application/json','Access-Control-Allow-Origin': '*'},
+                headers: {...authHeader(), 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*'},
                 body: JSON.stringify(board)
 
             };
@@ -57,7 +56,7 @@ export const postBoard = createAsyncThunk(
 
 const initialState = boardsAdapter.getInitialState({
     status: 'idle',
-    userBoards:{},
+    userBoards: {},
     error: null,
     isBoardFetching: false,
     isBoardGetSuccess: false,
@@ -79,7 +78,7 @@ export const boardsSlice = createSlice({
             state.isBoardFetching = false;
         },
     },
-    extraReducers:{
+    extraReducers: {
         [getBoards.pending]: (state, action) => {
             state.status = 'loading'
             state.isBoardFetching = true;
@@ -89,7 +88,7 @@ export const boardsSlice = createSlice({
             state.isBoardFetching = false;
             state.isBoardGetSuccess = true;
             // Add any fetched posts to the array
-            console.log('responseBoardFulfilled',action.payload.data)
+            console.log('responseBoardFulfilled', action.payload.data)
             state.userBoards = action.payload.data
             // boardsAdapter.upsertMany(state, action.payload)
         },
@@ -108,14 +107,13 @@ export const boardsSlice = createSlice({
             state.isBoardFetching = false;
             state.isBoardSuccess = true;
             // Add any fetched posts to the array
-            console.log('responseAdded',action.payload)
+            console.log('responseAdded', action.payload)
             // state.userBoards = action.payload.board
             // boardsAdapter.upsertMany(state, action.payload.board)
         },
         [postBoard.rejected]: (state, {payload}) => {
-            if(!payload)
-            {
-                payload={'message':"Something went wrong. Please try again later"}
+            if (!payload) {
+                payload = {'message': "Something went wrong. Please try again later"}
             }
             state.status = 'failed'
             state.errorMessage = payload.message;

@@ -7,7 +7,7 @@ import {LoginPage} from "./views/LoginPage";
 import {RegisterPage} from "./views/RegisterPage";
 import Snackbar from '@mui/material/Snackbar';
 import MuiAlert from '@mui/material/Alert';
-import {alertSlice, clear} from "./features/AlertSlice";
+import {clear} from "./features/AlertSlice";
 import {useDispatch, useSelector} from "react-redux";
 
 const Alert = React.forwardRef(function Alert(props, ref) {
@@ -18,14 +18,12 @@ const Alert = React.forwardRef(function Alert(props, ref) {
 function App() {
     const dispatch = useDispatch();
     const snackbar = useSelector(state => state.alert);
-console.log(snackbar)
     const handleClose = (event, reason) => {
         if (reason === 'clickaway') {
             return;
         }
-        dispatch(clear());
+        dispatch(clear(snackbar));
     };
-    console.log(alert.open)
     const theme = createTheme({
         palette: {
             mode: 'dark',

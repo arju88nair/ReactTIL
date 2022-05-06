@@ -1,6 +1,6 @@
 import {logger} from 'redux-logger';
-import { configureStore, getDefaultMiddleware } from '@reduxjs/toolkit';
-import { FLUSH, PAUSE, PERSIST, PURGE, REGISTER, REHYDRATE } from 'redux-persist/es/constants';
+import {configureStore, getDefaultMiddleware} from '@reduxjs/toolkit';
+import {FLUSH, PAUSE, PERSIST, PURGE, REGISTER, REHYDRATE} from 'redux-persist/es/constants';
 import persistStore from 'redux-persist/es/persistStore';
 import persistedReducer from './persistConfig';
 
@@ -18,7 +18,7 @@ const store = configureStore({
 export const persistor = persistStore(store);
 export default store;
 
-    //
+//
 // store.subscribe(() => {
 //   console.log("s")
 //   const preferences = store.getState().preferences;
