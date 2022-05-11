@@ -16,6 +16,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {clearState, signupUser, userSelector} from "../../features/UserSlice";
 import {closeSpinner, openSpinner} from "../../features/MiscSlice";
 import {error, success} from "../../features/AlertSlice";
+import {useLocation, useNavigate} from "react-router-dom";
 
 export default function RegisterForm() {
     const dispatch = useDispatch();
@@ -36,6 +37,9 @@ export default function RegisterForm() {
             dispatch(signupUser(user));
         }
     };
+    let navigate = useNavigate();
+    let location = useLocation();
+    let from = location.state?.from?.pathname || "/";
 
     useEffect(() => {
         if (isSuccess) {
@@ -43,6 +47,8 @@ export default function RegisterForm() {
             dispatch(success(errorMessage))
             dispatch(closeSpinner())
             // history.push('/');
+            navigate(from, {replace: true});
+
         }
         if (isError) {
             dispatch(error(errorMessage))

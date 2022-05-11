@@ -1,8 +1,8 @@
 import React from 'react';
-import PreLoginAppBar from "../Components/PreLoginAppBar";
-import {HeroBanner} from "./HeroBanner";
-import styled from "@emotion/styled";
 import {CssBaseline} from "@mui/material";
+import MainAppBar from "../Components/AppBar";
+import styled from "@emotion/styled";
+import SideBar from "../Components/SideBar";
 
 // styled
 const LayoutContainer = styled('div')(() => ({
@@ -11,15 +11,17 @@ const LayoutContainer = styled('div')(() => ({
     width: '100%'
 }));
 
-export function LandingPage() {
+
+function HomePage() {
 
     return (
         <div>
             <CssBaseline/>
             <LayoutContainer>
-                <PreLoginAppBar/>
-                <HeroBanner/>
+                <SideBar/>
             </LayoutContainer>
         </div>
     );
 }
+
+export {HomePage};
