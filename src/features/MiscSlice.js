@@ -1,7 +1,7 @@
 import {createSlice} from '@reduxjs/toolkit';
 
 
-const initialState = {spinner: false, boardModal: false}
+const initialState = {spinner: false, boardModal: false, sideBar: false}
 
 export const miscSlice = createSlice({
     name: 'misc',
@@ -19,9 +19,22 @@ export const miscSlice = createSlice({
         closeBoardModal: (state, action) => {
             return {...state, boardModal: false};
         },
+        openSideBar: (state, action) => {
+            return {...state, sideBar: true};
+        },
+        closeSideBar: (state, action) => {
+            return {...state, sideBar: false};
+        },
     }
 });
 
-export const {openSpinner, closeSpinner, openBoardModal, closeBoardModal} = miscSlice.actions;
+export const {
+    openSpinner,
+    closeSpinner,
+    openBoardModal,
+    closeBoardModal,
+    openSideBar,
+    closeSideBar
+} = miscSlice.actions;
 
 export const miscSelector = (state) => state.misc;
