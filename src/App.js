@@ -26,6 +26,19 @@ function App() {
         dispatch(clear(snackbar));
     };
     const theme = createTheme({
+        typography: {
+            fontFamily: [
+                '-apple-system',
+                'BlinkMacSystemFont',
+                '"Segoe UI"',
+                '"Helvetica"',
+                'Arial',
+                'sans-serif',
+                '"Apple Color Emoji"',
+                '"Segoe UI Emoji"',
+                '"Segoe UI Symbol"',
+            ].join(','),
+        },
         palette: {
             mode: 'dark',
             primary: {

@@ -19,6 +19,7 @@ function HomePage() {
             <CssBaseline/>
             <LayoutContainer>
                 <SideBar/>
+
             </LayoutContainer>
         </div>
     );
