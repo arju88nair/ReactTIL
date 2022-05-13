@@ -1,133 +1,105 @@
 import * as React from 'react';
-import {styled, useTheme} from '@mui/material/styles';
+import PropTypes from 'prop-types';
+import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
-import Drawer from '@mui/material/Drawer';
 import CssBaseline from '@mui/material/CssBaseline';
-import List from '@mui/material/List';
-import Typography from '@mui/material/Typography';
 import Divider from '@mui/material/Divider';
+import Drawer from '@mui/material/Drawer';
 import IconButton from '@mui/material/IconButton';
-import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
-import ChevronRightIcon from '@mui/icons-material/ChevronRight';
+import InboxIcon from '@mui/icons-material/MoveToInbox';
+import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
+import MenuIcon from '@mui/icons-material/Menu';
+import Toolbar from '@mui/material/Toolbar';
+import Typography from '@mui/material/Typography';
 import MainAppBar from "./AppBar";
 import {useDispatch, useSelector} from "react-redux";
-import {closeSideBar, openSideBar} from "../../features/MiscSlice";
+import {toggleSideBar} from "../../features/MiscSlice";
 
 const drawerWidth = 240;
 
-const Main = styled('main', {shouldForwardProp: (prop) => prop !== 'open'})(
-    ({theme, open}) => ({
-        flexGrow: 1,
-        padding: theme.spacing(3),
-        transition: theme.transitions.create('margin', {
-            easing: theme.transitions.easing.sharp,
-            duration: theme.transitions.duration.leavingScreen,
-        }),
-        marginLeft: `-${drawerWidth}px`,
-        ...(open && {
-            transition: theme.transitions.create('margin', {
-                easing: theme.transitions.easing.easeOut,
-                duration: theme.transitions.duration.enteringScreen,
-            }),
-            marginLeft: 0,
-        }),
-    }),
-);
-
-
-const DrawerHeader = styled('div')(({theme}) => ({
-    display: 'flex',
-    alignItems: 'center',
-    padding: theme.spacing(0, 1),
-    // necessary for content to be below app bar
-    ...theme.mixins.toolbar,
-    justifyContent: 'flex-end',
-}));
-
-export default function SideBar() {
+function SideBar(props) {
     const dispatch = useDispatch();
-
-    const theme = useTheme();
-    const [open, setOpen] = React.useState(true);
+    const { window } = props;
     const sideBar = useSelector(state => state.misc.sideBar);
-    console.log(sideBar)
 
-    const handleDrawerOpen = () => {
-        dispatch(openSideBar())
+    const handleDrawerToggle = () => {
+        dispatch(toggleSideBar(sideBar));
     };
 
-    const handleDrawerClose = () => {
-        dispatch(closeSideBar())
-    };
+    const drawer = (
+        <div>
+            <Divider />
+            <List>
+                {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
+                    <ListItem button key={text}>
+                        <ListItemIcon>
+                            {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                        </ListItemIcon>
+                        <ListItemText primary={text} />
+                    </ListItem>
+                ))}
+            </List>
+            <Divider />
+            <List>
+                {['All mail', 'Trash', 'Spam'].map((text, index) => (
+                    <ListItem button key={text}>
+                        <ListItemIcon>
+                            {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                        </ListItemIcon>
+                        <ListItemText primary={text} />
+                    </ListItem>
+                ))}
+            </List>
+        </div>
+    );
+
+    const container = window !== undefined ? () => window().document.body : undefined;
 
     return (
-        <Box sx={{display: 'flex'}}>
-            <CssBaseline/>
+        <Box sx={{ display: 'flex' }}>
+            <CssBaseline />
             <MainAppBar/>
-            {/*<AppBar position="fixed" open={open}>*/}
-            {/*    <Toolbar>*/}
-            {/*        <IconButton*/}
-            {/*            color="inherit"*/}
-            {/*            aria-label="open drawer"*/}
-            {/*            onClick={handleDrawerOpen}*/}
-            {/*            edge="start"*/}
-            {/*            sx={{ mr: 2, ...(open && { display: 'none' }) }}*/}
-            {/*        >*/}
-            {/*            <MenuIcon />*/}
-            {/*        </IconButton>*/}
-            {/*        <Typography variant="h6" noWrap component="div">*/}
-            {/*            Persistent drawer*/}
-            {/*        </Typography>*/}
-            {/*    </Toolbar>*/}
-            {/*</AppBar>*/}
-            <Drawer
-                sx={{
-                    width: drawerWidth,
-                    flexShrink: 0,
-                    '& .MuiDrawer-paper': {
-                        width: drawerWidth,
-                        boxSizing: 'border-box',
-                    },
-                }}
-                variant="persistent"
-                anchor="left"
-                open={sideBar}
+            <Box
+                component="nav"
+                sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 } }}
+                aria-label="mailbox folders"
             >
-                <DrawerHeader>
-                    <IconButton onClick={handleDrawerClose}>
-                        {theme.direction === 'ltr' ? <ChevronLeftIcon/> : <ChevronRightIcon/>}
-                    </IconButton>
-                </DrawerHeader>
-                <Divider/>
-                <List>
-                    {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-                        <ListItem button key={text}>
-                            <ListItemIcon>
-                                {index % 2 === 0 ? <InboxIcon/> : <MailIcon/>}
-                            </ListItemIcon>
-                            <ListItemText primary={text}/>
-                        </ListItem>
-                    ))}
-                </List>
-                <Divider/>
-                <List>
-                    {['All mail', 'Trash', 'Spam'].map((text, index) => (
-                        <ListItem button key={text}>
-                            <ListItemIcon>
-                                {index % 2 === 0 ? <InboxIcon/> : <MailIcon/>}
-                            </ListItemIcon>
-                            <ListItemText primary={text}/>
-                        </ListItem>
-                    ))}
-                </List>
-            </Drawer>
-            <Main open={sideBar}>
-                <DrawerHeader/>
+                {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
+                <Drawer
+                    container={container}
+                    variant="temporary"
+                    open={sideBar}
+                    onClose={handleDrawerToggle}
+                    ModalProps={{
+                        keepMounted: true, // Better open performance on mobile.
+                    }}
+                    sx={{
+                        display: { xs: 'block', sm: 'none' },
+                        '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
+                    }}
+                >
+                    {drawer}
+                </Drawer>
+                <Drawer
+                    variant="permanent"
+                    sx={{
+                        display: { xs: 'none', sm: 'block' },
+                        '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
+                    }}
+                    open
+                >
+                    {drawer}
+                </Drawer>
+            </Box>
+            <Box
+                component="main"
+                sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` } }}
+            >
+                <Toolbar />
                 <Typography paragraph>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                     tempor incididunt ut labore et dolore magna aliqua. Rhoncus dolor purus non
@@ -155,7 +127,17 @@ export default function SideBar() {
                     eleifend. Commodo viverra maecenas accumsan lacus vel facilisis. Nulla
                     posuere sollicitudin aliquam ultrices sagittis orci a.
                 </Typography>
-            </Main>
+            </Box>
         </Box>
     );
 }
+
+SideBar.propTypes = {
+    /**
+     * Injected by the documentation to work in an iframe.
+     * You won't need it on your project.
+     */
+    window: PropTypes.func,
+};
+
+export default SideBar;

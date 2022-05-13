@@ -15,7 +15,7 @@ import MailIcon from '@mui/icons-material/Mail';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import MoreIcon from '@mui/icons-material/MoreVert';
 import {useDispatch, useSelector} from "react-redux";
-import {openSideBar} from "../../features/MiscSlice";
+import {toggleSideBar} from "../../features/MiscSlice";
 import MuiAppBar from "@mui/material/AppBar";
 
 const drawerWidth = 240;
@@ -84,11 +84,10 @@ export default function MainAppBar() {
 
     const isMenuOpen = Boolean(anchorEl);
     const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
-
     const sideBar = useSelector(state => state.misc.sideBar);
 
-    const handleDrawerOpen = () => {
-        dispatch(openSideBar());
+    const handleDrawerToggle = () => {
+        dispatch(toggleSideBar(sideBar));
     };
 
     const handleProfileMenuOpen = (event) => {
@@ -184,35 +183,37 @@ export default function MainAppBar() {
 
     return (
         <Box sx={{flexGrow: 1}}>
-            <AppBar position="fixed" open={sideBar}>
+            <AppBar position="fixed" open={sideBar} sx={{
+                width: {sm: `calc(100% - ${drawerWidth}px)`},
+                ml: {sm: `${drawerWidth}px`},
+            }}>
                 <Toolbar>
                     <IconButton
                         color="inherit"
                         aria-label="open drawer"
-                        onClick={handleDrawerOpen}
                         edge="start"
-                        sx={{mr: 2, ...(sideBar && {display: 'none'})}}
+                        onClick={handleDrawerToggle}
+                        sx={{mr: 2, display: {sm: 'none'}}}
                     >
                         <MenuIcon/>
                     </IconButton>
-
                     <Typography
                         variant="h6"
                         noWrap
-                        component="div"
-                        sx={{display: {xs: 'none', sm: 'block'}}}
+                        component="a"
+                        href="/"
+                        sx={{
+                            mr: 2,
+                            display: { xs: 'flex', md: 'flex' },
+                            fontFamily: 'monospace',
+                            fontWeight: 700,
+                            letterSpacing: '.2rem',
+                            color: 'inherit',
+                            textDecoration: 'none',
+                        }}
                     >
-                        MUI
+                        Shelved
                     </Typography>
-                    <Search>
-                        <SearchIconWrapper>
-                            <SearchIcon/>
-                        </SearchIconWrapper>
-                        <StyledInputBase
-                            placeholder="Search…"
-                            inputProps={{'aria-label': 'search'}}
-                        />
-                    </Search>
                     <Box sx={{flexGrow: 1}}/>
                     <Box sx={{display: {xs: 'none', md: 'flex'}}}>
                         <IconButton size="large" aria-label="show 4 new mails" color="inherit">

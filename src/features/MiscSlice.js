@@ -25,6 +25,9 @@ export const miscSlice = createSlice({
         closeSideBar: (state, action) => {
             return {...state, sideBar: false};
         },
+        toggleSideBar: (state, action) => {
+            return {...state, sideBar: !action.payload};
+        },
     }
 });
 
@@ -34,7 +37,8 @@ export const {
     openBoardModal,
     closeBoardModal,
     openSideBar,
-    closeSideBar
+    closeSideBar,
+    toggleSideBar
 } = miscSlice.actions;
 
 export const miscSelector = (state) => state.misc;
