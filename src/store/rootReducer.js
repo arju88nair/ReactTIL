@@ -3,7 +3,7 @@ import {userSlice} from "../features/UserSlice";
 // import {preferencesSlice} from "../features/PreferencesSlice";
 import {alertSlice} from "../features/AlertSlice";
 import {miscSlice} from "../features/MiscSlice";
-// import {boardsSlice} from "../features/BoardsSlice";
+import {boardsSlice} from "../features/BoardsSlice";
 // import darkModeReducer from "../features/DarkModeSlice";
 
 const rootReducer = combineReducers({
@@ -11,7 +11,7 @@ const rootReducer = combineReducers({
     // preferences: preferencesSlice.reducer,
     alert: alertSlice.reducer,
     misc: miscSlice.reducer,
-    // boards: boardsSlice.reducer,
+    boards: boardsSlice.reducer,
     // darkMode:darkModeReducer
 });
 

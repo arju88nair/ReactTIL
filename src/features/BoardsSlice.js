@@ -1,6 +1,5 @@
 import {createAsyncThunk, createEntityAdapter, createSlice} from '@reduxjs/toolkit';
 import {authHeader} from "../_helpers";
-import config from 'config';
 
 const boardsAdapter = createEntityAdapter({
     // sortComparer: (a, b) => b.date.localeCompare(a.date),
@@ -15,7 +14,7 @@ export const getBoards = createAsyncThunk(
                 method: 'GET',
                 headers: {...authHeader(), 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*'},
             };
-            const response = await fetch(`${config.apiUrl}/boards`, requestOptions);
+            const response = await fetch(process.env.REACT_APP_SERVER_URL + `/boards`, requestOptions);
             let boards = await response.json();
             if (response.status === 200) {
                 return boards;
@@ -39,7 +38,7 @@ export const postBoard = createAsyncThunk(
                 body: JSON.stringify(board)
 
             };
-            const response = await fetch(`${config.apiUrl}/boards`, requestOptions);
+            const response = await fetch(process.env.REACT_APP_SERVER_URL + `/boards`, requestOptions);
             let boards = await response.json();
             if (response.status === 200) {
                 getBoards()

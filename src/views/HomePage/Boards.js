@@ -1,34 +1,21 @@
 import React, {useEffect} from 'react';
-import {makeStyles} from '@material-ui/core/styles';
-import Typography from '@material-ui/core/Typography';
-import Grid from "@material-ui/core/Grid";
 import {BoardSkeleton} from "../Components/BoardSkeleton";
 import {useDispatch, useSelector} from "react-redux";
-import Button from "@material-ui/core/Button";
-import  {BoardCards} from "./BoardCards";
-import {getBoards, boardSelector} from '../../features/BoardsSlice';
+import {boardSelector, getBoards} from '../../features/BoardsSlice';
+import Grid from "@mui/material/Grid";
+import Typography from "@mui/material/Typography";
+import Button from "@mui/material/Button";
+import {styled} from "@mui/material/styles";
+import BoardCards from "./BoardCards";
+import CachedIcon from '@mui/icons-material/Cached';
 
-
-const useStyles = makeStyles((theme) => ({
-    cateContainer: {
-        marginTop: '2%',
-    },
-    button: {
-        background: theme.palette.action.primary,
-        color: theme.palette.text.primary,
-        borderColor: theme.palette.action.secondary,
-        borderRadius: '26px',
-        textTransform: 'capitalize',
-        fontWeight: 900,
-        padding: '0.85em',
-        '&:hover': {
-            background: theme.palette.action.hover,
-        },
-    },
+const CateContainer = styled("div")(({theme}) => ({
+    flexGrow: 1,
+    padding: theme.spacing(3),
 }));
 
+
 function ErrorRefresh() {
-    const classes = useStyles();
     const dispatch = useDispatch();
     const handleErrorRefresh = (event) => {
         dispatch(getBoards());
@@ -39,19 +26,20 @@ function ErrorRefresh() {
         <Grid container
               direction="column"
               justify="center"
-              alignItems="center" xs={12} style={{marginTop:'20%'}}>
-            <Typography gutterBottom variant="body2">
+              alignItems="center" xs={12} style={{marginTop: '20%'}}>
+            <Typography gutterBottom variant="h7">
                 Something went wrong.Please Try again
             </Typography>
-            <Button  className={classes.button}   onClick={handleErrorRefresh}>Retry</Button>
+            <Button variant="contained"
+                    startIcon={<CachedIcon/>}
+                    onClick={handleErrorRefresh}>Retry</Button>
         </Grid>
     )
 }
 
 
 export function Board() {
-    const classes = useStyles();
-    const { isBoardFetching, isBoardGetError,isBoardGetSuccess } = useSelector(boardSelector);
+    const {isBoardFetching, isBoardGetError, isBoardGetSuccess} = useSelector(boardSelector);
     const dispatch = useDispatch();
     useEffect(() => {
         console.log("dispatching for boards")
@@ -60,7 +48,7 @@ export function Board() {
 
 
     return (
-        <div className={classes.cateContainer}>
+        <CateContainer>
             <Grid container direction="row"
                   justify="flex-start"
                   alignItems="center" spacing={3}>
@@ -68,6 +56,6 @@ export function Board() {
                 {isBoardGetError && <ErrorRefresh/>}
                 {isBoardGetSuccess && <BoardCards/>}
             </Grid>
-        </div>
+        </CateContainer>
     );
 }

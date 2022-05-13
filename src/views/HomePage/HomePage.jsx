@@ -1,8 +1,8 @@
 import React from 'react';
 import {CssBaseline} from "@mui/material";
-import MainAppBar from "../Components/AppBar";
 import styled from "@emotion/styled";
 import SideBar from "../Components/SideBar";
+import {BoardView} from "./BoardView";
 
 // styled
 const LayoutContainer = styled('div')(() => ({
@@ -13,13 +13,12 @@ const LayoutContainer = styled('div')(() => ({
 
 
 function HomePage() {
-
     return (
         <div>
             <CssBaseline/>
             <LayoutContainer>
                 <SideBar/>
-
+                <BoardView/>
             </LayoutContainer>
         </div>
     );
