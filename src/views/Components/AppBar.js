@@ -14,7 +14,7 @@ import MailIcon from '@mui/icons-material/Mail';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import MoreIcon from '@mui/icons-material/MoreVert';
 import {useDispatch, useSelector} from "react-redux";
-import {toggleSideBar} from "../../features/MiscSlice";
+import {closeSideBar, openSideBar, toggleSideBar} from "../../features/MiscSlice";
 import MuiAppBar from "@mui/material/AppBar";
 
 const drawerWidth = 240;
@@ -62,6 +62,7 @@ const StyledInputBase = styled(InputBase)(({theme}) => ({
 const AppBar = styled(MuiAppBar, {
     shouldForwardProp: (prop) => prop !== 'open',
 })(({theme, open}) => ({
+    zIndex: theme.zIndex.drawer + 1,
     transition: theme.transitions.create(['margin', 'width'], {
         easing: theme.transitions.easing.sharp,
         duration: theme.transitions.duration.leavingScreen,
@@ -77,17 +78,24 @@ const AppBar = styled(MuiAppBar, {
 }));
 export default function MainAppBar() {
     const [anchorEl, setAnchorEl] = React.useState(null);
-    const [open, setOpen] = React.useState(true);
+    const [open, setOpen] = React.useState(null);
     const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
     const dispatch = useDispatch();
-
     const isMenuOpen = Boolean(anchorEl);
     const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
     const sideBar = useSelector(state => state.misc.sideBar);
-
+    console.log(sideBar)
     const handleDrawerToggle = () => {
         dispatch(toggleSideBar(sideBar));
     };
+    const handleDrawerOpen = () => {
+        dispatch(openSideBar(sideBar));
+    };
+
+    const handleDrawerClose = () => {
+        dispatch(closeSideBar(sideBar));
+    };
+
 
     const handleProfileMenuOpen = (event) => {
         setAnchorEl(event.currentTarget);
@@ -183,17 +191,17 @@ export default function MainAppBar() {
 
     return (
         <Box sx={{flexGrow: 1}}>
-            <AppBar position="fixed" open={sideBar} sx={{
-                width: {sm: `calc(100% - ${drawerWidth}px)`},
-                ml: {sm: `${drawerWidth}px`},
-            }}>
+            <AppBar position="fixed" open={sideBar}>
                 <Toolbar>
                     <IconButton
                         color="inherit"
                         aria-label="open drawer"
+                        onClick={handleDrawerOpen}
                         edge="start"
-                        onClick={handleDrawerToggle}
-                        sx={{mr: 2, display: {sm: 'none'}}}
+                        sx={{
+                            marginRight: 5,
+                            ...(sideBar && {display: 'none'}),
+                        }}
                     >
                         <MenuIcon/>
                     </IconButton>
@@ -204,7 +212,7 @@ export default function MainAppBar() {
                         href="/"
                         sx={{
                             mr: 2,
-                            display: { xs: 'flex', md: 'flex' },
+                            display: {xs: 'flex', md: 'flex'},
                             fontWeight: 700,
                             letterSpacing: '.2rem',
                             color: 'inherit',
