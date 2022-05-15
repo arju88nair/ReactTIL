@@ -8,9 +8,21 @@ import {BoardView} from "./BoardView";
 const LayoutContainer = styled('div')(() => ({
     height: '100%',
     overflow: 'hidden',
-    width: '100%'
-}));
+    width: '100%',
+    // justifyContent:'center',
+    // alignItems: 'center',
+    display: 'flex',
 
+
+}));
+const DrawerHeader = styled('div')(({ theme }) => ({
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'flex-end',
+    padding: theme.spacing(0, 1),
+    // necessary for content to be below app bar
+    ...theme.mixins.toolbar,
+}));
 
 function HomePage() {
     return (
