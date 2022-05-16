@@ -16,6 +16,7 @@ import MoreIcon from '@mui/icons-material/MoreVert';
 import {useDispatch, useSelector} from "react-redux";
 import {closeSideBar, openSideBar, toggleSideBar} from "../../features/MiscSlice";
 import MuiAppBar from "@mui/material/AppBar";
+import SearchIcon from '@mui/icons-material/Search';
 
 const drawerWidth = 240;
 
@@ -212,7 +213,7 @@ export default function MainAppBar() {
                         href="/"
                         sx={{
                             mr: 2,
-                            display: {xs: 'flex', md: 'flex'},
+                            display: { xs: 'none', sm: 'block' },
                             fontWeight: 700,
                             letterSpacing: '.2rem',
                             color: 'inherit',
@@ -221,6 +222,15 @@ export default function MainAppBar() {
                     >
                         Shelved
                     </Typography>
+                    <Search>
+                        <SearchIconWrapper>
+                            <SearchIcon />
+                        </SearchIconWrapper>
+                        <StyledInputBase
+                            placeholder="Search…"
+                            inputProps={{ 'aria-label': 'search' }}
+                        />
+                    </Search>
                     <Box sx={{flexGrow: 1}}/>
                     <Box sx={{display: {xs: 'none', md: 'flex'}}}>
                         <IconButton size="large" aria-label="show 4 new mails" color="inherit">

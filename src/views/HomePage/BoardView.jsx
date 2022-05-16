@@ -8,9 +8,10 @@ import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import Divider from "@mui/material/Divider";
 import Box from "@mui/material/Box";
-import Container from "@mui/material/Container";
-import {BoardSkeleton} from "../Components/BoardSkeleton";
-
+import FilterAltIcon from '@mui/icons-material/FilterAlt';
+import SortIcon from '@mui/icons-material/Sort';
+import AddCircleIcon from '@mui/icons-material/AddCircle';
+import IconButton from "@mui/material/IconButton";
 
 const MainCont = styled("div")(({theme}) => ({
     flexGrow: 1,
@@ -25,6 +26,7 @@ const DrawerHeader = styled('div')(({theme}) => ({
     // necessary for content to be below app bar
     ...theme.mixins.toolbar,
 }));
+
 export function BoardView() {
     const dispatch = useDispatch();
 
@@ -35,42 +37,37 @@ export function BoardView() {
 
     return (
         <MainCont component="main" maxWidth="lg">
-            <Box  component="main"sx={{ flexGrow: 1, p: 3 }}>
-                <DrawerHeader />
+            <Box component="main" sx={{flexGrow: 1, p: 3}}>
+                <DrawerHeader/>
 
-                <Grid container spacing={3} style={{marginBottom: '4em'}}>
-                    <Grid item xs={12} sm={6}>
+                <Grid container spacing={2} style={{marginBottom: '1em'}}>
+                    <Grid container item xs={12} sm={6} direction="row"
+                          justifyContent="flex-start"
+                          alignItems="center">
                         <Typography style={{marginBottom: '1%', fontWeight: "bold"}} variant="h5" gutterBottom>Your
                             Boards</Typography>
-
-                        {/*<FormControl variant="outlined" className={classes.formControl}>*/}
-                        {/*    <InputLabel id="board-sort">Recent Boards</InputLabel>*/}
-                        {/*    <Select*/}
-                        {/*        labelId="board-sort"*/}
-                        {/*        id="board-sort"*/}
-                        {/*        onChange={handleChange}*/}
-                        {/*        label="Recent Boards"*/}
-                        {/*    >*/}
-                        {/*        <MenuItem value="">*/}
-                        {/*            <em>None</em>*/}
-                        {/*        </MenuItem>*/}
-                        {/*        <MenuItem value={10}>Ten</MenuItem>*/}
-                        {/*        <MenuItem value={20}>Twenty</MenuItem>*/}
-                        {/*        <MenuItem value={30}>Thirty</MenuItem>*/}
-                        {/*    </Select>*/}
-                        {/*</FormControl>*/}
                     </Grid>
-                    <Grid item xs={12} sm={6} container
+                    <Grid container item xs={12} sm={6}
                           direction="row"
-                          justify="flex-end"
-                          alignItems="center">
+                          justifyContent="flex-end"
+                         >
                         <Button
                             variant="contained"
-                            // startIcon={<AddCircleIcon/>}
+                            startIcon={<AddCircleIcon/>}
                             onClick={handleBoardModal}
                         >
                             Create new board
                         </Button>
+                        <label htmlFor="icon-button-file">
+                            <IconButton color="primary" aria-label="upload picture" component="span">
+                                <FilterAltIcon/>
+                            </IconButton>
+                        </label>
+                        <label htmlFor="icon-button-file">
+                            <IconButton color="primary" aria-label="upload picture" component="span">
+                                <SortIcon/>
+                            </IconButton>
+                        </label>
                     </Grid>
                 </Grid>
                 <Divider/>

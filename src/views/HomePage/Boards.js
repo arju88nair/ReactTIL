@@ -26,7 +26,7 @@ function ErrorRefresh() {
         <Grid container
               direction="column"
               justify="center"
-              alignItems="center" xs={12} style={{marginTop: '20%'}}>
+              alignItems="center"  style={{marginTop: '20%'}}>
             <Typography gutterBottom variant="h7">
                 Something went wrong.Please Try again
             </Typography>
