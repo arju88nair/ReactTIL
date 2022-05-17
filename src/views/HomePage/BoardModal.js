@@ -9,12 +9,12 @@ import DialogContent from '@mui/material/DialogContent';
 import DialogActions from '@mui/material/DialogActions';
 import IconButton from '@mui/material/IconButton';
 import CloseIcon from '@mui/icons-material/Close';
-import Typography from '@mui/material/Typography';
 import {useDispatch, useSelector} from "react-redux";
 import {boardSelector, clearBoardState, getBoards, postBoard} from "../../features/BoardsSlice";
 import {closeBoardModal, closeSpinner, openSpinner} from "../../features/MiscSlice";
 import Grid from "@mui/material/Grid";
 import {TextField} from "@mui/material";
+import {Spinner} from "../Components/Spinner";
 
 const BootstrapDialog = styled(Dialog)(({theme}) => ({
     '& .MuiDialogContent-root': {
@@ -68,6 +68,7 @@ export default function BoardModal() {
 
     const handleAddBoard = (e) => {
         e.preventDefault();
+        console.log(newBoard)
         dispatch(openSpinner())
         dispatch(clearBoardState())
         dispatch(postBoard(newBoard))
@@ -93,54 +94,57 @@ export default function BoardModal() {
 
     return (
         <div>
-
+            <Spinner/>
             <BootstrapDialog
                 onClose={handleClose}
                 aria-labelledby="customized-dialog-title"
                 open={modalOpen}
             >
-                <BootstrapDialogTitle id="customized-dialog-title" onClose={handleClose}>
-                    Add a new Board
-                </BootstrapDialogTitle>
-                <DialogContent dividers>
-                    {/*<Typography gutterBottom>*/}
-                    {/*    Boards help you to categorise your items*/}
-                    {/*</Typography>*/}
-                    <Grid container>
-                        <Grid item xs={12}>
-                            <TextField
-                                variant="outlined"
-                                required
-                                fullWidth
-                                id="title"
-                                label="Title"
-                                name="title"
-                                onChange={handleChange}
-                                margin="normal"
-                                type="text"
-                            />
-                        </Grid>
-                        <Grid item xs={12}>
-                            <TextField
-                                id="Description"
-                                label="Description"
-                                name="description"
-                                multiline
-                                fullWidth
-                                rows={4}
-                                variant="outlined"
-                                onChange={handleChange}
-                            />
-                    </Grid>
-                    </Grid>
+                <form onSubmit={handleAddBoard}>
 
-                </DialogContent>
-                <DialogActions>
-                    <Button autoFocus type="submit" type="submit"
-                            variant="contained" color="primary" >
-                        Save changes
-                    </Button>
-                </DialogActions>
+                    <BootstrapDialogTitle id="customized-dialog-title" onClose={handleClose}>
+                        Add a new Board
+                    </BootstrapDialogTitle>
+                    <DialogContent dividers>
+                        {/*<Typography gutterBottom>*/}
+                        {/*    Boards help you to categorise your items*/}
+                        {/*</Typography>*/}
+                        <Grid container>
+                            <Grid item xs={12}>
+                                <TextField
+                                    variant="outlined"
+                                    required
+                                    fullWidth
+                                    id="title"
+                                    label="Title"
+                                    name="title"
+                                    onChange={handleChange}
+                                    margin="normal"
+                                    type="text"
+                                />
+                            </Grid>
+                            <Grid item xs={12}>
+                                <TextField
+                                    id="Description"
+                                    label="Description"
+                                    name="description"
+                                    multiline
+                                    fullWidth
+                                    rows={4}
+                                    variant="outlined"
+                                    onChange={handleChange}
+                                />
+                            </Grid>
+                        </Grid>
+
+                    </DialogContent>
+                    <DialogActions>
+                        <Button autoFocus type="submit" type="submit"
+                                variant="contained" color="primary">
+                            Save changes
+                        </Button>
+                    </DialogActions>
+                </form>
             </BootstrapDialog>
         </div>
     );
