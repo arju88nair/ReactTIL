@@ -36,7 +36,7 @@ export function BoardView() {
 
 
     return (
-        <MainCont component="main" maxWidth="lg">
+        <MainCont component="main" maxwidth="lg">
             <Box component="main" sx={{flexGrow: 1, p: 3}}>
                 <DrawerHeader/>
 

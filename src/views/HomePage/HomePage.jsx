@@ -3,6 +3,7 @@ import {CssBaseline} from "@mui/material";
 import styled from "@emotion/styled";
 import SideBar from "../Components/SideBar";
 import {BoardView} from "./BoardView";
+import BoardModal from "./BoardModal";
 
 // styled
 const LayoutContainer = styled('div')(() => ({
@@ -29,6 +30,7 @@ function HomePage() {
         <div>
             <CssBaseline/>
             <LayoutContainer>
+                <BoardModal/>
                 <SideBar/>
                 <BoardView/>
             </LayoutContainer>
