@@ -10,6 +10,8 @@ import MuiAlert from '@mui/material/Alert';
 import {clear} from "./features/AlertSlice";
 import {useDispatch, useSelector} from "react-redux";
 import {HomePage} from "./views/HomePage";
+import {BoardPage} from "./views/BoardPage";
+import {PrivateRoute} from "./helpers/PrivateRoute";
 
 const Alert = React.forwardRef(function Alert(props, ref) {
     return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
@@ -65,7 +67,22 @@ function App() {
                 <Route path="/landing" element={<LandingPage/>}/>
                 <Route path="/login" element={<LoginPage/>}/>
                 <Route path="/register" element={<RegisterPage/>}/>
-                <Route path="/" element={<HomePage/>}/>
+                <Route
+                    path="/"
+                    element={
+                        <PrivateRoute>
+                            <HomePage/>
+                        </PrivateRoute>
+                    }
+                />
+                <Route
+                    path="/board/:boardId"
+                    element={
+                        <PrivateRoute>
+                            <BoardPage/>
+                        </PrivateRoute>
+                    }
+                />
                 <Route
                     path="*"
                     element={<Navigate to="/landing" replace/>}

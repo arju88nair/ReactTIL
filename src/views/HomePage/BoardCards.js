@@ -57,7 +57,7 @@ export default function BoardCards() {
             <Grid container spacing={3}>
                 {boards.map((board, index) => (
                     // xs={12} sm={6} md={4}
-                    <Grid item key={board}>
+                    <Grid item key={index}>
                         <Card sx={{maxWidth: 300, display: 'flex', flexDirection: 'column'}} style={{minWidth: 280,
                            justifyContent: 'space-between', display: 'flex',
                             flexDirection: 'column',

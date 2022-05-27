@@ -1,5 +1,5 @@
 import {createAsyncThunk, createSlice} from '@reduxjs/toolkit';
-import {history} from "../_helpers";
+import {history} from "../helpers";
 
 
 // createAsyncThunk provides us those states out of the box. To implement it, we just need to use the action name and the state of it.

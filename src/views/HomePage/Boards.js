@@ -26,7 +26,7 @@ function ErrorRefresh() {
         <Grid container
               direction="column"
               justify="center"
-              alignItems="center"  style={{marginTop: '20%'}}>
+              alignItems="center" style={{marginTop: '20%'}}>
             <Typography gutterBottom variant="h7">
                 Something went wrong.Please Try again
             </Typography>
@@ -52,7 +52,7 @@ export function Board() {
             <Grid container direction="row"
                   justify="flex-start"
                   alignItems="center" spacing={3}>
-                {isBoardFetching && Array(6).fill(<BoardSkeleton/>)}
+                {isBoardFetching && [...Array(6)].map((e, i) => <BoardSkeleton key={i}/>)}
                 {isBoardGetError && <ErrorRefresh/>}
                 {isBoardGetSuccess && <BoardCards/>}
             </Grid>

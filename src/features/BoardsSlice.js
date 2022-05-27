@@ -1,5 +1,5 @@
 import {createAsyncThunk, createEntityAdapter, createSlice} from '@reduxjs/toolkit';
-import {authHeader} from "../_helpers";
+import {authHeader} from "../helpers";
 
 const boardsAdapter = createEntityAdapter({
     // sortComparer: (a, b) => b.date.localeCompare(a.date),
