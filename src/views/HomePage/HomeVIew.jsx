@@ -2,7 +2,7 @@ import React from 'react';
 import {CssBaseline} from "@mui/material";
 import styled from "@emotion/styled";
 import SideBar from "../Components/SideBar";
-import {BoardView} from "./BoardView";
+import {BoardsHeader} from "./BoardsHeader";
 import BoardModal from "./BoardModal";
 
 // styled
@@ -16,7 +16,7 @@ const LayoutContainer = styled('div')(() => ({
 
 
 }));
-const DrawerHeader = styled('div')(({ theme }) => ({
+const DrawerHeader = styled('div')(({theme}) => ({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'flex-end',
@@ -25,17 +25,17 @@ const DrawerHeader = styled('div')(({ theme }) => ({
     ...theme.mixins.toolbar,
 }));
 
-function HomePage() {
+function HomeVIew() {
     return (
         <div>
             <CssBaseline/>
             <LayoutContainer>
                 <BoardModal/>
                 <SideBar/>
-                <BoardView/>
+                <BoardsHeader/>
             </LayoutContainer>
         </div>
     );
 }
 
-export {HomePage};
+export {HomeVIew};

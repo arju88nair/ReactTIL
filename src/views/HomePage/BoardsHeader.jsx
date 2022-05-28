@@ -1,6 +1,6 @@
 import React from "react";
 import {styled} from '@mui/material/styles';
-import {Board} from "./Boards";
+import {Board, Boards} from "./Boards";
 import {useDispatch} from "react-redux";
 import {openBoardModal} from "../../features/MiscSlice";
 import Grid from "@mui/material/Grid";
@@ -27,7 +27,7 @@ const DrawerHeader = styled('div')(({theme}) => ({
     ...theme.mixins.toolbar,
 }));
 
-export function BoardView() {
+export function BoardsHeader() {
     const dispatch = useDispatch();
 
     const handleBoardModal = () => {
@@ -50,7 +50,7 @@ export function BoardView() {
                     <Grid container item xs={12} sm={6}
                           direction="row"
                           justifyContent="flex-end"
-                         >
+                    >
                         <Button
                             variant="contained"
                             startIcon={<AddCircleIcon/>}
@@ -72,7 +72,7 @@ export function BoardView() {
                 </Grid>
                 <Divider/>
                 {/*<BoardSkeleton/>*/}
-                <Board/>
+                <Boards/>
             </Box>
         </MainCont>
 

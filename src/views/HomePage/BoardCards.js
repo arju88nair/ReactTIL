@@ -80,7 +80,7 @@ export default function BoardCards() {
                             {/*    image="/static/images/cards/paella.jpg"*/}
                             {/*    alt="Paella dish"*/}
                             {/*/>*/}
-                            <CardActionArea component={RouterLink} to={`/board/2`}>
+                            <CardActionArea component={RouterLink} to={`/board/`+board.slug}>
                             <CardContent style={{backgroundColor: board.color, overflow: "hidden"}}>
                                 <div style={{
                                     color: "salmon",

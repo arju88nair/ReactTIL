@@ -38,7 +38,7 @@ function ErrorRefresh() {
 }
 
 
-export function Board() {
+export function Boards() {
     const {isBoardFetching, isBoardGetError, isBoardGetSuccess} = useSelector(boardSelector);
     const dispatch = useDispatch();
     useEffect(() => {

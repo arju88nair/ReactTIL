@@ -11,7 +11,7 @@ const LayoutContainer = styled('div')(() => ({
     width: '100%'
 }));
 
-export function LandingPage() {
+export function LandingVIew() {
 
     return (
         <div>

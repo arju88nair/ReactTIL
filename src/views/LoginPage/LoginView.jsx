@@ -12,7 +12,7 @@ const LayoutContainer = styled('div')(() => ({
 }));
 
 
-export function LoginPage() {
+export function LoginView() {
     return (
         <div>
             <CssBaseline/>

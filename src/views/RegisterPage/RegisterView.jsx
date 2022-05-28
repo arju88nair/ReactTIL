@@ -12,7 +12,7 @@ const LayoutContainer = styled('div')(() => ({
 }));
 
 
-export function RegisterPage() {
+export function RegisterView() {
 
     return (
         <div>

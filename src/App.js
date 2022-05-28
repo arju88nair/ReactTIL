@@ -1,16 +1,16 @@
 import * as React from 'react';
 import './App.css';
 import {Navigate, Route, Routes} from 'react-router-dom';
-import {LandingPage} from "./views/LandingPage";
+import {LandingVIew} from "./views/LandingPage";
 import {createTheme, ThemeProvider} from '@mui/material/styles';
-import {LoginPage} from "./views/LoginPage";
-import {RegisterPage} from "./views/RegisterPage";
+import {LoginView} from "./views/LoginPage";
+import {RegisterView} from "./views/RegisterPage";
 import Snackbar from '@mui/material/Snackbar';
 import MuiAlert from '@mui/material/Alert';
 import {clear} from "./features/AlertSlice";
 import {useDispatch, useSelector} from "react-redux";
-import {HomePage} from "./views/HomePage";
-import {BoardPage} from "./views/BoardPage";
+import {HomeVIew} from "./views/HomePage";
+import {BoardView} from "./views/BoardPage";
 import {PrivateRoute} from "./helpers/PrivateRoute";
 
 const Alert = React.forwardRef(function Alert(props, ref) {
@@ -64,14 +64,14 @@ function App() {
                 </Alert>
             </Snackbar>
             <Routes>
-                <Route path="/landing" element={<LandingPage/>}/>
-                <Route path="/login" element={<LoginPage/>}/>
-                <Route path="/register" element={<RegisterPage/>}/>
+                <Route path="/landing" element={<LandingVIew/>}/>
+                <Route path="/login" element={<LoginView/>}/>
+                <Route path="/register" element={<RegisterView/>}/>
                 <Route
                     path="/"
                     element={
                         <PrivateRoute>
-                            <HomePage/>
+                            <HomeVIew/>
                         </PrivateRoute>
                     }
                 />
@@ -79,7 +79,7 @@ function App() {
                     path="/board/:boardId"
                     element={
                         <PrivateRoute>
-                            <BoardPage/>
+                            <BoardView/>
                         </PrivateRoute>
                     }
                 />
