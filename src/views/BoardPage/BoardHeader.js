@@ -5,6 +5,8 @@ import Grid from "@mui/material/Grid";
 import IconButton from "@mui/material/IconButton";
 import {styled} from "@mui/material/styles";
 import Box from "@mui/material/Box";
+import BoardCards from "../HomePage/BoardCards";
+import {Board} from "./Board";
 
 
 function SortIcon() {
@@ -50,6 +52,7 @@ export function BoardHeader() {
                         </IconButton>
                     </Grid>
                 </Grid>
+                <Board/>
             </Box>
         </MainCont>
     )
