@@ -24,34 +24,15 @@ const DrawerHeader = styled('div')(({theme}) => ({
     justifyContent: 'flex-end',
     padding: theme.spacing(0, 1),
     // necessary for content to be below app bar
+    // marginTop:'2%',
     ...theme.mixins.toolbar,
 }));
 
 export function BoardHeader() {
     return (
         <MainCont component="main" maxwidth="lg">
-            <Box component="main" sx={{flexGrow: 1, p: 3}}>
+            <Box component="main" >
                 <DrawerHeader/>
-                <ShelvedBreadCrumbs/>
-                <Divider style={{marginTop: '1%', marginBottom: '1%'}} variant="middle"/>
-                <Grid container>
-                    <Grid item xs={3}>
-                        <IconButton
-                            edge="end"
-                            color="inherit"
-                            aria-label="mode"
-                        >
-                            <SortIcon/>
-                        </IconButton>
-                        <IconButton
-                            edge="end"
-                            color="inherit"
-                            aria-label="mode"
-                        >
-                            <SortIcon/>
-                        </IconButton>
-                    </Grid>
-                </Grid>
                 <Board/>
             </Box>
         </MainCont>
