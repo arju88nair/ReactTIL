@@ -2,13 +2,10 @@ import * as React from 'react';
 import {styled} from '@mui/material/styles';
 import Card from '@mui/material/Card';
 import CardHeader from '@mui/material/CardHeader';
-import CardMedia from '@mui/material/CardMedia';
 import CardContent from '@mui/material/CardContent';
 import CardActions from '@mui/material/CardActions';
-import Avatar from '@mui/material/Avatar';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
-import {red} from '@mui/material/colors';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import ShareIcon from '@mui/icons-material/Share';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
@@ -25,13 +22,16 @@ const ExpandMore = styled((props) => {
     }),
 }));
 
-function Cards() {
+
+function CardsComponent() {
     return (
-        <Grid  item>
-            <Card sx={{maxWidth: 260, display: 'flex', }} style={{
+        <Grid item>
+            <Card sx={{maxWidth: 260, display: 'flex',}} style={{
                 minWidth: 200,
                 justifyContent: 'space-between', display: 'flex',
-                flexDirection: 'column', padding: '2%'
+                flexDirection: 'column', padding: '2%', boxShadow: "5px 5px 11px 0px rgba(0,0,0,0.75)",
+                WebkitBoxShadow: "5px 5px 11px 0px rgba(0,0,0,0.75)",
+                MozBoxShadow: "5px 5px 11px 0px rgba(0,0,0,0.75)",
             }}>
                 <CardHeader
                     action={
@@ -39,6 +39,7 @@ function Cards() {
                             <MoreVertIcon/>
                         </IconButton>
                     }
+                    titleTypographyProps={{variant: 'h7'}}
                     title="Shrimp and Chorizo Paella"
                     subheader="September 14, 2016"
                 />
@@ -63,9 +64,7 @@ function Cards() {
                     <IconButton aria-label="share">
                         <ShareIcon/>
                     </IconButton>
-
                 </CardActions>
-
             </Card>
         </Grid>
     )
@@ -79,12 +78,12 @@ export default function BoardItems() {
     };
 
     return (
-        <Grid  container
-               direction="row"
-               justifyContent="center"
-               alignItems="center" spacing={3}>
+        <Grid container
+              direction="row"
+              justifyContent="center"
+              alignItems="center" spacing={3}>
 
-            {[...Array(12)].map((e, i) => <Cards key={i}/>)}
+            {[...Array(12)].map((e, i) => <CardsComponent key={i}/>)}
 
         </Grid>
     );

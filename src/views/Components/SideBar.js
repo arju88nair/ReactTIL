@@ -2,7 +2,6 @@ import * as React from 'react';
 import {styled, useTheme} from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import MuiDrawer from '@mui/material/Drawer';
-import MuiAppBar from '@mui/material/AppBar';
 import List from '@mui/material/List';
 import CssBaseline from '@mui/material/CssBaseline';
 import Divider from '@mui/material/Divider';
@@ -17,7 +16,6 @@ import MailIcon from '@mui/icons-material/Mail';
 import {useDispatch, useSelector} from "react-redux";
 import {closeSideBar, openSideBar, toggleSideBar} from "../../features/MiscSlice";
 import MainAppBar from "./AppBar";
-import Typography from "@mui/material/Typography";
 
 const drawerWidth = 240;
 

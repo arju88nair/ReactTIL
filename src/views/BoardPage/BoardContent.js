@@ -1,11 +1,6 @@
 import React from 'react';
-import {ShelvedBreadCrumbs} from "../Components/BreadCrumbs";
-import Divider from "@mui/material/Divider";
-import Grid from "@mui/material/Grid";
-import IconButton from "@mui/material/IconButton";
 import {styled} from "@mui/material/styles";
 import Box from "@mui/material/Box";
-import BoardCards from "../HomePage/BoardCards";
 import {Board} from "./Board";
 
 
@@ -28,10 +23,10 @@ const DrawerHeader = styled('div')(({theme}) => ({
     ...theme.mixins.toolbar,
 }));
 
-export function BoardHeader() {
+export function BoardContent() {
     return (
         <MainCont component="main" maxwidth="lg">
-            <Box component="main" >
+            <Box component="main">
                 <DrawerHeader/>
                 <Board/>
             </Box>

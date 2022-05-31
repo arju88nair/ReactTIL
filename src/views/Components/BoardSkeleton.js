@@ -2,7 +2,6 @@ import React from 'react';
 import Grid from "@mui/material/Grid";
 import {Skeleton} from "@mui/material";
 import Box from "@mui/material/Box";
-import styled from "@emotion/styled";
 
 // // styled
 // const BoxContainer = styled('Box')(() => ({

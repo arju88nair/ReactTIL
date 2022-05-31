@@ -36,7 +36,7 @@ export default function LoginForm() {
             dispatch(clearState());
             dispatch(loginUser(user));
         }
-    };
+    }
     let navigate = useNavigate();
     let location = useLocation();
     let from = location.state?.from?.pathname || "/";

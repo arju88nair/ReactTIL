@@ -1,6 +1,6 @@
 import React from 'react';
 import SideBar from "../Components/SideBar";
-import {BoardHeader} from "./BoardHeader";
+import {BoardContent} from "./BoardContent";
 import {CssBaseline} from "@mui/material";
 import styled from "@emotion/styled";
 // styled
@@ -23,7 +23,7 @@ function BoardView() {
             <CssBaseline/>
             <LayoutContainer>
                 <SideBar/>
-                <BoardHeader/>
+                <BoardContent/>
             </LayoutContainer>
         </div>
     );

@@ -5,10 +5,8 @@ import CardHeader from '@mui/material/CardHeader';
 import CardContent from '@mui/material/CardContent';
 import CardActions from '@mui/material/CardActions';
 import Collapse from '@mui/material/Collapse';
-import Avatar from '@mui/material/Avatar';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
-import {red} from '@mui/material/colors';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import ShareIcon from '@mui/icons-material/Share';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
@@ -17,7 +15,7 @@ import {useSelector} from "react-redux";
 import {boardSelector} from "../../features/BoardsSlice";
 import Grid from "@mui/material/Grid";
 import {CardActionArea} from "@mui/material";
-import { Link as RouterLink } from 'react-router-dom';
+import {Link as RouterLink} from 'react-router-dom';
 
 const ExpandMore = styled((props) => {
     const {expand, ...other} = props;
@@ -31,7 +29,7 @@ const ExpandMore = styled((props) => {
 }));
 
 const CardContainer = styled("Card")(({theme}) => ({
-    width: 240,
+    width: 280,
     minHeight: 320,
     // maxHeight: 300,
     display: 'flex',
@@ -58,12 +56,15 @@ export default function BoardCards() {
                 {boards.map((board, index) => (
                     // xs={12} sm={6} md={4}
                     <Grid item key={index}>
-                        <Card sx={{maxWidth: 300, display: 'flex', flexDirection: 'column'}} style={{minWidth: 280,
-                           justifyContent: 'space-between', display: 'flex',
-                            flexDirection: 'column',
+                        <Card sx={{maxWidth: 280, display: 'flex',}} style={{
+                            minWidth: 260,
+                            justifyContent: 'space-between', display: 'flex',
+                            flexDirection: 'column', padding: '2%', boxShadow: "5px 5px 11px 0px rgba(0,0,0,0.75)",
+                            WebkitBoxShadow: "5px 5px 11px 0px rgba(0,0,0,0.75)",
+                            MozBoxShadow: "5px 5px 11px 0px rgba(0,0,0,0.75)",
                         }}>
                             {/*<Link to="/Blog" component={CardActionArea} style={{textDecoration:'none'}}>*/}
-                                <CardHeader
+                            <CardHeader
 
                                 action={
                                     <IconButton aria-label="settings">
@@ -72,22 +73,22 @@ export default function BoardCards() {
                                 }
                                 title={board.title}
                                 subheader={board.time_stamp}
-                                titleTypographyProps={{variant:'h8' }}
-                                />
+                                titleTypographyProps={{variant: 'h8'}}
+                            />
                             {/*<CardMedia*/}
                             {/*    component="img"*/}
                             {/*    height="194"*/}
                             {/*    image="/static/images/cards/paella.jpg"*/}
                             {/*    alt="Paella dish"*/}
                             {/*/>*/}
-                            <CardActionArea component={RouterLink} to={`/board/`+board.slug}>
-                            <CardContent style={{backgroundColor: board.color, overflow: "hidden"}}>
-                                <div style={{
-                                    color: "salmon",
-                                    position: 'relative',
-                                    width: '119px',
-                                    height: '150px'
-                                }}>
+                            <CardActionArea component={RouterLink} to={`/board/` + board.slug}>
+                                <CardContent style={{backgroundColor: board.color, overflow: "hidden"}}>
+                                    <div style={{
+                                        color: "salmon",
+                                        position: 'relative',
+                                        width: '119px',
+                                        height: '150px'
+                                    }}>
                                     <span style={{
                                         fontWeight: "bold",
                                         fontSize: '16em',
@@ -98,9 +99,9 @@ export default function BoardCards() {
                                     }}>
                                         {board.title.charAt(0)}
                                     </span>
-                                </div>
+                                    </div>
 
-                            </CardContent>
+                                </CardContent>
                             </CardActionArea>
                             <CardActions disableSpacing>
                                 <IconButton aria-label="add to favorites">

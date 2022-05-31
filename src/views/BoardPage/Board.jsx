@@ -5,7 +5,7 @@ import Grid from "@mui/material/Grid";
 import {styled} from "@mui/material/styles";
 import Divider from "@mui/material/Divider";
 import BoardItems from "./BoardItems";
-import Typography from "@mui/material/Typography";
+import {BoardLeftHeader} from "./BoardLeftHeader";
 
 const CateContainer = styled("div")(({theme}) => ({
     flexGrow: 1,
@@ -26,8 +26,7 @@ export function Board() {
         <CateContainer>
             <Grid container>
                 <Grid item xs={6} style={{maxHeight: '100vh', overflow: 'auto'}}>
-                    <Typography variant="h4"> Blah</Typography>
-                    <br></br>
+                    <BoardLeftHeader/>
                     <BoardItems/>
                 </Grid>
                 <Divider orientation="vertical" flexItem/>
