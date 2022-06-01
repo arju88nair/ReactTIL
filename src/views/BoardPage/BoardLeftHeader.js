@@ -11,6 +11,7 @@ import MoreHorizOutlinedIcon from '@mui/icons-material/MoreHorizOutlined';
 import {alpha, styled} from "@mui/material/styles";
 import InputBase from "@mui/material/InputBase";
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
+import AddButton from "../Components/AddButton";
 
 const Search = styled('div')(({theme}) => ({
     position: 'relative',
@@ -64,12 +65,11 @@ export function BoardLeftHeader() {
     return (
         <div>
             <Grid container spacing={2} style={{marginBottom: '1em'}}>
-                <Grid container item xs={12} sm={6} direction="row"
+                <Grid container item xs={12} sm={8} direction="row"
                       justifyContent="flex-start"
                       alignItems="center">
                     <Typography style={{marginBottom: '1%', fontWeight: "bold"}} variant="h5" gutterBottom>All
                         Boards</Typography>
-
                     <Search>
                         <SearchIconWrapper>
                             <SearchOutlinedIcon/>
@@ -79,8 +79,9 @@ export function BoardLeftHeader() {
                             inputProps={{'aria-label': 'search'}}
                         />
                     </Search>
+                    <AddButton/>
                 </Grid>
-                <Grid container item xs={12} sm={6}
+                <Grid container item xs={12} sm={4}
                       direction="row"
                       justifyContent="flex-end"
                 >
