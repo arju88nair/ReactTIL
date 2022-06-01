@@ -8,8 +8,8 @@ import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import ShareIcon from '@mui/icons-material/Share';
-import MoreVertIcon from '@mui/icons-material/MoreVert';
 import Grid from "@mui/material/Grid";
+import {CardActionArea} from "@mui/material";
 
 const ExpandMore = styled((props) => {
     const {expand, ...other} = props;
@@ -22,8 +22,15 @@ const ExpandMore = styled((props) => {
     }),
 }));
 
+const handleDrawerToggle = (event) => {
+
+    // you can do all sorts of Css change by this way
+    event.target.element.class = "newGreenColor";
+};
+
 
 function CardsComponent() {
+
     return (
         <Grid item>
             <Card sx={{maxWidth: 260, display: 'flex',}} style={{
@@ -32,25 +39,29 @@ function CardsComponent() {
                 flexDirection: 'column', padding: '2%', boxShadow: "5px 5px 11px 0px rgba(0,0,0,0.75)",
                 WebkitBoxShadow: "5px 5px 11px 0px rgba(0,0,0,0.75)",
                 MozBoxShadow: "5px 5px 11px 0px rgba(0,0,0,0.75)",
-            }}>
-                <CardHeader
-                    action={
-                        <IconButton aria-label="settings">
-                            <MoreVertIcon/>
-                        </IconButton>
-                    }
-                    titleTypographyProps={{variant: 'h7'}}
-                    title="Shrimp and Chorizo Paella"
-                    subheader="September 14, 2016"
-                />
+            }}
+            >
+                <CardActionArea onClick={handleDrawerToggle}>
 
-                <CardContent>
-                    <Typography variant="body2" color="text.secondary">
-                        This impressive paella is a perfect party dish and a fun meal to cook
-                        together with your guests. Add 1 cup of frozen peas along with the mussels,
-                        if you like.
-                    </Typography>
-                </CardContent>
+                    <CardHeader
+                        // action={
+                        //     <IconButton aria-label="settings">
+                        //         <MoreVertIcon/>
+                        //     </IconButton>
+                        // }
+                        titleTypographyProps={{variant: 'h7'}}
+                        title="Shrimp and Chorizo Paella"
+                        subheader="September 14, 2016"
+                    />
+
+                    <CardContent>
+                        <Typography variant="body2" color="text.secondary">
+                            This impressive paella is a perfect party dish and a fun meal to cook
+                            together with your guests. Add 1 cup of frozen peas along with the mussels,
+                            if you like.
+                        </Typography>
+                    </CardContent>
+                </CardActionArea>
                 {/*<CardMedia*/}
                 {/*    component="img"*/}
                 {/*    height="194"*/}
