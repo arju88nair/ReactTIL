@@ -3,6 +3,7 @@ import SideBar from "../Components/SideBar";
 import {BoardContent} from "./BoardContent";
 import {CssBaseline} from "@mui/material";
 import styled from "@emotion/styled";
+import Editor from "./Editor";
 // styled
 const LayoutContainer = styled('div')(() => ({
     height: '100%',
@@ -23,7 +24,8 @@ function BoardView() {
             <CssBaseline/>
             <LayoutContainer>
                 <SideBar/>
-                <BoardContent/>
+                <Editor/>
+                {/*<BoardContent/>*/}
             </LayoutContainer>
         </div>
     );
