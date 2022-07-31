@@ -10,6 +10,13 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 import ShareIcon from '@mui/icons-material/Share';
 import Grid from "@mui/material/Grid";
 import {CardActionArea} from "@mui/material";
+import {useEffect, useState} from "react";
+import {closeSpinner, openSpinner} from "../../features/MiscSlice";
+import {clearState, loginUser, userSelector} from "../../features/UserSlice";
+import {useDispatch, useSelector} from "react-redux";
+import {boardSelector, ByBoard} from "../../features/BoardsSlice";
+import { useParams } from 'react-router-dom'
+import {error, success} from "../../features/AlertSlice";
 
 const ExpandMore = styled((props) => {
     const {expand, ...other} = props;
@@ -81,8 +88,30 @@ function CardsComponent() {
     )
 }
 
-export default function BoardItems() {
+export default function BoardItems(props) {
+
     const [expanded, setExpanded] = React.useState(false);
+    const dispatch = useDispatch();
+    const { boardId } = useParams()
+    const [data, setData] = useState([]);
+    const {isByBoardGetError, isByBoardGetSuccess, isByBoardFetching,errorMessage} = useSelector(
+        boardSelector
+    );
+    useEffect(() => {
+        dispatch(openSpinner())
+        dispatch(clearState());
+        dispatch(ByBoard(boardId));
+        if (isByBoardGetSuccess) {
+            dispatch(clearState());
+            dispatch(success(errorMessage))
+            dispatch(closeSpinner())
+            // this.props.history.push('/');
+        }
+        if (isByBoardGetError) {
+            dispatch(error(errorMessage))
+            dispatch(closeSpinner())
+        }
+    }, [isByBoardGetError, isByBoardGetSuccess]);
 
     const handleExpandClick = () => {
         setExpanded(!expanded);

@@ -15,7 +15,7 @@ import {useSelector} from "react-redux";
 import {boardSelector} from "../../features/BoardsSlice";
 import Grid from "@mui/material/Grid";
 import {CardActionArea} from "@mui/material";
-import {Link as RouterLink} from 'react-router-dom';
+import {Link } from 'react-router-dom';
 
 const ExpandMore = styled((props) => {
     const {expand, ...other} = props;
@@ -81,7 +81,8 @@ export default function BoardCards() {
                             {/*    image="/static/images/cards/paella.jpg"*/}
                             {/*    alt="Paella dish"*/}
                             {/*/>*/}
-                            <CardActionArea component={RouterLink} to={`/board/` + board.slug}>
+                            <CardActionArea >
+                                <Link to={`/board/` + board.slug}>
                                 <CardContent style={{backgroundColor: board.color, overflow: "hidden"}}>
                                     <div style={{
                                         color: "salmon",
@@ -102,6 +103,7 @@ export default function BoardCards() {
                                     </div>
 
                                 </CardContent>
+                                </Link>
                             </CardActionArea>
                             <CardActions disableSpacing>
                                 <IconButton aria-label="add to favorites">
