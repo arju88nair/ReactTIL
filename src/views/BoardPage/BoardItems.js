@@ -12,11 +12,16 @@ import Grid from "@mui/material/Grid";
 import {CardActionArea} from "@mui/material";
 import {useEffect, useState} from "react";
 import {closeSpinner, openSpinner} from "../../features/MiscSlice";
-import {clearState, loginUser, userSelector} from "../../features/UserSlice";
 import {useDispatch, useSelector} from "react-redux";
-import {boardSelector, ByBoard} from "../../features/BoardsSlice";
-import { useParams } from 'react-router-dom'
-import {error, success} from "../../features/AlertSlice";
+import {useParams} from 'react-router-dom'
+import {ByBoard, byBoardSelector} from "../../features/ByBoardSilce";
+import {error} from "../../features/AlertSlice";
+import {clearByBoardState} from "../../features/ByBoardSilce";
+import {boardSelector, getBoards} from "../../features/BoardsSlice";
+import {BoardSkeleton} from "../Components/BoardSkeleton";
+import BoardCards from "../HomePage/BoardCards";
+import Button from "@mui/material/Button";
+import CachedIcon from "@mui/icons-material/Cached";
 
 const ExpandMore = styled((props) => {
     const {expand, ...other} = props;
@@ -35,55 +40,84 @@ const handleDrawerToggle = (event) => {
     event.target.element.class = "newGreenColor";
 };
 
+function ErrorRefresh() {
+    const dispatch = useDispatch();
+    const handleErrorRefresh = (event) => {
+        dispatch(getBoards());
+    };
+
+    // TODO Fix error refresh rendering
+    return (
+        <Grid container
+              direction="column"
+              justify="center"
+              alignItems="center" style={{marginTop: '20%'}}>
+            <Typography gutterBottom variant="h7">
+                Something went wrong.Please Try again
+            </Typography>
+            <Button variant="contained"
+                    startIcon={<CachedIcon/>}
+                    onClick={handleErrorRefresh}>Retry</Button>
+        </Grid>
+    )
+}
+
 
 function CardsComponent() {
+    const data = useSelector(byBoardSelector);
+    const boardItems = data.byBoardItems
 
     return (
-        <Grid item>
-            <Card sx={{maxWidth: 260, display: 'flex',}} style={{
-                minWidth: 200,
-                justifyContent: 'space-between', display: 'flex',
-                flexDirection: 'column', padding: '2%', boxShadow: "5px 5px 11px 0px rgba(0,0,0,0.75)",
-                WebkitBoxShadow: "5px 5px 11px 0px rgba(0,0,0,0.75)",
-                MozBoxShadow: "5px 5px 11px 0px rgba(0,0,0,0.75)",
-            }}
-            >
-                <CardActionArea onClick={handleDrawerToggle}>
+        <Grid container
+              direction="row"
+              alignItems="center" spacing={3}>
+            {boardItems.map((board, index) => (
+                <Grid item>
+                    <Card sx={{maxWidth: 260, display: 'flex',}} style={{
+                        minWidth: 200,
+                        justifyContent: 'space-between', display: 'flex',
+                        flexDirection: 'column', padding: '2%', boxShadow: "5px 5px 11px 0px rgba(0,0,0,0.75)",
+                        WebkitBoxShadow: "5px 5px 11px 0px rgba(0,0,0,0.75)",
+                        MozBoxShadow: "5px 5px 11px 0px rgba(0,0,0,0.75)",
+                    }}
+                    >
+                        <CardActionArea onClick={handleDrawerToggle}>
 
-                    <CardHeader
-                        // action={
-                        //     <IconButton aria-label="settings">
-                        //         <MoreVertIcon/>
-                        //     </IconButton>
-                        // }
-                        titleTypographyProps={{variant: 'h7'}}
-                        title="Shrimp and Chorizo Paella"
-                        subheader="September 14, 2016"
-                    />
+                            <CardHeader
+                                // action={
+                                //     <IconButton aria-label="settings">
+                                //         <MoreVertIcon/>
+                                //     </IconButton>
+                                // }
+                                titleTypographyProps={{variant: 'h7'}}
+                                title={board.source}
+                                subheader="September 14, 2016"
+                            />
 
-                    <CardContent>
-                        <Typography variant="body2" color="text.secondary">
-                            This impressive paella is a perfect party dish and a fun meal to cook
-                            together with your guests. Add 1 cup of frozen peas along with the mussels,
-                            if you like.
-                        </Typography>
-                    </CardContent>
-                </CardActionArea>
-                {/*<CardMedia*/}
-                {/*    component="img"*/}
-                {/*    height="194"*/}
-                {/*    image="/static/images/cards/paella.jpg"*/}
-                {/*    alt="Paella dish"*/}
-                {/*/>*/}
-                <CardActions disableSpacing>
-                    <IconButton aria-label="add to favorites">
-                        <FavoriteIcon/>
-                    </IconButton>
-                    <IconButton aria-label="share">
-                        <ShareIcon/>
-                    </IconButton>
-                </CardActions>
-            </Card>
+                            <CardContent>
+                                <Typography variant="body2" color="text.secondary">
+                                    {data.summary}
+                                </Typography>
+                            </CardContent>
+                        </CardActionArea>
+                        {/*<CardMedia*/}
+                        {/*    component="img"*/}
+                        {/*    height="194"*/}
+                        {/*    image="/static/images/cards/paella.jpg"*/}
+                        {/*    alt="Paella dish"*/}
+                        {/*/>*/}
+                        <CardActions disableSpacing>
+                            <IconButton aria-label="add to favorites">
+                                <FavoriteIcon/>
+                            </IconButton>
+                            <IconButton aria-label="share">
+                                <ShareIcon/>
+                            </IconButton>
+                        </CardActions>
+                    </Card>
+                </Grid>
+            ))
+            }
         </Grid>
     )
 }
@@ -92,20 +126,19 @@ export default function BoardItems(props) {
 
     const [expanded, setExpanded] = React.useState(false);
     const dispatch = useDispatch();
-    const { boardId } = useParams()
-    const [data, setData] = useState([]);
-    const {isByBoardGetError, isByBoardGetSuccess, isByBoardFetching,errorMessage} = useSelector(
-        boardSelector
+    const {boardId} = useParams()
+
+
+    const {isByBoardGetError, isByBoardGetSuccess, isByBoardFetching, errorMessage, byBoardItems} = useSelector(
+        byBoardSelector
     );
+
     useEffect(() => {
         dispatch(openSpinner())
-        dispatch(clearState());
         dispatch(ByBoard(boardId));
         if (isByBoardGetSuccess) {
-            dispatch(clearState());
-            dispatch(success(errorMessage))
             dispatch(closeSpinner())
-            // this.props.history.push('/');
+            console.log(byBoardItems)
         }
         if (isByBoardGetError) {
             dispatch(error(errorMessage))
@@ -118,13 +151,13 @@ export default function BoardItems(props) {
     };
 
     return (
-        <Grid container
-              direction="row"
-              justifyContent="center"
-              alignItems="center" spacing={3}>
 
-            {[...Array(12)].map((e, i) => <CardsComponent key={i}/>)}
+        <div>
+            {isByBoardFetching && [...Array(6)].map((e, i) => <BoardSkeleton key={i}/>)}
+            {isByBoardGetError && <ErrorRefresh/>}
+            {isByBoardGetSuccess && <CardsComponent/>}
+            {/*{[...Array(12)].map((e, i) => <CardsComponent key={i}/>)}*/}
+        </div>
 
-        </Grid>
     );
 }

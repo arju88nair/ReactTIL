@@ -4,6 +4,7 @@ import {userSlice} from "../features/UserSlice";
 import {alertSlice} from "../features/AlertSlice";
 import {miscSlice} from "../features/MiscSlice";
 import {boardsSlice} from "../features/BoardsSlice";
+import {byBoardSlice} from "../features/ByBoardSilce";
 // import darkModeReducer from "../features/DarkModeSlice";
 
 const rootReducer = combineReducers({
@@ -12,6 +13,7 @@ const rootReducer = combineReducers({
     alert: alertSlice.reducer,
     misc: miscSlice.reducer,
     boards: boardsSlice.reducer,
+    byBoardItems: byBoardSlice.reducer,
     // darkMode:darkModeReducer
 });
 

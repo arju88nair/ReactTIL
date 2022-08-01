@@ -41,30 +41,6 @@ export const postBoard = createAsyncThunk(
             const response = await fetch(process.env.REACT_APP_SERVER_URL + `/boards`, requestOptions);
             let boards = await response.json();
             if (response.status === 200) {
-                getBoards()
-                return boards;
-            } else {
-                return thunkAPI.rejectWithValue(boards);
-            }
-        } catch (e) {
-            console.log('Error', e);
-            thunkAPI.rejectWithValue(e.response.data);
-        }
-    }
-);
-export const ByBoard = createAsyncThunk(
-    'boards/get',
-    async (slug, thunkAPI) => {
-        try {
-            const requestOptions = {
-                method: 'GET',
-                headers: {...authHeader(), 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*'},
-            };
-            const response = await fetch(process.env.REACT_APP_SERVER_URL + `/by-board/`+slug, requestOptions);
-            console.log(slug)
-            let boards = await response.json();
-            if (response.status === 200) {
-                getBoards()
                 return boards;
             } else {
                 return thunkAPI.rejectWithValue(boards);
@@ -85,9 +61,6 @@ const initialState = boardsAdapter.getInitialState({
     isBoardSuccess: false,
     isBoardGetError: false,
     isBoardError: false,
-    isByBoardFetching: false,
-    isByBoardGetSuccess: false,
-    isByBoardGetError: false,
     errorMessage: '',
 })
 
@@ -144,28 +117,6 @@ export const boardsSlice = createSlice({
             state.errorMessage = payload.message;
             state.isBoardFetching = false;
             state.isBoardError = true;
-        },
-        [ByBoard.pending]: (state, action) => {
-            state.status = 'loading'
-            state.isByBoardFetching = true;
-        },
-        [ByBoard.fulfilled]: (state, action) => {
-            state.status = 'succeeded'
-            state.isByBoardFetching = false;
-            state.isByBoardGetSuccess = true;
-            // Add any fetched posts to the array
-            console.log('responseAdded', action.payload)
-            // state.userBoards = action.payload.board
-            // boardsAdapter.upsertMany(state, action.payload.board)
-        },
-        [ByBoard.rejected]: (state, {payload}) => {
-            if (!payload) {
-                payload = {'message': "Something went wrong. Please try again later"}
-            }
-            state.status = 'failed'
-            state.errorMessage = payload.message;
-            state.isByBoardFetching = false;
-            state.isByBoardGetError = true;
         },
     }
 });

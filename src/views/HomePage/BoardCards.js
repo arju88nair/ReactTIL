@@ -45,7 +45,6 @@ export default function BoardCards() {
     const [expanded, setExpanded] = React.useState(false);
     const data = useSelector(boardSelector);
     const boards = data.userBoards
-    console.log("boards", boards)
     const handleExpandClick = () => {
         setExpanded(!expanded);
     };
