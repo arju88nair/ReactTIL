@@ -73,14 +73,14 @@ function CardsComponent() {
               alignItems="center" spacing={3}>
             {boardItems.map((board, index) => (
                 <Grid item>
-                    <Card sx={{maxWidth: 260, display: 'flex',}} style={{
-                        minWidth: 200,
+                    <Card sx={{maxWidth: 280,minWidth: 280,  minHeight: 320,  maxHeight: 320,display: 'flex',}} style={{
+                        minWidth: 260,
                         justifyContent: 'space-between', display: 'flex',
                         flexDirection: 'column', padding: '2%', boxShadow: "5px 5px 11px 0px rgba(0,0,0,0.75)",
                         WebkitBoxShadow: "5px 5px 11px 0px rgba(0,0,0,0.75)",
                         MozBoxShadow: "5px 5px 11px 0px rgba(0,0,0,0.75)",
-                    }}
-                    >
+                    }}>
+                    
                         <CardActionArea onClick={handleDrawerToggle}>
 
                             <CardHeader
@@ -90,13 +90,13 @@ function CardsComponent() {
                                 //     </IconButton>
                                 // }
                                 titleTypographyProps={{variant: 'h7'}}
-                                title={board.source}
+                                title={board.title}
                                 subheader="September 14, 2016"
                             />
 
                             <CardContent>
                                 <Typography variant="body2" color="text.secondary">
-                                    {data.summary}
+                                    {board.content}
                                 </Typography>
                             </CardContent>
                         </CardActionArea>
