@@ -43,7 +43,7 @@ const handleDrawerToggle = (event) => {
 function ErrorRefresh() {
     const dispatch = useDispatch();
     const handleErrorRefresh = (event) => {
-        dispatch(getBoards());
+        dispatch(ByBoard());
     };
 
     // TODO Fix error refresh rendering
@@ -73,14 +73,14 @@ function CardsComponent() {
               alignItems="center" spacing={3}>
             {boardItems.map((board, index) => (
                 <Grid item>
-                    <Card sx={{maxWidth: 280,minWidth: 280,  minHeight: 320,  maxHeight: 320,display: 'flex',}} style={{
+                    <Card sx={{maxWidth: 280, minWidth: 280, minHeight: 320, maxHeight: 320, display: 'flex',}} style={{
                         minWidth: 260,
                         justifyContent: 'space-between', display: 'flex',
                         flexDirection: 'column', padding: '2%', boxShadow: "5px 5px 11px 0px rgba(0,0,0,0.75)",
                         WebkitBoxShadow: "5px 5px 11px 0px rgba(0,0,0,0.75)",
                         MozBoxShadow: "5px 5px 11px 0px rgba(0,0,0,0.75)",
                     }}>
-                    
+
                         <CardActionArea onClick={handleDrawerToggle}>
 
                             <CardHeader
@@ -153,7 +153,7 @@ export default function BoardItems(props) {
     return (
 
         <div>
-            {isByBoardFetching && [...Array(6)].map((e, i) => <BoardSkeleton key={i}/>)}
+            {isByBoardFetching && [...Array(3)].map((e, i) => <BoardSkeleton key={i}/>)}
             {isByBoardGetError && <ErrorRefresh/>}
             {isByBoardGetSuccess && <CardsComponent/>}
             {/*{[...Array(12)].map((e, i) => <CardsComponent key={i}/>)}*/}
